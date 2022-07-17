@@ -1,7 +1,7 @@
-# CREAM Project
+# Hyperstar UI
 
 ## What is it?
-CREAM coin is a project that intends to strengthen and stabilize the memecoin economy on Algorand by establishing safe practices and standards for creator’s supply management and distribution.
+Front-end for the endlessly-evolving Hyperstar ecosystem.
 
 
 ## Development
