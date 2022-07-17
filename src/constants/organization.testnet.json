@@ -1,0 +1,12 @@
+{
+  "name": "Hyperstar",
+  "description": "A Collaborative Network",
+  "image": {
+    "transparent": "https://ipfs.io/ipfs/QmSbHG3tnp8GbZN9YzPBfJUB8MvykXTnxJgQGmBg7aZVuu?filename=CREAMlogo.2.png",
+    "background": "https://ipfs.io/ipfs/QmZhkCoBmZ9xXQUdiNmW7oTu4Mtari22uFXmX5opAUiMD4?filename=CREAMlogo.2.background.png"
+  },
+
+  "price-oracles": {},
+
+  "exchange": {}
+}

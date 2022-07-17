@@ -1,0 +1,14 @@
+{
+  "name": "C.R.E.A.M.",
+  "description": "Crypto Rules Everything Around Me",
+  "website": "https://creamasa.network/",
+  "logo": {
+    "transparent": "https://ipfs.io/ipfs/QmSbHG3tnp8GbZN9YzPBfJUB8MvykXTnxJgQGmBg7aZVuu?filename=CREAMlogo.2.png",
+    "background": "https://ipfs.io/ipfs/QmZhkCoBmZ9xXQUdiNmW7oTu4Mtari22uFXmX5opAUiMD4?filename=CREAMlogo.2.background.png"
+  },
+
+  "price-oracles": {
+    "23828111": ["https://tinychart.org/asset/23828111"],
+    "47958294": ["https://tinychart.org/asset/47958294"]
+  }
+}

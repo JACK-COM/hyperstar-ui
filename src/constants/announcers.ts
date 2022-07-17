@@ -1,0 +1,4 @@
+// export const EXCHANGE_ANNOUNCER = 95210840;
+// export const SALE_ANNOUNCER = 95210804;
+export const EXCHANGE_ANNOUNCER = 99692249;
+export const SALE_ANNOUNCER = 99692198;

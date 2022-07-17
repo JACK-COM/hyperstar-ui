@@ -1,0 +1,18 @@
+@import "material-icons/iconfont/material-icons.css";
+@import "css/mixins.scss";
+@import "css/reset.scss";
+@import "css/animations.scss";
+
+.App {
+  text-align: center;
+}
+
+a {
+  @include heading-font;
+  font-weight: bolder;
+}
+
+legend,
+label > span:first-child {
+  @include heading-font;
+}

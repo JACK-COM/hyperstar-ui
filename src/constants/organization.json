@@ -1,0 +1,40 @@
+{
+  "name": "C.R.E.A.M.",
+  "description": "Crypto Rules Everything Around Me",
+  "image": {
+    "transparent": "https://ipfs.io/ipfs/QmSbHG3tnp8GbZN9YzPBfJUB8MvykXTnxJgQGmBg7aZVuu?filename=CREAMlogo.2.png",
+    "background": "https://ipfs.io/ipfs/QmZhkCoBmZ9xXQUdiNmW7oTu4Mtari22uFXmX5opAUiMD4?filename=CREAMlogo.2.background.png"
+  },
+
+  "tokens": [
+    {
+      "id": 312412702,
+      "name": "CREAM",
+      "symbol": "CREAM",
+      "price-oracles": {
+        "tinychart": "https://tinychart.org/asset/312412702"
+      },
+      "conversion": [
+        {
+          "assetId": 417116551,
+          "rate": 0.00001
+        }
+      ]
+    },
+
+    {
+      "id": 417116551,
+      "name": "CREAM.100K",
+      "symbol": "CRM100K",
+      "price-oracles": {
+        "tinychart": "https://tinychart.org/asset/417116551"
+      },
+      "conversion": [
+        {
+          "assetId": 312412702,
+          "rate": 100000
+        }
+      ]
+    }
+  ]
+}
