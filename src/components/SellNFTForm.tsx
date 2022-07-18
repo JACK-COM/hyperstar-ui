@@ -28,7 +28,7 @@ const PreviewContainer = styled.div`
   margin: 0 auto;
   max-width: 400px;
 `;
-type ListingState = {
+export type ListingState = {
   altPrice: number;
   altToken: string;
   img: string;

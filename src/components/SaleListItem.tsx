@@ -66,12 +66,12 @@ type SalePreviewProps = {
 };
 
 // eslint-disable-next-line react/no-unused-prop-types
-type SaleItemProps = { contract?: any } & SalePreviewProps;
+type SaleItemProps = { ctc?: any } & SalePreviewProps;
 
 const SaleListItem = (props: SaleItemProps) => {
   const { connector } = createReachAPI();
   const {
-    contract = 0,
+    ctc: contract = 0,
     item,
     qty,
     useBondingCurve,
@@ -129,7 +129,7 @@ export const SaleItemPreview = (props: SaleItemProps) => {
 
   return (
     <SaleListItem
-      contract={0}
+      ctc={0}
       item={listing}
       qty={qty}
       useBondingCurve={useBondingCurve}

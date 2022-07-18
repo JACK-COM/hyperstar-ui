@@ -5,7 +5,7 @@
   "dependencies": {
     "@jackcom/adi-cacheducks": "^1.0.16",
     "@jackcom/raphsducks": "^2.0.1",
-    "@jackcom/reachduck": "^0.4.1",
+    "@jackcom/reachduck": "^0.4.2",
     "@randlabs/myalgo-connect": "^1.1.2",
     "@reach-sh/stdlib": "^0.1.11-rc.3",
     "algosdk": "^1.13.0-beta.2",
