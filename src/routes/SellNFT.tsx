@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { BigValue, Hero, PageContainer } from "components/Common/Containers";
-import SellNFTForm from "components/SellNFTForm";
+import CreateListingForm from "components/ListingForm.Create";
 import { createSaleContract } from "reach/participants/MarketSeller";
 import store from "state";
 import Modal from "components/Common/Modal";
@@ -36,7 +36,7 @@ const BuySellNFT = () => {
       <h1 className="h2">Sell an Item</h1>
       <Hero>Create and list an item for sale in the marketplace</Hero>
 
-      <SellNFTForm onSubmit={onSubmit} assets={assets} />
+      <CreateListingForm onSubmit={onSubmit} assets={assets} />
       {complete && (
         <Modal title="Sale Contract created!" onClose={hideModal}>
           <p>

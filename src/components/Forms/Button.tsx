@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import AllButtonProps, * as UI from "./Button.Helpers";
 
-const ButtonBase = styled.button<AllButtonProps>`
+export const $ButtonStyles = css`
   align-items: center;
   background-color: ${UI.bgColor};
   border-radius: ${UI.borderRadius};
@@ -28,6 +28,10 @@ const ButtonBase = styled.button<AllButtonProps>`
   }
 `;
 
+const ButtonBase = styled.button<AllButtonProps>`
+  ${$ButtonStyles}
+`;
+
 const DefaultButton = styled(ButtonBase)``;
 export default DefaultButton;
 
@@ -38,7 +42,7 @@ export const IconButton = styled(({ icon, ...rest }: UI.IconButtonProps) => (
   </RoundButton>
 ))``;
 export const TransparentButton = styled(ButtonBase).attrs({
-  variant: "transparent",
+  variant: "transparent"
 })``;
 
 export const WideButton = styled(ButtonBase).attrs({ size: "lg" })`

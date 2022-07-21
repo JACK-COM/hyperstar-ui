@@ -13,15 +13,11 @@ const publicRoutes: RouteDef[] = [
     publicRoute: true
   },
   {
-    path: "/dao/:id/view",
-    text: "Interact with a DAO",
-    component: lazy(() => import("./DaoInteract")),
-    publicRoute: true
-  },
-  {
-    path: "/dao/:id/edit",
-    text: "Edit DAO (Admin)",
-    component: lazy(() => import("./DaoEdit")),
+    path: "/dao",
+    text: "DAOSpace",
+    component: lazy(() => import("./DaoSpace")),
+    publicRoute: true,
+    menuItem: true
   },
   {
     path: "/dao/new",
@@ -30,11 +26,27 @@ const publicRoutes: RouteDef[] = [
     publicRoute: true
   },
   {
-    path: "/dao",
-    text: "DAOSpace",
-    component: lazy(() => import("./DaoSpace")),
-    publicRoute: true,
-    menuItem: true,
+    path: "/dao/:id/edit",
+    text: "Edit DAO (Admin)",
+    component: lazy(() => import("./DaoEdit"))
+  },
+  {
+    path: "/dao/:id/view",
+    text: "View a DAO",
+    component: lazy(() => import("./DaoInteract")),
+    publicRoute: true
+  },
+  {
+    path: "/dao/:id/proposals",
+    text: "List DAO Proposals",
+    component: lazy(() => import("./DaoInteract")),
+    publicRoute: true
+  },
+  {
+    path: "/dao/:id/proposals/new",
+    text: "Create a Governance Proposal",
+    component: lazy(() => import("./ProposalCreate")),
+    publicRoute: true
   }
 ];
 
@@ -58,7 +70,7 @@ const routes: RouteDef[] = [
   {
     path: "/sell",
     text: "Sell",
-    component: lazy(() => import("./SellNFT")),
+    component: lazy(() => import("./SellNFT"))
   },
   {
     path: "/swap/:poolId",
