@@ -13,11 +13,15 @@ const publicRoutes: RouteDef[] = [
     publicRoute: true
   },
   {
-    path: "/dao",
-    text: "DAOSpace",
-    component: lazy(() => import("./DaoSpace")),
-    publicRoute: true,
-    menuItem: true,
+    path: "/dao/:id/view",
+    text: "Interact with a DAO",
+    component: lazy(() => import("./DaoInteract")),
+    publicRoute: true
+  },
+  {
+    path: "/dao/:id/edit",
+    text: "Edit DAO (Admin)",
+    component: lazy(() => import("./DaoEdit")),
   },
   {
     path: "/dao/new",
@@ -26,16 +30,11 @@ const publicRoutes: RouteDef[] = [
     publicRoute: true
   },
   {
-    path: "/dao/interact",
-    text: "List all DAOs",
-    component: lazy(() => import("./DaoInteract")),
-    publicRoute: true
-  },
-  {
-    path: "/dao/interact/:id",
-    text: "Interact with a DAO",
-    component: lazy(() => import("./DaoInteract")),
-    publicRoute: true
+    path: "/dao",
+    text: "DAOSpace",
+    component: lazy(() => import("./DaoSpace")),
+    publicRoute: true,
+    menuItem: true,
   }
 ];
 
@@ -45,12 +44,6 @@ const publicRoutes: RouteDef[] = [
  */
 const routes: RouteDef[] = [
   ...publicRoutes,
-  {
-    path: "/dao/edit/:id",
-    text: "Edit DAO (Admin)",
-    component: lazy(() => import("./DaoEdit")),
-    publicRoute: true
-  },
   {
     path: "/buy",
     text: "Market",

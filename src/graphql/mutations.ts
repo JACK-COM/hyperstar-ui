@@ -21,7 +21,7 @@ export async function addDAO(dao: HSDao) {
 export async function endListing(id: string) {
   const { url, method, headers } = config;
   const variables = { id };
-  const query = `mutation AddListing($input: HSListingCreateInput!){
+  const query = `mutation EndListing($id: String!){
     endListing(id: $id) {
       ... on HSListing { id, created, seller, price, tokens { item { symbol } } }
     }

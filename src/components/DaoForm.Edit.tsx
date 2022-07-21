@@ -70,7 +70,7 @@ export default function EditDaoForm(props: FormProps) {
     const { selected } = DaoStore.getState();
     if (selected) {
       setView(selected);
-      setDesc(selected.description || '');
+      setDesc(selected.description || "");
       return;
     }
 
@@ -83,7 +83,7 @@ export default function EditDaoForm(props: FormProps) {
     const v = await getDaoView(account, target);
     if (v?.name && v?.admin) {
       setView(v);
-      setDesc(v.description || '');
+      setDesc(v.description || "");
       DaoStore.selected(v);
     }
     setLoading(false);
@@ -98,6 +98,7 @@ export default function EditDaoForm(props: FormProps) {
   }, [address]);
 
   if (loading || !view) return <p>Loading DAO details ...</p>;
+  if (!view.isAdmin) return <p>You don't have permissions to view this page</p>;
 
   return (
     <section>
@@ -124,6 +125,7 @@ export default function EditDaoForm(props: FormProps) {
         <Fields disabled={!account}>
           <h4>{view?.name} description</h4>
           <Textarea
+            disabled={!view.isAdmin}
             maxLength={512}
             placeholder="Short description (max-length: 512)"
             onChange={({ target }) => setDesc(target.value)}
@@ -138,7 +140,11 @@ export default function EditDaoForm(props: FormProps) {
           </FormDesc>
         </Fields>
 
-        <WideButton type="button" disabled={isInvalid} onClick={maybeSubmit}>
+        <WideButton
+          type="button"
+          disabled={!view.isAdmin || isInvalid}
+          onClick={maybeSubmit}
+        >
           <b>Publish DAO</b>
         </WideButton>
 

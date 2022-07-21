@@ -26,7 +26,7 @@ export default function DaoInteract() {
       {daoId ? (
         <PreviewDao daoId={daoId} />
       ) : (
-        <Form onSubmit={() => history.push(`/dao/interact/${localDaoId}`)}>
+        <Form onSubmit={() => history.push(`/dao/${localDaoId}/view`)}>
           <CenterWide>
             <Legend>Enter DAO Contract Address</Legend>
             <Input

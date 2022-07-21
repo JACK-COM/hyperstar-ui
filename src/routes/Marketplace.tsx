@@ -17,13 +17,12 @@ const Market = styled(PageContainer)`
 export default function Marketplace() {
   const { items: stateItems } = SalesStore.getState();
   const [items, setItems] = useState<Sale[]>(stateItems);
-  const [className, loading] = useMemo(
-    () => [gridClass(items.length), items.length === 0],
-    [items]
-  );
+  const [loading, setLoading] = useState(true);
+  const className = useMemo(() => gridClass(items.length), [items]);
   const load = async () => {
     const it = await listMarketplaceItems();
     it.forEach(addSale);
+    setLoading(false);
   };
 
   useEffect(() => {
