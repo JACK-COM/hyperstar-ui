@@ -1,16 +1,25 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { useEffect, useState } from "react";
 import useGlobalUser from "hooks/globalUser";
-import { WideButton } from "components/Forms/Button";
+import { $ButtonStyles, WideButton } from "components/Forms/Button";
 import { getDaoView } from "reach/views/DaoView";
 import { UnwrapPromise } from "types/shared";
 import WalletNotFound from "./Reach/WalletNotFound";
 import { FlexColumn } from "./Common/Containers";
 import DaoStore from "state/daos";
 import DaoDetails from "./Dao.Details";
+import { Link } from "react-router-dom";
 
-const ActionBtn = styled(WideButton).attrs({ type: "button" })`
-  font-weight: bold;
+const $BtnStyles = css`
+  ${$ButtonStyles}
+  margin-bottom: 0.4rem;
+  width: 100%;
+`;
+const ActionBtn = styled(WideButton)`
+  ${$BtnStyles}
+`;
+const ActionLink = styled(Link)`
+  ${$BtnStyles}
 `;
 
 type Props = { daoId: string };
@@ -54,17 +63,16 @@ export default function PreviewDao(props: Props) {
 
       {view.isMember ? (
         <FlexColumn>
-          <ActionBtn type="button" disabled>
+          <ActionLink type="button" to={`/dao/${daoId}/proposals/new`}>
             Create Proposal
-          </ActionBtn>
-          <ActionBtn type="button" disabled>
-            Leave DAO
-          </ActionBtn>
+          </ActionLink>
+
+          {!view.isAdmin && <ActionBtn>Leave DAO</ActionBtn>}
         </FlexColumn>
       ) : (
-        <WideButton type="button" disabled>
+        <ActionBtn type="button" disabled>
           Join DAO
-        </WideButton>
+        </ActionBtn>
       )}
     </section>
   );

@@ -11,7 +11,7 @@ import {
 import { createTExContract } from "reach/participants/TokenExchangeAdmin";
 import { ExchangeView } from "reach/views/TokenExchangeView";
 import { TransparentButton } from "components/Forms/Button";
-import CreateSwapForm from "components/CreateSwapForm";
+import CreateSwapForm from "components/SwapForm.Create";
 import CryptoIcon from "components/Reach/CryptoIcon";
 import LoadingView from "components/Common/LoadingView";
 import Modal from "components/Common/Modal";

@@ -64,7 +64,7 @@ export default function DaoDetails(props: Props) {
       {dao.isAdmin && (
         <ActionBtn
           type="button"
-          onClick={() => history.push(`/dao/edit/${dao.id}`)}
+          onClick={() => history.push(`/dao/${dao.id}/edit`)}
         >
           Edit description
         </ActionBtn>

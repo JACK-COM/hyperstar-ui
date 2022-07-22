@@ -84,5 +84,16 @@ export const Highlight = styled.span`
 
 export const ExLink = styled.a.attrs({
   rel: "noopener noreferrer",
-  target: "_blank",
+  target: "_blank"
 })``;
+
+export const ClickableStrong = styled.strong.attrs({
+  className: "accent--text pulse",
+  role: "button"
+})`
+  animation-duration: 0.3s;
+  border: 1px solid #9998;
+  border-radius: 8px;
+  padding: 0 0.4rem;
+  cursor: pointer;
+`;

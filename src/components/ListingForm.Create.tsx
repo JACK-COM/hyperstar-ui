@@ -55,7 +55,7 @@ enum PHASE {
 }
 const phasesList = [PHASE.START, PHASE.PRICING, PHASE.FINAL, PHASE.FINISH];
 
-const SellNFTForm = (props: SellNFTFormProps) => {
+const CreateListingForm = (props: SellNFTFormProps) => {
   const { connector, ge, gt } = createReachAPI();
   const { onSubmit, assets } = props;
   const nonZeroAssets = assets.filter((a) => a.amount > 0);
@@ -376,4 +376,4 @@ const SellNFTForm = (props: SellNFTFormProps) => {
   );
 };
 
-export default SellNFTForm;
+export default CreateListingForm;

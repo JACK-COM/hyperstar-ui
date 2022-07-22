@@ -7,12 +7,12 @@ import { getExchangeById, removeExchange } from "state/exchanges";
 import {
   BigValue,
   GridContainer,
-  PageContainer,
+  PageContainer
 } from "components/Common/Containers";
 import { createTokenExchangeAPI } from "reach/api/TokenExchangeAPI";
 import { ExchangeView, loadExchangeView } from "reach/views/TokenExchangeView";
 import Button from "components/Forms/Button";
-import FundSwapForm from "components/FundSwapForm";
+import FundSwapForm from "components/SwapForm.Deposit";
 import LoadingView from "components/Common/LoadingView";
 import Modal from "components/Common/Modal";
 import PublishSwap from "./PublishSwap";
@@ -35,7 +35,7 @@ enum VIEWACTION {
   FUNDING = "Add Funds to Pool",
   PUBLISHING = "Publish New Pool",
   FUNDED = "Funded Pair",
-  SWAPPING = "Swapping Tokens",
+  SWAPPING = "Swapping Tokens"
 }
 
 const TokenExchange = () => {
@@ -61,7 +61,7 @@ const TokenExchange = () => {
     addNotification({
       msg: "Pool was not found!",
       error: true,
-      time: new Date().getTime(),
+      time: new Date().getTime()
     });
     history.push("/swap");
   };

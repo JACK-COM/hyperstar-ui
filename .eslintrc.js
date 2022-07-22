@@ -29,7 +29,7 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "react/no-array-index-key": "off",
     "react/react-in-jsx-scope": "off",
-    "react/no-unused-prop-types": "warn",
+    "react/no-unused-prop-types": "off",
     "react/require-default-props": "off",
     "react/no-unescaped-entities": "off",
     "import/extensions": [
