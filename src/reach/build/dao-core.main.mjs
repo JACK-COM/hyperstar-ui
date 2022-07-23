@@ -1,7 +1,7 @@
-// Automatically generated with Reach 0.1.11 (578589af)
+// Automatically generated with Reach 0.1.11 (a9f7613d)
 /* eslint-disable */
 export const _version = '0.1.11';
-export const _versionHash = '0.1.11 (578589af)';
+export const _versionHash = '0.1.11 (a9f7613d)';
 export const _backendVersion = 17;
 
 export function getExports(s) {
@@ -37,38 +37,39 @@ export function _getViews(s, viewlib) {
   const stdlib = s.reachStdlib;
   const ctc0 = stdlib.T_Address;
   const ctc1 = stdlib.T_Bytes(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '128'));
-  const ctc2 = stdlib.T_UInt;
-  const ctc3 = stdlib.T_Tuple([ctc0, ctc2]);
-  const ctc4 = stdlib.T_Bool;
-  const ctc5 = stdlib.T_Struct([['admin', ctc0], ['registerSelf', ctc4], ['fee', ctc2], ['quorum', ctc2], ['openTreasury', ctc4]]);
-  const ctc6 = stdlib.T_Null;
-  const ctc7 = stdlib.T_Data({
-    AllocateFunds: ctc3,
-    ChangeAdmin: ctc5,
+  const ctc2 = stdlib.T_Contract;
+  const ctc3 = stdlib.T_UInt;
+  const ctc4 = stdlib.T_Tuple([ctc0, ctc3]);
+  const ctc5 = stdlib.T_Bool;
+  const ctc6 = stdlib.T_Struct([['admin', ctc0], ['registerSelf', ctc5], ['fee', ctc3], ['quorum', ctc3], ['openTreasury', ctc5]]);
+  const ctc7 = stdlib.T_Null;
+  const ctc8 = stdlib.T_Data({
+    AllocateFunds: ctc4,
+    ChangeAdmin: ctc6,
     EjectMember: ctc0,
-    None: ctc6,
-    Stop: ctc6
-    });
-  const ctc8 = stdlib.T_Object({
-    admin: ctc0,
-    fee: ctc2,
-    openTreasury: ctc4,
-    quorum: ctc2,
-    registerSelf: ctc4
+    None: ctc7,
+    Stop: ctc7
     });
   const ctc9 = stdlib.T_Object({
-    Against: ctc2,
-    For: ctc2,
-    action: ctc7,
-    index: ctc2
+    admin: ctc0,
+    fee: ctc3,
+    openTreasury: ctc5,
+    quorum: ctc3,
+    registerSelf: ctc5
     });
-  const ctc10 = stdlib.T_Struct([['name', ctc1], ['founder', ctc0], ['admin', ctc0], ['fee', ctc2], ['registerSelf', ctc4], ['quorum', ctc2], ['openTreasury', ctc4]]);
-  const ctc11 = stdlib.T_Tuple([ctc2, ctc2]);
-  const ctc12 = stdlib.T_Data({
-    None: ctc6,
-    Some: ctc11
+  const ctc10 = stdlib.T_Object({
+    Against: ctc3,
+    For: ctc3,
+    action: ctc8,
+    index: ctc3
     });
-  const map0_ctc = ctc12;
+  const ctc11 = stdlib.T_Struct([['name', ctc1], ['founder', ctc0], ['admin', ctc0], ['fee', ctc3], ['registerSelf', ctc5], ['quorum', ctc3], ['openTreasury', ctc5]]);
+  const ctc12 = stdlib.T_Tuple([ctc3, ctc3]);
+  const ctc13 = stdlib.T_Data({
+    None: ctc7,
+    Some: ctc12
+    });
+  const map0_ctc = ctc13;
   
   
   return {
@@ -76,110 +77,110 @@ export function _getViews(s, viewlib) {
       Proposal: {
         decode: async (i, svs, args) => {
           if (stdlib.eq(i, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'))) {
-            const [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934] = svs;
+            const [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986] = svs;
             return (await ((async () => {
               
               
-              return v3903;}))(...args));
+              return v3955;}))(...args));
             }
           
           stdlib.assert(false, 'illegal view')
           },
-        ty: ctc7
+        ty: ctc8
         },
       currentVotes: {
         decode: async (i, svs, args) => {
           if (stdlib.eq(i, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'))) {
-            const [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934] = svs;
+            const [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986] = svs;
             return (await ((async () => {
               
-              const v3916 = v3824.For;
-              const v3917 = v3824.Against;
-              const v3920 = stdlib.add(v3916, v3917);
+              const v3968 = v3876.For;
+              const v3969 = v3876.Against;
+              const v3972 = stdlib.add(v3968, v3969);
               
-              return v3920;}))(...args));
+              return v3972;}))(...args));
             }
           
           stdlib.assert(false, 'illegal view')
           },
-        ty: ctc2
+        ty: ctc3
         },
       info: {
         decode: async (i, svs, args) => {
           if (stdlib.eq(i, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'))) {
-            const [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934] = svs;
+            const [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986] = svs;
             return (await ((async () => {
               
-              const v3902 = {
-                admin: v3897,
-                fee: v3898,
-                founder: v3798,
-                name: v3799,
-                openTreasury: v3899,
-                quorum: v3900,
-                registerSelf: v3901
+              const v3954 = {
+                admin: v3949,
+                fee: v3950,
+                founder: v3833,
+                name: v3834,
+                openTreasury: v3951,
+                quorum: v3952,
+                registerSelf: v3953
                 };
               
-              return v3902;}))(...args));
+              return v3954;}))(...args));
             }
           
           stdlib.assert(false, 'illegal view')
           },
-        ty: ctc10
+        ty: ctc11
         },
       isMember: {
         decode: async (i, svs, args) => {
           if (stdlib.eq(i, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'))) {
-            const [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934] = svs;
-            return (await ((async (_v3921 ) => {
-                const v3921 = stdlib.protect(ctc0, _v3921, null);
+            const [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986] = svs;
+            return (await ((async (_v3973 ) => {
+                const v3973 = stdlib.protect(ctc0, _v3973, null);
               
-              const v3922 = stdlib.protect(map0_ctc, await viewlib.viewMapRef(0, v3921), null);
-              let v3923;
-              switch (v3922[0]) {
+              const v3974 = stdlib.protect(map0_ctc, await viewlib.viewMapRef(0, v3973), null);
+              let v3975;
+              switch (v3974[0]) {
                 case 'None': {
-                  const v3924 = v3922[1];
-                  v3923 = false;
+                  const v3976 = v3974[1];
+                  v3975 = false;
                   
                   break;
                   }
                 case 'Some': {
-                  const v3925 = v3922[1];
-                  v3923 = true;
+                  const v3977 = v3974[1];
+                  v3975 = true;
                   
                   break;
                   }
                 }
               
-              return v3923;}))(...args));
+              return v3975;}))(...args));
             }
           
           stdlib.assert(false, 'illegal view')
           },
-        ty: ctc4
+        ty: ctc5
         },
       myRank: {
         decode: async (i, svs, args) => {
           if (stdlib.eq(i, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'))) {
-            const [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934] = svs;
-            return (await ((async (_v3926 ) => {
-                const v3926 = stdlib.protect(ctc0, _v3926, null);
+            const [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986] = svs;
+            return (await ((async (_v3978 ) => {
+                const v3978 = stdlib.protect(ctc0, _v3978, null);
               
-              const v3927 = stdlib.protect(map0_ctc, await viewlib.viewMapRef(0, v3926), null);
-              const v3928 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-              const v3929 = stdlib.fromSome(v3927, v3928);
-              const v3930 = v3929[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:98:11:array', stdlib.UInt_max, '0')];
+              const v3979 = stdlib.protect(map0_ctc, await viewlib.viewMapRef(0, v3978), null);
+              const v3980 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+              const v3981 = stdlib.fromSome(v3979, v3980);
+              const v3982 = v3981[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:115:11:array', stdlib.UInt_max, '0')];
               
-              return v3930;}))(...args));
+              return v3982;}))(...args));
             }
           
           stdlib.assert(false, 'illegal view')
           },
-        ty: ctc2
+        ty: ctc3
         }
       },
     views: {
-      3: [ctc0, ctc1, ctc2, ctc7, ctc8, ctc9, ctc2, ctc0, ctc2, ctc4, ctc2, ctc4, ctc7, ctc2, ctc4, ctc2]
+      3: [ctc0, ctc1, ctc2, ctc3, ctc2, ctc8, ctc9, ctc10, ctc3, ctc0, ctc3, ctc5, ctc3, ctc5, ctc8, ctc3, ctc5, ctc3]
       }
     };
   
@@ -212,34 +213,36 @@ export async function Founder(ctcTop, interact) {
     None: ctc0,
     Some: ctc2
     });
-  const ctc4 = stdlib.T_Bytes(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '128'));
-  const ctc5 = stdlib.T_Bool;
-  const ctc6 = stdlib.T_Address;
-  const ctc7 = stdlib.T_Tuple([ctc6]);
-  const ctc8 = stdlib.T_Tuple([ctc1]);
-  const ctc9 = stdlib.T_Tuple([ctc5]);
-  const ctc10 = stdlib.T_Tuple([ctc6, ctc1]);
-  const ctc11 = stdlib.T_Struct([['admin', ctc6], ['registerSelf', ctc5], ['fee', ctc1], ['quorum', ctc1], ['openTreasury', ctc5]]);
-  const ctc12 = stdlib.T_Data({
-    AllocateFunds: ctc10,
-    ChangeAdmin: ctc11,
-    EjectMember: ctc6,
+  const ctc4 = stdlib.T_Contract;
+  const ctc5 = stdlib.T_Bytes(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '128'));
+  const ctc6 = stdlib.T_Bool;
+  const ctc7 = stdlib.T_Tuple([ctc1, ctc0]);
+  const ctc8 = stdlib.T_Address;
+  const ctc9 = stdlib.T_Tuple([ctc8]);
+  const ctc10 = stdlib.T_Tuple([ctc1]);
+  const ctc11 = stdlib.T_Tuple([ctc6]);
+  const ctc12 = stdlib.T_Tuple([ctc8, ctc1]);
+  const ctc13 = stdlib.T_Struct([['admin', ctc8], ['registerSelf', ctc6], ['fee', ctc1], ['quorum', ctc1], ['openTreasury', ctc6]]);
+  const ctc14 = stdlib.T_Data({
+    AllocateFunds: ctc12,
+    ChangeAdmin: ctc13,
+    EjectMember: ctc8,
     None: ctc0,
     Stop: ctc0
     });
-  const ctc13 = stdlib.T_Tuple([ctc12]);
-  const ctc14 = stdlib.T_Data({
+  const ctc15 = stdlib.T_Tuple([ctc14]);
+  const ctc16 = stdlib.T_Data({
     Against: ctc0,
     For: ctc0
     });
-  const ctc15 = stdlib.T_Tuple([ctc14]);
-  const ctc16 = stdlib.T_Data({
-    addMember0_334: ctc7,
-    donate0_334: ctc8,
-    eject0_334: ctc7,
-    joinLeave0_334: ctc9,
-    registerProposal0_334: ctc13,
-    voteProposal0_334: ctc15
+  const ctc17 = stdlib.T_Tuple([ctc16]);
+  const ctc18 = stdlib.T_Data({
+    addMember0_352: ctc9,
+    donate0_352: ctc10,
+    eject0_352: ctc9,
+    joinLeave0_352: ctc11,
+    registerProposal0_352: ctc15,
+    voteProposal0_352: ctc17
     });
   
   const map0_ctc = ctc3;
@@ -251,43 +254,44 @@ export async function Founder(ctcTop, interact) {
     });
   
   
-  const v3782 = stdlib.protect(ctc1, interact.fee, 'for Founder\'s interact field fee');
-  const v3783 = stdlib.protect(ctc4, interact.name, 'for Founder\'s interact field name');
-  const v3784 = stdlib.protect(ctc5, interact.openTreasury, 'for Founder\'s interact field openTreasury');
-  const v3785 = stdlib.protect(ctc1, interact.quorum, 'for Founder\'s interact field quorum');
-  const v3786 = stdlib.protect(ctc5, interact.registerSelf, 'for Founder\'s interact field registerSelf');
+  const v3816 = stdlib.protect(ctc4, interact.announcerCtc, 'for Founder\'s interact field announcerCtc');
+  const v3817 = stdlib.protect(ctc1, interact.fee, 'for Founder\'s interact field fee');
+  const v3818 = stdlib.protect(ctc5, interact.name, 'for Founder\'s interact field name');
+  const v3819 = stdlib.protect(ctc6, interact.openTreasury, 'for Founder\'s interact field openTreasury');
+  const v3820 = stdlib.protect(ctc1, interact.quorum, 'for Founder\'s interact field quorum');
+  const v3821 = stdlib.protect(ctc6, interact.registerSelf, 'for Founder\'s interact field registerSelf');
   
-  const v3789 = stdlib.gt(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:82:22:decimal', stdlib.UInt_max, '1000000000'));
-  stdlib.assert(v3789, {
+  const v3824 = stdlib.gt(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:85:22:decimal', stdlib.UInt_max, '1000000000'));
+  stdlib.assert(v3824, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:82:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:73:15:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:73:19:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:85:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:74:15:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:74:19:function exp)'],
     msg: 'Invalid consensus state',
     who: 'Founder'
     });
-  const v3792 = stdlib.ge(v3785, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:69:18:decimal', stdlib.UInt_max, '1'));
-  stdlib.assert(v3792, {
+  const v3827 = stdlib.ge(v3820, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:70:18:decimal', stdlib.UInt_max, '1'));
+  stdlib.assert(v3827, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:69:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:83:24:application call to "checkValidateQuorum" (defined at: ./dao/contracts/dao-core.rsh:68:37:function exp)', 'at ./dao/contracts/dao-core.rsh:73:15:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:73:19:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:70:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:86:24:application call to "checkValidateQuorum" (defined at: ./dao/contracts/dao-core.rsh:69:37:function exp)', 'at ./dao/contracts/dao-core.rsh:74:15:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:74:19:function exp)'],
     msg: 'Quorum cannot be 0',
     who: 'Founder'
     });
-  const v3795 = stdlib.div(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:70:28:decimal', stdlib.UInt_max, '10'));
-  const v3796 = stdlib.lt(v3785, v3795);
-  stdlib.assert(v3796, {
+  const v3830 = stdlib.div(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:71:28:decimal', stdlib.UInt_max, '10'));
+  const v3831 = stdlib.lt(v3820, v3830);
+  stdlib.assert(v3831, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:70:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:83:24:application call to "checkValidateQuorum" (defined at: ./dao/contracts/dao-core.rsh:68:37:function exp)', 'at ./dao/contracts/dao-core.rsh:73:15:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:73:19:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:71:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:86:24:application call to "checkValidateQuorum" (defined at: ./dao/contracts/dao-core.rsh:69:37:function exp)', 'at ./dao/contracts/dao-core.rsh:74:15:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:74:19:function exp)'],
     msg: 'Quorum seems worryingly large',
     who: 'Founder'
     });
   
   const txn1 = await (ctc.sendrecv({
-    args: [v3783, v3786, v3785, v3784, v3782],
-    evt_cnt: 5,
+    args: [v3818, v3821, v3820, v3819, v3817, v3816],
+    evt_cnt: 6,
     funcNum: 0,
-    lct: stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:86:11:dot', stdlib.UInt_max, '0'),
+    lct: stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:89:11:dot', stdlib.UInt_max, '0'),
     onlyIf: true,
-    out_tys: [ctc4, ctc5, ctc1, ctc5, ctc1],
-    pay: [stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:86:11:decimal', stdlib.UInt_max, '0'), []],
+    out_tys: [ctc5, ctc6, ctc1, ctc6, ctc1, ctc4],
+    pay: [stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:89:11:decimal', stdlib.UInt_max, '0'), []],
     sim_p: (async (txn1) => {
       const sim_r = { txns: [], mapRefs: [], maps: [] };
       let sim_txn_ctr = stdlib.UInt_max;
@@ -295,69 +299,83 @@ export async function Founder(ctcTop, interact) {
       
       stdlib.simMapDupe(sim_r, 0, map0);
       
-      const {data: [v3799, v3800, v3801, v3802, v3803], secs: v3805, time: v3804, didSend: v89, from: v3798 } = txn1;
+      const {data: [v3834, v3835, v3836, v3837, v3838, v3839], secs: v3841, time: v3840, didSend: v91, from: v3833 } = txn1;
       
       ;
-      const v3812 = stdlib.div(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:70:28:decimal', stdlib.UInt_max, '10'));
-      const v3815 = await ctc.getContractInfo();
-      const v3816 = [stdlib.UInt_max, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-      await stdlib.simMapSet(sim_r, 0, v3798, v3816);
+      const v3848 = stdlib.div(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:71:28:decimal', stdlib.UInt_max, '10'));
+      const v3851 = await ctc.getContractInfo();
+      const v3852 = [stdlib.UInt_max, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+      await stdlib.simMapSet(sim_r, 0, v3833, v3852);
+      const v3855 = [stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:109:23:application', stdlib.UInt_max, '0'), ((sim_r.txns.push({
+        kind: 'remote',
+        obj: v3839,
+        remote: ({
+          accs: [],
+          apps: [],
+          bills: stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:109:23:application', stdlib.UInt_max, '0'),
+          fees: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
+          pays: stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:109:23:application', stdlib.UInt_max, '0'),
+          toks: []
+          })
+        })), undefined)];
+      const v3856 = await txn1.getOutput('internal', 'v3855', ctc7, v3855);
+      const v3858 = v3856[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:109:23:application', stdlib.UInt_max, '0')];
       
-      const v3818 = {
-        admin: v3798,
-        fee: v3803,
-        openTreasury: v3802,
-        quorum: v3801,
-        registerSelf: v3800
+      const v3870 = {
+        admin: v3833,
+        fee: v3838,
+        openTreasury: v3837,
+        quorum: v3836,
+        registerSelf: v3835
         };
-      const v3820 = ['None', null];
-      const v3821 = {
+      const v3872 = ['None', null];
+      const v3873 = {
         Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
         For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-        action: v3820,
+        action: v3872,
         index: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')
         };
-      const v3822 = v3818;
-      const v3823 = true;
-      const v3824 = v3821;
-      const v3825 = v3804;
-      const v3828 = stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:66:9:after expr stmt semicolon', stdlib.UInt_max, '0');
+      const v3874 = v3870;
+      const v3875 = true;
+      const v3876 = v3873;
+      const v3877 = v3840;
+      const v3880 = v3858;
       
       if (await (async () => {
         
-        return v3823;})()) {
-        const v3897 = v3822.admin;
-        const v3898 = v3822.fee;
-        const v3899 = v3822.openTreasury;
-        const v3900 = v3822.quorum;
-        const v3901 = v3822.registerSelf;
-        const v3903 = v3824.action;
-        const v3932 = v3824.index;
-        const v3933 = stdlib.ge(v3932, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-        let v3934;
-        if (v3933) {
-          const v3936 = stdlib.mod(v3932, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-          const v3938 = stdlib.sub(v3932, v3936);
-          const v3940 = stdlib.div(v3938, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-          v3934 = v3940;
+        return v3875;})()) {
+        const v3949 = v3874.admin;
+        const v3950 = v3874.fee;
+        const v3951 = v3874.openTreasury;
+        const v3952 = v3874.quorum;
+        const v3953 = v3874.registerSelf;
+        const v3955 = v3876.action;
+        const v3984 = v3876.index;
+        const v3985 = stdlib.ge(v3984, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+        let v3986;
+        if (v3985) {
+          const v3988 = stdlib.mod(v3984, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+          const v3990 = stdlib.sub(v3984, v3988);
+          const v3992 = stdlib.div(v3990, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+          v3986 = v3992;
           }
         else {
-          v3934 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+          v3986 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
           }
         sim_r.isHalt = false;
         }
       else {
-        const v11731 = v3822.admin;
-        const v11780 = stdlib.sub(v3828, v3828);
+        const v12263 = v3874.admin;
+        const v12312 = stdlib.sub(v3880, v3880);
         sim_r.txns.push({
           kind: 'from',
-          to: v11731,
+          to: v12263,
           tok: undefined /* Nothing */
           });
-        const v11785 = (stdlib.le(await ctc.getBalance(), v11780) ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:353:29:application', stdlib.UInt_max, '0') : stdlib.sub(await ctc.getBalance(), v11780));
+        const v12317 = (stdlib.le(await ctc.getBalance(), v12312) ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:373:29:application', stdlib.UInt_max, '0') : stdlib.sub(await ctc.getBalance(), v12312));
         sim_r.txns.push({
           kind: 'from',
-          to: v11731,
+          to: v12263,
           tok: undefined /* Nothing */
           });
         sim_r.txns.push({
@@ -370,149 +388,136 @@ export async function Founder(ctcTop, interact) {
       }),
     soloSend: true,
     timeoutAt: undefined /* mto */,
-    tys: [ctc4, ctc5, ctc1, ctc5, ctc1],
+    tys: [ctc5, ctc6, ctc1, ctc6, ctc1, ctc4],
     waitIfNotPresent: false
     }));
-  const {data: [v3799, v3800, v3801, v3802, v3803], secs: v3805, time: v3804, didSend: v89, from: v3798 } = txn1;
+  const {data: [v3834, v3835, v3836, v3837, v3838, v3839], secs: v3841, time: v3840, didSend: v91, from: v3833 } = txn1;
   ;
-  const v3806 = stdlib.gt(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:87:20:decimal', stdlib.UInt_max, '1000000000'));
-  stdlib.assert(v3806, {
+  const v3842 = stdlib.gt(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:97:20:decimal', stdlib.UInt_max, '1000000000'));
+  stdlib.assert(v3842, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:87:8:application call to "check" (defined at: reach standard library:49:32:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:97:8:application call to "check" (defined at: reach standard library:49:32:function exp)'],
     msg: 'Invalid consensus state',
     who: 'Founder'
     });
-  const v3809 = stdlib.ge(v3801, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:69:18:decimal', stdlib.UInt_max, '1'));
-  stdlib.assert(v3809, {
+  const v3845 = stdlib.ge(v3836, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:70:18:decimal', stdlib.UInt_max, '1'));
+  stdlib.assert(v3845, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:69:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:88:22:application call to "checkValidateQuorum" (defined at: ./dao/contracts/dao-core.rsh:68:37:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:70:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:98:22:application call to "checkValidateQuorum" (defined at: ./dao/contracts/dao-core.rsh:69:37:function exp)'],
     msg: 'Quorum cannot be 0',
     who: 'Founder'
     });
-  const v3812 = stdlib.div(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:70:28:decimal', stdlib.UInt_max, '10'));
-  const v3813 = stdlib.lt(v3801, v3812);
-  stdlib.assert(v3813, {
+  const v3848 = stdlib.div(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:71:28:decimal', stdlib.UInt_max, '10'));
+  const v3849 = stdlib.lt(v3836, v3848);
+  stdlib.assert(v3849, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:70:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:88:22:application call to "checkValidateQuorum" (defined at: ./dao/contracts/dao-core.rsh:68:37:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:71:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:98:22:application call to "checkValidateQuorum" (defined at: ./dao/contracts/dao-core.rsh:69:37:function exp)'],
     msg: 'Quorum seems worryingly large',
     who: 'Founder'
     });
-  const v3815 = await ctc.getContractInfo();
-  const v3816 = [stdlib.UInt_max, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-  await stdlib.mapSet(map0, v3798, v3816);
-  stdlib.protect(ctc0, await interact.done(v3815), {
-    at: './dao/contracts/dao-core.rsh:93:24:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:93:24:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:93:24:function exp)', 'at ./dao/contracts/dao-core.rsh:93:24:application call to "liftedInteract" (defined at: ./dao/contracts/dao-core.rsh:93:24:application)'],
+  const v3851 = await ctc.getContractInfo();
+  const v3852 = [stdlib.UInt_max, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+  await stdlib.mapSet(map0, v3833, v3852);
+  const v3855 = undefined /* Remote */;
+  const v3856 = await txn1.getOutput('internal', 'v3855', ctc7, v3855);
+  const v3858 = v3856[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:109:23:application', stdlib.UInt_max, '0')];
+  const v3864 = stdlib.le(v3858, stdlib.UInt_max);
+  stdlib.assert(v3864, {
+    at: './dao/contracts/dao-core.rsh:109:23:application',
+    fs: [],
+    msg: 'assume <= UInt.max',
+    who: 'Founder'
+    });
+  const v3868 = stdlib.eq(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), v3858);
+  stdlib.assert(v3868, {
+    at: './dao/contracts/dao-core.rsh:109:23:application',
+    fs: [],
+    msg: 'remote bill check',
+    who: 'Founder'
+    });
+  stdlib.protect(ctc0, await interact.done(v3851), {
+    at: './dao/contracts/dao-core.rsh:110:24:application',
+    fs: ['at ./dao/contracts/dao-core.rsh:110:24:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:110:24:function exp)', 'at ./dao/contracts/dao-core.rsh:110:24:application call to "liftedInteract" (defined at: ./dao/contracts/dao-core.rsh:110:24:application)'],
     msg: 'done',
     who: 'Founder'
     });
   
-  const v3818 = {
-    admin: v3798,
-    fee: v3803,
-    openTreasury: v3802,
-    quorum: v3801,
-    registerSelf: v3800
+  const v3870 = {
+    admin: v3833,
+    fee: v3838,
+    openTreasury: v3837,
+    quorum: v3836,
+    registerSelf: v3835
     };
-  const v3820 = ['None', null];
-  const v3821 = {
+  const v3872 = ['None', null];
+  const v3873 = {
     Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
     For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-    action: v3820,
+    action: v3872,
     index: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')
     };
-  let v3822 = v3818;
-  let v3823 = true;
-  let v3824 = v3821;
-  let v3825 = v3804;
-  let v3828 = stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:66:9:after expr stmt semicolon', stdlib.UInt_max, '0');
+  let v3874 = v3870;
+  let v3875 = true;
+  let v3876 = v3873;
+  let v3877 = v3840;
+  let v3880 = v3858;
   
   while (await (async () => {
     
-    return v3823;})()) {
-    const v3897 = v3822.admin;
-    const v3898 = v3822.fee;
-    const v3899 = v3822.openTreasury;
-    const v3900 = v3822.quorum;
-    const v3901 = v3822.registerSelf;
-    const v3903 = v3824.action;
-    const v3932 = v3824.index;
-    const v3933 = stdlib.ge(v3932, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-    let v3934;
-    if (v3933) {
-      const v3936 = stdlib.mod(v3932, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-      const v3938 = stdlib.sub(v3932, v3936);
-      const v3940 = stdlib.div(v3938, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-      v3934 = v3940;
+    return v3875;})()) {
+    const v3949 = v3874.admin;
+    const v3950 = v3874.fee;
+    const v3951 = v3874.openTreasury;
+    const v3952 = v3874.quorum;
+    const v3953 = v3874.registerSelf;
+    const v3955 = v3876.action;
+    const v3984 = v3876.index;
+    const v3985 = stdlib.ge(v3984, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+    let v3986;
+    if (v3985) {
+      const v3988 = stdlib.mod(v3984, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+      const v3990 = stdlib.sub(v3984, v3988);
+      const v3992 = stdlib.div(v3990, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+      v3986 = v3992;
       }
     else {
-      v3934 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+      v3986 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
       }
     const txn2 = await (ctc.recv({
       didSend: false,
       evt_cnt: 1,
       funcNum: 2,
-      out_tys: [ctc16],
+      out_tys: [ctc18],
       timeoutAt: undefined /* mto */,
       waitIfNotPresent: false
       }));
-    const {data: [v4456], secs: v4458, time: v4457, didSend: v2511, from: v4455 } = txn2;
-    switch (v4456[0]) {
-      case 'addMember0_334': {
-        const v4459 = v4456[1];
+    const {data: [v4508], secs: v4510, time: v4509, didSend: v2529, from: v4507 } = txn2;
+    switch (v4508[0]) {
+      case 'addMember0_352': {
+        const v4511 = v4508[1];
         undefined /* setApiDetails */;
-        const v4464 = v4459[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:196:10:spread', stdlib.UInt_max, '0')];
-        const v4465 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4464), null);
-        const v4466 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-        const v4467 = stdlib.fromSome(v4465, v4466);
-        const v4468 = v4467[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:98:11:array', stdlib.UInt_max, '0')];
-        const v4470 = stdlib.ge(v4468, v3934);
-        stdlib.assert(v4470, {
+        const v4516 = v4511[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:216:10:spread', stdlib.UInt_max, '0')];
+        const v4517 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4516), null);
+        const v4518 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+        const v4519 = stdlib.fromSome(v4517, v4518);
+        const v4520 = v4519[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:115:11:array', stdlib.UInt_max, '0')];
+        const v4522 = stdlib.ge(v4520, v3986);
+        stdlib.assert(v4522, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:197:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:196:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:196:36:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:196:36:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:217:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:216:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:216:36:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:216:36:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
           msg: 'User is below Citizen Rank threshold',
           who: 'Founder'
           });
-        let v4473;
-        switch (v4465[0]) {
-          case 'None': {
-            const v4474 = v4465[1];
-            v4473 = true;
-            
-            break;
-            }
-          case 'Some': {
-            const v4475 = v4465[1];
-            v4473 = false;
-            
-            break;
-            }
-          }
-        stdlib.assert(v4473, {
-          at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:198:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:196:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:196:36:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:196:36:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
-          msg: 'Address is already a member',
-          who: 'Founder'
-          });
-        const v4510 = stdlib.add(v3828, v3898);
-        const v4511 = stdlib.le(v4510, stdlib.UInt_max);
-        stdlib.assert(v4511, {
-          at: './dao/contracts/dao-core.rsh:169:50:dot',
-          fs: [],
-          msg: 'assume <= UInt.max',
-          who: 'Founder'
-          });
-        ;
         let v4525;
-        switch (v4465[0]) {
+        switch (v4517[0]) {
           case 'None': {
-            const v4526 = v4465[1];
+            const v4526 = v4517[1];
             v4525 = true;
             
             break;
             }
           case 'Some': {
-            const v4527 = v4465[1];
+            const v4527 = v4517[1];
             v4525 = false;
             
             break;
@@ -520,1627 +525,1675 @@ export async function Founder(ctcTop, interact) {
           }
         stdlib.assert(v4525, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:198:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:203:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:203:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:218:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:216:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:216:36:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:216:36:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
           msg: 'Address is already a member',
           who: 'Founder'
           });
-        const v4530 = [v3934, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-        await stdlib.mapSet(map0, v4464, v4530);
+        const v4562 = stdlib.add(v3880, v3950);
+        const v4563 = stdlib.le(v4562, stdlib.UInt_max);
+        stdlib.assert(v4563, {
+          at: './dao/contracts/dao-core.rsh:189:50:dot',
+          fs: [],
+          msg: 'assume <= UInt.max',
+          who: 'Founder'
+          });
+        ;
+        let v4577;
+        switch (v4517[0]) {
+          case 'None': {
+            const v4578 = v4517[1];
+            v4577 = true;
+            
+            break;
+            }
+          case 'Some': {
+            const v4579 = v4517[1];
+            v4577 = false;
+            
+            break;
+            }
+          }
+        stdlib.assert(v4577, {
+          at: 'reach standard library:57:5:application',
+          fs: ['at ./dao/contracts/dao-core.rsh:218:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:223:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:223:13:function exp)'],
+          msg: 'Address is already a member',
+          who: 'Founder'
+          });
+        const v4582 = [v3986, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+        await stdlib.mapSet(map0, v4516, v4582);
         null;
-        const v4532 = null;
-        await txn2.getOutput('addMember', 'v4532', ctc0, v4532);
-        const cv3822 = v3822;
-        const cv3823 = true;
-        const cv3824 = v3824;
-        const cv3825 = v4457;
-        const cv3828 = v4510;
+        const v4584 = null;
+        await txn2.getOutput('addMember', 'v4584', ctc0, v4584);
+        const cv3874 = v3874;
+        const cv3875 = true;
+        const cv3876 = v3876;
+        const cv3877 = v4509;
+        const cv3880 = v4562;
         
-        v3822 = cv3822;
-        v3823 = cv3823;
-        v3824 = cv3824;
-        v3825 = cv3825;
-        v3828 = cv3828;
+        v3874 = cv3874;
+        v3875 = cv3875;
+        v3876 = cv3876;
+        v3877 = cv3877;
+        v3880 = cv3880;
         
         continue;
         break;
         }
-      case 'donate0_334': {
-        const v5671 = v4456[1];
+      case 'donate0_352': {
+        const v5803 = v4508[1];
         undefined /* setApiDetails */;
-        const v5691 = v5671[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:212:10:spread', stdlib.UInt_max, '0')];
-        const v5694 = stdlib.sub(stdlib.UInt_max, v5691);
-        const v5695 = stdlib.lt(v3828, v5694);
-        stdlib.assert(v5695, {
+        const v5823 = v5803[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:232:10:spread', stdlib.UInt_max, '0')];
+        const v5826 = stdlib.sub(stdlib.UInt_max, v5823);
+        const v5827 = stdlib.lt(v3880, v5826);
+        stdlib.assert(v5827, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:213:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:212:33:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:212:33:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:212:33:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:233:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:232:33:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:232:33:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:232:33:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
           msg: 'Donation is too generous',
           who: 'Founder'
           });
-        const v5722 = stdlib.add(v3828, v5691);
-        const v5723 = stdlib.le(v5722, stdlib.UInt_max);
-        stdlib.assert(v5723, {
-          at: './dao/contracts/dao-core.rsh:169:50:dot',
+        const v5854 = stdlib.add(v3880, v5823);
+        const v5855 = stdlib.le(v5854, stdlib.UInt_max);
+        stdlib.assert(v5855, {
+          at: './dao/contracts/dao-core.rsh:189:50:dot',
           fs: [],
           msg: 'assume <= UInt.max',
           who: 'Founder'
           });
         ;
-        const v5757 = stdlib.lt(v5722, v5694);
-        stdlib.assert(v5757, {
+        const v5889 = stdlib.lt(v5854, v5826);
+        stdlib.assert(v5889, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:213:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:218:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:218:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:233:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:238:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:238:13:function exp)'],
           msg: 'Donation is too generous',
           who: 'Founder'
           });
-        const v5760 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4455), null);
-        let v5761;
-        switch (v5760[0]) {
+        const v5892 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4507), null);
+        let v5893;
+        switch (v5892[0]) {
           case 'None': {
-            const v5762 = v5760[1];
-            v5761 = false;
+            const v5894 = v5892[1];
+            v5893 = false;
             
             break;
             }
           case 'Some': {
-            const v5763 = v5760[1];
-            v5761 = true;
+            const v5895 = v5892[1];
+            v5893 = true;
             
             break;
             }
           }
-        if (v5761) {
-          const v5765 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-          const v5766 = stdlib.fromSome(v5760, v5765);
-          const v5767 = v5766[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:220:19:array', stdlib.UInt_max, '0')];
-          const v5768 = v5766[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:220:19:array', stdlib.UInt_max, '1')];
-          const v5770 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:222:36:decimal', stdlib.UInt_max, '1'));
-          const v5771 = stdlib.lt(v5767, v5770);
-          let v5772;
-          if (v5771) {
-            const v5775 = stdlib.add(v5767, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:223:30:decimal', stdlib.UInt_max, '1'));
-            const v5776 = [v5775, v5768];
-            v5772 = v5776;
+        if (v5893) {
+          const v5897 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+          const v5898 = stdlib.fromSome(v5892, v5897);
+          const v5899 = v5898[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:240:19:array', stdlib.UInt_max, '0')];
+          const v5900 = v5898[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:240:19:array', stdlib.UInt_max, '1')];
+          const v5902 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:242:36:decimal', stdlib.UInt_max, '1'));
+          const v5903 = stdlib.lt(v5899, v5902);
+          let v5904;
+          if (v5903) {
+            const v5907 = stdlib.add(v5899, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:243:30:decimal', stdlib.UInt_max, '1'));
+            const v5908 = [v5907, v5900];
+            v5904 = v5908;
             }
           else {
-            const v5777 = stdlib.ge(v5767, v3934);
-            const v5778 = v5777 ? v5767 : v3934;
-            const v5779 = [v5778, v5768];
-            v5772 = v5779;
+            const v5909 = stdlib.ge(v5899, v3986);
+            const v5910 = v5909 ? v5899 : v3986;
+            const v5911 = [v5910, v5900];
+            v5904 = v5911;
             }
-          await stdlib.mapSet(map0, v4455, v5772);
-          const v5780 = null;
-          await txn2.getOutput('donate', 'v5780', ctc0, v5780);
-          const cv3822 = v3822;
-          const cv3823 = true;
-          const cv3824 = v3824;
-          const cv3825 = v4457;
-          const cv3828 = v5722;
+          await stdlib.mapSet(map0, v4507, v5904);
+          const v5912 = null;
+          await txn2.getOutput('donate', 'v5912', ctc0, v5912);
+          const cv3874 = v3874;
+          const cv3875 = true;
+          const cv3876 = v3876;
+          const cv3877 = v4509;
+          const cv3880 = v5854;
           
-          v3822 = cv3822;
-          v3823 = cv3823;
-          v3824 = cv3824;
-          v3825 = cv3825;
-          v3828 = cv3828;
+          v3874 = cv3874;
+          v3875 = cv3875;
+          v3876 = cv3876;
+          v3877 = cv3877;
+          v3880 = cv3880;
           
           continue;}
         else {
-          const v5788 = null;
-          await txn2.getOutput('donate', 'v5788', ctc0, v5788);
-          const cv3822 = v3822;
-          const cv3823 = true;
-          const cv3824 = v3824;
-          const cv3825 = v4457;
-          const cv3828 = v5722;
+          const v5920 = null;
+          await txn2.getOutput('donate', 'v5920', ctc0, v5920);
+          const cv3874 = v3874;
+          const cv3875 = true;
+          const cv3876 = v3876;
+          const cv3877 = v4509;
+          const cv3880 = v5854;
           
-          v3822 = cv3822;
-          v3823 = cv3823;
-          v3824 = cv3824;
-          v3825 = cv3825;
-          v3828 = cv3828;
+          v3874 = cv3874;
+          v3875 = cv3875;
+          v3876 = cv3876;
+          v3877 = cv3877;
+          v3880 = cv3880;
           
           continue;}
         break;
         }
-      case 'eject0_334': {
-        const v6883 = v4456[1];
+      case 'eject0_352': {
+        const v7095 = v4508[1];
         undefined /* setApiDetails */;
-        const v6935 = stdlib.le(v3828, stdlib.UInt_max);
-        stdlib.assert(v6935, {
-          at: './dao/contracts/dao-core.rsh:169:50:dot',
+        const v7147 = stdlib.le(v3880, stdlib.UInt_max);
+        stdlib.assert(v7147, {
+          at: './dao/contracts/dao-core.rsh:189:50:dot',
           fs: [],
           msg: 'assume <= UInt.max',
           who: 'Founder'
           });
         ;
-        const v7009 = v6883[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:233:10:spread', stdlib.UInt_max, '0')];
-        const v7010 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7009), null);
-        let v7011;
-        switch (v7010[0]) {
+        const v7221 = v7095[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:253:10:spread', stdlib.UInt_max, '0')];
+        const v7222 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7221), null);
+        let v7223;
+        switch (v7222[0]) {
           case 'None': {
-            const v7012 = v7010[1];
-            v7011 = false;
+            const v7224 = v7222[1];
+            v7223 = false;
             
             break;
             }
           case 'Some': {
-            const v7013 = v7010[1];
-            v7011 = true;
+            const v7225 = v7222[1];
+            v7223 = true;
             
             break;
             }
           }
-        const v7015 = stdlib.addressEq(v7009, v3897);
-        const v7016 = v7015 ? false : true;
-        const v7017 = v7011 ? v7016 : false;
-        const v7018 = stdlib.addressEq(v4455, v7009);
-        const v7019 = v7018 ? false : true;
-        stdlib.assert(v7019, {
+        const v7227 = stdlib.addressEq(v7221, v3949);
+        const v7228 = v7227 ? false : true;
+        const v7229 = v7223 ? v7228 : false;
+        const v7230 = stdlib.addressEq(v4507, v7221);
+        const v7231 = v7230 ? false : true;
+        stdlib.assert(v7231, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:236:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:250:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:250:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:256:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:270:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:270:13:function exp)'],
           msg: 'Use \'Leave\' API to exit',
           who: 'Founder'
           });
-        let v7022;
-        switch (v7010[0]) {
+        let v7234;
+        switch (v7222[0]) {
           case 'None': {
-            const v7023 = v7010[1];
-            v7022 = false;
+            const v7235 = v7222[1];
+            v7234 = false;
             
             break;
             }
           case 'Some': {
-            const v7024 = v7010[1];
-            v7022 = true;
+            const v7236 = v7222[1];
+            v7234 = true;
             
             break;
             }
           }
-        stdlib.assert(v7022, {
+        stdlib.assert(v7234, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:237:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:250:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:250:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:257:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:270:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:270:13:function exp)'],
           msg: 'Address is not a member',
           who: 'Founder'
           });
-        stdlib.assert(v7017, {
+        stdlib.assert(v7229, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:238:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:250:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:250:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:258:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:270:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:270:13:function exp)'],
           msg: 'Requires ChangeAdmin proposal',
           who: 'Founder'
           });
-        const v7028 = stdlib.addressEq(v4455, v3897);
-        if (v7028) {
-          const v7121 = null;
-          await txn2.getOutput('eject', 'v7121', ctc0, v7121);
-          await stdlib.mapSet(map0, v7009, undefined /* Nothing */);
+        const v7240 = stdlib.addressEq(v4507, v3949);
+        if (v7240) {
+          const v7333 = null;
+          await txn2.getOutput('eject', 'v7333', ctc0, v7333);
+          await stdlib.mapSet(map0, v7221, undefined /* Nothing */);
           null;
-          const cv3822 = v3822;
-          const cv3823 = true;
-          const cv3824 = v3824;
-          const cv3825 = v4457;
-          const cv3828 = v3828;
+          const cv3874 = v3874;
+          const cv3875 = true;
+          const cv3876 = v3876;
+          const cv3877 = v4509;
+          const cv3880 = v3880;
           
-          v3822 = cv3822;
-          v3823 = cv3823;
-          v3824 = cv3824;
-          v3825 = cv3825;
-          v3828 = cv3828;
+          v3874 = cv3874;
+          v3875 = cv3875;
+          v3876 = cv3876;
+          v3877 = cv3877;
+          v3880 = cv3880;
           
           continue;}
         else {
-          const v7033 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:242:35:decimal', stdlib.UInt_max, '1'));
-          const v7034 = stdlib.le(v3932, v7033);
-          stdlib.assert(v7034, {
+          const v7245 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:262:35:decimal', stdlib.UInt_max, '1'));
+          const v7246 = stdlib.le(v3984, v7245);
+          stdlib.assert(v7246, {
             at: 'reach standard library:57:5:application',
-            fs: ['at ./dao/contracts/dao-core.rsh:242:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:250:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:250:13:function exp)'],
+            fs: ['at ./dao/contracts/dao-core.rsh:262:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:270:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:270:13:function exp)'],
             msg: 'Proposals Limit reached',
             who: 'Founder'
             });
-          let v7036;
-          switch (v3903[0]) {
+          let v7248;
+          switch (v3955[0]) {
             case 'AllocateFunds': {
-              const v7037 = v3903[1];
-              const v7038 = v7037[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-              const v7039 = v7037[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
-              const v7041 = stdlib.lt(v7039, v3828);
-              const v7042 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7038), null);
-              let v7043;
-              switch (v7042[0]) {
+              const v7249 = v3955[1];
+              const v7250 = v7249[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+              const v7251 = v7249[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
+              const v7253 = stdlib.lt(v7251, v3880);
+              const v7254 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7250), null);
+              let v7255;
+              switch (v7254[0]) {
                 case 'None': {
-                  const v7044 = v7042[1];
-                  v7043 = false;
+                  const v7256 = v7254[1];
+                  v7255 = false;
                   
                   break;
                   }
                 case 'Some': {
-                  const v7045 = v7042[1];
-                  v7043 = true;
+                  const v7257 = v7254[1];
+                  v7255 = true;
                   
                   break;
                   }
                 }
-              const v7046 = v7043 ? v7041 : false;
-              const v7048 = v3899 ? v7041 : v7046;
-              v7036 = v7048;
+              const v7258 = v7255 ? v7253 : false;
+              const v7260 = v3951 ? v7253 : v7258;
+              v7248 = v7260;
               
               break;
               }
             case 'ChangeAdmin': {
-              const v7049 = v3903[1];
-              const v7050 = v7049.admin;
-              const v7051 = v7049.fee;
-              const v7053 = v7049.quorum;
-              const v7055 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7050), null);
-              const v7056 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-              const v7057 = stdlib.fromSome(v7055, v7056);
-              const v7058 = v7057[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
-              let v7061;
-              switch (v7055[0]) {
+              const v7261 = v3955[1];
+              const v7262 = v7261.admin;
+              const v7263 = v7261.fee;
+              const v7265 = v7261.quorum;
+              const v7267 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7262), null);
+              const v7268 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+              const v7269 = stdlib.fromSome(v7267, v7268);
+              const v7270 = v7269[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
+              let v7273;
+              switch (v7267[0]) {
                 case 'None': {
-                  const v7062 = v7055[1];
-                  v7061 = false;
+                  const v7274 = v7267[1];
+                  v7273 = false;
                   
                   break;
                   }
                 case 'Some': {
-                  const v7063 = v7055[1];
-                  v7061 = true;
+                  const v7275 = v7267[1];
+                  v7273 = true;
                   
                   break;
                   }
                 }
-              const v7064 = stdlib.gt(v7058, v3934);
-              const v7065 = v7061 ? v7064 : false;
-              const v7066 = stdlib.gt(v7053, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
-              let v7067;
-              if (v7066) {
-                const v7070 = stdlib.lt(v7053, v3812);
-                v7067 = v7070;
+              const v7276 = stdlib.gt(v7270, v3986);
+              const v7277 = v7273 ? v7276 : false;
+              const v7278 = stdlib.gt(v7265, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
+              let v7279;
+              if (v7278) {
+                const v7282 = stdlib.lt(v7265, v3848);
+                v7279 = v7282;
                 }
               else {
-                v7067 = false;
+                v7279 = false;
                 }
-              const v7071 = stdlib.gt(v7051, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:33:decimal', stdlib.UInt_max, '0'));
-              const v7072 = stdlib.lt(v7051, stdlib.UInt_max);
-              const v7073 = v7071 ? v7072 : false;
-              const v7074 = v7065 ? v7067 : false;
-              const v7075 = v7074 ? v7073 : false;
-              v7036 = v7075;
+              const v7283 = stdlib.ge(v7263, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:34:decimal', stdlib.UInt_max, '0'));
+              const v7284 = stdlib.lt(v7263, stdlib.UInt_max);
+              const v7285 = v7283 ? v7284 : false;
+              const v7286 = v7277 ? v7279 : false;
+              const v7287 = v7286 ? v7285 : false;
+              v7248 = v7287;
               
               break;
               }
             case 'EjectMember': {
-              const v7076 = v3903[1];
-              const v7077 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7076), null);
-              let v7078;
-              switch (v7077[0]) {
+              const v7288 = v3955[1];
+              const v7289 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7288), null);
+              let v7290;
+              switch (v7289[0]) {
                 case 'None': {
-                  const v7079 = v7077[1];
-                  v7078 = false;
+                  const v7291 = v7289[1];
+                  v7290 = false;
                   
                   break;
                   }
                 case 'Some': {
-                  const v7080 = v7077[1];
-                  v7078 = true;
+                  const v7292 = v7289[1];
+                  v7290 = true;
                   
                   break;
                   }
                 }
-              const v7082 = stdlib.addressEq(v7076, v3897);
-              const v7083 = v7082 ? false : true;
-              const v7084 = v7078 ? v7083 : false;
-              v7036 = v7084;
+              const v7294 = stdlib.addressEq(v7288, v3949);
+              const v7295 = v7294 ? false : true;
+              const v7296 = v7290 ? v7295 : false;
+              v7248 = v7296;
               
               break;
               }
             case 'None': {
-              const v7085 = v3903[1];
-              v7036 = false;
+              const v7297 = v3955[1];
+              v7248 = false;
               
               break;
               }
             case 'Stop': {
-              const v7086 = v3903[1];
-              v7036 = true;
+              const v7298 = v3955[1];
+              v7248 = true;
               
               break;
               }
             }
-          stdlib.assert(v7036, {
+          stdlib.assert(v7248, {
             at: 'reach standard library:57:5:application',
-            fs: ['at ./dao/contracts/dao-core.rsh:243:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:250:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:250:13:function exp)'],
+            fs: ['at ./dao/contracts/dao-core.rsh:263:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:270:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:270:13:function exp)'],
             msg: 'A Proposal is already active.',
             who: 'Founder'
             });
-          const v7089 = null;
-          await txn2.getOutput('eject', 'v7089', ctc0, v7089);
-          const v7107 = stdlib.add(v3932, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:163:30:decimal', stdlib.UInt_max, '1'));
-          const v7108 = ['EjectMember', v7009];
-          const v7109 = {
+          const v7301 = null;
+          await txn2.getOutput('eject', 'v7301', ctc0, v7301);
+          const v7319 = stdlib.add(v3984, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:183:30:decimal', stdlib.UInt_max, '1'));
+          const v7320 = ['EjectMember', v7221];
+          const v7321 = {
             Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
             For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-            action: v7108,
-            index: v7107
+            action: v7320,
+            index: v7319
             };
-          const cv3822 = v3822;
-          const cv3823 = true;
-          const cv3824 = v7109;
-          const cv3825 = v4457;
-          const cv3828 = v3828;
+          const cv3874 = v3874;
+          const cv3875 = true;
+          const cv3876 = v7321;
+          const cv3877 = v4509;
+          const cv3880 = v3880;
           
-          v3822 = cv3822;
-          v3823 = cv3823;
-          v3824 = cv3824;
-          v3825 = cv3825;
-          v3828 = cv3828;
+          v3874 = cv3874;
+          v3875 = cv3875;
+          v3876 = cv3876;
+          v3877 = cv3877;
+          v3880 = cv3880;
           
           continue;}
         break;
         }
-      case 'joinLeave0_334': {
-        const v8095 = v4456[1];
+      case 'joinLeave0_352': {
+        const v8387 = v4508[1];
         undefined /* setApiDetails */;
-        const v8123 = v8095[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:264:10:spread', stdlib.UInt_max, '0')];
-        if (v8123) {
-          const v8124 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4455), null);
-          let v8125;
-          switch (v8124[0]) {
+        const v8415 = v8387[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:284:10:spread', stdlib.UInt_max, '0')];
+        if (v8415) {
+          const v8416 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4507), null);
+          let v8417;
+          switch (v8416[0]) {
             case 'None': {
-              const v8126 = v8124[1];
-              v8125 = false;
+              const v8418 = v8416[1];
+              v8417 = false;
               
               break;
               }
             case 'Some': {
-              const v8127 = v8124[1];
-              v8125 = true;
+              const v8419 = v8416[1];
+              v8417 = true;
               
               break;
               }
             }
-          stdlib.assert(v8125, {
+          stdlib.assert(v8417, {
             at: 'reach standard library:57:5:application',
-            fs: ['at ./dao/contracts/dao-core.rsh:266:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+            fs: ['at ./dao/contracts/dao-core.rsh:286:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
             msg: 'Address is not a member',
             who: 'Founder'
             });
           }
         else {
-          stdlib.assert(v3901, {
+          stdlib.assert(v3953, {
             at: 'reach standard library:57:5:application',
-            fs: ['at ./dao/contracts/dao-core.rsh:268:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+            fs: ['at ./dao/contracts/dao-core.rsh:288:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
             msg: 'An existing user has to add you to this DAO',
             who: 'Founder'
             });
-          const v8131 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4455), null);
-          let v8132;
-          switch (v8131[0]) {
+          const v8423 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4507), null);
+          let v8424;
+          switch (v8423[0]) {
             case 'None': {
-              const v8133 = v8131[1];
-              v8132 = true;
+              const v8425 = v8423[1];
+              v8424 = true;
               
               break;
               }
             case 'Some': {
-              const v8134 = v8131[1];
-              v8132 = false;
+              const v8426 = v8423[1];
+              v8424 = false;
               
               break;
               }
             }
-          stdlib.assert(v8132, {
+          stdlib.assert(v8424, {
             at: 'reach standard library:57:5:application',
-            fs: ['at ./dao/contracts/dao-core.rsh:269:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+            fs: ['at ./dao/contracts/dao-core.rsh:289:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
             msg: 'Address is already a member',
             who: 'Founder'
             });
           }
-        const v8137 = v8123 ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:272:35:decimal', stdlib.UInt_max, '0') : v3898;
-        const v8140 = stdlib.sub(stdlib.UInt_max, v3828);
-        const v8141 = stdlib.lt(v8137, v8140);
-        stdlib.assert(v8141, {
+        const v8429 = v8415 ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:292:35:decimal', stdlib.UInt_max, '0') : v3950;
+        const v8432 = stdlib.sub(stdlib.UInt_max, v3880);
+        const v8433 = stdlib.lt(v8429, v8432);
+        stdlib.assert(v8433, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:273:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:293:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
           msg: 'Membership is at maximum capacity',
           who: 'Founder'
           });
-        const v8146 = stdlib.add(v3828, v8137);
-        const v8147 = stdlib.le(v8146, stdlib.UInt_max);
-        stdlib.assert(v8147, {
-          at: './dao/contracts/dao-core.rsh:169:50:dot',
+        const v8438 = stdlib.add(v3880, v8429);
+        const v8439 = stdlib.le(v8438, stdlib.UInt_max);
+        stdlib.assert(v8439, {
+          at: './dao/contracts/dao-core.rsh:189:50:dot',
           fs: [],
           msg: 'assume <= UInt.max',
           who: 'Founder'
           });
         ;
-        if (v8123) {
-          const v8366 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4455), null);
-          let v8367;
-          switch (v8366[0]) {
+        if (v8415) {
+          const v8658 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4507), null);
+          let v8659;
+          switch (v8658[0]) {
             case 'None': {
-              const v8368 = v8366[1];
-              v8367 = false;
+              const v8660 = v8658[1];
+              v8659 = false;
               
               break;
               }
             case 'Some': {
-              const v8369 = v8366[1];
-              v8367 = true;
+              const v8661 = v8658[1];
+              v8659 = true;
               
               break;
               }
             }
-          stdlib.assert(v8367, {
+          stdlib.assert(v8659, {
             at: 'reach standard library:57:5:application',
-            fs: ['at ./dao/contracts/dao-core.rsh:266:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:278:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:278:13:function exp)'],
+            fs: ['at ./dao/contracts/dao-core.rsh:286:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:298:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:298:13:function exp)'],
             msg: 'Address is not a member',
             who: 'Founder'
             });
           }
         else {
-          stdlib.assert(v3901, {
+          stdlib.assert(v3953, {
             at: 'reach standard library:57:5:application',
-            fs: ['at ./dao/contracts/dao-core.rsh:268:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:278:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:278:13:function exp)'],
+            fs: ['at ./dao/contracts/dao-core.rsh:288:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:298:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:298:13:function exp)'],
             msg: 'An existing user has to add you to this DAO',
             who: 'Founder'
             });
-          const v8373 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4455), null);
-          let v8374;
-          switch (v8373[0]) {
+          const v8665 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4507), null);
+          let v8666;
+          switch (v8665[0]) {
             case 'None': {
-              const v8375 = v8373[1];
-              v8374 = true;
+              const v8667 = v8665[1];
+              v8666 = true;
               
               break;
               }
             case 'Some': {
-              const v8376 = v8373[1];
-              v8374 = false;
+              const v8668 = v8665[1];
+              v8666 = false;
               
               break;
               }
             }
-          stdlib.assert(v8374, {
+          stdlib.assert(v8666, {
             at: 'reach standard library:57:5:application',
-            fs: ['at ./dao/contracts/dao-core.rsh:269:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:278:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:278:13:function exp)'],
+            fs: ['at ./dao/contracts/dao-core.rsh:289:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:298:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:298:13:function exp)'],
             msg: 'Address is already a member',
             who: 'Founder'
             });
           }
-        const v8382 = stdlib.sub(stdlib.UInt_max, v8146);
-        const v8383 = stdlib.lt(v8137, v8382);
-        stdlib.assert(v8383, {
+        const v8674 = stdlib.sub(stdlib.UInt_max, v8438);
+        const v8675 = stdlib.lt(v8429, v8674);
+        stdlib.assert(v8675, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:273:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:278:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:278:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:293:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:298:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:298:13:function exp)'],
           msg: 'Membership is at maximum capacity',
           who: 'Founder'
           });
-        const v8386 = null;
-        await txn2.getOutput('joinLeave', 'v8386', ctc0, v8386);
-        if (v8123) {
-          await stdlib.mapSet(map0, v4455, undefined /* Nothing */);
+        const v8678 = null;
+        await txn2.getOutput('joinLeave', 'v8678', ctc0, v8678);
+        if (v8415) {
+          await stdlib.mapSet(map0, v4507, undefined /* Nothing */);
           null;
-          const cv3822 = v3822;
-          const cv3823 = true;
-          const cv3824 = v3824;
-          const cv3825 = v4457;
-          const cv3828 = v8146;
+          const cv3874 = v3874;
+          const cv3875 = true;
+          const cv3876 = v3876;
+          const cv3877 = v4509;
+          const cv3880 = v8438;
           
-          v3822 = cv3822;
-          v3823 = cv3823;
-          v3824 = cv3824;
-          v3825 = cv3825;
-          v3828 = cv3828;
+          v3874 = cv3874;
+          v3875 = cv3875;
+          v3876 = cv3876;
+          v3877 = cv3877;
+          v3880 = cv3880;
           
           continue;}
         else {
-          const v8395 = [v3934, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-          await stdlib.mapSet(map0, v4455, v8395);
+          const v8687 = [v3986, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+          await stdlib.mapSet(map0, v4507, v8687);
           null;
-          const cv3822 = v3822;
-          const cv3823 = true;
-          const cv3824 = v3824;
-          const cv3825 = v4457;
-          const cv3828 = v8146;
+          const cv3874 = v3874;
+          const cv3875 = true;
+          const cv3876 = v3876;
+          const cv3877 = v4509;
+          const cv3880 = v8438;
           
-          v3822 = cv3822;
-          v3823 = cv3823;
-          v3824 = cv3824;
-          v3825 = cv3825;
-          v3828 = cv3828;
+          v3874 = cv3874;
+          v3875 = cv3875;
+          v3876 = cv3876;
+          v3877 = cv3877;
+          v3880 = cv3880;
           
           continue;}
         break;
         }
-      case 'registerProposal0_334': {
-        const v9307 = v4456[1];
+      case 'registerProposal0_352': {
+        const v9679 = v4508[1];
         undefined /* setApiDetails */;
-        const v9359 = stdlib.le(v3828, stdlib.UInt_max);
-        stdlib.assert(v9359, {
-          at: './dao/contracts/dao-core.rsh:169:50:dot',
+        const v9731 = stdlib.le(v3880, stdlib.UInt_max);
+        stdlib.assert(v9731, {
+          at: './dao/contracts/dao-core.rsh:189:50:dot',
           fs: [],
           msg: 'assume <= UInt.max',
           who: 'Founder'
           });
         ;
-        const v9611 = v9307[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:291:10:spread', stdlib.UInt_max, '0')];
-        let v9615;
-        if (v3933) {
-          const v9617 = stdlib.mod(v3932, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-          const v9619 = stdlib.sub(v3932, v9617);
-          const v9621 = stdlib.div(v9619, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-          v9615 = v9621;
+        const v9983 = v9679[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:311:10:spread', stdlib.UInt_max, '0')];
+        let v9987;
+        if (v3985) {
+          const v9989 = stdlib.mod(v3984, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+          const v9991 = stdlib.sub(v3984, v9989);
+          const v9993 = stdlib.div(v9991, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+          v9987 = v9993;
           }
         else {
-          v9615 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+          v9987 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
           }
-        const v9622 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4455), null);
-        const v9623 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-        const v9624 = stdlib.fromSome(v9622, v9623);
-        const v9625 = v9624[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:103:11:array', stdlib.UInt_max, '0')];
-        const v9627 = stdlib.ge(v9625, v9615);
-        stdlib.assert(v9627, {
+        const v9994 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4507), null);
+        const v9995 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+        const v9996 = stdlib.fromSome(v9994, v9995);
+        const v9997 = v9996[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:120:11:array', stdlib.UInt_max, '0')];
+        const v9999 = stdlib.ge(v9997, v9987);
+        stdlib.assert(v9999, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:104:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:292:22:application call to "requireIsMember" (defined at: ./dao/contracts/dao-core.rsh:101:36:function exp)', 'at ./dao/contracts/dao-core.rsh:304:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:304:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:121:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:312:22:application call to "requireIsMember" (defined at: ./dao/contracts/dao-core.rsh:118:36:function exp)', 'at ./dao/contracts/dao-core.rsh:324:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:324:13:function exp)'],
           msg: 'THIEF! SEIZE THEM!',
           who: 'Founder'
           });
-        const v9634 = stdlib.ge(v9625, v3934);
-        stdlib.assert(v9634, {
+        const v10006 = stdlib.ge(v9997, v3986);
+        stdlib.assert(v10006, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:293:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:304:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:304:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:313:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:324:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:324:13:function exp)'],
           msg: 'User is below Citizen Rank threshold',
           who: 'Founder'
           });
-        let v9638;
-        switch (v3903[0]) {
+        let v10010;
+        switch (v3955[0]) {
           case 'AllocateFunds': {
-            const v9639 = v3903[1];
-            const v9640 = v9639[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-            const v9641 = v9639[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
-            const v9643 = stdlib.lt(v9641, v3828);
-            const v9644 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v9640), null);
-            let v9645;
-            switch (v9644[0]) {
+            const v10011 = v3955[1];
+            const v10012 = v10011[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+            const v10013 = v10011[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
+            const v10015 = stdlib.lt(v10013, v3880);
+            const v10016 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v10012), null);
+            let v10017;
+            switch (v10016[0]) {
               case 'None': {
-                const v9646 = v9644[1];
-                v9645 = false;
+                const v10018 = v10016[1];
+                v10017 = false;
                 
                 break;
                 }
               case 'Some': {
-                const v9647 = v9644[1];
-                v9645 = true;
+                const v10019 = v10016[1];
+                v10017 = true;
                 
                 break;
                 }
               }
-            const v9648 = v9645 ? v9643 : false;
-            const v9650 = v3899 ? v9643 : v9648;
-            v9638 = v9650;
+            const v10020 = v10017 ? v10015 : false;
+            const v10022 = v3951 ? v10015 : v10020;
+            v10010 = v10022;
             
             break;
             }
           case 'ChangeAdmin': {
-            const v9651 = v3903[1];
-            const v9652 = v9651.admin;
-            const v9653 = v9651.fee;
-            const v9655 = v9651.quorum;
-            const v9657 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v9652), null);
-            const v9659 = stdlib.fromSome(v9657, v9623);
-            const v9660 = v9659[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
-            let v9663;
-            switch (v9657[0]) {
+            const v10023 = v3955[1];
+            const v10024 = v10023.admin;
+            const v10025 = v10023.fee;
+            const v10027 = v10023.quorum;
+            const v10029 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v10024), null);
+            const v10031 = stdlib.fromSome(v10029, v9995);
+            const v10032 = v10031[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
+            let v10035;
+            switch (v10029[0]) {
               case 'None': {
-                const v9664 = v9657[1];
-                v9663 = false;
+                const v10036 = v10029[1];
+                v10035 = false;
                 
                 break;
                 }
               case 'Some': {
-                const v9665 = v9657[1];
-                v9663 = true;
+                const v10037 = v10029[1];
+                v10035 = true;
                 
                 break;
                 }
               }
-            const v9666 = stdlib.gt(v9660, v3934);
-            const v9667 = v9663 ? v9666 : false;
-            const v9668 = stdlib.gt(v9655, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
-            let v9669;
-            if (v9668) {
-              const v9672 = stdlib.lt(v9655, v3812);
-              v9669 = v9672;
+            const v10038 = stdlib.gt(v10032, v3986);
+            const v10039 = v10035 ? v10038 : false;
+            const v10040 = stdlib.gt(v10027, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
+            let v10041;
+            if (v10040) {
+              const v10044 = stdlib.lt(v10027, v3848);
+              v10041 = v10044;
               }
             else {
-              v9669 = false;
+              v10041 = false;
               }
-            const v9673 = stdlib.gt(v9653, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:33:decimal', stdlib.UInt_max, '0'));
-            const v9674 = stdlib.lt(v9653, stdlib.UInt_max);
-            const v9675 = v9673 ? v9674 : false;
-            const v9676 = v9667 ? v9669 : false;
-            const v9677 = v9676 ? v9675 : false;
-            v9638 = v9677;
+            const v10045 = stdlib.ge(v10025, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:34:decimal', stdlib.UInt_max, '0'));
+            const v10046 = stdlib.lt(v10025, stdlib.UInt_max);
+            const v10047 = v10045 ? v10046 : false;
+            const v10048 = v10039 ? v10041 : false;
+            const v10049 = v10048 ? v10047 : false;
+            v10010 = v10049;
             
             break;
             }
           case 'EjectMember': {
-            const v9678 = v3903[1];
-            const v9679 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v9678), null);
-            let v9680;
-            switch (v9679[0]) {
+            const v10050 = v3955[1];
+            const v10051 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v10050), null);
+            let v10052;
+            switch (v10051[0]) {
               case 'None': {
-                const v9681 = v9679[1];
-                v9680 = false;
+                const v10053 = v10051[1];
+                v10052 = false;
                 
                 break;
                 }
               case 'Some': {
-                const v9682 = v9679[1];
-                v9680 = true;
+                const v10054 = v10051[1];
+                v10052 = true;
                 
                 break;
                 }
               }
-            const v9684 = stdlib.addressEq(v9678, v3897);
-            const v9685 = v9684 ? false : true;
-            const v9686 = v9680 ? v9685 : false;
-            v9638 = v9686;
+            const v10056 = stdlib.addressEq(v10050, v3949);
+            const v10057 = v10056 ? false : true;
+            const v10058 = v10052 ? v10057 : false;
+            v10010 = v10058;
             
             break;
             }
           case 'None': {
-            const v9687 = v3903[1];
-            v9638 = false;
+            const v10059 = v3955[1];
+            v10010 = false;
             
             break;
             }
           case 'Stop': {
-            const v9688 = v3903[1];
-            v9638 = true;
+            const v10060 = v3955[1];
+            v10010 = true;
             
             break;
             }
           }
-        const v9689 = v9638 ? false : true;
-        stdlib.assert(v9689, {
+        const v10061 = v10010 ? false : true;
+        stdlib.assert(v10061, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:295:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:304:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:304:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:315:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:324:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:324:13:function exp)'],
           msg: 'A Proposal is already active.',
           who: 'Founder'
           });
-        const v9692 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:300:32:decimal', stdlib.UInt_max, '1'));
-        const v9693 = stdlib.lt(v3932, v9692);
-        stdlib.assert(v9693, {
+        const v10064 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:320:32:decimal', stdlib.UInt_max, '1'));
+        const v10065 = stdlib.lt(v3984, v10064);
+        stdlib.assert(v10065, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:300:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:304:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:304:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:320:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:324:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:324:13:function exp)'],
           msg: 'Governance limit reached',
           who: 'Founder'
           });
-        let v9695;
-        switch (v9611[0]) {
+        let v10067;
+        switch (v9983[0]) {
           case 'AllocateFunds': {
-            const v9696 = v9611[1];
-            const v9697 = v9696[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-            const v9698 = v9696[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
-            const v9700 = stdlib.lt(v9698, v3828);
-            const v9701 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v9697), null);
-            let v9702;
-            switch (v9701[0]) {
+            const v10068 = v9983[1];
+            const v10069 = v10068[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+            const v10070 = v10068[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
+            const v10072 = stdlib.lt(v10070, v3880);
+            const v10073 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v10069), null);
+            let v10074;
+            switch (v10073[0]) {
               case 'None': {
-                const v9703 = v9701[1];
-                v9702 = false;
+                const v10075 = v10073[1];
+                v10074 = false;
                 
                 break;
                 }
               case 'Some': {
-                const v9704 = v9701[1];
-                v9702 = true;
+                const v10076 = v10073[1];
+                v10074 = true;
                 
                 break;
                 }
               }
-            const v9705 = v9702 ? v9700 : false;
-            const v9707 = v3899 ? v9700 : v9705;
-            v9695 = v9707;
+            const v10077 = v10074 ? v10072 : false;
+            const v10079 = v3951 ? v10072 : v10077;
+            v10067 = v10079;
             
             break;
             }
           case 'ChangeAdmin': {
-            const v9708 = v9611[1];
-            const v9709 = v9708.admin;
-            const v9710 = v9708.fee;
-            const v9712 = v9708.quorum;
-            const v9714 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v9709), null);
-            const v9716 = stdlib.fromSome(v9714, v9623);
-            const v9717 = v9716[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
-            let v9720;
-            switch (v9714[0]) {
+            const v10080 = v9983[1];
+            const v10081 = v10080.admin;
+            const v10082 = v10080.fee;
+            const v10084 = v10080.quorum;
+            const v10086 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v10081), null);
+            const v10088 = stdlib.fromSome(v10086, v9995);
+            const v10089 = v10088[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
+            let v10092;
+            switch (v10086[0]) {
               case 'None': {
-                const v9721 = v9714[1];
-                v9720 = false;
+                const v10093 = v10086[1];
+                v10092 = false;
                 
                 break;
                 }
               case 'Some': {
-                const v9722 = v9714[1];
-                v9720 = true;
+                const v10094 = v10086[1];
+                v10092 = true;
                 
                 break;
                 }
               }
-            const v9723 = stdlib.gt(v9717, v3934);
-            const v9724 = v9720 ? v9723 : false;
-            const v9725 = stdlib.gt(v9712, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
-            let v9726;
-            if (v9725) {
-              const v9729 = stdlib.lt(v9712, v3812);
-              v9726 = v9729;
+            const v10095 = stdlib.gt(v10089, v3986);
+            const v10096 = v10092 ? v10095 : false;
+            const v10097 = stdlib.gt(v10084, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
+            let v10098;
+            if (v10097) {
+              const v10101 = stdlib.lt(v10084, v3848);
+              v10098 = v10101;
               }
             else {
-              v9726 = false;
+              v10098 = false;
               }
-            const v9730 = stdlib.gt(v9710, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:33:decimal', stdlib.UInt_max, '0'));
-            const v9731 = stdlib.lt(v9710, stdlib.UInt_max);
-            const v9732 = v9730 ? v9731 : false;
-            const v9733 = v9724 ? v9726 : false;
-            const v9734 = v9733 ? v9732 : false;
-            v9695 = v9734;
+            const v10102 = stdlib.ge(v10082, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:34:decimal', stdlib.UInt_max, '0'));
+            const v10103 = stdlib.lt(v10082, stdlib.UInt_max);
+            const v10104 = v10102 ? v10103 : false;
+            const v10105 = v10096 ? v10098 : false;
+            const v10106 = v10105 ? v10104 : false;
+            v10067 = v10106;
             
             break;
             }
           case 'EjectMember': {
-            const v9735 = v9611[1];
-            const v9736 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v9735), null);
-            let v9737;
-            switch (v9736[0]) {
+            const v10107 = v9983[1];
+            const v10108 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v10107), null);
+            let v10109;
+            switch (v10108[0]) {
               case 'None': {
-                const v9738 = v9736[1];
-                v9737 = false;
+                const v10110 = v10108[1];
+                v10109 = false;
                 
                 break;
                 }
               case 'Some': {
-                const v9739 = v9736[1];
-                v9737 = true;
+                const v10111 = v10108[1];
+                v10109 = true;
                 
                 break;
                 }
               }
-            const v9741 = stdlib.addressEq(v9735, v3897);
-            const v9742 = v9741 ? false : true;
-            const v9743 = v9737 ? v9742 : false;
-            v9695 = v9743;
+            const v10113 = stdlib.addressEq(v10107, v3949);
+            const v10114 = v10113 ? false : true;
+            const v10115 = v10109 ? v10114 : false;
+            v10067 = v10115;
             
             break;
             }
           case 'None': {
-            const v9744 = v9611[1];
-            v9695 = false;
+            const v10116 = v9983[1];
+            v10067 = false;
             
             break;
             }
           case 'Stop': {
-            const v9745 = v9611[1];
-            v9695 = true;
+            const v10117 = v9983[1];
+            v10067 = true;
             
             break;
             }
           }
-        stdlib.assert(v9695, {
+        stdlib.assert(v10067, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:301:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:304:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:304:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:321:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:324:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:324:13:function exp)'],
           msg: 'Bad suggestion is bad. Apologize to everyone.',
           who: 'Founder'
           });
-        const v9748 = null;
-        await txn2.getOutput('registerProposal', 'v9748', ctc0, v9748);
+        const v10120 = null;
+        await txn2.getOutput('registerProposal', 'v10120', ctc0, v10120);
         null;
-        const v9782 = stdlib.add(v3932, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:163:30:decimal', stdlib.UInt_max, '1'));
-        const v9783 = {
+        const v10154 = stdlib.add(v3984, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:183:30:decimal', stdlib.UInt_max, '1'));
+        const v10155 = {
           Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
           For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-          action: v9611,
-          index: v9782
+          action: v9983,
+          index: v10154
           };
-        const cv3822 = v3822;
-        const cv3823 = true;
-        const cv3824 = v9783;
-        const cv3825 = v4457;
-        const cv3828 = v3828;
+        const cv3874 = v3874;
+        const cv3875 = true;
+        const cv3876 = v10155;
+        const cv3877 = v4509;
+        const cv3880 = v3880;
         
-        v3822 = cv3822;
-        v3823 = cv3823;
-        v3824 = cv3824;
-        v3825 = cv3825;
-        v3828 = cv3828;
+        v3874 = cv3874;
+        v3875 = cv3875;
+        v3876 = cv3876;
+        v3877 = cv3877;
+        v3880 = cv3880;
         
         continue;
         break;
         }
-      case 'voteProposal0_334': {
-        const v10519 = v4456[1];
+      case 'voteProposal0_352': {
+        const v10971 = v4508[1];
         undefined /* setApiDetails */;
-        const v10571 = stdlib.le(v3828, stdlib.UInt_max);
-        stdlib.assert(v10571, {
-          at: './dao/contracts/dao-core.rsh:169:50:dot',
+        const v11023 = stdlib.le(v3880, stdlib.UInt_max);
+        stdlib.assert(v11023, {
+          at: './dao/contracts/dao-core.rsh:189:50:dot',
           fs: [],
           msg: 'assume <= UInt.max',
           who: 'Founder'
           });
         ;
-        const v11002 = v10519[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:313:10:spread', stdlib.UInt_max, '0')];
-        let v11006;
-        if (v3933) {
-          const v11008 = stdlib.mod(v3932, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-          const v11010 = stdlib.sub(v3932, v11008);
-          const v11012 = stdlib.div(v11010, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-          v11006 = v11012;
+        const v11454 = v10971[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:333:10:spread', stdlib.UInt_max, '0')];
+        let v11458;
+        if (v3985) {
+          const v11460 = stdlib.mod(v3984, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+          const v11462 = stdlib.sub(v3984, v11460);
+          const v11464 = stdlib.div(v11462, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+          v11458 = v11464;
           }
         else {
-          v11006 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+          v11458 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
           }
-        const v11013 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4455), null);
-        const v11014 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-        const v11015 = stdlib.fromSome(v11013, v11014);
-        const v11016 = v11015[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:103:11:array', stdlib.UInt_max, '0')];
-        const v11017 = v11015[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:103:11:array', stdlib.UInt_max, '1')];
-        const v11018 = stdlib.ge(v11016, v11006);
-        stdlib.assert(v11018, {
+        const v11465 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4507), null);
+        const v11466 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+        const v11467 = stdlib.fromSome(v11465, v11466);
+        const v11468 = v11467[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:120:11:array', stdlib.UInt_max, '0')];
+        const v11469 = v11467[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:120:11:array', stdlib.UInt_max, '1')];
+        const v11470 = stdlib.ge(v11468, v11458);
+        stdlib.assert(v11470, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:104:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:314:22:application call to "requireIsMember" (defined at: ./dao/contracts/dao-core.rsh:101:36:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:121:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:334:22:application call to "requireIsMember" (defined at: ./dao/contracts/dao-core.rsh:118:36:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
           msg: 'THIEF! SEIZE THEM!',
           who: 'Founder'
           });
-        const v11020 = v3824.For;
-        const v11021 = v3824.Against;
-        let v11024;
-        switch (v3903[0]) {
+        const v11472 = v3876.For;
+        const v11473 = v3876.Against;
+        let v11476;
+        switch (v3955[0]) {
           case 'AllocateFunds': {
-            const v11025 = v3903[1];
-            const v11026 = v11025[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-            const v11027 = v11025[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
-            const v11029 = stdlib.lt(v11027, v3828);
-            const v11030 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11026), null);
-            let v11031;
-            switch (v11030[0]) {
+            const v11477 = v3955[1];
+            const v11478 = v11477[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+            const v11479 = v11477[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
+            const v11481 = stdlib.lt(v11479, v3880);
+            const v11482 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11478), null);
+            let v11483;
+            switch (v11482[0]) {
               case 'None': {
-                const v11032 = v11030[1];
-                v11031 = false;
+                const v11484 = v11482[1];
+                v11483 = false;
                 
                 break;
                 }
               case 'Some': {
-                const v11033 = v11030[1];
-                v11031 = true;
+                const v11485 = v11482[1];
+                v11483 = true;
                 
                 break;
                 }
               }
-            const v11034 = v11031 ? v11029 : false;
-            const v11036 = v3899 ? v11029 : v11034;
-            v11024 = v11036;
+            const v11486 = v11483 ? v11481 : false;
+            const v11488 = v3951 ? v11481 : v11486;
+            v11476 = v11488;
             
             break;
             }
           case 'ChangeAdmin': {
-            const v11037 = v3903[1];
-            const v11038 = v11037.admin;
-            const v11039 = v11037.fee;
-            const v11041 = v11037.quorum;
-            const v11043 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11038), null);
-            const v11045 = stdlib.fromSome(v11043, v11014);
-            const v11046 = v11045[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
-            let v11049;
-            switch (v11043[0]) {
+            const v11489 = v3955[1];
+            const v11490 = v11489.admin;
+            const v11491 = v11489.fee;
+            const v11493 = v11489.quorum;
+            const v11495 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11490), null);
+            const v11497 = stdlib.fromSome(v11495, v11466);
+            const v11498 = v11497[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
+            let v11501;
+            switch (v11495[0]) {
               case 'None': {
-                const v11050 = v11043[1];
-                v11049 = false;
+                const v11502 = v11495[1];
+                v11501 = false;
                 
                 break;
                 }
               case 'Some': {
-                const v11051 = v11043[1];
-                v11049 = true;
+                const v11503 = v11495[1];
+                v11501 = true;
                 
                 break;
                 }
               }
-            const v11052 = stdlib.gt(v11046, v3934);
-            const v11053 = v11049 ? v11052 : false;
-            const v11054 = stdlib.gt(v11041, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
-            let v11055;
-            if (v11054) {
-              const v11058 = stdlib.lt(v11041, v3812);
-              v11055 = v11058;
+            const v11504 = stdlib.gt(v11498, v3986);
+            const v11505 = v11501 ? v11504 : false;
+            const v11506 = stdlib.gt(v11493, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
+            let v11507;
+            if (v11506) {
+              const v11510 = stdlib.lt(v11493, v3848);
+              v11507 = v11510;
               }
             else {
-              v11055 = false;
+              v11507 = false;
               }
-            const v11059 = stdlib.gt(v11039, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:33:decimal', stdlib.UInt_max, '0'));
-            const v11060 = stdlib.lt(v11039, stdlib.UInt_max);
-            const v11061 = v11059 ? v11060 : false;
-            const v11062 = v11053 ? v11055 : false;
-            const v11063 = v11062 ? v11061 : false;
-            v11024 = v11063;
+            const v11511 = stdlib.ge(v11491, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:34:decimal', stdlib.UInt_max, '0'));
+            const v11512 = stdlib.lt(v11491, stdlib.UInt_max);
+            const v11513 = v11511 ? v11512 : false;
+            const v11514 = v11505 ? v11507 : false;
+            const v11515 = v11514 ? v11513 : false;
+            v11476 = v11515;
             
             break;
             }
           case 'EjectMember': {
-            const v11064 = v3903[1];
-            const v11065 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11064), null);
-            let v11066;
-            switch (v11065[0]) {
+            const v11516 = v3955[1];
+            const v11517 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11516), null);
+            let v11518;
+            switch (v11517[0]) {
               case 'None': {
-                const v11067 = v11065[1];
-                v11066 = false;
+                const v11519 = v11517[1];
+                v11518 = false;
                 
                 break;
                 }
               case 'Some': {
-                const v11068 = v11065[1];
-                v11066 = true;
+                const v11520 = v11517[1];
+                v11518 = true;
                 
                 break;
                 }
               }
-            const v11070 = stdlib.addressEq(v11064, v3897);
-            const v11071 = v11070 ? false : true;
-            const v11072 = v11066 ? v11071 : false;
-            v11024 = v11072;
+            const v11522 = stdlib.addressEq(v11516, v3949);
+            const v11523 = v11522 ? false : true;
+            const v11524 = v11518 ? v11523 : false;
+            v11476 = v11524;
             
             break;
             }
           case 'None': {
-            const v11073 = v3903[1];
-            v11024 = false;
+            const v11525 = v3955[1];
+            v11476 = false;
             
             break;
             }
           case 'Stop': {
-            const v11074 = v3903[1];
-            v11024 = true;
+            const v11526 = v3955[1];
+            v11476 = true;
             
             break;
             }
           }
-        stdlib.assert(v11024, {
+        stdlib.assert(v11476, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:316:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:336:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
           msg: 'No Proposal is currently active',
           who: 'Founder'
           });
-        const v11076 = stdlib.gt(v11020, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:321:17:decimal', stdlib.UInt_max, '0'));
-        if (v11076) {
-          const v11078 = stdlib.sub(stdlib.UInt_max, v11021);
-          const v11079 = stdlib.lt(v11020, v11078);
-          stdlib.assert(v11079, {
+        const v11528 = stdlib.gt(v11472, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:341:17:decimal', stdlib.UInt_max, '0'));
+        if (v11528) {
+          const v11530 = stdlib.sub(stdlib.UInt_max, v11473);
+          const v11531 = stdlib.lt(v11472, v11530);
+          stdlib.assert(v11531, {
             at: 'reach standard library:57:5:application',
-            fs: ['at ./dao/contracts/dao-core.rsh:322:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+            fs: ['at ./dao/contracts/dao-core.rsh:342:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
             msg: 'Voting limit reached',
             who: 'Founder'
             });
           }
         else {
           }
-        const v11081 = stdlib.gt(v11021, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:324:21:decimal', stdlib.UInt_max, '0'));
-        if (v11081) {
-          const v11083 = stdlib.sub(stdlib.UInt_max, v11020);
-          const v11084 = stdlib.lt(v11021, v11083);
-          stdlib.assert(v11084, {
+        const v11533 = stdlib.gt(v11473, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:344:21:decimal', stdlib.UInt_max, '0'));
+        if (v11533) {
+          const v11535 = stdlib.sub(stdlib.UInt_max, v11472);
+          const v11536 = stdlib.lt(v11473, v11535);
+          stdlib.assert(v11536, {
             at: 'reach standard library:57:5:application',
-            fs: ['at ./dao/contracts/dao-core.rsh:325:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+            fs: ['at ./dao/contracts/dao-core.rsh:345:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
             msg: 'Voting limit reached',
             who: 'Founder'
             });
           }
         else {
           }
-        const v11088 = stdlib.add(v11020, v11021);
-        const v11090 = stdlib.lt(v11088, v3900);
-        stdlib.assert(v11090, {
+        const v11540 = stdlib.add(v11472, v11473);
+        const v11542 = stdlib.lt(v11540, v3952);
+        stdlib.assert(v11542, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:328:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:348:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
           msg: 'Quorum reached',
           who: 'Founder'
           });
-        const v11097 = stdlib.lt(v11017, v3932);
-        stdlib.assert(v11097, {
+        const v11549 = stdlib.lt(v11469, v3984);
+        stdlib.assert(v11549, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:331:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:351:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
           msg: 'Address has already voted in this session',
           who: 'Founder'
           });
-        let v11099;
-        switch (v11002[0]) {
+        let v11551;
+        switch (v11454[0]) {
           case 'Against': {
-            const v11100 = v11002[1];
-            const v11103 = stdlib.add(v11021, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:335:40:decimal', stdlib.UInt_max, '1'));
-            const v11104 = [v11020, v11103];
-            v11099 = v11104;
+            const v11552 = v11454[1];
+            const v11555 = stdlib.add(v11473, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:355:40:decimal', stdlib.UInt_max, '1'));
+            const v11556 = [v11472, v11555];
+            v11551 = v11556;
             
             break;
             }
           case 'For': {
-            const v11106 = v11002[1];
-            const v11109 = stdlib.add(v11020, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:334:27:decimal', stdlib.UInt_max, '1'));
-            const v11110 = [v11109, v11021];
-            v11099 = v11110;
+            const v11558 = v11454[1];
+            const v11561 = stdlib.add(v11472, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:354:27:decimal', stdlib.UInt_max, '1'));
+            const v11562 = [v11561, v11473];
+            v11551 = v11562;
             
             break;
             }
           }
-        const v11112 = v11099[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:333:13:array', stdlib.UInt_max, '0')];
-        const v11113 = v11099[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:333:13:array', stdlib.UInt_max, '1')];
-        const v11115 = stdlib.sub(stdlib.UInt_max, v11113);
-        const v11116 = stdlib.lt(v11112, v11115);
-        stdlib.assert(v11116, {
+        const v11564 = v11551[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:353:13:array', stdlib.UInt_max, '0')];
+        const v11565 = v11551[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:353:13:array', stdlib.UInt_max, '1')];
+        const v11567 = stdlib.sub(stdlib.UInt_max, v11565);
+        const v11568 = stdlib.lt(v11564, v11567);
+        stdlib.assert(v11568, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:337:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:357:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
           msg: 'Voting limit reached (2)',
           who: 'Founder'
           });
-        const v11119 = stdlib.sub(stdlib.UInt_max, v11112);
-        const v11120 = stdlib.lt(v11113, v11119);
-        stdlib.assert(v11120, {
+        const v11571 = stdlib.sub(stdlib.UInt_max, v11564);
+        const v11572 = stdlib.lt(v11565, v11571);
+        stdlib.assert(v11572, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:338:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:358:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
           msg: 'Voting limit reached (2)',
           who: 'Founder'
           });
-        const v11123 = null;
-        await txn2.getOutput('voteProposal', 'v11123', ctc0, v11123);
-        const v11132 = stdlib.lt(v11016, stdlib.UInt_max);
-        let v11133;
-        if (v11132) {
-          const v11136 = stdlib.add(v11016, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:345:45:decimal', stdlib.UInt_max, '1'));
-          const v11137 = [v11136, v3932];
-          v11133 = v11137;
+        const v11575 = null;
+        await txn2.getOutput('voteProposal', 'v11575', ctc0, v11575);
+        const v11584 = stdlib.lt(v11468, stdlib.UInt_max);
+        let v11585;
+        if (v11584) {
+          const v11588 = stdlib.add(v11468, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:365:45:decimal', stdlib.UInt_max, '1'));
+          const v11589 = [v11588, v3984];
+          v11585 = v11589;
           }
         else {
-          const v11138 = [v11016, v3932];
-          v11133 = v11138;
+          const v11590 = [v11468, v3984];
+          v11585 = v11590;
           }
-        await stdlib.mapSet(map0, v4455, v11133);
-        const v11145 = stdlib.add(v11112, v11113);
-        const v11147 = stdlib.ge(v11145, v3900);
-        let v11149;
-        if (v3933) {
-          const v11151 = stdlib.mod(v3932, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-          const v11153 = stdlib.sub(v3932, v11151);
-          const v11155 = stdlib.div(v11153, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-          v11149 = v11155;
+        await stdlib.mapSet(map0, v4507, v11585);
+        const v11597 = stdlib.add(v11564, v11565);
+        const v11599 = stdlib.ge(v11597, v3952);
+        let v11601;
+        if (v3985) {
+          const v11603 = stdlib.mod(v3984, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+          const v11605 = stdlib.sub(v3984, v11603);
+          const v11607 = stdlib.div(v11605, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+          v11601 = v11607;
           }
         else {
-          v11149 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+          v11601 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
           }
-        let v11156;
-        switch (v3903[0]) {
+        let v11608;
+        switch (v3955[0]) {
           case 'AllocateFunds': {
-            const v11157 = v3903[1];
-            const v11158 = v11157[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-            const v11159 = v11157[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
-            const v11161 = stdlib.lt(v11159, v3828);
-            const v11162 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11158), null);
-            let v11163;
-            switch (v11162[0]) {
+            const v11609 = v3955[1];
+            const v11610 = v11609[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+            const v11611 = v11609[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
+            const v11613 = stdlib.lt(v11611, v3880);
+            const v11614 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11610), null);
+            let v11615;
+            switch (v11614[0]) {
               case 'None': {
-                const v11164 = v11162[1];
-                v11163 = false;
+                const v11616 = v11614[1];
+                v11615 = false;
                 
                 break;
                 }
               case 'Some': {
-                const v11165 = v11162[1];
-                v11163 = true;
+                const v11617 = v11614[1];
+                v11615 = true;
                 
                 break;
                 }
               }
-            const v11166 = v11163 ? v11161 : false;
-            const v11168 = v3899 ? v11161 : v11166;
-            v11156 = v11168;
+            const v11618 = v11615 ? v11613 : false;
+            const v11620 = v3951 ? v11613 : v11618;
+            v11608 = v11620;
             
             break;
             }
           case 'ChangeAdmin': {
-            const v11169 = v3903[1];
-            const v11170 = v11169.admin;
-            const v11171 = v11169.fee;
-            const v11173 = v11169.quorum;
-            const v11175 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11170), null);
-            const v11177 = stdlib.fromSome(v11175, v11014);
-            const v11178 = v11177[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
-            let v11181;
-            switch (v11175[0]) {
+            const v11621 = v3955[1];
+            const v11622 = v11621.admin;
+            const v11623 = v11621.fee;
+            const v11625 = v11621.quorum;
+            const v11627 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11622), null);
+            const v11629 = stdlib.fromSome(v11627, v11466);
+            const v11630 = v11629[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
+            let v11633;
+            switch (v11627[0]) {
               case 'None': {
-                const v11182 = v11175[1];
-                v11181 = false;
+                const v11634 = v11627[1];
+                v11633 = false;
                 
                 break;
                 }
               case 'Some': {
-                const v11183 = v11175[1];
-                v11181 = true;
+                const v11635 = v11627[1];
+                v11633 = true;
                 
                 break;
                 }
               }
-            const v11184 = stdlib.gt(v11178, v11149);
-            const v11185 = v11181 ? v11184 : false;
-            const v11186 = stdlib.gt(v11173, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
-            let v11187;
-            if (v11186) {
-              const v11190 = stdlib.lt(v11173, v3812);
-              v11187 = v11190;
+            const v11636 = stdlib.gt(v11630, v11601);
+            const v11637 = v11633 ? v11636 : false;
+            const v11638 = stdlib.gt(v11625, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
+            let v11639;
+            if (v11638) {
+              const v11642 = stdlib.lt(v11625, v3848);
+              v11639 = v11642;
               }
             else {
-              v11187 = false;
+              v11639 = false;
               }
-            const v11191 = stdlib.gt(v11171, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:33:decimal', stdlib.UInt_max, '0'));
-            const v11192 = stdlib.lt(v11171, stdlib.UInt_max);
-            const v11193 = v11191 ? v11192 : false;
-            const v11194 = v11185 ? v11187 : false;
-            const v11195 = v11194 ? v11193 : false;
-            v11156 = v11195;
+            const v11643 = stdlib.ge(v11623, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:34:decimal', stdlib.UInt_max, '0'));
+            const v11644 = stdlib.lt(v11623, stdlib.UInt_max);
+            const v11645 = v11643 ? v11644 : false;
+            const v11646 = v11637 ? v11639 : false;
+            const v11647 = v11646 ? v11645 : false;
+            v11608 = v11647;
             
             break;
             }
           case 'EjectMember': {
-            const v11196 = v3903[1];
-            const v11197 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11196), null);
-            let v11198;
-            switch (v11197[0]) {
+            const v11648 = v3955[1];
+            const v11649 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11648), null);
+            let v11650;
+            switch (v11649[0]) {
               case 'None': {
-                const v11199 = v11197[1];
-                v11198 = false;
+                const v11651 = v11649[1];
+                v11650 = false;
                 
                 break;
                 }
               case 'Some': {
-                const v11200 = v11197[1];
-                v11198 = true;
+                const v11652 = v11649[1];
+                v11650 = true;
                 
                 break;
                 }
               }
-            const v11202 = stdlib.addressEq(v11196, v3897);
-            const v11203 = v11202 ? false : true;
-            const v11204 = v11198 ? v11203 : false;
-            v11156 = v11204;
+            const v11654 = stdlib.addressEq(v11648, v3949);
+            const v11655 = v11654 ? false : true;
+            const v11656 = v11650 ? v11655 : false;
+            v11608 = v11656;
             
             break;
             }
           case 'None': {
-            const v11205 = v3903[1];
-            v11156 = false;
+            const v11657 = v3955[1];
+            v11608 = false;
             
             break;
             }
           case 'Stop': {
-            const v11206 = v3903[1];
-            v11156 = true;
+            const v11658 = v3955[1];
+            v11608 = true;
             
             break;
             }
           }
-        if (v11147) {
-          const v11207 = stdlib.gt(v11112, v11113);
-          const v11208 = v11156 ? v11207 : false;
-          if (v11208) {
-            switch (v3903[0]) {
+        if (v11599) {
+          const v11659 = stdlib.gt(v11564, v11565);
+          const v11660 = v11608 ? v11659 : false;
+          if (v11660) {
+            switch (v3955[0]) {
               case 'AllocateFunds': {
-                const v11209 = v3903[1];
-                const v11210 = v11209[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:133:32:application', stdlib.UInt_max, '0')];
-                const v11211 = v11209[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:133:32:application', stdlib.UInt_max, '1')];
+                const v11661 = v3955[1];
+                const v11662 = v11661[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:150:32:application', stdlib.UInt_max, '0')];
+                const v11663 = v11661[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:150:32:application', stdlib.UInt_max, '1')];
                 null;
-                const v11218 = stdlib.sub(v3828, v11211);
-                const v11219 = stdlib.ge(v11218, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:137:29:application', stdlib.UInt_max, '0'));
-                stdlib.assert(v11219, {
-                  at: './dao/contracts/dao-core.rsh:137:29:application',
-                  fs: ['at ./dao/contracts/dao-core.rsh:135:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:136:44:function exp)', 'at ./dao/contracts/dao-core.rsh:135:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:135:28:function exp)', 'at ./dao/contracts/dao-core.rsh:347:28:application call to "doProposal" (defined at: ./dao/contracts/dao-core.rsh:115:51:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+                const v11670 = stdlib.sub(v3880, v11663);
+                const v11671 = stdlib.ge(v11670, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:154:29:application', stdlib.UInt_max, '0'));
+                stdlib.assert(v11671, {
+                  at: './dao/contracts/dao-core.rsh:154:29:application',
+                  fs: ['at ./dao/contracts/dao-core.rsh:152:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:153:44:function exp)', 'at ./dao/contracts/dao-core.rsh:152:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:152:28:function exp)', 'at ./dao/contracts/dao-core.rsh:367:28:application call to "doProposal" (defined at: ./dao/contracts/dao-core.rsh:132:51:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
                   msg: 'assume >= 0',
                   who: 'Founder'
                   });
                 ;
-                const v11223 = {
+                const v11675 = {
                   Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                   For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                  action: v3820,
-                  index: v3932
+                  action: v3872,
+                  index: v3984
                   };
-                const cv3822 = v3822;
-                const cv3823 = true;
-                const cv3824 = v11223;
-                const cv3825 = v4457;
-                const cv3828 = v11218;
+                const cv3874 = v3874;
+                const cv3875 = true;
+                const cv3876 = v11675;
+                const cv3877 = v4509;
+                const cv3880 = v11670;
                 
-                v3822 = cv3822;
-                v3823 = cv3823;
-                v3824 = cv3824;
-                v3825 = cv3825;
-                v3828 = cv3828;
+                v3874 = cv3874;
+                v3875 = cv3875;
+                v3876 = cv3876;
+                v3877 = cv3877;
+                v3880 = cv3880;
                 
                 continue;
                 break;
                 }
               case 'ChangeAdmin': {
-                const v11294 = v3903[1];
-                const v11295 = v11294.admin;
-                const v11296 = v11294.registerSelf;
-                const v11297 = v11294.fee;
-                const v11298 = v11294.quorum;
-                const v11299 = v11294.openTreasury;
+                const v11762 = v3955[1];
+                const v11763 = v11762.admin;
+                const v11764 = v11762.registerSelf;
+                const v11765 = v11762.fee;
+                const v11766 = v11762.quorum;
+                const v11767 = v11762.openTreasury;
                 null;
-                const v11333 = {
+                const v11801 = {
                   Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                   For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                  action: v3820,
-                  index: v3932
+                  action: v3872,
+                  index: v3984
                   };
-                const v11334 = {
-                  admin: v11295,
-                  fee: v11297,
-                  openTreasury: v11299,
-                  quorum: v11298,
-                  registerSelf: v11296
+                const v11802 = {
+                  admin: v11763,
+                  fee: v11765,
+                  openTreasury: v11767,
+                  quorum: v11766,
+                  registerSelf: v11764
                   };
-                const cv3822 = v11334;
-                const cv3823 = true;
-                const cv3824 = v11333;
-                const cv3825 = v4457;
-                const cv3828 = v3828;
+                const cv3874 = v11802;
+                const cv3875 = true;
+                const cv3876 = v11801;
+                const cv3877 = v4509;
+                const cv3880 = v3880;
                 
-                v3822 = cv3822;
-                v3823 = cv3823;
-                v3824 = cv3824;
-                v3825 = cv3825;
-                v3828 = cv3828;
+                v3874 = cv3874;
+                v3875 = cv3875;
+                v3876 = cv3876;
+                v3877 = cv3877;
+                v3880 = cv3880;
                 
                 continue;
                 break;
                 }
               case 'EjectMember': {
-                const v11382 = v3903[1];
+                const v11866 = v3955[1];
                 null;
-                const v11428 = v11382;
-                await stdlib.mapSet(map0, v11382, undefined /* Nothing */);
+                const v11912 = v11866;
+                await stdlib.mapSet(map0, v11866, undefined /* Nothing */);
                 null;
-                const v11431 = {
+                const v11915 = {
                   Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                   For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                  action: v3820,
-                  index: v3932
+                  action: v3872,
+                  index: v3984
                   };
-                const cv3822 = v3822;
-                const cv3823 = true;
-                const cv3824 = v11431;
-                const cv3825 = v4457;
-                const cv3828 = v3828;
+                const cv3874 = v3874;
+                const cv3875 = true;
+                const cv3876 = v11915;
+                const cv3877 = v4509;
+                const cv3880 = v3880;
                 
-                v3822 = cv3822;
-                v3823 = cv3823;
-                v3824 = cv3824;
-                v3825 = cv3825;
-                v3828 = cv3828;
+                v3874 = cv3874;
+                v3875 = cv3875;
+                v3876 = cv3876;
+                v3877 = cv3877;
+                v3880 = cv3880;
                 
                 continue;
                 break;
                 }
               case 'None': {
-                const v11465 = v3903[1];
+                const v11965 = v3955[1];
                 null;
-                const v11526 = {
+                const v12026 = {
                   Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                   For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                  action: v3820,
-                  index: v3932
+                  action: v3872,
+                  index: v3984
                   };
-                const cv3822 = v3822;
-                const cv3823 = true;
-                const cv3824 = v11526;
-                const cv3825 = v4457;
-                const cv3828 = v3828;
+                const cv3874 = v3874;
+                const cv3875 = true;
+                const cv3876 = v12026;
+                const cv3877 = v4509;
+                const cv3880 = v3880;
                 
-                v3822 = cv3822;
-                v3823 = cv3823;
-                v3824 = cv3824;
-                v3825 = cv3825;
-                v3828 = cv3828;
+                v3874 = cv3874;
+                v3875 = cv3875;
+                v3876 = cv3876;
+                v3877 = cv3877;
+                v3880 = cv3880;
                 
                 continue;
                 break;
                 }
               case 'Stop': {
-                const v11548 = v3903[1];
+                const v12064 = v3955[1];
                 null;
-                const v11621 = {
+                const v12138 = undefined /* Remote */;
+                const v12139 = await txn2.getOutput('internal', 'v12138', ctc7, v12138);
+                const v12141 = v12139[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:168:33:application', stdlib.UInt_max, '0')];
+                const v12146 = stdlib.add(v3880, v12141);
+                const v12147 = stdlib.le(v12146, stdlib.UInt_max);
+                stdlib.assert(v12147, {
+                  at: './dao/contracts/dao-core.rsh:168:33:application',
+                  fs: ['at ./dao/contracts/dao-core.rsh:152:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:167:20:function exp)', 'at ./dao/contracts/dao-core.rsh:152:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:152:28:function exp)', 'at ./dao/contracts/dao-core.rsh:367:28:application call to "doProposal" (defined at: ./dao/contracts/dao-core.rsh:132:51:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
+                  msg: 'assume <= UInt.max',
+                  who: 'Founder'
+                  });
+                const v12151 = stdlib.eq(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), v12141);
+                stdlib.assert(v12151, {
+                  at: './dao/contracts/dao-core.rsh:168:33:application',
+                  fs: ['at ./dao/contracts/dao-core.rsh:152:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:167:20:function exp)', 'at ./dao/contracts/dao-core.rsh:152:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:152:28:function exp)', 'at ./dao/contracts/dao-core.rsh:367:28:application call to "doProposal" (defined at: ./dao/contracts/dao-core.rsh:132:51:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
+                  msg: 'remote bill check',
+                  who: 'Founder'
+                  });
+                const v12153 = {
                   Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                   For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                  action: v3820,
-                  index: v3932
+                  action: v3872,
+                  index: v3984
                   };
-                const cv3822 = v3822;
-                const cv3823 = false;
-                const cv3824 = v11621;
-                const cv3825 = v4457;
-                const cv3828 = v3828;
+                const cv3874 = v3874;
+                const cv3875 = false;
+                const cv3876 = v12153;
+                const cv3877 = v4509;
+                const cv3880 = v12146;
                 
-                v3822 = cv3822;
-                v3823 = cv3823;
-                v3824 = cv3824;
-                v3825 = cv3825;
-                v3828 = cv3828;
+                v3874 = cv3874;
+                v3875 = cv3875;
+                v3876 = cv3876;
+                v3877 = cv3877;
+                v3880 = cv3880;
                 
                 continue;
                 break;
                 }
               }}
           else {
-            if (v11207) {
-              switch (v3903[0]) {
+            if (v11659) {
+              switch (v3955[0]) {
                 case 'AllocateFunds': {
-                  const v11631 = v3903[1];
+                  const v12163 = v3955[1];
                   null;
-                  const v11635 = {
+                  const v12167 = {
                     Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                     For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                    action: v3820,
-                    index: v3932
+                    action: v3872,
+                    index: v3984
                     };
-                  const cv3822 = v3822;
-                  const cv3823 = true;
-                  const cv3824 = v11635;
-                  const cv3825 = v4457;
-                  const cv3828 = v3828;
+                  const cv3874 = v3874;
+                  const cv3875 = true;
+                  const cv3876 = v12167;
+                  const cv3877 = v4509;
+                  const cv3880 = v3880;
                   
-                  v3822 = cv3822;
-                  v3823 = cv3823;
-                  v3824 = cv3824;
-                  v3825 = cv3825;
-                  v3828 = cv3828;
+                  v3874 = cv3874;
+                  v3875 = cv3875;
+                  v3876 = cv3876;
+                  v3877 = cv3877;
+                  v3880 = cv3880;
                   
                   continue;
                   break;
                   }
                 case 'ChangeAdmin': {
-                  const v11641 = v3903[1];
+                  const v12173 = v3955[1];
                   null;
-                  const v11648 = {
+                  const v12180 = {
                     Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                     For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                    action: v3820,
-                    index: v3932
+                    action: v3872,
+                    index: v3984
                     };
-                  const cv3822 = v3822;
-                  const cv3823 = true;
-                  const cv3824 = v11648;
-                  const cv3825 = v4457;
-                  const cv3828 = v3828;
+                  const cv3874 = v3874;
+                  const cv3875 = true;
+                  const cv3876 = v12180;
+                  const cv3877 = v4509;
+                  const cv3880 = v3880;
                   
-                  v3822 = cv3822;
-                  v3823 = cv3823;
-                  v3824 = cv3824;
-                  v3825 = cv3825;
-                  v3828 = cv3828;
+                  v3874 = cv3874;
+                  v3875 = cv3875;
+                  v3876 = cv3876;
+                  v3877 = cv3877;
+                  v3880 = cv3880;
                   
                   continue;
                   break;
                   }
                 case 'EjectMember': {
-                  const v11654 = v3903[1];
+                  const v12186 = v3955[1];
                   null;
-                  const v11656 = {
+                  const v12188 = {
                     Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                     For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                    action: v3820,
-                    index: v3932
+                    action: v3872,
+                    index: v3984
                     };
-                  const cv3822 = v3822;
-                  const cv3823 = true;
-                  const cv3824 = v11656;
-                  const cv3825 = v4457;
-                  const cv3828 = v3828;
+                  const cv3874 = v3874;
+                  const cv3875 = true;
+                  const cv3876 = v12188;
+                  const cv3877 = v4509;
+                  const cv3880 = v3880;
                   
-                  v3822 = cv3822;
-                  v3823 = cv3823;
-                  v3824 = cv3824;
-                  v3825 = cv3825;
-                  v3828 = cv3828;
+                  v3874 = cv3874;
+                  v3875 = cv3875;
+                  v3876 = cv3876;
+                  v3877 = cv3877;
+                  v3880 = cv3880;
                   
                   continue;
                   break;
                   }
                 case 'None': {
-                  const v11662 = v3903[1];
+                  const v12194 = v3955[1];
                   null;
-                  const v11664 = {
+                  const v12196 = {
                     Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                     For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                    action: v3820,
-                    index: v3932
+                    action: v3872,
+                    index: v3984
                     };
-                  const cv3822 = v3822;
-                  const cv3823 = true;
-                  const cv3824 = v11664;
-                  const cv3825 = v4457;
-                  const cv3828 = v3828;
+                  const cv3874 = v3874;
+                  const cv3875 = true;
+                  const cv3876 = v12196;
+                  const cv3877 = v4509;
+                  const cv3880 = v3880;
                   
-                  v3822 = cv3822;
-                  v3823 = cv3823;
-                  v3824 = cv3824;
-                  v3825 = cv3825;
-                  v3828 = cv3828;
+                  v3874 = cv3874;
+                  v3875 = cv3875;
+                  v3876 = cv3876;
+                  v3877 = cv3877;
+                  v3880 = cv3880;
                   
                   continue;
                   break;
                   }
                 case 'Stop': {
-                  const v11670 = v3903[1];
+                  const v12202 = v3955[1];
                   null;
-                  const v11672 = {
+                  const v12204 = {
                     Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                     For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                    action: v3820,
-                    index: v3932
+                    action: v3872,
+                    index: v3984
                     };
-                  const cv3822 = v3822;
-                  const cv3823 = true;
-                  const cv3824 = v11672;
-                  const cv3825 = v4457;
-                  const cv3828 = v3828;
+                  const cv3874 = v3874;
+                  const cv3875 = true;
+                  const cv3876 = v12204;
+                  const cv3877 = v4509;
+                  const cv3880 = v3880;
                   
-                  v3822 = cv3822;
-                  v3823 = cv3823;
-                  v3824 = cv3824;
-                  v3825 = cv3825;
-                  v3828 = cv3828;
+                  v3874 = cv3874;
+                  v3875 = cv3875;
+                  v3876 = cv3876;
+                  v3877 = cv3877;
+                  v3880 = cv3880;
                   
                   continue;
                   break;
                   }
                 }}
             else {
-              switch (v3903[0]) {
+              switch (v3955[0]) {
                 case 'AllocateFunds': {
-                  const v11678 = v3903[1];
+                  const v12210 = v3955[1];
                   null;
-                  const v11682 = {
+                  const v12214 = {
                     Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                     For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                    action: v3820,
-                    index: v3932
+                    action: v3872,
+                    index: v3984
                     };
-                  const cv3822 = v3822;
-                  const cv3823 = true;
-                  const cv3824 = v11682;
-                  const cv3825 = v4457;
-                  const cv3828 = v3828;
+                  const cv3874 = v3874;
+                  const cv3875 = true;
+                  const cv3876 = v12214;
+                  const cv3877 = v4509;
+                  const cv3880 = v3880;
                   
-                  v3822 = cv3822;
-                  v3823 = cv3823;
-                  v3824 = cv3824;
-                  v3825 = cv3825;
-                  v3828 = cv3828;
+                  v3874 = cv3874;
+                  v3875 = cv3875;
+                  v3876 = cv3876;
+                  v3877 = cv3877;
+                  v3880 = cv3880;
                   
                   continue;
                   break;
                   }
                 case 'ChangeAdmin': {
-                  const v11688 = v3903[1];
+                  const v12220 = v3955[1];
                   null;
-                  const v11695 = {
+                  const v12227 = {
                     Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                     For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                    action: v3820,
-                    index: v3932
+                    action: v3872,
+                    index: v3984
                     };
-                  const cv3822 = v3822;
-                  const cv3823 = true;
-                  const cv3824 = v11695;
-                  const cv3825 = v4457;
-                  const cv3828 = v3828;
+                  const cv3874 = v3874;
+                  const cv3875 = true;
+                  const cv3876 = v12227;
+                  const cv3877 = v4509;
+                  const cv3880 = v3880;
                   
-                  v3822 = cv3822;
-                  v3823 = cv3823;
-                  v3824 = cv3824;
-                  v3825 = cv3825;
-                  v3828 = cv3828;
+                  v3874 = cv3874;
+                  v3875 = cv3875;
+                  v3876 = cv3876;
+                  v3877 = cv3877;
+                  v3880 = cv3880;
                   
                   continue;
                   break;
                   }
                 case 'EjectMember': {
-                  const v11701 = v3903[1];
+                  const v12233 = v3955[1];
                   null;
-                  const v11703 = {
+                  const v12235 = {
                     Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                     For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                    action: v3820,
-                    index: v3932
+                    action: v3872,
+                    index: v3984
                     };
-                  const cv3822 = v3822;
-                  const cv3823 = true;
-                  const cv3824 = v11703;
-                  const cv3825 = v4457;
-                  const cv3828 = v3828;
+                  const cv3874 = v3874;
+                  const cv3875 = true;
+                  const cv3876 = v12235;
+                  const cv3877 = v4509;
+                  const cv3880 = v3880;
                   
-                  v3822 = cv3822;
-                  v3823 = cv3823;
-                  v3824 = cv3824;
-                  v3825 = cv3825;
-                  v3828 = cv3828;
+                  v3874 = cv3874;
+                  v3875 = cv3875;
+                  v3876 = cv3876;
+                  v3877 = cv3877;
+                  v3880 = cv3880;
                   
                   continue;
                   break;
                   }
                 case 'None': {
-                  const v11709 = v3903[1];
+                  const v12241 = v3955[1];
                   null;
-                  const v11711 = {
+                  const v12243 = {
                     Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                     For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                    action: v3820,
-                    index: v3932
+                    action: v3872,
+                    index: v3984
                     };
-                  const cv3822 = v3822;
-                  const cv3823 = true;
-                  const cv3824 = v11711;
-                  const cv3825 = v4457;
-                  const cv3828 = v3828;
+                  const cv3874 = v3874;
+                  const cv3875 = true;
+                  const cv3876 = v12243;
+                  const cv3877 = v4509;
+                  const cv3880 = v3880;
                   
-                  v3822 = cv3822;
-                  v3823 = cv3823;
-                  v3824 = cv3824;
-                  v3825 = cv3825;
-                  v3828 = cv3828;
+                  v3874 = cv3874;
+                  v3875 = cv3875;
+                  v3876 = cv3876;
+                  v3877 = cv3877;
+                  v3880 = cv3880;
                   
                   continue;
                   break;
                   }
                 case 'Stop': {
-                  const v11717 = v3903[1];
+                  const v12249 = v3955[1];
                   null;
-                  const v11719 = {
+                  const v12251 = {
                     Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                     For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                    action: v3820,
-                    index: v3932
+                    action: v3872,
+                    index: v3984
                     };
-                  const cv3822 = v3822;
-                  const cv3823 = true;
-                  const cv3824 = v11719;
-                  const cv3825 = v4457;
-                  const cv3828 = v3828;
+                  const cv3874 = v3874;
+                  const cv3875 = true;
+                  const cv3876 = v12251;
+                  const cv3877 = v4509;
+                  const cv3880 = v3880;
                   
-                  v3822 = cv3822;
-                  v3823 = cv3823;
-                  v3824 = cv3824;
-                  v3825 = cv3825;
-                  v3828 = cv3828;
+                  v3874 = cv3874;
+                  v3875 = cv3875;
+                  v3876 = cv3876;
+                  v3877 = cv3877;
+                  v3880 = cv3880;
                   
                   continue;
                   break;
                   }
                 }}}}
         else {
-          const v11725 = {
-            Against: v11113,
-            For: v11112,
-            action: v3903,
-            index: v3932
+          const v12257 = {
+            Against: v11565,
+            For: v11564,
+            action: v3955,
+            index: v3984
             };
-          const cv3822 = v3822;
-          const cv3823 = true;
-          const cv3824 = v11725;
-          const cv3825 = v4457;
-          const cv3828 = v3828;
+          const cv3874 = v3874;
+          const cv3875 = true;
+          const cv3876 = v12257;
+          const cv3877 = v4509;
+          const cv3880 = v3880;
           
-          v3822 = cv3822;
-          v3823 = cv3823;
-          v3824 = cv3824;
-          v3825 = cv3825;
-          v3828 = cv3828;
+          v3874 = cv3874;
+          v3875 = cv3875;
+          v3876 = cv3876;
+          v3877 = cv3877;
+          v3880 = cv3880;
           
           continue;}
         break;
@@ -2148,22 +2201,22 @@ export async function Founder(ctcTop, interact) {
       }
     
     }
-  const v11731 = v3822.admin;
-  const v11780 = stdlib.sub(v3828, v3828);
-  const v11781 = stdlib.ge(v11780, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:352:25:application', stdlib.UInt_max, '0'));
-  stdlib.assert(v11781, {
-    at: './dao/contracts/dao-core.rsh:352:25:application',
+  const v12263 = v3874.admin;
+  const v12312 = stdlib.sub(v3880, v3880);
+  const v12313 = stdlib.ge(v12312, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:372:25:application', stdlib.UInt_max, '0'));
+  stdlib.assert(v12313, {
+    at: './dao/contracts/dao-core.rsh:372:25:application',
     fs: [],
     msg: 'assume >= 0',
     who: 'Founder'
     });
   ;
-  const v11785 = (stdlib.le(await ctc.getBalance(), v11780) ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:353:29:application', stdlib.UInt_max, '0') : stdlib.sub(await ctc.getBalance(), v11780));
-  const v11786 = stdlib.add(v11785, v11780);
-  const v11791 = stdlib.sub(v11786, v11785);
-  const v11792 = stdlib.ge(v11791, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:353:35:application', stdlib.UInt_max, '0'));
-  stdlib.assert(v11792, {
-    at: './dao/contracts/dao-core.rsh:353:35:application',
+  const v12317 = (stdlib.le(await ctc.getBalance(), v12312) ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:373:29:application', stdlib.UInt_max, '0') : stdlib.sub(await ctc.getBalance(), v12312));
+  const v12318 = stdlib.add(v12317, v12312);
+  const v12323 = stdlib.sub(v12318, v12317);
+  const v12324 = stdlib.ge(v12323, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:373:35:application', stdlib.UInt_max, '0'));
+  stdlib.assert(v12324, {
+    at: './dao/contracts/dao-core.rsh:373:35:application',
     fs: [],
     msg: 'assume >= 0',
     who: 'Founder'
@@ -2189,45 +2242,46 @@ export async function _addMember3(ctcTop, interact) {
     });
   const ctc4 = stdlib.T_Address;
   const ctc5 = stdlib.T_Bytes(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '128'));
-  const ctc6 = stdlib.T_Tuple([ctc4, ctc1]);
-  const ctc7 = stdlib.T_Bool;
-  const ctc8 = stdlib.T_Struct([['admin', ctc4], ['registerSelf', ctc7], ['fee', ctc1], ['quorum', ctc1], ['openTreasury', ctc7]]);
-  const ctc9 = stdlib.T_Data({
-    AllocateFunds: ctc6,
-    ChangeAdmin: ctc8,
+  const ctc6 = stdlib.T_Contract;
+  const ctc7 = stdlib.T_Tuple([ctc4, ctc1]);
+  const ctc8 = stdlib.T_Bool;
+  const ctc9 = stdlib.T_Struct([['admin', ctc4], ['registerSelf', ctc8], ['fee', ctc1], ['quorum', ctc1], ['openTreasury', ctc8]]);
+  const ctc10 = stdlib.T_Data({
+    AllocateFunds: ctc7,
+    ChangeAdmin: ctc9,
     EjectMember: ctc4,
     None: ctc0,
     Stop: ctc0
     });
-  const ctc10 = stdlib.T_Object({
+  const ctc11 = stdlib.T_Object({
     admin: ctc4,
     fee: ctc1,
-    openTreasury: ctc7,
+    openTreasury: ctc8,
     quorum: ctc1,
-    registerSelf: ctc7
+    registerSelf: ctc8
     });
-  const ctc11 = stdlib.T_Object({
+  const ctc12 = stdlib.T_Object({
     Against: ctc1,
     For: ctc1,
-    action: ctc9,
+    action: ctc10,
     index: ctc1
     });
-  const ctc12 = stdlib.T_Tuple([ctc4]);
-  const ctc13 = stdlib.T_Tuple([ctc1]);
-  const ctc14 = stdlib.T_Tuple([ctc7]);
-  const ctc15 = stdlib.T_Tuple([ctc9]);
-  const ctc16 = stdlib.T_Data({
+  const ctc13 = stdlib.T_Tuple([ctc4]);
+  const ctc14 = stdlib.T_Tuple([ctc1]);
+  const ctc15 = stdlib.T_Tuple([ctc8]);
+  const ctc16 = stdlib.T_Tuple([ctc10]);
+  const ctc17 = stdlib.T_Data({
     Against: ctc0,
     For: ctc0
     });
-  const ctc17 = stdlib.T_Tuple([ctc16]);
-  const ctc18 = stdlib.T_Data({
-    addMember0_334: ctc12,
-    donate0_334: ctc13,
-    eject0_334: ctc12,
-    joinLeave0_334: ctc14,
-    registerProposal0_334: ctc15,
-    voteProposal0_334: ctc17
+  const ctc18 = stdlib.T_Tuple([ctc17]);
+  const ctc19 = stdlib.T_Data({
+    addMember0_352: ctc13,
+    donate0_352: ctc14,
+    eject0_352: ctc13,
+    joinLeave0_352: ctc15,
+    registerProposal0_352: ctc16,
+    voteProposal0_352: ctc18
     });
   
   const map0_ctc = ctc3;
@@ -2239,78 +2293,78 @@ export async function _addMember3(ctcTop, interact) {
     });
   
   
-  const [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934] = await ctc.getState(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'), [ctc4, ctc5, ctc1, ctc9, ctc10, ctc11, ctc1, ctc4, ctc1, ctc7, ctc1, ctc7, ctc9, ctc1, ctc7, ctc1]);
-  const v3943 = stdlib.protect(ctc12, await interact.in(), {
+  const [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986] = await ctc.getState(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'), [ctc4, ctc5, ctc6, ctc1, ctc6, ctc10, ctc11, ctc12, ctc1, ctc4, ctc1, ctc8, ctc1, ctc8, ctc10, ctc1, ctc8, ctc1]);
+  const v3995 = stdlib.protect(ctc13, await interact.in(), {
     at: './dao/contracts/dao-core.rsh:1:23:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:196:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:196:36:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runaddMember0_334" (defined at: ./dao/contracts/dao-core.rsh:196:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:216:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:216:36:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runaddMember0_352" (defined at: ./dao/contracts/dao-core.rsh:216:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'in',
     who: 'addMember'
     });
-  const v3944 = v3943[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:1:23:application', stdlib.UInt_max, '0')];
-  const v3946 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v3944), null);
-  const v3947 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-  const v3948 = stdlib.fromSome(v3946, v3947);
-  const v3949 = v3948[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:98:11:array', stdlib.UInt_max, '0')];
-  const v3951 = stdlib.ge(v3949, v3934);
-  stdlib.assert(v3951, {
+  const v3996 = v3995[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:1:23:application', stdlib.UInt_max, '0')];
+  const v3998 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v3996), null);
+  const v3999 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+  const v4000 = stdlib.fromSome(v3998, v3999);
+  const v4001 = v4000[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:115:11:array', stdlib.UInt_max, '0')];
+  const v4003 = stdlib.ge(v4001, v3986);
+  stdlib.assert(v4003, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:197:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:196:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:196:36:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runaddMember0_334" (defined at: ./dao/contracts/dao-core.rsh:196:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:217:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:216:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:216:36:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runaddMember0_352" (defined at: ./dao/contracts/dao-core.rsh:216:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'User is below Citizen Rank threshold',
     who: 'addMember'
     });
-  let v3954;
-  switch (v3946[0]) {
+  let v4006;
+  switch (v3998[0]) {
     case 'None': {
-      const v3955 = v3946[1];
-      v3954 = true;
+      const v4007 = v3998[1];
+      v4006 = true;
       
       break;
       }
     case 'Some': {
-      const v3956 = v3946[1];
-      v3954 = false;
+      const v4008 = v3998[1];
+      v4006 = false;
       
       break;
       }
     }
-  stdlib.assert(v3954, {
+  stdlib.assert(v4006, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:198:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:196:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:196:36:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runaddMember0_334" (defined at: ./dao/contracts/dao-core.rsh:196:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:218:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:216:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:216:36:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runaddMember0_352" (defined at: ./dao/contracts/dao-core.rsh:216:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'Address is already a member',
     who: 'addMember'
     });
-  const v3963 = ['addMember0_334', v3943];
+  const v4015 = ['addMember0_352', v3995];
   
-  let v4419;
-  switch (v3946[0]) {
+  let v4471;
+  switch (v3998[0]) {
     case 'None': {
-      const v4420 = v3946[1];
-      v4419 = true;
+      const v4472 = v3998[1];
+      v4471 = true;
       
       break;
       }
     case 'Some': {
-      const v4421 = v3946[1];
-      v4419 = false;
+      const v4473 = v3998[1];
+      v4471 = false;
       
       break;
       }
     }
-  stdlib.assert(v4419, {
+  stdlib.assert(v4471, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:198:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:196:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:196:36:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:196:36:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:218:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:216:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:216:36:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:216:36:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'Address is already a member',
     who: 'addMember'
     });
   
   const txn1 = await (ctc.sendrecv({
-    args: [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934, v3963],
+    args: [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986, v4015],
     evt_cnt: 1,
     funcNum: 2,
     lct: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
     onlyIf: true,
-    out_tys: [ctc18],
-    pay: [v3898, []],
+    out_tys: [ctc19],
+    pay: [v3950, []],
     sim_p: (async (txn1) => {
       const sim_r = { txns: [], mapRefs: [], maps: [] };
       let sim_txn_ctr = stdlib.UInt_max;
@@ -2318,76 +2372,76 @@ export async function _addMember3(ctcTop, interact) {
       
       stdlib.simMapDupe(sim_r, 0, map0);
       
-      const {data: [v4456], secs: v4458, time: v4457, didSend: v2511, from: v4455 } = txn1;
+      const {data: [v4508], secs: v4510, time: v4509, didSend: v2529, from: v4507 } = txn1;
       
-      switch (v4456[0]) {
-        case 'addMember0_334': {
-          const v4459 = v4456[1];
+      switch (v4508[0]) {
+        case 'addMember0_352': {
+          const v4511 = v4508[1];
           sim_r.txns.push({
             kind: 'api',
             who: "addMember"
             });
-          const v4464 = v4459[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:196:10:spread', stdlib.UInt_max, '0')];
-          stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v4464), null);
-          const v4510 = stdlib.add(v3828, v3898);
+          const v4516 = v4511[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:216:10:spread', stdlib.UInt_max, '0')];
+          stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v4516), null);
+          const v4562 = stdlib.add(v3880, v3950);
           sim_r.txns.push({
-            amt: v3898,
+            amt: v3950,
             kind: 'to',
             tok: undefined /* Nothing */
             });
-          const v4530 = [v3934, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-          await stdlib.simMapSet(sim_r, 0, v4464, v4530);
+          const v4582 = [v3986, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+          await stdlib.simMapSet(sim_r, 0, v4516, v4582);
           null;
-          const v4532 = null;
-          const v4533 = await txn1.getOutput('addMember', 'v4532', ctc0, v4532);
+          const v4584 = null;
+          const v4585 = await txn1.getOutput('addMember', 'v4584', ctc0, v4584);
           
-          const v18522 = v3822;
-          const v18524 = v3824;
-          const v18526 = v4510;
-          const v18527 = v3822.admin;
-          const v18528 = v3822.fee;
-          const v18529 = v3822.openTreasury;
-          const v18530 = v3822.quorum;
-          const v18531 = v3822.registerSelf;
-          const v18532 = v3824.action;
-          const v18533 = v3824.index;
-          const v18534 = stdlib.ge(v18533, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-          let v18535;
-          if (v18534) {
-            const v18536 = stdlib.mod(v18533, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-            const v18537 = stdlib.sub(v18533, v18536);
-            const v18538 = stdlib.div(v18537, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-            v18535 = v18538;
+          const v19054 = v3874;
+          const v19056 = v3876;
+          const v19058 = v4562;
+          const v19059 = v3874.admin;
+          const v19060 = v3874.fee;
+          const v19061 = v3874.openTreasury;
+          const v19062 = v3874.quorum;
+          const v19063 = v3874.registerSelf;
+          const v19064 = v3876.action;
+          const v19065 = v3876.index;
+          const v19066 = stdlib.ge(v19065, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+          let v19067;
+          if (v19066) {
+            const v19068 = stdlib.mod(v19065, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+            const v19069 = stdlib.sub(v19065, v19068);
+            const v19070 = stdlib.div(v19069, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+            v19067 = v19070;
             }
           else {
-            v18535 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+            v19067 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
             }
           sim_r.isHalt = false;
           
           break;
           }
-        case 'donate0_334': {
-          const v5671 = v4456[1];
+        case 'donate0_352': {
+          const v5803 = v4508[1];
           
           break;
           }
-        case 'eject0_334': {
-          const v6883 = v4456[1];
+        case 'eject0_352': {
+          const v7095 = v4508[1];
           
           break;
           }
-        case 'joinLeave0_334': {
-          const v8095 = v4456[1];
+        case 'joinLeave0_352': {
+          const v8387 = v4508[1];
           
           break;
           }
-        case 'registerProposal0_334': {
-          const v9307 = v4456[1];
+        case 'registerProposal0_352': {
+          const v9679 = v4508[1];
           
           break;
           }
-        case 'voteProposal0_334': {
-          const v10519 = v4456[1];
+        case 'voteProposal0_352': {
+          const v10971 = v4508[1];
           
           break;
           }
@@ -2396,66 +2450,36 @@ export async function _addMember3(ctcTop, interact) {
       }),
     soloSend: false,
     timeoutAt: undefined /* mto */,
-    tys: [ctc4, ctc5, ctc1, ctc9, ctc10, ctc11, ctc1, ctc4, ctc1, ctc7, ctc1, ctc7, ctc9, ctc1, ctc7, ctc1, ctc18],
+    tys: [ctc4, ctc5, ctc6, ctc1, ctc6, ctc10, ctc11, ctc12, ctc1, ctc4, ctc1, ctc8, ctc1, ctc8, ctc10, ctc1, ctc8, ctc1, ctc19],
     waitIfNotPresent: false
     }));
-  const {data: [v4456], secs: v4458, time: v4457, didSend: v2511, from: v4455 } = txn1;
-  switch (v4456[0]) {
-    case 'addMember0_334': {
-      const v4459 = v4456[1];
+  const {data: [v4508], secs: v4510, time: v4509, didSend: v2529, from: v4507 } = txn1;
+  switch (v4508[0]) {
+    case 'addMember0_352': {
+      const v4511 = v4508[1];
       undefined /* setApiDetails */;
-      const v4464 = v4459[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:196:10:spread', stdlib.UInt_max, '0')];
-      const v4465 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4464), null);
-      const v4466 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-      const v4467 = stdlib.fromSome(v4465, v4466);
-      const v4468 = v4467[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:98:11:array', stdlib.UInt_max, '0')];
-      const v4470 = stdlib.ge(v4468, v3934);
-      stdlib.assert(v4470, {
+      const v4516 = v4511[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:216:10:spread', stdlib.UInt_max, '0')];
+      const v4517 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4516), null);
+      const v4518 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+      const v4519 = stdlib.fromSome(v4517, v4518);
+      const v4520 = v4519[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:115:11:array', stdlib.UInt_max, '0')];
+      const v4522 = stdlib.ge(v4520, v3986);
+      stdlib.assert(v4522, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:197:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:196:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:196:36:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:196:36:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:217:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:216:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:216:36:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:216:36:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
         msg: 'User is below Citizen Rank threshold',
         who: 'addMember'
         });
-      let v4473;
-      switch (v4465[0]) {
-        case 'None': {
-          const v4474 = v4465[1];
-          v4473 = true;
-          
-          break;
-          }
-        case 'Some': {
-          const v4475 = v4465[1];
-          v4473 = false;
-          
-          break;
-          }
-        }
-      stdlib.assert(v4473, {
-        at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:198:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:196:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:196:36:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:196:36:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
-        msg: 'Address is already a member',
-        who: 'addMember'
-        });
-      const v4510 = stdlib.add(v3828, v3898);
-      const v4511 = stdlib.le(v4510, stdlib.UInt_max);
-      stdlib.assert(v4511, {
-        at: './dao/contracts/dao-core.rsh:169:50:dot',
-        fs: [],
-        msg: 'assume <= UInt.max',
-        who: 'addMember'
-        });
-      ;
       let v4525;
-      switch (v4465[0]) {
+      switch (v4517[0]) {
         case 'None': {
-          const v4526 = v4465[1];
+          const v4526 = v4517[1];
           v4525 = true;
           
           break;
           }
         case 'Some': {
-          const v4527 = v4465[1];
+          const v4527 = v4517[1];
           v4525 = false;
           
           break;
@@ -2463,19 +2487,49 @@ export async function _addMember3(ctcTop, interact) {
         }
       stdlib.assert(v4525, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:198:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:203:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:203:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:218:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:216:36:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:216:36:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:216:36:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
         msg: 'Address is already a member',
         who: 'addMember'
         });
-      const v4530 = [v3934, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-      await stdlib.mapSet(map0, v4464, v4530);
+      const v4562 = stdlib.add(v3880, v3950);
+      const v4563 = stdlib.le(v4562, stdlib.UInt_max);
+      stdlib.assert(v4563, {
+        at: './dao/contracts/dao-core.rsh:189:50:dot',
+        fs: [],
+        msg: 'assume <= UInt.max',
+        who: 'addMember'
+        });
+      ;
+      let v4577;
+      switch (v4517[0]) {
+        case 'None': {
+          const v4578 = v4517[1];
+          v4577 = true;
+          
+          break;
+          }
+        case 'Some': {
+          const v4579 = v4517[1];
+          v4577 = false;
+          
+          break;
+          }
+        }
+      stdlib.assert(v4577, {
+        at: 'reach standard library:57:5:application',
+        fs: ['at ./dao/contracts/dao-core.rsh:218:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:223:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:223:13:function exp)'],
+        msg: 'Address is already a member',
+        who: 'addMember'
+        });
+      const v4582 = [v3986, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+      await stdlib.mapSet(map0, v4516, v4582);
       null;
-      const v4532 = null;
-      const v4533 = await txn1.getOutput('addMember', 'v4532', ctc0, v4532);
-      if (v2511) {
-        stdlib.protect(ctc0, await interact.out(v4459, v4533), {
-          at: './dao/contracts/dao-core.rsh:196:11:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:196:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:196:11:function exp)', 'at ./dao/contracts/dao-core.rsh:205:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:203:13:function exp)', 'at ./dao/contracts/dao-core.rsh:203:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:203:13:function exp)'],
+      const v4584 = null;
+      const v4585 = await txn1.getOutput('addMember', 'v4584', ctc0, v4584);
+      if (v2529) {
+        stdlib.protect(ctc0, await interact.out(v4511, v4585), {
+          at: './dao/contracts/dao-core.rsh:216:11:application',
+          fs: ['at ./dao/contracts/dao-core.rsh:216:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:216:11:function exp)', 'at ./dao/contracts/dao-core.rsh:225:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:223:13:function exp)', 'at ./dao/contracts/dao-core.rsh:223:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:223:13:function exp)'],
           msg: 'out',
           who: 'addMember'
           });
@@ -2483,53 +2537,53 @@ export async function _addMember3(ctcTop, interact) {
       else {
         }
       
-      const v18522 = v3822;
-      const v18524 = v3824;
-      const v18526 = v4510;
-      const v18527 = v3822.admin;
-      const v18528 = v3822.fee;
-      const v18529 = v3822.openTreasury;
-      const v18530 = v3822.quorum;
-      const v18531 = v3822.registerSelf;
-      const v18532 = v3824.action;
-      const v18533 = v3824.index;
-      const v18534 = stdlib.ge(v18533, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-      let v18535;
-      if (v18534) {
-        const v18536 = stdlib.mod(v18533, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-        const v18537 = stdlib.sub(v18533, v18536);
-        const v18538 = stdlib.div(v18537, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-        v18535 = v18538;
+      const v19054 = v3874;
+      const v19056 = v3876;
+      const v19058 = v4562;
+      const v19059 = v3874.admin;
+      const v19060 = v3874.fee;
+      const v19061 = v3874.openTreasury;
+      const v19062 = v3874.quorum;
+      const v19063 = v3874.registerSelf;
+      const v19064 = v3876.action;
+      const v19065 = v3876.index;
+      const v19066 = stdlib.ge(v19065, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+      let v19067;
+      if (v19066) {
+        const v19068 = stdlib.mod(v19065, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+        const v19069 = stdlib.sub(v19065, v19068);
+        const v19070 = stdlib.div(v19069, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+        v19067 = v19070;
         }
       else {
-        v18535 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+        v19067 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
         }
       return;
       
       break;
       }
-    case 'donate0_334': {
-      const v5671 = v4456[1];
+    case 'donate0_352': {
+      const v5803 = v4508[1];
       return;
       break;
       }
-    case 'eject0_334': {
-      const v6883 = v4456[1];
+    case 'eject0_352': {
+      const v7095 = v4508[1];
       return;
       break;
       }
-    case 'joinLeave0_334': {
-      const v8095 = v4456[1];
+    case 'joinLeave0_352': {
+      const v8387 = v4508[1];
       return;
       break;
       }
-    case 'registerProposal0_334': {
-      const v9307 = v4456[1];
+    case 'registerProposal0_352': {
+      const v9679 = v4508[1];
       return;
       break;
       }
-    case 'voteProposal0_334': {
-      const v10519 = v4456[1];
+    case 'voteProposal0_352': {
+      const v10971 = v4508[1];
       return;
       break;
       }
@@ -2553,45 +2607,46 @@ export async function _donate3(ctcTop, interact) {
     });
   const ctc4 = stdlib.T_Address;
   const ctc5 = stdlib.T_Bytes(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '128'));
-  const ctc6 = stdlib.T_Tuple([ctc4, ctc1]);
-  const ctc7 = stdlib.T_Bool;
-  const ctc8 = stdlib.T_Struct([['admin', ctc4], ['registerSelf', ctc7], ['fee', ctc1], ['quorum', ctc1], ['openTreasury', ctc7]]);
-  const ctc9 = stdlib.T_Data({
-    AllocateFunds: ctc6,
-    ChangeAdmin: ctc8,
+  const ctc6 = stdlib.T_Contract;
+  const ctc7 = stdlib.T_Tuple([ctc4, ctc1]);
+  const ctc8 = stdlib.T_Bool;
+  const ctc9 = stdlib.T_Struct([['admin', ctc4], ['registerSelf', ctc8], ['fee', ctc1], ['quorum', ctc1], ['openTreasury', ctc8]]);
+  const ctc10 = stdlib.T_Data({
+    AllocateFunds: ctc7,
+    ChangeAdmin: ctc9,
     EjectMember: ctc4,
     None: ctc0,
     Stop: ctc0
     });
-  const ctc10 = stdlib.T_Object({
+  const ctc11 = stdlib.T_Object({
     admin: ctc4,
     fee: ctc1,
-    openTreasury: ctc7,
+    openTreasury: ctc8,
     quorum: ctc1,
-    registerSelf: ctc7
+    registerSelf: ctc8
     });
-  const ctc11 = stdlib.T_Object({
+  const ctc12 = stdlib.T_Object({
     Against: ctc1,
     For: ctc1,
-    action: ctc9,
+    action: ctc10,
     index: ctc1
     });
-  const ctc12 = stdlib.T_Tuple([ctc1]);
-  const ctc13 = stdlib.T_Tuple([ctc4]);
-  const ctc14 = stdlib.T_Tuple([ctc7]);
-  const ctc15 = stdlib.T_Tuple([ctc9]);
-  const ctc16 = stdlib.T_Data({
+  const ctc13 = stdlib.T_Tuple([ctc1]);
+  const ctc14 = stdlib.T_Tuple([ctc4]);
+  const ctc15 = stdlib.T_Tuple([ctc8]);
+  const ctc16 = stdlib.T_Tuple([ctc10]);
+  const ctc17 = stdlib.T_Data({
     Against: ctc0,
     For: ctc0
     });
-  const ctc17 = stdlib.T_Tuple([ctc16]);
-  const ctc18 = stdlib.T_Data({
-    addMember0_334: ctc13,
-    donate0_334: ctc12,
-    eject0_334: ctc13,
-    joinLeave0_334: ctc14,
-    registerProposal0_334: ctc15,
-    voteProposal0_334: ctc17
+  const ctc18 = stdlib.T_Tuple([ctc17]);
+  const ctc19 = stdlib.T_Data({
+    addMember0_352: ctc14,
+    donate0_352: ctc13,
+    eject0_352: ctc14,
+    joinLeave0_352: ctc15,
+    registerProposal0_352: ctc16,
+    voteProposal0_352: ctc18
     });
   
   const map0_ctc = ctc3;
@@ -2603,32 +2658,32 @@ export async function _donate3(ctcTop, interact) {
     });
   
   
-  const [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934] = await ctc.getState(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'), [ctc4, ctc5, ctc1, ctc9, ctc10, ctc11, ctc1, ctc4, ctc1, ctc7, ctc1, ctc7, ctc9, ctc1, ctc7, ctc1]);
-  const v3967 = stdlib.protect(ctc12, await interact.in(), {
+  const [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986] = await ctc.getState(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'), [ctc4, ctc5, ctc6, ctc1, ctc6, ctc10, ctc11, ctc12, ctc1, ctc4, ctc1, ctc8, ctc1, ctc8, ctc10, ctc1, ctc8, ctc1]);
+  const v4019 = stdlib.protect(ctc13, await interact.in(), {
     at: './dao/contracts/dao-core.rsh:1:23:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:212:33:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:212:33:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "rundonate0_334" (defined at: ./dao/contracts/dao-core.rsh:212:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:232:33:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:232:33:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "rundonate0_352" (defined at: ./dao/contracts/dao-core.rsh:232:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'in',
     who: 'donate'
     });
-  const v3968 = v3967[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:1:23:application', stdlib.UInt_max, '0')];
-  const v3972 = stdlib.sub(stdlib.UInt_max, v3968);
-  const v3973 = stdlib.lt(v3828, v3972);
-  stdlib.assert(v3973, {
+  const v4020 = v4019[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:1:23:application', stdlib.UInt_max, '0')];
+  const v4024 = stdlib.sub(stdlib.UInt_max, v4020);
+  const v4025 = stdlib.lt(v3880, v4024);
+  stdlib.assert(v4025, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:213:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:212:33:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:212:33:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "rundonate0_334" (defined at: ./dao/contracts/dao-core.rsh:212:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:233:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:232:33:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:232:33:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "rundonate0_352" (defined at: ./dao/contracts/dao-core.rsh:232:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'Donation is too generous',
     who: 'donate'
     });
-  const v3980 = ['donate0_334', v3967];
+  const v4032 = ['donate0_352', v4019];
   
   const txn1 = await (ctc.sendrecv({
-    args: [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934, v3980],
+    args: [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986, v4032],
     evt_cnt: 1,
     funcNum: 2,
     lct: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
     onlyIf: true,
-    out_tys: [ctc18],
-    pay: [v3968, []],
+    out_tys: [ctc19],
+    pay: [v4020, []],
     sim_p: (async (txn1) => {
       const sim_r = { txns: [], mapRefs: [], maps: [] };
       let sim_txn_ctr = stdlib.UInt_max;
@@ -2636,135 +2691,135 @@ export async function _donate3(ctcTop, interact) {
       
       stdlib.simMapDupe(sim_r, 0, map0);
       
-      const {data: [v4456], secs: v4458, time: v4457, didSend: v2511, from: v4455 } = txn1;
+      const {data: [v4508], secs: v4510, time: v4509, didSend: v2529, from: v4507 } = txn1;
       
-      switch (v4456[0]) {
-        case 'addMember0_334': {
-          const v4459 = v4456[1];
+      switch (v4508[0]) {
+        case 'addMember0_352': {
+          const v4511 = v4508[1];
           
           break;
           }
-        case 'donate0_334': {
-          const v5671 = v4456[1];
+        case 'donate0_352': {
+          const v5803 = v4508[1];
           sim_r.txns.push({
             kind: 'api',
             who: "donate"
             });
-          const v5691 = v5671[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:212:10:spread', stdlib.UInt_max, '0')];
-          const v5722 = stdlib.add(v3828, v5691);
+          const v5823 = v5803[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:232:10:spread', stdlib.UInt_max, '0')];
+          const v5854 = stdlib.add(v3880, v5823);
           sim_r.txns.push({
-            amt: v5691,
+            amt: v5823,
             kind: 'to',
             tok: undefined /* Nothing */
             });
-          const v5760 = stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v4455), null);
-          let v5761;
-          switch (v5760[0]) {
+          const v5892 = stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v4507), null);
+          let v5893;
+          switch (v5892[0]) {
             case 'None': {
-              const v5762 = v5760[1];
-              v5761 = false;
+              const v5894 = v5892[1];
+              v5893 = false;
               
               break;
               }
             case 'Some': {
-              const v5763 = v5760[1];
-              v5761 = true;
+              const v5895 = v5892[1];
+              v5893 = true;
               
               break;
               }
             }
-          if (v5761) {
-            const v5765 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-            const v5766 = stdlib.fromSome(v5760, v5765);
-            const v5767 = v5766[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:220:19:array', stdlib.UInt_max, '0')];
-            const v5768 = v5766[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:220:19:array', stdlib.UInt_max, '1')];
-            const v5770 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:222:36:decimal', stdlib.UInt_max, '1'));
-            const v5771 = stdlib.lt(v5767, v5770);
-            let v5772;
-            if (v5771) {
-              const v5775 = stdlib.add(v5767, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:223:30:decimal', stdlib.UInt_max, '1'));
-              const v5776 = [v5775, v5768];
-              v5772 = v5776;
+          if (v5893) {
+            const v5897 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+            const v5898 = stdlib.fromSome(v5892, v5897);
+            const v5899 = v5898[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:240:19:array', stdlib.UInt_max, '0')];
+            const v5900 = v5898[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:240:19:array', stdlib.UInt_max, '1')];
+            const v5902 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:242:36:decimal', stdlib.UInt_max, '1'));
+            const v5903 = stdlib.lt(v5899, v5902);
+            let v5904;
+            if (v5903) {
+              const v5907 = stdlib.add(v5899, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:243:30:decimal', stdlib.UInt_max, '1'));
+              const v5908 = [v5907, v5900];
+              v5904 = v5908;
               }
             else {
-              const v5777 = stdlib.ge(v5767, v3934);
-              const v5778 = v5777 ? v5767 : v3934;
-              const v5779 = [v5778, v5768];
-              v5772 = v5779;
+              const v5909 = stdlib.ge(v5899, v3986);
+              const v5910 = v5909 ? v5899 : v3986;
+              const v5911 = [v5910, v5900];
+              v5904 = v5911;
               }
-            await stdlib.simMapSet(sim_r, 0, v4455, v5772);
-            const v5780 = null;
-            const v5781 = await txn1.getOutput('donate', 'v5780', ctc0, v5780);
+            await stdlib.simMapSet(sim_r, 0, v4507, v5904);
+            const v5912 = null;
+            const v5913 = await txn1.getOutput('donate', 'v5912', ctc0, v5912);
             
-            const v19247 = v3822;
-            const v19249 = v3824;
-            const v19251 = v5722;
-            const v19252 = v3822.admin;
-            const v19253 = v3822.fee;
-            const v19254 = v3822.openTreasury;
-            const v19255 = v3822.quorum;
-            const v19256 = v3822.registerSelf;
-            const v19257 = v3824.action;
-            const v19258 = v3824.index;
-            const v19259 = stdlib.ge(v19258, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-            let v19260;
-            if (v19259) {
-              const v19261 = stdlib.mod(v19258, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-              const v19262 = stdlib.sub(v19258, v19261);
-              const v19263 = stdlib.div(v19262, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-              v19260 = v19263;
+            const v19779 = v3874;
+            const v19781 = v3876;
+            const v19783 = v5854;
+            const v19784 = v3874.admin;
+            const v19785 = v3874.fee;
+            const v19786 = v3874.openTreasury;
+            const v19787 = v3874.quorum;
+            const v19788 = v3874.registerSelf;
+            const v19789 = v3876.action;
+            const v19790 = v3876.index;
+            const v19791 = stdlib.ge(v19790, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+            let v19792;
+            if (v19791) {
+              const v19793 = stdlib.mod(v19790, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+              const v19794 = stdlib.sub(v19790, v19793);
+              const v19795 = stdlib.div(v19794, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+              v19792 = v19795;
               }
             else {
-              v19260 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+              v19792 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
               }
             sim_r.isHalt = false;
             }
           else {
-            const v5788 = null;
-            const v5789 = await txn1.getOutput('donate', 'v5788', ctc0, v5788);
+            const v5920 = null;
+            const v5921 = await txn1.getOutput('donate', 'v5920', ctc0, v5920);
             
-            const v19276 = v3822;
-            const v19278 = v3824;
-            const v19280 = v5722;
-            const v19281 = v3822.admin;
-            const v19282 = v3822.fee;
-            const v19283 = v3822.openTreasury;
-            const v19284 = v3822.quorum;
-            const v19285 = v3822.registerSelf;
-            const v19286 = v3824.action;
-            const v19287 = v3824.index;
-            const v19288 = stdlib.ge(v19287, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-            let v19289;
-            if (v19288) {
-              const v19290 = stdlib.mod(v19287, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-              const v19291 = stdlib.sub(v19287, v19290);
-              const v19292 = stdlib.div(v19291, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-              v19289 = v19292;
+            const v19808 = v3874;
+            const v19810 = v3876;
+            const v19812 = v5854;
+            const v19813 = v3874.admin;
+            const v19814 = v3874.fee;
+            const v19815 = v3874.openTreasury;
+            const v19816 = v3874.quorum;
+            const v19817 = v3874.registerSelf;
+            const v19818 = v3876.action;
+            const v19819 = v3876.index;
+            const v19820 = stdlib.ge(v19819, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+            let v19821;
+            if (v19820) {
+              const v19822 = stdlib.mod(v19819, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+              const v19823 = stdlib.sub(v19819, v19822);
+              const v19824 = stdlib.div(v19823, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+              v19821 = v19824;
               }
             else {
-              v19289 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+              v19821 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
               }
             sim_r.isHalt = false;
             }
           break;
           }
-        case 'eject0_334': {
-          const v6883 = v4456[1];
+        case 'eject0_352': {
+          const v7095 = v4508[1];
           
           break;
           }
-        case 'joinLeave0_334': {
-          const v8095 = v4456[1];
+        case 'joinLeave0_352': {
+          const v8387 = v4508[1];
           
           break;
           }
-        case 'registerProposal0_334': {
-          const v9307 = v4456[1];
+        case 'registerProposal0_352': {
+          const v9679 = v4508[1];
           
           break;
           }
-        case 'voteProposal0_334': {
-          const v10519 = v4456[1];
+        case 'voteProposal0_352': {
+          const v10971 = v4508[1];
           
           break;
           }
@@ -2773,86 +2828,86 @@ export async function _donate3(ctcTop, interact) {
       }),
     soloSend: false,
     timeoutAt: undefined /* mto */,
-    tys: [ctc4, ctc5, ctc1, ctc9, ctc10, ctc11, ctc1, ctc4, ctc1, ctc7, ctc1, ctc7, ctc9, ctc1, ctc7, ctc1, ctc18],
+    tys: [ctc4, ctc5, ctc6, ctc1, ctc6, ctc10, ctc11, ctc12, ctc1, ctc4, ctc1, ctc8, ctc1, ctc8, ctc10, ctc1, ctc8, ctc1, ctc19],
     waitIfNotPresent: false
     }));
-  const {data: [v4456], secs: v4458, time: v4457, didSend: v2511, from: v4455 } = txn1;
-  switch (v4456[0]) {
-    case 'addMember0_334': {
-      const v4459 = v4456[1];
+  const {data: [v4508], secs: v4510, time: v4509, didSend: v2529, from: v4507 } = txn1;
+  switch (v4508[0]) {
+    case 'addMember0_352': {
+      const v4511 = v4508[1];
       return;
       break;
       }
-    case 'donate0_334': {
-      const v5671 = v4456[1];
+    case 'donate0_352': {
+      const v5803 = v4508[1];
       undefined /* setApiDetails */;
-      const v5691 = v5671[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:212:10:spread', stdlib.UInt_max, '0')];
-      const v5694 = stdlib.sub(stdlib.UInt_max, v5691);
-      const v5695 = stdlib.lt(v3828, v5694);
-      stdlib.assert(v5695, {
+      const v5823 = v5803[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:232:10:spread', stdlib.UInt_max, '0')];
+      const v5826 = stdlib.sub(stdlib.UInt_max, v5823);
+      const v5827 = stdlib.lt(v3880, v5826);
+      stdlib.assert(v5827, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:213:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:212:33:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:212:33:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:212:33:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:233:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:232:33:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:232:33:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:232:33:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
         msg: 'Donation is too generous',
         who: 'donate'
         });
-      const v5722 = stdlib.add(v3828, v5691);
-      const v5723 = stdlib.le(v5722, stdlib.UInt_max);
-      stdlib.assert(v5723, {
-        at: './dao/contracts/dao-core.rsh:169:50:dot',
+      const v5854 = stdlib.add(v3880, v5823);
+      const v5855 = stdlib.le(v5854, stdlib.UInt_max);
+      stdlib.assert(v5855, {
+        at: './dao/contracts/dao-core.rsh:189:50:dot',
         fs: [],
         msg: 'assume <= UInt.max',
         who: 'donate'
         });
       ;
-      const v5757 = stdlib.lt(v5722, v5694);
-      stdlib.assert(v5757, {
+      const v5889 = stdlib.lt(v5854, v5826);
+      stdlib.assert(v5889, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:213:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:218:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:218:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:233:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:238:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:238:13:function exp)'],
         msg: 'Donation is too generous',
         who: 'donate'
         });
-      const v5760 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4455), null);
-      let v5761;
-      switch (v5760[0]) {
+      const v5892 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4507), null);
+      let v5893;
+      switch (v5892[0]) {
         case 'None': {
-          const v5762 = v5760[1];
-          v5761 = false;
+          const v5894 = v5892[1];
+          v5893 = false;
           
           break;
           }
         case 'Some': {
-          const v5763 = v5760[1];
-          v5761 = true;
+          const v5895 = v5892[1];
+          v5893 = true;
           
           break;
           }
         }
-      if (v5761) {
-        const v5765 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-        const v5766 = stdlib.fromSome(v5760, v5765);
-        const v5767 = v5766[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:220:19:array', stdlib.UInt_max, '0')];
-        const v5768 = v5766[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:220:19:array', stdlib.UInt_max, '1')];
-        const v5770 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:222:36:decimal', stdlib.UInt_max, '1'));
-        const v5771 = stdlib.lt(v5767, v5770);
-        let v5772;
-        if (v5771) {
-          const v5775 = stdlib.add(v5767, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:223:30:decimal', stdlib.UInt_max, '1'));
-          const v5776 = [v5775, v5768];
-          v5772 = v5776;
+      if (v5893) {
+        const v5897 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+        const v5898 = stdlib.fromSome(v5892, v5897);
+        const v5899 = v5898[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:240:19:array', stdlib.UInt_max, '0')];
+        const v5900 = v5898[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:240:19:array', stdlib.UInt_max, '1')];
+        const v5902 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:242:36:decimal', stdlib.UInt_max, '1'));
+        const v5903 = stdlib.lt(v5899, v5902);
+        let v5904;
+        if (v5903) {
+          const v5907 = stdlib.add(v5899, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:243:30:decimal', stdlib.UInt_max, '1'));
+          const v5908 = [v5907, v5900];
+          v5904 = v5908;
           }
         else {
-          const v5777 = stdlib.ge(v5767, v3934);
-          const v5778 = v5777 ? v5767 : v3934;
-          const v5779 = [v5778, v5768];
-          v5772 = v5779;
+          const v5909 = stdlib.ge(v5899, v3986);
+          const v5910 = v5909 ? v5899 : v3986;
+          const v5911 = [v5910, v5900];
+          v5904 = v5911;
           }
-        await stdlib.mapSet(map0, v4455, v5772);
-        const v5780 = null;
-        const v5781 = await txn1.getOutput('donate', 'v5780', ctc0, v5780);
-        if (v2511) {
-          stdlib.protect(ctc0, await interact.out(v5671, v5781), {
-            at: './dao/contracts/dao-core.rsh:212:11:application',
-            fs: ['at ./dao/contracts/dao-core.rsh:212:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:212:11:function exp)', 'at ./dao/contracts/dao-core.rsh:226:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:218:13:function exp)', 'at ./dao/contracts/dao-core.rsh:218:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:218:13:function exp)'],
+        await stdlib.mapSet(map0, v4507, v5904);
+        const v5912 = null;
+        const v5913 = await txn1.getOutput('donate', 'v5912', ctc0, v5912);
+        if (v2529) {
+          stdlib.protect(ctc0, await interact.out(v5803, v5913), {
+            at: './dao/contracts/dao-core.rsh:232:11:application',
+            fs: ['at ./dao/contracts/dao-core.rsh:232:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:232:11:function exp)', 'at ./dao/contracts/dao-core.rsh:246:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:238:13:function exp)', 'at ./dao/contracts/dao-core.rsh:238:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:238:13:function exp)'],
             msg: 'out',
             who: 'donate'
             });
@@ -2860,36 +2915,36 @@ export async function _donate3(ctcTop, interact) {
         else {
           }
         
-        const v19247 = v3822;
-        const v19249 = v3824;
-        const v19251 = v5722;
-        const v19252 = v3822.admin;
-        const v19253 = v3822.fee;
-        const v19254 = v3822.openTreasury;
-        const v19255 = v3822.quorum;
-        const v19256 = v3822.registerSelf;
-        const v19257 = v3824.action;
-        const v19258 = v3824.index;
-        const v19259 = stdlib.ge(v19258, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-        let v19260;
-        if (v19259) {
-          const v19261 = stdlib.mod(v19258, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-          const v19262 = stdlib.sub(v19258, v19261);
-          const v19263 = stdlib.div(v19262, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-          v19260 = v19263;
+        const v19779 = v3874;
+        const v19781 = v3876;
+        const v19783 = v5854;
+        const v19784 = v3874.admin;
+        const v19785 = v3874.fee;
+        const v19786 = v3874.openTreasury;
+        const v19787 = v3874.quorum;
+        const v19788 = v3874.registerSelf;
+        const v19789 = v3876.action;
+        const v19790 = v3876.index;
+        const v19791 = stdlib.ge(v19790, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+        let v19792;
+        if (v19791) {
+          const v19793 = stdlib.mod(v19790, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+          const v19794 = stdlib.sub(v19790, v19793);
+          const v19795 = stdlib.div(v19794, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+          v19792 = v19795;
           }
         else {
-          v19260 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+          v19792 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
           }
         return;
         }
       else {
-        const v5788 = null;
-        const v5789 = await txn1.getOutput('donate', 'v5788', ctc0, v5788);
-        if (v2511) {
-          stdlib.protect(ctc0, await interact.out(v5671, v5789), {
-            at: './dao/contracts/dao-core.rsh:212:11:application',
-            fs: ['at ./dao/contracts/dao-core.rsh:212:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:212:11:function exp)', 'at ./dao/contracts/dao-core.rsh:226:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:218:13:function exp)', 'at ./dao/contracts/dao-core.rsh:218:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:218:13:function exp)'],
+        const v5920 = null;
+        const v5921 = await txn1.getOutput('donate', 'v5920', ctc0, v5920);
+        if (v2529) {
+          stdlib.protect(ctc0, await interact.out(v5803, v5921), {
+            at: './dao/contracts/dao-core.rsh:232:11:application',
+            fs: ['at ./dao/contracts/dao-core.rsh:232:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:232:11:function exp)', 'at ./dao/contracts/dao-core.rsh:246:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:238:13:function exp)', 'at ./dao/contracts/dao-core.rsh:238:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:238:13:function exp)'],
             msg: 'out',
             who: 'donate'
             });
@@ -2897,48 +2952,48 @@ export async function _donate3(ctcTop, interact) {
         else {
           }
         
-        const v19276 = v3822;
-        const v19278 = v3824;
-        const v19280 = v5722;
-        const v19281 = v3822.admin;
-        const v19282 = v3822.fee;
-        const v19283 = v3822.openTreasury;
-        const v19284 = v3822.quorum;
-        const v19285 = v3822.registerSelf;
-        const v19286 = v3824.action;
-        const v19287 = v3824.index;
-        const v19288 = stdlib.ge(v19287, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-        let v19289;
-        if (v19288) {
-          const v19290 = stdlib.mod(v19287, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-          const v19291 = stdlib.sub(v19287, v19290);
-          const v19292 = stdlib.div(v19291, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-          v19289 = v19292;
+        const v19808 = v3874;
+        const v19810 = v3876;
+        const v19812 = v5854;
+        const v19813 = v3874.admin;
+        const v19814 = v3874.fee;
+        const v19815 = v3874.openTreasury;
+        const v19816 = v3874.quorum;
+        const v19817 = v3874.registerSelf;
+        const v19818 = v3876.action;
+        const v19819 = v3876.index;
+        const v19820 = stdlib.ge(v19819, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+        let v19821;
+        if (v19820) {
+          const v19822 = stdlib.mod(v19819, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+          const v19823 = stdlib.sub(v19819, v19822);
+          const v19824 = stdlib.div(v19823, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+          v19821 = v19824;
           }
         else {
-          v19289 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+          v19821 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
           }
         return;
         }
       break;
       }
-    case 'eject0_334': {
-      const v6883 = v4456[1];
+    case 'eject0_352': {
+      const v7095 = v4508[1];
       return;
       break;
       }
-    case 'joinLeave0_334': {
-      const v8095 = v4456[1];
+    case 'joinLeave0_352': {
+      const v8387 = v4508[1];
       return;
       break;
       }
-    case 'registerProposal0_334': {
-      const v9307 = v4456[1];
+    case 'registerProposal0_352': {
+      const v9679 = v4508[1];
       return;
       break;
       }
-    case 'voteProposal0_334': {
-      const v10519 = v4456[1];
+    case 'voteProposal0_352': {
+      const v10971 = v4508[1];
       return;
       break;
       }
@@ -2962,45 +3017,46 @@ export async function _eject3(ctcTop, interact) {
     });
   const ctc4 = stdlib.T_Address;
   const ctc5 = stdlib.T_Bytes(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '128'));
-  const ctc6 = stdlib.T_Tuple([ctc4, ctc1]);
-  const ctc7 = stdlib.T_Bool;
-  const ctc8 = stdlib.T_Struct([['admin', ctc4], ['registerSelf', ctc7], ['fee', ctc1], ['quorum', ctc1], ['openTreasury', ctc7]]);
-  const ctc9 = stdlib.T_Data({
-    AllocateFunds: ctc6,
-    ChangeAdmin: ctc8,
+  const ctc6 = stdlib.T_Contract;
+  const ctc7 = stdlib.T_Tuple([ctc4, ctc1]);
+  const ctc8 = stdlib.T_Bool;
+  const ctc9 = stdlib.T_Struct([['admin', ctc4], ['registerSelf', ctc8], ['fee', ctc1], ['quorum', ctc1], ['openTreasury', ctc8]]);
+  const ctc10 = stdlib.T_Data({
+    AllocateFunds: ctc7,
+    ChangeAdmin: ctc9,
     EjectMember: ctc4,
     None: ctc0,
     Stop: ctc0
     });
-  const ctc10 = stdlib.T_Object({
+  const ctc11 = stdlib.T_Object({
     admin: ctc4,
     fee: ctc1,
-    openTreasury: ctc7,
+    openTreasury: ctc8,
     quorum: ctc1,
-    registerSelf: ctc7
+    registerSelf: ctc8
     });
-  const ctc11 = stdlib.T_Object({
+  const ctc12 = stdlib.T_Object({
     Against: ctc1,
     For: ctc1,
-    action: ctc9,
+    action: ctc10,
     index: ctc1
     });
-  const ctc12 = stdlib.T_Tuple([ctc4]);
-  const ctc13 = stdlib.T_Tuple([ctc1]);
-  const ctc14 = stdlib.T_Tuple([ctc7]);
-  const ctc15 = stdlib.T_Tuple([ctc9]);
-  const ctc16 = stdlib.T_Data({
+  const ctc13 = stdlib.T_Tuple([ctc4]);
+  const ctc14 = stdlib.T_Tuple([ctc1]);
+  const ctc15 = stdlib.T_Tuple([ctc8]);
+  const ctc16 = stdlib.T_Tuple([ctc10]);
+  const ctc17 = stdlib.T_Data({
     Against: ctc0,
     For: ctc0
     });
-  const ctc17 = stdlib.T_Tuple([ctc16]);
-  const ctc18 = stdlib.T_Data({
-    addMember0_334: ctc12,
-    donate0_334: ctc13,
-    eject0_334: ctc12,
-    joinLeave0_334: ctc14,
-    registerProposal0_334: ctc15,
-    voteProposal0_334: ctc17
+  const ctc18 = stdlib.T_Tuple([ctc17]);
+  const ctc19 = stdlib.T_Data({
+    addMember0_352: ctc13,
+    donate0_352: ctc14,
+    eject0_352: ctc13,
+    joinLeave0_352: ctc15,
+    registerProposal0_352: ctc16,
+    voteProposal0_352: ctc18
     });
   
   const map0_ctc = ctc3;
@@ -3012,209 +3068,209 @@ export async function _eject3(ctcTop, interact) {
     });
   
   
-  const [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934] = await ctc.getState(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'), [ctc4, ctc5, ctc1, ctc9, ctc10, ctc11, ctc1, ctc4, ctc1, ctc7, ctc1, ctc7, ctc9, ctc1, ctc7, ctc1]);
-  const v3982 = ctc.selfAddress();
-  const v3984 = stdlib.protect(ctc12, await interact.in(), {
+  const [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986] = await ctc.getState(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'), [ctc4, ctc5, ctc6, ctc1, ctc6, ctc10, ctc11, ctc12, ctc1, ctc4, ctc1, ctc8, ctc1, ctc8, ctc10, ctc1, ctc8, ctc1]);
+  const v4034 = ctc.selfAddress();
+  const v4036 = stdlib.protect(ctc13, await interact.in(), {
     at: './dao/contracts/dao-core.rsh:1:23:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:233:32:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:233:32:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runeject0_334" (defined at: ./dao/contracts/dao-core.rsh:233:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:253:32:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:253:32:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runeject0_352" (defined at: ./dao/contracts/dao-core.rsh:253:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'in',
     who: 'eject'
     });
-  const v3985 = v3984[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:1:23:application', stdlib.UInt_max, '0')];
-  const v3987 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v3985), null);
-  let v3988;
-  switch (v3987[0]) {
+  const v4037 = v4036[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:1:23:application', stdlib.UInt_max, '0')];
+  const v4039 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4037), null);
+  let v4040;
+  switch (v4039[0]) {
     case 'None': {
-      const v3989 = v3987[1];
-      v3988 = false;
+      const v4041 = v4039[1];
+      v4040 = false;
       
       break;
       }
     case 'Some': {
-      const v3990 = v3987[1];
-      v3988 = true;
+      const v4042 = v4039[1];
+      v4040 = true;
       
       break;
       }
     }
-  const v3992 = stdlib.addressEq(v3985, v3897);
-  const v3993 = v3992 ? false : true;
-  const v3994 = v3988 ? v3993 : false;
-  const v3995 = stdlib.addressEq(v3982, v3985);
-  const v3996 = v3995 ? false : true;
-  stdlib.assert(v3996, {
+  const v4044 = stdlib.addressEq(v4037, v3949);
+  const v4045 = v4044 ? false : true;
+  const v4046 = v4040 ? v4045 : false;
+  const v4047 = stdlib.addressEq(v4034, v4037);
+  const v4048 = v4047 ? false : true;
+  stdlib.assert(v4048, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:236:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:233:32:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:233:32:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runeject0_334" (defined at: ./dao/contracts/dao-core.rsh:233:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:256:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:253:32:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:253:32:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runeject0_352" (defined at: ./dao/contracts/dao-core.rsh:253:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'Use \'Leave\' API to exit',
     who: 'eject'
     });
-  let v3999;
-  switch (v3987[0]) {
+  let v4051;
+  switch (v4039[0]) {
     case 'None': {
-      const v4000 = v3987[1];
-      v3999 = false;
+      const v4052 = v4039[1];
+      v4051 = false;
       
       break;
       }
     case 'Some': {
-      const v4001 = v3987[1];
-      v3999 = true;
+      const v4053 = v4039[1];
+      v4051 = true;
       
       break;
       }
     }
-  stdlib.assert(v3999, {
+  stdlib.assert(v4051, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:237:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:233:32:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:233:32:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runeject0_334" (defined at: ./dao/contracts/dao-core.rsh:233:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:257:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:253:32:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:253:32:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runeject0_352" (defined at: ./dao/contracts/dao-core.rsh:253:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'Address is not a member',
     who: 'eject'
     });
-  stdlib.assert(v3994, {
+  stdlib.assert(v4046, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:238:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:233:32:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:233:32:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runeject0_334" (defined at: ./dao/contracts/dao-core.rsh:233:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:258:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:253:32:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:253:32:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runeject0_352" (defined at: ./dao/contracts/dao-core.rsh:253:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'Requires ChangeAdmin proposal',
     who: 'eject'
     });
-  const v4005 = stdlib.addressEq(v3982, v3897);
-  if (v4005) {
+  const v4057 = stdlib.addressEq(v4034, v3949);
+  if (v4057) {
     }
   else {
-    const v4010 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:242:35:decimal', stdlib.UInt_max, '1'));
-    const v4011 = stdlib.le(v3932, v4010);
-    stdlib.assert(v4011, {
+    const v4062 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:262:35:decimal', stdlib.UInt_max, '1'));
+    const v4063 = stdlib.le(v3984, v4062);
+    stdlib.assert(v4063, {
       at: 'reach standard library:57:5:application',
-      fs: ['at ./dao/contracts/dao-core.rsh:242:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:233:32:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:233:32:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runeject0_334" (defined at: ./dao/contracts/dao-core.rsh:233:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+      fs: ['at ./dao/contracts/dao-core.rsh:262:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:253:32:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:253:32:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runeject0_352" (defined at: ./dao/contracts/dao-core.rsh:253:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
       msg: 'Proposals Limit reached',
       who: 'eject'
       });
-    let v4013;
-    switch (v3903[0]) {
+    let v4065;
+    switch (v3955[0]) {
       case 'AllocateFunds': {
-        const v4014 = v3903[1];
-        const v4015 = v4014[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-        const v4016 = v4014[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
-        const v4018 = stdlib.lt(v4016, v3828);
-        const v4019 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4015), null);
-        let v4020;
-        switch (v4019[0]) {
+        const v4066 = v3955[1];
+        const v4067 = v4066[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+        const v4068 = v4066[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
+        const v4070 = stdlib.lt(v4068, v3880);
+        const v4071 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4067), null);
+        let v4072;
+        switch (v4071[0]) {
           case 'None': {
-            const v4021 = v4019[1];
-            v4020 = false;
+            const v4073 = v4071[1];
+            v4072 = false;
             
             break;
             }
           case 'Some': {
-            const v4022 = v4019[1];
-            v4020 = true;
+            const v4074 = v4071[1];
+            v4072 = true;
             
             break;
             }
           }
-        const v4023 = v4020 ? v4018 : false;
-        const v4025 = v3899 ? v4018 : v4023;
-        v4013 = v4025;
+        const v4075 = v4072 ? v4070 : false;
+        const v4077 = v3951 ? v4070 : v4075;
+        v4065 = v4077;
         
         break;
         }
       case 'ChangeAdmin': {
-        const v4026 = v3903[1];
-        const v4027 = v4026.admin;
-        const v4028 = v4026.fee;
-        const v4030 = v4026.quorum;
-        const v4032 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4027), null);
-        const v4033 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-        const v4034 = stdlib.fromSome(v4032, v4033);
-        const v4035 = v4034[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
-        let v4038;
-        switch (v4032[0]) {
+        const v4078 = v3955[1];
+        const v4079 = v4078.admin;
+        const v4080 = v4078.fee;
+        const v4082 = v4078.quorum;
+        const v4084 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4079), null);
+        const v4085 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+        const v4086 = stdlib.fromSome(v4084, v4085);
+        const v4087 = v4086[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
+        let v4090;
+        switch (v4084[0]) {
           case 'None': {
-            const v4039 = v4032[1];
-            v4038 = false;
+            const v4091 = v4084[1];
+            v4090 = false;
             
             break;
             }
           case 'Some': {
-            const v4040 = v4032[1];
-            v4038 = true;
+            const v4092 = v4084[1];
+            v4090 = true;
             
             break;
             }
           }
-        const v4041 = stdlib.gt(v4035, v3934);
-        const v4042 = v4038 ? v4041 : false;
-        const v4043 = stdlib.gt(v4030, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
-        let v4044;
-        if (v4043) {
-          const v4047 = stdlib.lt(v4030, v3812);
-          v4044 = v4047;
+        const v4093 = stdlib.gt(v4087, v3986);
+        const v4094 = v4090 ? v4093 : false;
+        const v4095 = stdlib.gt(v4082, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
+        let v4096;
+        if (v4095) {
+          const v4099 = stdlib.lt(v4082, v3848);
+          v4096 = v4099;
           }
         else {
-          v4044 = false;
+          v4096 = false;
           }
-        const v4048 = stdlib.gt(v4028, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:33:decimal', stdlib.UInt_max, '0'));
-        const v4049 = stdlib.lt(v4028, stdlib.UInt_max);
-        const v4050 = v4048 ? v4049 : false;
-        const v4051 = v4042 ? v4044 : false;
-        const v4052 = v4051 ? v4050 : false;
-        v4013 = v4052;
+        const v4100 = stdlib.ge(v4080, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:34:decimal', stdlib.UInt_max, '0'));
+        const v4101 = stdlib.lt(v4080, stdlib.UInt_max);
+        const v4102 = v4100 ? v4101 : false;
+        const v4103 = v4094 ? v4096 : false;
+        const v4104 = v4103 ? v4102 : false;
+        v4065 = v4104;
         
         break;
         }
       case 'EjectMember': {
-        const v4053 = v3903[1];
-        const v4054 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4053), null);
-        let v4055;
-        switch (v4054[0]) {
+        const v4105 = v3955[1];
+        const v4106 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4105), null);
+        let v4107;
+        switch (v4106[0]) {
           case 'None': {
-            const v4056 = v4054[1];
-            v4055 = false;
+            const v4108 = v4106[1];
+            v4107 = false;
             
             break;
             }
           case 'Some': {
-            const v4057 = v4054[1];
-            v4055 = true;
+            const v4109 = v4106[1];
+            v4107 = true;
             
             break;
             }
           }
-        const v4059 = stdlib.addressEq(v4053, v3897);
-        const v4060 = v4059 ? false : true;
-        const v4061 = v4055 ? v4060 : false;
-        v4013 = v4061;
+        const v4111 = stdlib.addressEq(v4105, v3949);
+        const v4112 = v4111 ? false : true;
+        const v4113 = v4107 ? v4112 : false;
+        v4065 = v4113;
         
         break;
         }
       case 'None': {
-        const v4062 = v3903[1];
-        v4013 = false;
+        const v4114 = v3955[1];
+        v4065 = false;
         
         break;
         }
       case 'Stop': {
-        const v4063 = v3903[1];
-        v4013 = true;
+        const v4115 = v3955[1];
+        v4065 = true;
         
         break;
         }
       }
-    stdlib.assert(v4013, {
+    stdlib.assert(v4065, {
       at: 'reach standard library:57:5:application',
-      fs: ['at ./dao/contracts/dao-core.rsh:243:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:233:32:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:233:32:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runeject0_334" (defined at: ./dao/contracts/dao-core.rsh:233:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+      fs: ['at ./dao/contracts/dao-core.rsh:263:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:253:32:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:253:32:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runeject0_352" (defined at: ./dao/contracts/dao-core.rsh:253:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
       msg: 'A Proposal is already active.',
       who: 'eject'
       });
     }
-  const v4070 = ['eject0_334', v3984];
+  const v4122 = ['eject0_352', v4036];
   
   const txn1 = await (ctc.sendrecv({
-    args: [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934, v4070],
+    args: [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986, v4122],
     evt_cnt: 1,
     funcNum: 2,
     lct: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
     onlyIf: true,
-    out_tys: [ctc18],
-    pay: [stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:233:10:decimal', stdlib.UInt_max, '0'), []],
+    out_tys: [ctc19],
+    pay: [stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:253:10:decimal', stdlib.UInt_max, '0'), []],
     sim_p: (async (txn1) => {
       const sim_r = { txns: [], mapRefs: [], maps: [] };
       let sim_txn_ctr = stdlib.UInt_max;
@@ -3222,139 +3278,139 @@ export async function _eject3(ctcTop, interact) {
       
       stdlib.simMapDupe(sim_r, 0, map0);
       
-      const {data: [v4456], secs: v4458, time: v4457, didSend: v2511, from: v4455 } = txn1;
+      const {data: [v4508], secs: v4510, time: v4509, didSend: v2529, from: v4507 } = txn1;
       
-      switch (v4456[0]) {
-        case 'addMember0_334': {
-          const v4459 = v4456[1];
+      switch (v4508[0]) {
+        case 'addMember0_352': {
+          const v4511 = v4508[1];
           
           break;
           }
-        case 'donate0_334': {
-          const v5671 = v4456[1];
+        case 'donate0_352': {
+          const v5803 = v4508[1];
           
           break;
           }
-        case 'eject0_334': {
-          const v6883 = v4456[1];
+        case 'eject0_352': {
+          const v7095 = v4508[1];
           sim_r.txns.push({
             kind: 'api',
             who: "eject"
             });
           ;
-          const v7009 = v6883[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:233:10:spread', stdlib.UInt_max, '0')];
-          stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v7009), null);
-          const v7028 = stdlib.addressEq(v4455, v3897);
-          if (v7028) {
-            const v7121 = null;
-            const v7122 = await txn1.getOutput('eject', 'v7121', ctc0, v7121);
+          const v7221 = v7095[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:253:10:spread', stdlib.UInt_max, '0')];
+          stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v7221), null);
+          const v7240 = stdlib.addressEq(v4507, v3949);
+          if (v7240) {
+            const v7333 = null;
+            const v7334 = await txn1.getOutput('eject', 'v7333', ctc0, v7333);
             
-            await stdlib.simMapSet(sim_r, 0, v7009, undefined /* Nothing */);
+            await stdlib.simMapSet(sim_r, 0, v7221, undefined /* Nothing */);
             null;
-            const v20001 = v3822;
-            const v20003 = v3824;
-            const v20005 = v3828;
-            const v20006 = v3822.admin;
-            const v20007 = v3822.fee;
-            const v20008 = v3822.openTreasury;
-            const v20009 = v3822.quorum;
-            const v20010 = v3822.registerSelf;
-            const v20011 = v3824.action;
-            const v20012 = v3824.index;
-            const v20013 = stdlib.ge(v20012, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-            let v20014;
-            if (v20013) {
-              const v20015 = stdlib.mod(v20012, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-              const v20016 = stdlib.sub(v20012, v20015);
-              const v20017 = stdlib.div(v20016, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-              v20014 = v20017;
+            const v20533 = v3874;
+            const v20535 = v3876;
+            const v20537 = v3880;
+            const v20538 = v3874.admin;
+            const v20539 = v3874.fee;
+            const v20540 = v3874.openTreasury;
+            const v20541 = v3874.quorum;
+            const v20542 = v3874.registerSelf;
+            const v20543 = v3876.action;
+            const v20544 = v3876.index;
+            const v20545 = stdlib.ge(v20544, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+            let v20546;
+            if (v20545) {
+              const v20547 = stdlib.mod(v20544, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+              const v20548 = stdlib.sub(v20544, v20547);
+              const v20549 = stdlib.div(v20548, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+              v20546 = v20549;
               }
             else {
-              v20014 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+              v20546 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
               }
             sim_r.isHalt = false;
             }
           else {
-            switch (v3903[0]) {
+            switch (v3955[0]) {
               case 'AllocateFunds': {
-                const v7037 = v3903[1];
-                const v7038 = v7037[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-                stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v7038), null);
+                const v7249 = v3955[1];
+                const v7250 = v7249[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+                stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v7250), null);
                 
                 break;
                 }
               case 'ChangeAdmin': {
-                const v7049 = v3903[1];
-                const v7050 = v7049.admin;
-                stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v7050), null);
+                const v7261 = v3955[1];
+                const v7262 = v7261.admin;
+                stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v7262), null);
                 
                 break;
                 }
               case 'EjectMember': {
-                const v7076 = v3903[1];
-                stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v7076), null);
+                const v7288 = v3955[1];
+                stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v7288), null);
                 
                 break;
                 }
               case 'None': {
-                const v7085 = v3903[1];
+                const v7297 = v3955[1];
                 
                 break;
                 }
               case 'Stop': {
-                const v7086 = v3903[1];
+                const v7298 = v3955[1];
                 
                 break;
                 }
               }
-            const v7089 = null;
-            const v7090 = await txn1.getOutput('eject', 'v7089', ctc0, v7089);
+            const v7301 = null;
+            const v7302 = await txn1.getOutput('eject', 'v7301', ctc0, v7301);
             
-            const v7107 = stdlib.add(v3932, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:163:30:decimal', stdlib.UInt_max, '1'));
-            const v7108 = ['EjectMember', v7009];
-            const v7109 = {
+            const v7319 = stdlib.add(v3984, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:183:30:decimal', stdlib.UInt_max, '1'));
+            const v7320 = ['EjectMember', v7221];
+            const v7321 = {
               Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
               For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-              action: v7108,
-              index: v7107
+              action: v7320,
+              index: v7319
               };
-            const v20030 = v3822;
-            const v20032 = v7109;
-            const v20034 = v3828;
-            const v20035 = v3822.admin;
-            const v20036 = v3822.fee;
-            const v20037 = v3822.openTreasury;
-            const v20038 = v3822.quorum;
-            const v20039 = v3822.registerSelf;
-            const v20040 = v7109.action;
-            const v20041 = v7109.index;
-            const v20042 = stdlib.ge(v20041, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-            let v20043;
-            if (v20042) {
-              const v20044 = stdlib.mod(v20041, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-              const v20045 = stdlib.sub(v20041, v20044);
-              const v20046 = stdlib.div(v20045, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-              v20043 = v20046;
+            const v20562 = v3874;
+            const v20564 = v7321;
+            const v20566 = v3880;
+            const v20567 = v3874.admin;
+            const v20568 = v3874.fee;
+            const v20569 = v3874.openTreasury;
+            const v20570 = v3874.quorum;
+            const v20571 = v3874.registerSelf;
+            const v20572 = v7321.action;
+            const v20573 = v7321.index;
+            const v20574 = stdlib.ge(v20573, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+            let v20575;
+            if (v20574) {
+              const v20576 = stdlib.mod(v20573, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+              const v20577 = stdlib.sub(v20573, v20576);
+              const v20578 = stdlib.div(v20577, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+              v20575 = v20578;
               }
             else {
-              v20043 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+              v20575 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
               }
             sim_r.isHalt = false;
             }
           break;
           }
-        case 'joinLeave0_334': {
-          const v8095 = v4456[1];
+        case 'joinLeave0_352': {
+          const v8387 = v4508[1];
           
           break;
           }
-        case 'registerProposal0_334': {
-          const v9307 = v4456[1];
+        case 'registerProposal0_352': {
+          const v9679 = v4508[1];
           
           break;
           }
-        case 'voteProposal0_334': {
-          const v10519 = v4456[1];
+        case 'voteProposal0_352': {
+          const v10971 = v4508[1];
           
           break;
           }
@@ -3363,95 +3419,95 @@ export async function _eject3(ctcTop, interact) {
       }),
     soloSend: false,
     timeoutAt: undefined /* mto */,
-    tys: [ctc4, ctc5, ctc1, ctc9, ctc10, ctc11, ctc1, ctc4, ctc1, ctc7, ctc1, ctc7, ctc9, ctc1, ctc7, ctc1, ctc18],
+    tys: [ctc4, ctc5, ctc6, ctc1, ctc6, ctc10, ctc11, ctc12, ctc1, ctc4, ctc1, ctc8, ctc1, ctc8, ctc10, ctc1, ctc8, ctc1, ctc19],
     waitIfNotPresent: false
     }));
-  const {data: [v4456], secs: v4458, time: v4457, didSend: v2511, from: v4455 } = txn1;
-  switch (v4456[0]) {
-    case 'addMember0_334': {
-      const v4459 = v4456[1];
+  const {data: [v4508], secs: v4510, time: v4509, didSend: v2529, from: v4507 } = txn1;
+  switch (v4508[0]) {
+    case 'addMember0_352': {
+      const v4511 = v4508[1];
       return;
       break;
       }
-    case 'donate0_334': {
-      const v5671 = v4456[1];
+    case 'donate0_352': {
+      const v5803 = v4508[1];
       return;
       break;
       }
-    case 'eject0_334': {
-      const v6883 = v4456[1];
+    case 'eject0_352': {
+      const v7095 = v4508[1];
       undefined /* setApiDetails */;
-      const v6935 = stdlib.le(v3828, stdlib.UInt_max);
-      stdlib.assert(v6935, {
-        at: './dao/contracts/dao-core.rsh:169:50:dot',
+      const v7147 = stdlib.le(v3880, stdlib.UInt_max);
+      stdlib.assert(v7147, {
+        at: './dao/contracts/dao-core.rsh:189:50:dot',
         fs: [],
         msg: 'assume <= UInt.max',
         who: 'eject'
         });
       ;
-      const v7009 = v6883[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:233:10:spread', stdlib.UInt_max, '0')];
-      const v7010 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7009), null);
-      let v7011;
-      switch (v7010[0]) {
+      const v7221 = v7095[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:253:10:spread', stdlib.UInt_max, '0')];
+      const v7222 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7221), null);
+      let v7223;
+      switch (v7222[0]) {
         case 'None': {
-          const v7012 = v7010[1];
-          v7011 = false;
+          const v7224 = v7222[1];
+          v7223 = false;
           
           break;
           }
         case 'Some': {
-          const v7013 = v7010[1];
-          v7011 = true;
+          const v7225 = v7222[1];
+          v7223 = true;
           
           break;
           }
         }
-      const v7015 = stdlib.addressEq(v7009, v3897);
-      const v7016 = v7015 ? false : true;
-      const v7017 = v7011 ? v7016 : false;
-      const v7018 = stdlib.addressEq(v4455, v7009);
-      const v7019 = v7018 ? false : true;
-      stdlib.assert(v7019, {
+      const v7227 = stdlib.addressEq(v7221, v3949);
+      const v7228 = v7227 ? false : true;
+      const v7229 = v7223 ? v7228 : false;
+      const v7230 = stdlib.addressEq(v4507, v7221);
+      const v7231 = v7230 ? false : true;
+      stdlib.assert(v7231, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:236:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:250:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:250:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:256:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:270:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:270:13:function exp)'],
         msg: 'Use \'Leave\' API to exit',
         who: 'eject'
         });
-      let v7022;
-      switch (v7010[0]) {
+      let v7234;
+      switch (v7222[0]) {
         case 'None': {
-          const v7023 = v7010[1];
-          v7022 = false;
+          const v7235 = v7222[1];
+          v7234 = false;
           
           break;
           }
         case 'Some': {
-          const v7024 = v7010[1];
-          v7022 = true;
+          const v7236 = v7222[1];
+          v7234 = true;
           
           break;
           }
         }
-      stdlib.assert(v7022, {
+      stdlib.assert(v7234, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:237:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:250:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:250:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:257:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:270:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:270:13:function exp)'],
         msg: 'Address is not a member',
         who: 'eject'
         });
-      stdlib.assert(v7017, {
+      stdlib.assert(v7229, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:238:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:250:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:250:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:258:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:270:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:270:13:function exp)'],
         msg: 'Requires ChangeAdmin proposal',
         who: 'eject'
         });
-      const v7028 = stdlib.addressEq(v4455, v3897);
-      if (v7028) {
-        const v7121 = null;
-        const v7122 = await txn1.getOutput('eject', 'v7121', ctc0, v7121);
-        if (v2511) {
-          stdlib.protect(ctc0, await interact.out(v6883, v7122), {
-            at: './dao/contracts/dao-core.rsh:233:11:application',
-            fs: ['at ./dao/contracts/dao-core.rsh:233:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:233:11:function exp)', 'at ./dao/contracts/dao-core.rsh:251:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:250:13:function exp)', 'at ./dao/contracts/dao-core.rsh:250:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:250:13:function exp)'],
+      const v7240 = stdlib.addressEq(v4507, v3949);
+      if (v7240) {
+        const v7333 = null;
+        const v7334 = await txn1.getOutput('eject', 'v7333', ctc0, v7333);
+        if (v2529) {
+          stdlib.protect(ctc0, await interact.out(v7095, v7334), {
+            at: './dao/contracts/dao-core.rsh:253:11:application',
+            fs: ['at ./dao/contracts/dao-core.rsh:253:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:253:11:function exp)', 'at ./dao/contracts/dao-core.rsh:271:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:270:13:function exp)', 'at ./dao/contracts/dao-core.rsh:270:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:270:13:function exp)'],
             msg: 'out',
             who: 'eject'
             });
@@ -3459,163 +3515,163 @@ export async function _eject3(ctcTop, interact) {
         else {
           }
         
-        await stdlib.mapSet(map0, v7009, undefined /* Nothing */);
+        await stdlib.mapSet(map0, v7221, undefined /* Nothing */);
         null;
-        const v20001 = v3822;
-        const v20003 = v3824;
-        const v20005 = v3828;
-        const v20006 = v3822.admin;
-        const v20007 = v3822.fee;
-        const v20008 = v3822.openTreasury;
-        const v20009 = v3822.quorum;
-        const v20010 = v3822.registerSelf;
-        const v20011 = v3824.action;
-        const v20012 = v3824.index;
-        const v20013 = stdlib.ge(v20012, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-        let v20014;
-        if (v20013) {
-          const v20015 = stdlib.mod(v20012, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-          const v20016 = stdlib.sub(v20012, v20015);
-          const v20017 = stdlib.div(v20016, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-          v20014 = v20017;
+        const v20533 = v3874;
+        const v20535 = v3876;
+        const v20537 = v3880;
+        const v20538 = v3874.admin;
+        const v20539 = v3874.fee;
+        const v20540 = v3874.openTreasury;
+        const v20541 = v3874.quorum;
+        const v20542 = v3874.registerSelf;
+        const v20543 = v3876.action;
+        const v20544 = v3876.index;
+        const v20545 = stdlib.ge(v20544, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+        let v20546;
+        if (v20545) {
+          const v20547 = stdlib.mod(v20544, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+          const v20548 = stdlib.sub(v20544, v20547);
+          const v20549 = stdlib.div(v20548, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+          v20546 = v20549;
           }
         else {
-          v20014 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+          v20546 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
           }
         return;
         }
       else {
-        const v7033 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:242:35:decimal', stdlib.UInt_max, '1'));
-        const v7034 = stdlib.le(v3932, v7033);
-        stdlib.assert(v7034, {
+        const v7245 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:262:35:decimal', stdlib.UInt_max, '1'));
+        const v7246 = stdlib.le(v3984, v7245);
+        stdlib.assert(v7246, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:242:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:250:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:250:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:262:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:270:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:270:13:function exp)'],
           msg: 'Proposals Limit reached',
           who: 'eject'
           });
-        let v7036;
-        switch (v3903[0]) {
+        let v7248;
+        switch (v3955[0]) {
           case 'AllocateFunds': {
-            const v7037 = v3903[1];
-            const v7038 = v7037[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-            const v7039 = v7037[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
-            const v7041 = stdlib.lt(v7039, v3828);
-            const v7042 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7038), null);
-            let v7043;
-            switch (v7042[0]) {
+            const v7249 = v3955[1];
+            const v7250 = v7249[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+            const v7251 = v7249[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
+            const v7253 = stdlib.lt(v7251, v3880);
+            const v7254 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7250), null);
+            let v7255;
+            switch (v7254[0]) {
               case 'None': {
-                const v7044 = v7042[1];
-                v7043 = false;
+                const v7256 = v7254[1];
+                v7255 = false;
                 
                 break;
                 }
               case 'Some': {
-                const v7045 = v7042[1];
-                v7043 = true;
+                const v7257 = v7254[1];
+                v7255 = true;
                 
                 break;
                 }
               }
-            const v7046 = v7043 ? v7041 : false;
-            const v7048 = v3899 ? v7041 : v7046;
-            v7036 = v7048;
+            const v7258 = v7255 ? v7253 : false;
+            const v7260 = v3951 ? v7253 : v7258;
+            v7248 = v7260;
             
             break;
             }
           case 'ChangeAdmin': {
-            const v7049 = v3903[1];
-            const v7050 = v7049.admin;
-            const v7051 = v7049.fee;
-            const v7053 = v7049.quorum;
-            const v7055 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7050), null);
-            const v7056 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-            const v7057 = stdlib.fromSome(v7055, v7056);
-            const v7058 = v7057[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
-            let v7061;
-            switch (v7055[0]) {
+            const v7261 = v3955[1];
+            const v7262 = v7261.admin;
+            const v7263 = v7261.fee;
+            const v7265 = v7261.quorum;
+            const v7267 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7262), null);
+            const v7268 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+            const v7269 = stdlib.fromSome(v7267, v7268);
+            const v7270 = v7269[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
+            let v7273;
+            switch (v7267[0]) {
               case 'None': {
-                const v7062 = v7055[1];
-                v7061 = false;
+                const v7274 = v7267[1];
+                v7273 = false;
                 
                 break;
                 }
               case 'Some': {
-                const v7063 = v7055[1];
-                v7061 = true;
+                const v7275 = v7267[1];
+                v7273 = true;
                 
                 break;
                 }
               }
-            const v7064 = stdlib.gt(v7058, v3934);
-            const v7065 = v7061 ? v7064 : false;
-            const v7066 = stdlib.gt(v7053, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
-            let v7067;
-            if (v7066) {
-              const v7070 = stdlib.lt(v7053, v3812);
-              v7067 = v7070;
+            const v7276 = stdlib.gt(v7270, v3986);
+            const v7277 = v7273 ? v7276 : false;
+            const v7278 = stdlib.gt(v7265, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
+            let v7279;
+            if (v7278) {
+              const v7282 = stdlib.lt(v7265, v3848);
+              v7279 = v7282;
               }
             else {
-              v7067 = false;
+              v7279 = false;
               }
-            const v7071 = stdlib.gt(v7051, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:33:decimal', stdlib.UInt_max, '0'));
-            const v7072 = stdlib.lt(v7051, stdlib.UInt_max);
-            const v7073 = v7071 ? v7072 : false;
-            const v7074 = v7065 ? v7067 : false;
-            const v7075 = v7074 ? v7073 : false;
-            v7036 = v7075;
+            const v7283 = stdlib.ge(v7263, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:34:decimal', stdlib.UInt_max, '0'));
+            const v7284 = stdlib.lt(v7263, stdlib.UInt_max);
+            const v7285 = v7283 ? v7284 : false;
+            const v7286 = v7277 ? v7279 : false;
+            const v7287 = v7286 ? v7285 : false;
+            v7248 = v7287;
             
             break;
             }
           case 'EjectMember': {
-            const v7076 = v3903[1];
-            const v7077 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7076), null);
-            let v7078;
-            switch (v7077[0]) {
+            const v7288 = v3955[1];
+            const v7289 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v7288), null);
+            let v7290;
+            switch (v7289[0]) {
               case 'None': {
-                const v7079 = v7077[1];
-                v7078 = false;
+                const v7291 = v7289[1];
+                v7290 = false;
                 
                 break;
                 }
               case 'Some': {
-                const v7080 = v7077[1];
-                v7078 = true;
+                const v7292 = v7289[1];
+                v7290 = true;
                 
                 break;
                 }
               }
-            const v7082 = stdlib.addressEq(v7076, v3897);
-            const v7083 = v7082 ? false : true;
-            const v7084 = v7078 ? v7083 : false;
-            v7036 = v7084;
+            const v7294 = stdlib.addressEq(v7288, v3949);
+            const v7295 = v7294 ? false : true;
+            const v7296 = v7290 ? v7295 : false;
+            v7248 = v7296;
             
             break;
             }
           case 'None': {
-            const v7085 = v3903[1];
-            v7036 = false;
+            const v7297 = v3955[1];
+            v7248 = false;
             
             break;
             }
           case 'Stop': {
-            const v7086 = v3903[1];
-            v7036 = true;
+            const v7298 = v3955[1];
+            v7248 = true;
             
             break;
             }
           }
-        stdlib.assert(v7036, {
+        stdlib.assert(v7248, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:243:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:250:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:250:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:263:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:270:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:270:13:function exp)'],
           msg: 'A Proposal is already active.',
           who: 'eject'
           });
-        const v7089 = null;
-        const v7090 = await txn1.getOutput('eject', 'v7089', ctc0, v7089);
-        if (v2511) {
-          stdlib.protect(ctc0, await interact.out(v6883, v7090), {
-            at: './dao/contracts/dao-core.rsh:233:11:application',
-            fs: ['at ./dao/contracts/dao-core.rsh:233:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:233:11:function exp)', 'at ./dao/contracts/dao-core.rsh:251:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:250:13:function exp)', 'at ./dao/contracts/dao-core.rsh:250:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:250:13:function exp)'],
+        const v7301 = null;
+        const v7302 = await txn1.getOutput('eject', 'v7301', ctc0, v7301);
+        if (v2529) {
+          stdlib.protect(ctc0, await interact.out(v7095, v7302), {
+            at: './dao/contracts/dao-core.rsh:253:11:application',
+            fs: ['at ./dao/contracts/dao-core.rsh:253:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:253:11:function exp)', 'at ./dao/contracts/dao-core.rsh:271:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:270:13:function exp)', 'at ./dao/contracts/dao-core.rsh:270:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:270:13:function exp)'],
             msg: 'out',
             who: 'eject'
             });
@@ -3623,51 +3679,51 @@ export async function _eject3(ctcTop, interact) {
         else {
           }
         
-        const v7107 = stdlib.add(v3932, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:163:30:decimal', stdlib.UInt_max, '1'));
-        const v7108 = ['EjectMember', v7009];
-        const v7109 = {
+        const v7319 = stdlib.add(v3984, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:183:30:decimal', stdlib.UInt_max, '1'));
+        const v7320 = ['EjectMember', v7221];
+        const v7321 = {
           Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
           For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-          action: v7108,
-          index: v7107
+          action: v7320,
+          index: v7319
           };
-        const v20030 = v3822;
-        const v20032 = v7109;
-        const v20034 = v3828;
-        const v20035 = v3822.admin;
-        const v20036 = v3822.fee;
-        const v20037 = v3822.openTreasury;
-        const v20038 = v3822.quorum;
-        const v20039 = v3822.registerSelf;
-        const v20040 = v7109.action;
-        const v20041 = v7109.index;
-        const v20042 = stdlib.ge(v20041, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-        let v20043;
-        if (v20042) {
-          const v20044 = stdlib.mod(v20041, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-          const v20045 = stdlib.sub(v20041, v20044);
-          const v20046 = stdlib.div(v20045, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-          v20043 = v20046;
+        const v20562 = v3874;
+        const v20564 = v7321;
+        const v20566 = v3880;
+        const v20567 = v3874.admin;
+        const v20568 = v3874.fee;
+        const v20569 = v3874.openTreasury;
+        const v20570 = v3874.quorum;
+        const v20571 = v3874.registerSelf;
+        const v20572 = v7321.action;
+        const v20573 = v7321.index;
+        const v20574 = stdlib.ge(v20573, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+        let v20575;
+        if (v20574) {
+          const v20576 = stdlib.mod(v20573, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+          const v20577 = stdlib.sub(v20573, v20576);
+          const v20578 = stdlib.div(v20577, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+          v20575 = v20578;
           }
         else {
-          v20043 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+          v20575 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
           }
         return;
         }
       break;
       }
-    case 'joinLeave0_334': {
-      const v8095 = v4456[1];
+    case 'joinLeave0_352': {
+      const v8387 = v4508[1];
       return;
       break;
       }
-    case 'registerProposal0_334': {
-      const v9307 = v4456[1];
+    case 'registerProposal0_352': {
+      const v9679 = v4508[1];
       return;
       break;
       }
-    case 'voteProposal0_334': {
-      const v10519 = v4456[1];
+    case 'voteProposal0_352': {
+      const v10971 = v4508[1];
       return;
       break;
       }
@@ -3691,45 +3747,46 @@ export async function _joinLeave3(ctcTop, interact) {
     });
   const ctc4 = stdlib.T_Address;
   const ctc5 = stdlib.T_Bytes(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '128'));
-  const ctc6 = stdlib.T_Tuple([ctc4, ctc1]);
-  const ctc7 = stdlib.T_Bool;
-  const ctc8 = stdlib.T_Struct([['admin', ctc4], ['registerSelf', ctc7], ['fee', ctc1], ['quorum', ctc1], ['openTreasury', ctc7]]);
-  const ctc9 = stdlib.T_Data({
-    AllocateFunds: ctc6,
-    ChangeAdmin: ctc8,
+  const ctc6 = stdlib.T_Contract;
+  const ctc7 = stdlib.T_Tuple([ctc4, ctc1]);
+  const ctc8 = stdlib.T_Bool;
+  const ctc9 = stdlib.T_Struct([['admin', ctc4], ['registerSelf', ctc8], ['fee', ctc1], ['quorum', ctc1], ['openTreasury', ctc8]]);
+  const ctc10 = stdlib.T_Data({
+    AllocateFunds: ctc7,
+    ChangeAdmin: ctc9,
     EjectMember: ctc4,
     None: ctc0,
     Stop: ctc0
     });
-  const ctc10 = stdlib.T_Object({
+  const ctc11 = stdlib.T_Object({
     admin: ctc4,
     fee: ctc1,
-    openTreasury: ctc7,
+    openTreasury: ctc8,
     quorum: ctc1,
-    registerSelf: ctc7
+    registerSelf: ctc8
     });
-  const ctc11 = stdlib.T_Object({
+  const ctc12 = stdlib.T_Object({
     Against: ctc1,
     For: ctc1,
-    action: ctc9,
+    action: ctc10,
     index: ctc1
     });
-  const ctc12 = stdlib.T_Tuple([ctc7]);
-  const ctc13 = stdlib.T_Tuple([ctc4]);
-  const ctc14 = stdlib.T_Tuple([ctc1]);
-  const ctc15 = stdlib.T_Tuple([ctc9]);
-  const ctc16 = stdlib.T_Data({
+  const ctc13 = stdlib.T_Tuple([ctc8]);
+  const ctc14 = stdlib.T_Tuple([ctc4]);
+  const ctc15 = stdlib.T_Tuple([ctc1]);
+  const ctc16 = stdlib.T_Tuple([ctc10]);
+  const ctc17 = stdlib.T_Data({
     Against: ctc0,
     For: ctc0
     });
-  const ctc17 = stdlib.T_Tuple([ctc16]);
-  const ctc18 = stdlib.T_Data({
-    addMember0_334: ctc13,
-    donate0_334: ctc14,
-    eject0_334: ctc13,
-    joinLeave0_334: ctc12,
-    registerProposal0_334: ctc15,
-    voteProposal0_334: ctc17
+  const ctc18 = stdlib.T_Tuple([ctc17]);
+  const ctc19 = stdlib.T_Data({
+    addMember0_352: ctc14,
+    donate0_352: ctc15,
+    eject0_352: ctc14,
+    joinLeave0_352: ctc13,
+    registerProposal0_352: ctc16,
+    voteProposal0_352: ctc18
     });
   
   const map0_ctc = ctc3;
@@ -3741,143 +3798,143 @@ export async function _joinLeave3(ctcTop, interact) {
     });
   
   
-  const [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934] = await ctc.getState(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'), [ctc4, ctc5, ctc1, ctc9, ctc10, ctc11, ctc1, ctc4, ctc1, ctc7, ctc1, ctc7, ctc9, ctc1, ctc7, ctc1]);
-  const v4072 = ctc.selfAddress();
-  const v4074 = stdlib.protect(ctc12, await interact.in(), {
+  const [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986] = await ctc.getState(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'), [ctc4, ctc5, ctc6, ctc1, ctc6, ctc10, ctc11, ctc12, ctc1, ctc4, ctc1, ctc8, ctc1, ctc8, ctc10, ctc1, ctc8, ctc1]);
+  const v4124 = ctc.selfAddress();
+  const v4126 = stdlib.protect(ctc13, await interact.in(), {
     at: './dao/contracts/dao-core.rsh:1:23:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runjoinLeave0_334" (defined at: ./dao/contracts/dao-core.rsh:264:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runjoinLeave0_352" (defined at: ./dao/contracts/dao-core.rsh:284:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'in',
     who: 'joinLeave'
     });
-  const v4075 = v4074[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:1:23:application', stdlib.UInt_max, '0')];
-  if (v4075) {
-    const v4077 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4072), null);
-    let v4078;
-    switch (v4077[0]) {
+  const v4127 = v4126[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:1:23:application', stdlib.UInt_max, '0')];
+  if (v4127) {
+    const v4129 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4124), null);
+    let v4130;
+    switch (v4129[0]) {
       case 'None': {
-        const v4079 = v4077[1];
-        v4078 = false;
+        const v4131 = v4129[1];
+        v4130 = false;
         
         break;
         }
       case 'Some': {
-        const v4080 = v4077[1];
-        v4078 = true;
+        const v4132 = v4129[1];
+        v4130 = true;
         
         break;
         }
       }
-    stdlib.assert(v4078, {
+    stdlib.assert(v4130, {
       at: 'reach standard library:57:5:application',
-      fs: ['at ./dao/contracts/dao-core.rsh:266:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runjoinLeave0_334" (defined at: ./dao/contracts/dao-core.rsh:264:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+      fs: ['at ./dao/contracts/dao-core.rsh:286:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runjoinLeave0_352" (defined at: ./dao/contracts/dao-core.rsh:284:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
       msg: 'Address is not a member',
       who: 'joinLeave'
       });
     }
   else {
-    stdlib.assert(v3901, {
+    stdlib.assert(v3953, {
       at: 'reach standard library:57:5:application',
-      fs: ['at ./dao/contracts/dao-core.rsh:268:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runjoinLeave0_334" (defined at: ./dao/contracts/dao-core.rsh:264:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+      fs: ['at ./dao/contracts/dao-core.rsh:288:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runjoinLeave0_352" (defined at: ./dao/contracts/dao-core.rsh:284:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
       msg: 'An existing user has to add you to this DAO',
       who: 'joinLeave'
       });
-    const v4084 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4072), null);
-    let v4085;
-    switch (v4084[0]) {
+    const v4136 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4124), null);
+    let v4137;
+    switch (v4136[0]) {
       case 'None': {
-        const v4086 = v4084[1];
-        v4085 = true;
+        const v4138 = v4136[1];
+        v4137 = true;
         
         break;
         }
       case 'Some': {
-        const v4087 = v4084[1];
-        v4085 = false;
+        const v4139 = v4136[1];
+        v4137 = false;
         
         break;
         }
       }
-    stdlib.assert(v4085, {
+    stdlib.assert(v4137, {
       at: 'reach standard library:57:5:application',
-      fs: ['at ./dao/contracts/dao-core.rsh:269:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runjoinLeave0_334" (defined at: ./dao/contracts/dao-core.rsh:264:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+      fs: ['at ./dao/contracts/dao-core.rsh:289:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runjoinLeave0_352" (defined at: ./dao/contracts/dao-core.rsh:284:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
       msg: 'Address is already a member',
       who: 'joinLeave'
       });
     }
-  const v4090 = v4075 ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:272:35:decimal', stdlib.UInt_max, '0') : v3898;
-  const v4093 = stdlib.sub(stdlib.UInt_max, v3828);
-  const v4094 = stdlib.lt(v4090, v4093);
-  stdlib.assert(v4094, {
+  const v4142 = v4127 ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:292:35:decimal', stdlib.UInt_max, '0') : v3950;
+  const v4145 = stdlib.sub(stdlib.UInt_max, v3880);
+  const v4146 = stdlib.lt(v4142, v4145);
+  stdlib.assert(v4146, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:273:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runjoinLeave0_334" (defined at: ./dao/contracts/dao-core.rsh:264:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:293:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runjoinLeave0_352" (defined at: ./dao/contracts/dao-core.rsh:284:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'Membership is at maximum capacity',
     who: 'joinLeave'
     });
-  const v4101 = ['joinLeave0_334', v4074];
+  const v4153 = ['joinLeave0_352', v4126];
   
-  if (v4075) {
-    const v4434 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4072), null);
-    let v4435;
-    switch (v4434[0]) {
+  if (v4127) {
+    const v4486 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4124), null);
+    let v4487;
+    switch (v4486[0]) {
       case 'None': {
-        const v4436 = v4434[1];
-        v4435 = false;
+        const v4488 = v4486[1];
+        v4487 = false;
         
         break;
         }
       case 'Some': {
-        const v4437 = v4434[1];
-        v4435 = true;
+        const v4489 = v4486[1];
+        v4487 = true;
         
         break;
         }
       }
-    stdlib.assert(v4435, {
+    stdlib.assert(v4487, {
       at: 'reach standard library:57:5:application',
-      fs: ['at ./dao/contracts/dao-core.rsh:266:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+      fs: ['at ./dao/contracts/dao-core.rsh:286:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
       msg: 'Address is not a member',
       who: 'joinLeave'
       });
     }
   else {
-    stdlib.assert(v3901, {
+    stdlib.assert(v3953, {
       at: 'reach standard library:57:5:application',
-      fs: ['at ./dao/contracts/dao-core.rsh:268:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+      fs: ['at ./dao/contracts/dao-core.rsh:288:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
       msg: 'An existing user has to add you to this DAO',
       who: 'joinLeave'
       });
-    const v4441 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4072), null);
-    let v4442;
-    switch (v4441[0]) {
+    const v4493 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4124), null);
+    let v4494;
+    switch (v4493[0]) {
       case 'None': {
-        const v4443 = v4441[1];
-        v4442 = true;
+        const v4495 = v4493[1];
+        v4494 = true;
         
         break;
         }
       case 'Some': {
-        const v4444 = v4441[1];
-        v4442 = false;
+        const v4496 = v4493[1];
+        v4494 = false;
         
         break;
         }
       }
-    stdlib.assert(v4442, {
+    stdlib.assert(v4494, {
       at: 'reach standard library:57:5:application',
-      fs: ['at ./dao/contracts/dao-core.rsh:269:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+      fs: ['at ./dao/contracts/dao-core.rsh:289:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
       msg: 'Address is already a member',
       who: 'joinLeave'
       });
     }
   
   const txn1 = await (ctc.sendrecv({
-    args: [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934, v4101],
+    args: [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986, v4153],
     evt_cnt: 1,
     funcNum: 2,
     lct: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
     onlyIf: true,
-    out_tys: [ctc18],
-    pay: [v4090, []],
+    out_tys: [ctc19],
+    pay: [v4142, []],
     sim_p: (async (txn1) => {
       const sim_r = { txns: [], mapRefs: [], maps: [] };
       let sim_txn_ctr = stdlib.UInt_max;
@@ -3885,105 +3942,105 @@ export async function _joinLeave3(ctcTop, interact) {
       
       stdlib.simMapDupe(sim_r, 0, map0);
       
-      const {data: [v4456], secs: v4458, time: v4457, didSend: v2511, from: v4455 } = txn1;
+      const {data: [v4508], secs: v4510, time: v4509, didSend: v2529, from: v4507 } = txn1;
       
-      switch (v4456[0]) {
-        case 'addMember0_334': {
-          const v4459 = v4456[1];
+      switch (v4508[0]) {
+        case 'addMember0_352': {
+          const v4511 = v4508[1];
           
           break;
           }
-        case 'donate0_334': {
-          const v5671 = v4456[1];
+        case 'donate0_352': {
+          const v5803 = v4508[1];
           
           break;
           }
-        case 'eject0_334': {
-          const v6883 = v4456[1];
+        case 'eject0_352': {
+          const v7095 = v4508[1];
           
           break;
           }
-        case 'joinLeave0_334': {
-          const v8095 = v4456[1];
+        case 'joinLeave0_352': {
+          const v8387 = v4508[1];
           sim_r.txns.push({
             kind: 'api',
             who: "joinLeave"
             });
-          const v8123 = v8095[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:264:10:spread', stdlib.UInt_max, '0')];
-          stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v4455), null);
-          const v8137 = v8123 ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:272:35:decimal', stdlib.UInt_max, '0') : v3898;
-          const v8146 = stdlib.add(v3828, v8137);
+          const v8415 = v8387[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:284:10:spread', stdlib.UInt_max, '0')];
+          stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v4507), null);
+          const v8429 = v8415 ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:292:35:decimal', stdlib.UInt_max, '0') : v3950;
+          const v8438 = stdlib.add(v3880, v8429);
           sim_r.txns.push({
-            amt: v8137,
+            amt: v8429,
             kind: 'to',
             tok: undefined /* Nothing */
             });
-          stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v4455), null);
-          const v8386 = null;
-          const v8387 = await txn1.getOutput('joinLeave', 'v8386', ctc0, v8386);
+          stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v4507), null);
+          const v8678 = null;
+          const v8679 = await txn1.getOutput('joinLeave', 'v8678', ctc0, v8678);
           
-          if (v8123) {
-            await stdlib.simMapSet(sim_r, 0, v4455, undefined /* Nothing */);
+          if (v8415) {
+            await stdlib.simMapSet(sim_r, 0, v4507, undefined /* Nothing */);
             null;
-            const v20755 = v3822;
-            const v20757 = v3824;
-            const v20759 = v8146;
-            const v20760 = v3822.admin;
-            const v20761 = v3822.fee;
-            const v20762 = v3822.openTreasury;
-            const v20763 = v3822.quorum;
-            const v20764 = v3822.registerSelf;
-            const v20765 = v3824.action;
-            const v20766 = v3824.index;
-            const v20767 = stdlib.ge(v20766, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-            let v20768;
-            if (v20767) {
-              const v20769 = stdlib.mod(v20766, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-              const v20770 = stdlib.sub(v20766, v20769);
-              const v20771 = stdlib.div(v20770, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-              v20768 = v20771;
+            const v21287 = v3874;
+            const v21289 = v3876;
+            const v21291 = v8438;
+            const v21292 = v3874.admin;
+            const v21293 = v3874.fee;
+            const v21294 = v3874.openTreasury;
+            const v21295 = v3874.quorum;
+            const v21296 = v3874.registerSelf;
+            const v21297 = v3876.action;
+            const v21298 = v3876.index;
+            const v21299 = stdlib.ge(v21298, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+            let v21300;
+            if (v21299) {
+              const v21301 = stdlib.mod(v21298, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+              const v21302 = stdlib.sub(v21298, v21301);
+              const v21303 = stdlib.div(v21302, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+              v21300 = v21303;
               }
             else {
-              v20768 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+              v21300 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
               }
             sim_r.isHalt = false;
             }
           else {
-            const v8395 = [v3934, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-            await stdlib.simMapSet(sim_r, 0, v4455, v8395);
+            const v8687 = [v3986, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+            await stdlib.simMapSet(sim_r, 0, v4507, v8687);
             null;
-            const v20784 = v3822;
-            const v20786 = v3824;
-            const v20788 = v8146;
-            const v20789 = v3822.admin;
-            const v20790 = v3822.fee;
-            const v20791 = v3822.openTreasury;
-            const v20792 = v3822.quorum;
-            const v20793 = v3822.registerSelf;
-            const v20794 = v3824.action;
-            const v20795 = v3824.index;
-            const v20796 = stdlib.ge(v20795, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-            let v20797;
-            if (v20796) {
-              const v20798 = stdlib.mod(v20795, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-              const v20799 = stdlib.sub(v20795, v20798);
-              const v20800 = stdlib.div(v20799, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-              v20797 = v20800;
+            const v21316 = v3874;
+            const v21318 = v3876;
+            const v21320 = v8438;
+            const v21321 = v3874.admin;
+            const v21322 = v3874.fee;
+            const v21323 = v3874.openTreasury;
+            const v21324 = v3874.quorum;
+            const v21325 = v3874.registerSelf;
+            const v21326 = v3876.action;
+            const v21327 = v3876.index;
+            const v21328 = stdlib.ge(v21327, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+            let v21329;
+            if (v21328) {
+              const v21330 = stdlib.mod(v21327, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+              const v21331 = stdlib.sub(v21327, v21330);
+              const v21332 = stdlib.div(v21331, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+              v21329 = v21332;
               }
             else {
-              v20797 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+              v21329 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
               }
             sim_r.isHalt = false;
             }
           break;
           }
-        case 'registerProposal0_334': {
-          const v9307 = v4456[1];
+        case 'registerProposal0_352': {
+          const v9679 = v4508[1];
           
           break;
           }
-        case 'voteProposal0_334': {
-          const v10519 = v4456[1];
+        case 'voteProposal0_352': {
+          const v10971 = v4508[1];
           
           break;
           }
@@ -3992,170 +4049,170 @@ export async function _joinLeave3(ctcTop, interact) {
       }),
     soloSend: false,
     timeoutAt: undefined /* mto */,
-    tys: [ctc4, ctc5, ctc1, ctc9, ctc10, ctc11, ctc1, ctc4, ctc1, ctc7, ctc1, ctc7, ctc9, ctc1, ctc7, ctc1, ctc18],
+    tys: [ctc4, ctc5, ctc6, ctc1, ctc6, ctc10, ctc11, ctc12, ctc1, ctc4, ctc1, ctc8, ctc1, ctc8, ctc10, ctc1, ctc8, ctc1, ctc19],
     waitIfNotPresent: false
     }));
-  const {data: [v4456], secs: v4458, time: v4457, didSend: v2511, from: v4455 } = txn1;
-  switch (v4456[0]) {
-    case 'addMember0_334': {
-      const v4459 = v4456[1];
+  const {data: [v4508], secs: v4510, time: v4509, didSend: v2529, from: v4507 } = txn1;
+  switch (v4508[0]) {
+    case 'addMember0_352': {
+      const v4511 = v4508[1];
       return;
       break;
       }
-    case 'donate0_334': {
-      const v5671 = v4456[1];
+    case 'donate0_352': {
+      const v5803 = v4508[1];
       return;
       break;
       }
-    case 'eject0_334': {
-      const v6883 = v4456[1];
+    case 'eject0_352': {
+      const v7095 = v4508[1];
       return;
       break;
       }
-    case 'joinLeave0_334': {
-      const v8095 = v4456[1];
+    case 'joinLeave0_352': {
+      const v8387 = v4508[1];
       undefined /* setApiDetails */;
-      const v8123 = v8095[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:264:10:spread', stdlib.UInt_max, '0')];
-      if (v8123) {
-        const v8124 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4455), null);
-        let v8125;
-        switch (v8124[0]) {
+      const v8415 = v8387[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:284:10:spread', stdlib.UInt_max, '0')];
+      if (v8415) {
+        const v8416 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4507), null);
+        let v8417;
+        switch (v8416[0]) {
           case 'None': {
-            const v8126 = v8124[1];
-            v8125 = false;
+            const v8418 = v8416[1];
+            v8417 = false;
             
             break;
             }
           case 'Some': {
-            const v8127 = v8124[1];
-            v8125 = true;
+            const v8419 = v8416[1];
+            v8417 = true;
             
             break;
             }
           }
-        stdlib.assert(v8125, {
+        stdlib.assert(v8417, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:266:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:286:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
           msg: 'Address is not a member',
           who: 'joinLeave'
           });
         }
       else {
-        stdlib.assert(v3901, {
+        stdlib.assert(v3953, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:268:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:288:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
           msg: 'An existing user has to add you to this DAO',
           who: 'joinLeave'
           });
-        const v8131 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4455), null);
-        let v8132;
-        switch (v8131[0]) {
+        const v8423 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4507), null);
+        let v8424;
+        switch (v8423[0]) {
           case 'None': {
-            const v8133 = v8131[1];
-            v8132 = true;
+            const v8425 = v8423[1];
+            v8424 = true;
             
             break;
             }
           case 'Some': {
-            const v8134 = v8131[1];
-            v8132 = false;
+            const v8426 = v8423[1];
+            v8424 = false;
             
             break;
             }
           }
-        stdlib.assert(v8132, {
+        stdlib.assert(v8424, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:269:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:289:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
           msg: 'Address is already a member',
           who: 'joinLeave'
           });
         }
-      const v8137 = v8123 ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:272:35:decimal', stdlib.UInt_max, '0') : v3898;
-      const v8140 = stdlib.sub(stdlib.UInt_max, v3828);
-      const v8141 = stdlib.lt(v8137, v8140);
-      stdlib.assert(v8141, {
+      const v8429 = v8415 ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:292:35:decimal', stdlib.UInt_max, '0') : v3950;
+      const v8432 = stdlib.sub(stdlib.UInt_max, v3880);
+      const v8433 = stdlib.lt(v8429, v8432);
+      stdlib.assert(v8433, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:273:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:264:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:40:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:293:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:284:40:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:40:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
         msg: 'Membership is at maximum capacity',
         who: 'joinLeave'
         });
-      const v8146 = stdlib.add(v3828, v8137);
-      const v8147 = stdlib.le(v8146, stdlib.UInt_max);
-      stdlib.assert(v8147, {
-        at: './dao/contracts/dao-core.rsh:169:50:dot',
+      const v8438 = stdlib.add(v3880, v8429);
+      const v8439 = stdlib.le(v8438, stdlib.UInt_max);
+      stdlib.assert(v8439, {
+        at: './dao/contracts/dao-core.rsh:189:50:dot',
         fs: [],
         msg: 'assume <= UInt.max',
         who: 'joinLeave'
         });
       ;
-      if (v8123) {
-        const v8366 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4455), null);
-        let v8367;
-        switch (v8366[0]) {
+      if (v8415) {
+        const v8658 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4507), null);
+        let v8659;
+        switch (v8658[0]) {
           case 'None': {
-            const v8368 = v8366[1];
-            v8367 = false;
+            const v8660 = v8658[1];
+            v8659 = false;
             
             break;
             }
           case 'Some': {
-            const v8369 = v8366[1];
-            v8367 = true;
+            const v8661 = v8658[1];
+            v8659 = true;
             
             break;
             }
           }
-        stdlib.assert(v8367, {
+        stdlib.assert(v8659, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:266:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:278:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:278:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:286:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:298:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:298:13:function exp)'],
           msg: 'Address is not a member',
           who: 'joinLeave'
           });
         }
       else {
-        stdlib.assert(v3901, {
+        stdlib.assert(v3953, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:268:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:278:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:278:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:288:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:298:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:298:13:function exp)'],
           msg: 'An existing user has to add you to this DAO',
           who: 'joinLeave'
           });
-        const v8373 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4455), null);
-        let v8374;
-        switch (v8373[0]) {
+        const v8665 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4507), null);
+        let v8666;
+        switch (v8665[0]) {
           case 'None': {
-            const v8375 = v8373[1];
-            v8374 = true;
+            const v8667 = v8665[1];
+            v8666 = true;
             
             break;
             }
           case 'Some': {
-            const v8376 = v8373[1];
-            v8374 = false;
+            const v8668 = v8665[1];
+            v8666 = false;
             
             break;
             }
           }
-        stdlib.assert(v8374, {
+        stdlib.assert(v8666, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:269:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:278:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:278:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:289:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:298:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:298:13:function exp)'],
           msg: 'Address is already a member',
           who: 'joinLeave'
           });
         }
-      const v8382 = stdlib.sub(stdlib.UInt_max, v8146);
-      const v8383 = stdlib.lt(v8137, v8382);
-      stdlib.assert(v8383, {
+      const v8674 = stdlib.sub(stdlib.UInt_max, v8438);
+      const v8675 = stdlib.lt(v8429, v8674);
+      stdlib.assert(v8675, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:273:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:278:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:278:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:293:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:298:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:298:13:function exp)'],
         msg: 'Membership is at maximum capacity',
         who: 'joinLeave'
         });
-      const v8386 = null;
-      const v8387 = await txn1.getOutput('joinLeave', 'v8386', ctc0, v8386);
-      if (v2511) {
-        stdlib.protect(ctc0, await interact.out(v8095, v8387), {
-          at: './dao/contracts/dao-core.rsh:264:11:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:264:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:264:11:function exp)', 'at ./dao/contracts/dao-core.rsh:279:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:278:13:function exp)', 'at ./dao/contracts/dao-core.rsh:278:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:278:13:function exp)'],
+      const v8678 = null;
+      const v8679 = await txn1.getOutput('joinLeave', 'v8678', ctc0, v8678);
+      if (v2529) {
+        stdlib.protect(ctc0, await interact.out(v8387, v8679), {
+          at: './dao/contracts/dao-core.rsh:284:11:application',
+          fs: ['at ./dao/contracts/dao-core.rsh:284:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:284:11:function exp)', 'at ./dao/contracts/dao-core.rsh:299:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:298:13:function exp)', 'at ./dao/contracts/dao-core.rsh:298:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:298:13:function exp)'],
           msg: 'out',
           who: 'joinLeave'
           });
@@ -4163,68 +4220,68 @@ export async function _joinLeave3(ctcTop, interact) {
       else {
         }
       
-      if (v8123) {
-        await stdlib.mapSet(map0, v4455, undefined /* Nothing */);
+      if (v8415) {
+        await stdlib.mapSet(map0, v4507, undefined /* Nothing */);
         null;
-        const v20755 = v3822;
-        const v20757 = v3824;
-        const v20759 = v8146;
-        const v20760 = v3822.admin;
-        const v20761 = v3822.fee;
-        const v20762 = v3822.openTreasury;
-        const v20763 = v3822.quorum;
-        const v20764 = v3822.registerSelf;
-        const v20765 = v3824.action;
-        const v20766 = v3824.index;
-        const v20767 = stdlib.ge(v20766, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-        let v20768;
-        if (v20767) {
-          const v20769 = stdlib.mod(v20766, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-          const v20770 = stdlib.sub(v20766, v20769);
-          const v20771 = stdlib.div(v20770, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-          v20768 = v20771;
+        const v21287 = v3874;
+        const v21289 = v3876;
+        const v21291 = v8438;
+        const v21292 = v3874.admin;
+        const v21293 = v3874.fee;
+        const v21294 = v3874.openTreasury;
+        const v21295 = v3874.quorum;
+        const v21296 = v3874.registerSelf;
+        const v21297 = v3876.action;
+        const v21298 = v3876.index;
+        const v21299 = stdlib.ge(v21298, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+        let v21300;
+        if (v21299) {
+          const v21301 = stdlib.mod(v21298, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+          const v21302 = stdlib.sub(v21298, v21301);
+          const v21303 = stdlib.div(v21302, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+          v21300 = v21303;
           }
         else {
-          v20768 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+          v21300 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
           }
         return;
         }
       else {
-        const v8395 = [v3934, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-        await stdlib.mapSet(map0, v4455, v8395);
+        const v8687 = [v3986, stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+        await stdlib.mapSet(map0, v4507, v8687);
         null;
-        const v20784 = v3822;
-        const v20786 = v3824;
-        const v20788 = v8146;
-        const v20789 = v3822.admin;
-        const v20790 = v3822.fee;
-        const v20791 = v3822.openTreasury;
-        const v20792 = v3822.quorum;
-        const v20793 = v3822.registerSelf;
-        const v20794 = v3824.action;
-        const v20795 = v3824.index;
-        const v20796 = stdlib.ge(v20795, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-        let v20797;
-        if (v20796) {
-          const v20798 = stdlib.mod(v20795, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-          const v20799 = stdlib.sub(v20795, v20798);
-          const v20800 = stdlib.div(v20799, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-          v20797 = v20800;
+        const v21316 = v3874;
+        const v21318 = v3876;
+        const v21320 = v8438;
+        const v21321 = v3874.admin;
+        const v21322 = v3874.fee;
+        const v21323 = v3874.openTreasury;
+        const v21324 = v3874.quorum;
+        const v21325 = v3874.registerSelf;
+        const v21326 = v3876.action;
+        const v21327 = v3876.index;
+        const v21328 = stdlib.ge(v21327, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+        let v21329;
+        if (v21328) {
+          const v21330 = stdlib.mod(v21327, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+          const v21331 = stdlib.sub(v21327, v21330);
+          const v21332 = stdlib.div(v21331, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+          v21329 = v21332;
           }
         else {
-          v20797 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+          v21329 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
           }
         return;
         }
       break;
       }
-    case 'registerProposal0_334': {
-      const v9307 = v4456[1];
+    case 'registerProposal0_352': {
+      const v9679 = v4508[1];
       return;
       break;
       }
-    case 'voteProposal0_334': {
-      const v10519 = v4456[1];
+    case 'voteProposal0_352': {
+      const v10971 = v4508[1];
       return;
       break;
       }
@@ -4248,45 +4305,46 @@ export async function _registerProposal3(ctcTop, interact) {
     });
   const ctc4 = stdlib.T_Address;
   const ctc5 = stdlib.T_Bytes(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '128'));
-  const ctc6 = stdlib.T_Tuple([ctc4, ctc1]);
-  const ctc7 = stdlib.T_Bool;
-  const ctc8 = stdlib.T_Struct([['admin', ctc4], ['registerSelf', ctc7], ['fee', ctc1], ['quorum', ctc1], ['openTreasury', ctc7]]);
-  const ctc9 = stdlib.T_Data({
-    AllocateFunds: ctc6,
-    ChangeAdmin: ctc8,
+  const ctc6 = stdlib.T_Contract;
+  const ctc7 = stdlib.T_Tuple([ctc4, ctc1]);
+  const ctc8 = stdlib.T_Bool;
+  const ctc9 = stdlib.T_Struct([['admin', ctc4], ['registerSelf', ctc8], ['fee', ctc1], ['quorum', ctc1], ['openTreasury', ctc8]]);
+  const ctc10 = stdlib.T_Data({
+    AllocateFunds: ctc7,
+    ChangeAdmin: ctc9,
     EjectMember: ctc4,
     None: ctc0,
     Stop: ctc0
     });
-  const ctc10 = stdlib.T_Object({
+  const ctc11 = stdlib.T_Object({
     admin: ctc4,
     fee: ctc1,
-    openTreasury: ctc7,
+    openTreasury: ctc8,
     quorum: ctc1,
-    registerSelf: ctc7
+    registerSelf: ctc8
     });
-  const ctc11 = stdlib.T_Object({
+  const ctc12 = stdlib.T_Object({
     Against: ctc1,
     For: ctc1,
-    action: ctc9,
+    action: ctc10,
     index: ctc1
     });
-  const ctc12 = stdlib.T_Tuple([ctc9]);
-  const ctc13 = stdlib.T_Tuple([ctc4]);
-  const ctc14 = stdlib.T_Tuple([ctc1]);
-  const ctc15 = stdlib.T_Tuple([ctc7]);
-  const ctc16 = stdlib.T_Data({
+  const ctc13 = stdlib.T_Tuple([ctc10]);
+  const ctc14 = stdlib.T_Tuple([ctc4]);
+  const ctc15 = stdlib.T_Tuple([ctc1]);
+  const ctc16 = stdlib.T_Tuple([ctc8]);
+  const ctc17 = stdlib.T_Data({
     Against: ctc0,
     For: ctc0
     });
-  const ctc17 = stdlib.T_Tuple([ctc16]);
-  const ctc18 = stdlib.T_Data({
-    addMember0_334: ctc13,
-    donate0_334: ctc14,
-    eject0_334: ctc13,
-    joinLeave0_334: ctc15,
-    registerProposal0_334: ctc12,
-    voteProposal0_334: ctc17
+  const ctc18 = stdlib.T_Tuple([ctc17]);
+  const ctc19 = stdlib.T_Data({
+    addMember0_352: ctc14,
+    donate0_352: ctc15,
+    eject0_352: ctc14,
+    joinLeave0_352: ctc16,
+    registerProposal0_352: ctc13,
+    voteProposal0_352: ctc18
     });
   
   const map0_ctc = ctc3;
@@ -4298,294 +4356,294 @@ export async function _registerProposal3(ctcTop, interact) {
     });
   
   
-  const [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934] = await ctc.getState(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'), [ctc4, ctc5, ctc1, ctc9, ctc10, ctc11, ctc1, ctc4, ctc1, ctc7, ctc1, ctc7, ctc9, ctc1, ctc7, ctc1]);
-  const v4103 = ctc.selfAddress();
-  const v4105 = stdlib.protect(ctc12, await interact.in(), {
+  const [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986] = await ctc.getState(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'), [ctc4, ctc5, ctc6, ctc1, ctc6, ctc10, ctc11, ctc12, ctc1, ctc4, ctc1, ctc8, ctc1, ctc8, ctc10, ctc1, ctc8, ctc1]);
+  const v4155 = ctc.selfAddress();
+  const v4157 = stdlib.protect(ctc13, await interact.in(), {
     at: './dao/contracts/dao-core.rsh:1:23:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:291:44:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:291:44:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runregisterProposal0_334" (defined at: ./dao/contracts/dao-core.rsh:291:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:311:44:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:311:44:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runregisterProposal0_352" (defined at: ./dao/contracts/dao-core.rsh:311:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'in',
     who: 'registerProposal'
     });
-  const v4106 = v4105[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:1:23:application', stdlib.UInt_max, '0')];
-  let v4123;
-  if (v3933) {
-    const v4125 = stdlib.mod(v3932, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-    const v4127 = stdlib.sub(v3932, v4125);
-    const v4129 = stdlib.div(v4127, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-    v4123 = v4129;
+  const v4158 = v4157[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:1:23:application', stdlib.UInt_max, '0')];
+  let v4175;
+  if (v3985) {
+    const v4177 = stdlib.mod(v3984, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+    const v4179 = stdlib.sub(v3984, v4177);
+    const v4181 = stdlib.div(v4179, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+    v4175 = v4181;
     }
   else {
-    v4123 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+    v4175 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
     }
-  const v4130 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4103), null);
-  const v4131 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-  const v4132 = stdlib.fromSome(v4130, v4131);
-  const v4133 = v4132[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:103:11:array', stdlib.UInt_max, '0')];
-  const v4135 = stdlib.ge(v4133, v4123);
-  stdlib.assert(v4135, {
+  const v4182 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4155), null);
+  const v4183 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+  const v4184 = stdlib.fromSome(v4182, v4183);
+  const v4185 = v4184[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:120:11:array', stdlib.UInt_max, '0')];
+  const v4187 = stdlib.ge(v4185, v4175);
+  stdlib.assert(v4187, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:104:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:292:22:application call to "requireIsMember" (defined at: ./dao/contracts/dao-core.rsh:101:36:function exp)', 'at ./dao/contracts/dao-core.rsh:291:44:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:291:44:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runregisterProposal0_334" (defined at: ./dao/contracts/dao-core.rsh:291:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:121:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:312:22:application call to "requireIsMember" (defined at: ./dao/contracts/dao-core.rsh:118:36:function exp)', 'at ./dao/contracts/dao-core.rsh:311:44:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:311:44:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runregisterProposal0_352" (defined at: ./dao/contracts/dao-core.rsh:311:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'THIEF! SEIZE THEM!',
     who: 'registerProposal'
     });
-  const v4142 = stdlib.ge(v4133, v3934);
-  stdlib.assert(v4142, {
+  const v4194 = stdlib.ge(v4185, v3986);
+  stdlib.assert(v4194, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:293:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:291:44:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:291:44:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runregisterProposal0_334" (defined at: ./dao/contracts/dao-core.rsh:291:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:313:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:311:44:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:311:44:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runregisterProposal0_352" (defined at: ./dao/contracts/dao-core.rsh:311:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'User is below Citizen Rank threshold',
     who: 'registerProposal'
     });
-  let v4146;
-  switch (v3903[0]) {
+  let v4198;
+  switch (v3955[0]) {
     case 'AllocateFunds': {
-      const v4147 = v3903[1];
-      const v4148 = v4147[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-      const v4149 = v4147[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
-      const v4151 = stdlib.lt(v4149, v3828);
-      const v4152 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4148), null);
-      let v4153;
-      switch (v4152[0]) {
+      const v4199 = v3955[1];
+      const v4200 = v4199[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+      const v4201 = v4199[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
+      const v4203 = stdlib.lt(v4201, v3880);
+      const v4204 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4200), null);
+      let v4205;
+      switch (v4204[0]) {
         case 'None': {
-          const v4154 = v4152[1];
-          v4153 = false;
+          const v4206 = v4204[1];
+          v4205 = false;
           
           break;
           }
         case 'Some': {
-          const v4155 = v4152[1];
-          v4153 = true;
+          const v4207 = v4204[1];
+          v4205 = true;
           
           break;
           }
         }
-      const v4156 = v4153 ? v4151 : false;
-      const v4158 = v3899 ? v4151 : v4156;
-      v4146 = v4158;
+      const v4208 = v4205 ? v4203 : false;
+      const v4210 = v3951 ? v4203 : v4208;
+      v4198 = v4210;
       
       break;
       }
     case 'ChangeAdmin': {
-      const v4159 = v3903[1];
-      const v4160 = v4159.admin;
-      const v4161 = v4159.fee;
-      const v4163 = v4159.quorum;
-      const v4165 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4160), null);
-      const v4167 = stdlib.fromSome(v4165, v4131);
-      const v4168 = v4167[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
-      let v4171;
-      switch (v4165[0]) {
+      const v4211 = v3955[1];
+      const v4212 = v4211.admin;
+      const v4213 = v4211.fee;
+      const v4215 = v4211.quorum;
+      const v4217 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4212), null);
+      const v4219 = stdlib.fromSome(v4217, v4183);
+      const v4220 = v4219[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
+      let v4223;
+      switch (v4217[0]) {
         case 'None': {
-          const v4172 = v4165[1];
-          v4171 = false;
+          const v4224 = v4217[1];
+          v4223 = false;
           
           break;
           }
         case 'Some': {
-          const v4173 = v4165[1];
-          v4171 = true;
+          const v4225 = v4217[1];
+          v4223 = true;
           
           break;
           }
         }
-      const v4174 = stdlib.gt(v4168, v3934);
-      const v4175 = v4171 ? v4174 : false;
-      const v4176 = stdlib.gt(v4163, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
-      let v4177;
-      if (v4176) {
-        const v4180 = stdlib.lt(v4163, v3812);
-        v4177 = v4180;
+      const v4226 = stdlib.gt(v4220, v3986);
+      const v4227 = v4223 ? v4226 : false;
+      const v4228 = stdlib.gt(v4215, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
+      let v4229;
+      if (v4228) {
+        const v4232 = stdlib.lt(v4215, v3848);
+        v4229 = v4232;
         }
       else {
-        v4177 = false;
+        v4229 = false;
         }
-      const v4181 = stdlib.gt(v4161, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:33:decimal', stdlib.UInt_max, '0'));
-      const v4182 = stdlib.lt(v4161, stdlib.UInt_max);
-      const v4183 = v4181 ? v4182 : false;
-      const v4184 = v4175 ? v4177 : false;
-      const v4185 = v4184 ? v4183 : false;
-      v4146 = v4185;
+      const v4233 = stdlib.ge(v4213, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:34:decimal', stdlib.UInt_max, '0'));
+      const v4234 = stdlib.lt(v4213, stdlib.UInt_max);
+      const v4235 = v4233 ? v4234 : false;
+      const v4236 = v4227 ? v4229 : false;
+      const v4237 = v4236 ? v4235 : false;
+      v4198 = v4237;
       
       break;
       }
     case 'EjectMember': {
-      const v4186 = v3903[1];
-      const v4187 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4186), null);
-      let v4188;
-      switch (v4187[0]) {
+      const v4238 = v3955[1];
+      const v4239 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4238), null);
+      let v4240;
+      switch (v4239[0]) {
         case 'None': {
-          const v4189 = v4187[1];
-          v4188 = false;
+          const v4241 = v4239[1];
+          v4240 = false;
           
           break;
           }
         case 'Some': {
-          const v4190 = v4187[1];
-          v4188 = true;
+          const v4242 = v4239[1];
+          v4240 = true;
           
           break;
           }
         }
-      const v4192 = stdlib.addressEq(v4186, v3897);
-      const v4193 = v4192 ? false : true;
-      const v4194 = v4188 ? v4193 : false;
-      v4146 = v4194;
+      const v4244 = stdlib.addressEq(v4238, v3949);
+      const v4245 = v4244 ? false : true;
+      const v4246 = v4240 ? v4245 : false;
+      v4198 = v4246;
       
       break;
       }
     case 'None': {
-      const v4195 = v3903[1];
-      v4146 = false;
+      const v4247 = v3955[1];
+      v4198 = false;
       
       break;
       }
     case 'Stop': {
-      const v4196 = v3903[1];
-      v4146 = true;
+      const v4248 = v3955[1];
+      v4198 = true;
       
       break;
       }
     }
-  const v4197 = v4146 ? false : true;
-  stdlib.assert(v4197, {
+  const v4249 = v4198 ? false : true;
+  stdlib.assert(v4249, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:295:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:291:44:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:291:44:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runregisterProposal0_334" (defined at: ./dao/contracts/dao-core.rsh:291:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:315:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:311:44:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:311:44:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runregisterProposal0_352" (defined at: ./dao/contracts/dao-core.rsh:311:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'A Proposal is already active.',
     who: 'registerProposal'
     });
-  const v4200 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:300:32:decimal', stdlib.UInt_max, '1'));
-  const v4201 = stdlib.lt(v3932, v4200);
-  stdlib.assert(v4201, {
+  const v4252 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:320:32:decimal', stdlib.UInt_max, '1'));
+  const v4253 = stdlib.lt(v3984, v4252);
+  stdlib.assert(v4253, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:300:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:291:44:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:291:44:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runregisterProposal0_334" (defined at: ./dao/contracts/dao-core.rsh:291:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:320:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:311:44:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:311:44:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runregisterProposal0_352" (defined at: ./dao/contracts/dao-core.rsh:311:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'Governance limit reached',
     who: 'registerProposal'
     });
-  let v4203;
-  switch (v4106[0]) {
+  let v4255;
+  switch (v4158[0]) {
     case 'AllocateFunds': {
-      const v4204 = v4106[1];
-      const v4205 = v4204[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-      const v4206 = v4204[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
-      const v4208 = stdlib.lt(v4206, v3828);
-      const v4209 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4205), null);
-      let v4210;
-      switch (v4209[0]) {
+      const v4256 = v4158[1];
+      const v4257 = v4256[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+      const v4258 = v4256[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
+      const v4260 = stdlib.lt(v4258, v3880);
+      const v4261 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4257), null);
+      let v4262;
+      switch (v4261[0]) {
         case 'None': {
-          const v4211 = v4209[1];
-          v4210 = false;
+          const v4263 = v4261[1];
+          v4262 = false;
           
           break;
           }
         case 'Some': {
-          const v4212 = v4209[1];
-          v4210 = true;
+          const v4264 = v4261[1];
+          v4262 = true;
           
           break;
           }
         }
-      const v4213 = v4210 ? v4208 : false;
-      const v4215 = v3899 ? v4208 : v4213;
-      v4203 = v4215;
+      const v4265 = v4262 ? v4260 : false;
+      const v4267 = v3951 ? v4260 : v4265;
+      v4255 = v4267;
       
       break;
       }
     case 'ChangeAdmin': {
-      const v4216 = v4106[1];
-      const v4217 = v4216.admin;
-      const v4218 = v4216.fee;
-      const v4220 = v4216.quorum;
-      const v4222 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4217), null);
-      const v4224 = stdlib.fromSome(v4222, v4131);
-      const v4225 = v4224[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
-      let v4228;
-      switch (v4222[0]) {
+      const v4268 = v4158[1];
+      const v4269 = v4268.admin;
+      const v4270 = v4268.fee;
+      const v4272 = v4268.quorum;
+      const v4274 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4269), null);
+      const v4276 = stdlib.fromSome(v4274, v4183);
+      const v4277 = v4276[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
+      let v4280;
+      switch (v4274[0]) {
         case 'None': {
-          const v4229 = v4222[1];
-          v4228 = false;
+          const v4281 = v4274[1];
+          v4280 = false;
           
           break;
           }
         case 'Some': {
-          const v4230 = v4222[1];
-          v4228 = true;
+          const v4282 = v4274[1];
+          v4280 = true;
           
           break;
           }
         }
-      const v4231 = stdlib.gt(v4225, v3934);
-      const v4232 = v4228 ? v4231 : false;
-      const v4233 = stdlib.gt(v4220, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
-      let v4234;
-      if (v4233) {
-        const v4237 = stdlib.lt(v4220, v3812);
-        v4234 = v4237;
+      const v4283 = stdlib.gt(v4277, v3986);
+      const v4284 = v4280 ? v4283 : false;
+      const v4285 = stdlib.gt(v4272, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
+      let v4286;
+      if (v4285) {
+        const v4289 = stdlib.lt(v4272, v3848);
+        v4286 = v4289;
         }
       else {
-        v4234 = false;
+        v4286 = false;
         }
-      const v4238 = stdlib.gt(v4218, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:33:decimal', stdlib.UInt_max, '0'));
-      const v4239 = stdlib.lt(v4218, stdlib.UInt_max);
-      const v4240 = v4238 ? v4239 : false;
-      const v4241 = v4232 ? v4234 : false;
-      const v4242 = v4241 ? v4240 : false;
-      v4203 = v4242;
+      const v4290 = stdlib.ge(v4270, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:34:decimal', stdlib.UInt_max, '0'));
+      const v4291 = stdlib.lt(v4270, stdlib.UInt_max);
+      const v4292 = v4290 ? v4291 : false;
+      const v4293 = v4284 ? v4286 : false;
+      const v4294 = v4293 ? v4292 : false;
+      v4255 = v4294;
       
       break;
       }
     case 'EjectMember': {
-      const v4243 = v4106[1];
-      const v4244 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4243), null);
-      let v4245;
-      switch (v4244[0]) {
+      const v4295 = v4158[1];
+      const v4296 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4295), null);
+      let v4297;
+      switch (v4296[0]) {
         case 'None': {
-          const v4246 = v4244[1];
-          v4245 = false;
+          const v4298 = v4296[1];
+          v4297 = false;
           
           break;
           }
         case 'Some': {
-          const v4247 = v4244[1];
-          v4245 = true;
+          const v4299 = v4296[1];
+          v4297 = true;
           
           break;
           }
         }
-      const v4249 = stdlib.addressEq(v4243, v3897);
-      const v4250 = v4249 ? false : true;
-      const v4251 = v4245 ? v4250 : false;
-      v4203 = v4251;
+      const v4301 = stdlib.addressEq(v4295, v3949);
+      const v4302 = v4301 ? false : true;
+      const v4303 = v4297 ? v4302 : false;
+      v4255 = v4303;
       
       break;
       }
     case 'None': {
-      const v4252 = v4106[1];
-      v4203 = false;
+      const v4304 = v4158[1];
+      v4255 = false;
       
       break;
       }
     case 'Stop': {
-      const v4253 = v4106[1];
-      v4203 = true;
+      const v4305 = v4158[1];
+      v4255 = true;
       
       break;
       }
     }
-  stdlib.assert(v4203, {
+  stdlib.assert(v4255, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:301:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:291:44:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:291:44:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runregisterProposal0_334" (defined at: ./dao/contracts/dao-core.rsh:291:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:321:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:311:44:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:311:44:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runregisterProposal0_352" (defined at: ./dao/contracts/dao-core.rsh:311:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'Bad suggestion is bad. Apologize to everyone.',
     who: 'registerProposal'
     });
-  const v4272 = ['registerProposal0_334', v4105];
+  const v4324 = ['registerProposal0_352', v4157];
   
   const txn1 = await (ctc.sendrecv({
-    args: [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934, v4272],
+    args: [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986, v4324],
     evt_cnt: 1,
     funcNum: 2,
     lct: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
     onlyIf: true,
-    out_tys: [ctc18],
-    pay: [stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:291:10:decimal', stdlib.UInt_max, '0'), []],
+    out_tys: [ctc19],
+    pay: [stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:311:10:decimal', stdlib.UInt_max, '0'), []],
     sim_p: (async (txn1) => {
       const sim_r = { txns: [], mapRefs: [], maps: [] };
       let sim_txn_ctr = stdlib.UInt_max;
@@ -4593,140 +4651,140 @@ export async function _registerProposal3(ctcTop, interact) {
       
       stdlib.simMapDupe(sim_r, 0, map0);
       
-      const {data: [v4456], secs: v4458, time: v4457, didSend: v2511, from: v4455 } = txn1;
+      const {data: [v4508], secs: v4510, time: v4509, didSend: v2529, from: v4507 } = txn1;
       
-      switch (v4456[0]) {
-        case 'addMember0_334': {
-          const v4459 = v4456[1];
+      switch (v4508[0]) {
+        case 'addMember0_352': {
+          const v4511 = v4508[1];
           
           break;
           }
-        case 'donate0_334': {
-          const v5671 = v4456[1];
+        case 'donate0_352': {
+          const v5803 = v4508[1];
           
           break;
           }
-        case 'eject0_334': {
-          const v6883 = v4456[1];
+        case 'eject0_352': {
+          const v7095 = v4508[1];
           
           break;
           }
-        case 'joinLeave0_334': {
-          const v8095 = v4456[1];
+        case 'joinLeave0_352': {
+          const v8387 = v4508[1];
           
           break;
           }
-        case 'registerProposal0_334': {
-          const v9307 = v4456[1];
+        case 'registerProposal0_352': {
+          const v9679 = v4508[1];
           sim_r.txns.push({
             kind: 'api',
             who: "registerProposal"
             });
           ;
-          const v9611 = v9307[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:291:10:spread', stdlib.UInt_max, '0')];
-          stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v4455), null);
-          switch (v3903[0]) {
+          const v9983 = v9679[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:311:10:spread', stdlib.UInt_max, '0')];
+          stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v4507), null);
+          switch (v3955[0]) {
             case 'AllocateFunds': {
-              const v9639 = v3903[1];
-              const v9640 = v9639[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v9640), null);
+              const v10011 = v3955[1];
+              const v10012 = v10011[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v10012), null);
               
               break;
               }
             case 'ChangeAdmin': {
-              const v9651 = v3903[1];
-              const v9652 = v9651.admin;
-              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v9652), null);
+              const v10023 = v3955[1];
+              const v10024 = v10023.admin;
+              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v10024), null);
               
               break;
               }
             case 'EjectMember': {
-              const v9678 = v3903[1];
-              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v9678), null);
+              const v10050 = v3955[1];
+              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v10050), null);
               
               break;
               }
             case 'None': {
-              const v9687 = v3903[1];
+              const v10059 = v3955[1];
               
               break;
               }
             case 'Stop': {
-              const v9688 = v3903[1];
+              const v10060 = v3955[1];
               
               break;
               }
             }
-          switch (v9611[0]) {
+          switch (v9983[0]) {
             case 'AllocateFunds': {
-              const v9696 = v9611[1];
-              const v9697 = v9696[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v9697), null);
+              const v10068 = v9983[1];
+              const v10069 = v10068[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v10069), null);
               
               break;
               }
             case 'ChangeAdmin': {
-              const v9708 = v9611[1];
-              const v9709 = v9708.admin;
-              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v9709), null);
+              const v10080 = v9983[1];
+              const v10081 = v10080.admin;
+              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v10081), null);
               
               break;
               }
             case 'EjectMember': {
-              const v9735 = v9611[1];
-              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v9735), null);
+              const v10107 = v9983[1];
+              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v10107), null);
               
               break;
               }
             case 'None': {
-              const v9744 = v9611[1];
+              const v10116 = v9983[1];
               
               break;
               }
             case 'Stop': {
-              const v9745 = v9611[1];
+              const v10117 = v9983[1];
               
               break;
               }
             }
-          const v9748 = null;
-          const v9749 = await txn1.getOutput('registerProposal', 'v9748', ctc0, v9748);
+          const v10120 = null;
+          const v10121 = await txn1.getOutput('registerProposal', 'v10120', ctc0, v10120);
           
           null;
-          const v9782 = stdlib.add(v3932, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:163:30:decimal', stdlib.UInt_max, '1'));
-          const v9783 = {
+          const v10154 = stdlib.add(v3984, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:183:30:decimal', stdlib.UInt_max, '1'));
+          const v10155 = {
             Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
             For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-            action: v9611,
-            index: v9782
+            action: v9983,
+            index: v10154
             };
-          const v21509 = v3822;
-          const v21511 = v9783;
-          const v21513 = v3828;
-          const v21514 = v3822.admin;
-          const v21515 = v3822.fee;
-          const v21516 = v3822.openTreasury;
-          const v21517 = v3822.quorum;
-          const v21518 = v3822.registerSelf;
-          const v21519 = v9783.action;
-          const v21520 = v9783.index;
-          const v21521 = stdlib.ge(v21520, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-          let v21522;
-          if (v21521) {
-            const v21523 = stdlib.mod(v21520, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-            const v21524 = stdlib.sub(v21520, v21523);
-            const v21525 = stdlib.div(v21524, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-            v21522 = v21525;
+          const v22041 = v3874;
+          const v22043 = v10155;
+          const v22045 = v3880;
+          const v22046 = v3874.admin;
+          const v22047 = v3874.fee;
+          const v22048 = v3874.openTreasury;
+          const v22049 = v3874.quorum;
+          const v22050 = v3874.registerSelf;
+          const v22051 = v10155.action;
+          const v22052 = v10155.index;
+          const v22053 = stdlib.ge(v22052, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+          let v22054;
+          if (v22053) {
+            const v22055 = stdlib.mod(v22052, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+            const v22056 = stdlib.sub(v22052, v22055);
+            const v22057 = stdlib.div(v22056, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+            v22054 = v22057;
             }
           else {
-            v21522 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+            v22054 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
             }
           sim_r.isHalt = false;
           
           break;
           }
-        case 'voteProposal0_334': {
-          const v10519 = v4456[1];
+        case 'voteProposal0_352': {
+          const v10971 = v4508[1];
           
           break;
           }
@@ -4735,318 +4793,318 @@ export async function _registerProposal3(ctcTop, interact) {
       }),
     soloSend: false,
     timeoutAt: undefined /* mto */,
-    tys: [ctc4, ctc5, ctc1, ctc9, ctc10, ctc11, ctc1, ctc4, ctc1, ctc7, ctc1, ctc7, ctc9, ctc1, ctc7, ctc1, ctc18],
+    tys: [ctc4, ctc5, ctc6, ctc1, ctc6, ctc10, ctc11, ctc12, ctc1, ctc4, ctc1, ctc8, ctc1, ctc8, ctc10, ctc1, ctc8, ctc1, ctc19],
     waitIfNotPresent: false
     }));
-  const {data: [v4456], secs: v4458, time: v4457, didSend: v2511, from: v4455 } = txn1;
-  switch (v4456[0]) {
-    case 'addMember0_334': {
-      const v4459 = v4456[1];
+  const {data: [v4508], secs: v4510, time: v4509, didSend: v2529, from: v4507 } = txn1;
+  switch (v4508[0]) {
+    case 'addMember0_352': {
+      const v4511 = v4508[1];
       return;
       break;
       }
-    case 'donate0_334': {
-      const v5671 = v4456[1];
+    case 'donate0_352': {
+      const v5803 = v4508[1];
       return;
       break;
       }
-    case 'eject0_334': {
-      const v6883 = v4456[1];
+    case 'eject0_352': {
+      const v7095 = v4508[1];
       return;
       break;
       }
-    case 'joinLeave0_334': {
-      const v8095 = v4456[1];
+    case 'joinLeave0_352': {
+      const v8387 = v4508[1];
       return;
       break;
       }
-    case 'registerProposal0_334': {
-      const v9307 = v4456[1];
+    case 'registerProposal0_352': {
+      const v9679 = v4508[1];
       undefined /* setApiDetails */;
-      const v9359 = stdlib.le(v3828, stdlib.UInt_max);
-      stdlib.assert(v9359, {
-        at: './dao/contracts/dao-core.rsh:169:50:dot',
+      const v9731 = stdlib.le(v3880, stdlib.UInt_max);
+      stdlib.assert(v9731, {
+        at: './dao/contracts/dao-core.rsh:189:50:dot',
         fs: [],
         msg: 'assume <= UInt.max',
         who: 'registerProposal'
         });
       ;
-      const v9611 = v9307[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:291:10:spread', stdlib.UInt_max, '0')];
-      let v9615;
-      if (v3933) {
-        const v9617 = stdlib.mod(v3932, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-        const v9619 = stdlib.sub(v3932, v9617);
-        const v9621 = stdlib.div(v9619, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-        v9615 = v9621;
+      const v9983 = v9679[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:311:10:spread', stdlib.UInt_max, '0')];
+      let v9987;
+      if (v3985) {
+        const v9989 = stdlib.mod(v3984, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+        const v9991 = stdlib.sub(v3984, v9989);
+        const v9993 = stdlib.div(v9991, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+        v9987 = v9993;
         }
       else {
-        v9615 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+        v9987 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
         }
-      const v9622 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4455), null);
-      const v9623 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-      const v9624 = stdlib.fromSome(v9622, v9623);
-      const v9625 = v9624[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:103:11:array', stdlib.UInt_max, '0')];
-      const v9627 = stdlib.ge(v9625, v9615);
-      stdlib.assert(v9627, {
+      const v9994 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4507), null);
+      const v9995 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+      const v9996 = stdlib.fromSome(v9994, v9995);
+      const v9997 = v9996[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:120:11:array', stdlib.UInt_max, '0')];
+      const v9999 = stdlib.ge(v9997, v9987);
+      stdlib.assert(v9999, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:104:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:292:22:application call to "requireIsMember" (defined at: ./dao/contracts/dao-core.rsh:101:36:function exp)', 'at ./dao/contracts/dao-core.rsh:304:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:304:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:121:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:312:22:application call to "requireIsMember" (defined at: ./dao/contracts/dao-core.rsh:118:36:function exp)', 'at ./dao/contracts/dao-core.rsh:324:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:324:13:function exp)'],
         msg: 'THIEF! SEIZE THEM!',
         who: 'registerProposal'
         });
-      const v9634 = stdlib.ge(v9625, v3934);
-      stdlib.assert(v9634, {
+      const v10006 = stdlib.ge(v9997, v3986);
+      stdlib.assert(v10006, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:293:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:304:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:304:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:313:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:324:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:324:13:function exp)'],
         msg: 'User is below Citizen Rank threshold',
         who: 'registerProposal'
         });
-      let v9638;
-      switch (v3903[0]) {
+      let v10010;
+      switch (v3955[0]) {
         case 'AllocateFunds': {
-          const v9639 = v3903[1];
-          const v9640 = v9639[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-          const v9641 = v9639[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
-          const v9643 = stdlib.lt(v9641, v3828);
-          const v9644 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v9640), null);
-          let v9645;
-          switch (v9644[0]) {
+          const v10011 = v3955[1];
+          const v10012 = v10011[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+          const v10013 = v10011[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
+          const v10015 = stdlib.lt(v10013, v3880);
+          const v10016 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v10012), null);
+          let v10017;
+          switch (v10016[0]) {
             case 'None': {
-              const v9646 = v9644[1];
-              v9645 = false;
+              const v10018 = v10016[1];
+              v10017 = false;
               
               break;
               }
             case 'Some': {
-              const v9647 = v9644[1];
-              v9645 = true;
+              const v10019 = v10016[1];
+              v10017 = true;
               
               break;
               }
             }
-          const v9648 = v9645 ? v9643 : false;
-          const v9650 = v3899 ? v9643 : v9648;
-          v9638 = v9650;
+          const v10020 = v10017 ? v10015 : false;
+          const v10022 = v3951 ? v10015 : v10020;
+          v10010 = v10022;
           
           break;
           }
         case 'ChangeAdmin': {
-          const v9651 = v3903[1];
-          const v9652 = v9651.admin;
-          const v9653 = v9651.fee;
-          const v9655 = v9651.quorum;
-          const v9657 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v9652), null);
-          const v9659 = stdlib.fromSome(v9657, v9623);
-          const v9660 = v9659[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
-          let v9663;
-          switch (v9657[0]) {
+          const v10023 = v3955[1];
+          const v10024 = v10023.admin;
+          const v10025 = v10023.fee;
+          const v10027 = v10023.quorum;
+          const v10029 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v10024), null);
+          const v10031 = stdlib.fromSome(v10029, v9995);
+          const v10032 = v10031[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
+          let v10035;
+          switch (v10029[0]) {
             case 'None': {
-              const v9664 = v9657[1];
-              v9663 = false;
+              const v10036 = v10029[1];
+              v10035 = false;
               
               break;
               }
             case 'Some': {
-              const v9665 = v9657[1];
-              v9663 = true;
+              const v10037 = v10029[1];
+              v10035 = true;
               
               break;
               }
             }
-          const v9666 = stdlib.gt(v9660, v3934);
-          const v9667 = v9663 ? v9666 : false;
-          const v9668 = stdlib.gt(v9655, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
-          let v9669;
-          if (v9668) {
-            const v9672 = stdlib.lt(v9655, v3812);
-            v9669 = v9672;
+          const v10038 = stdlib.gt(v10032, v3986);
+          const v10039 = v10035 ? v10038 : false;
+          const v10040 = stdlib.gt(v10027, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
+          let v10041;
+          if (v10040) {
+            const v10044 = stdlib.lt(v10027, v3848);
+            v10041 = v10044;
             }
           else {
-            v9669 = false;
+            v10041 = false;
             }
-          const v9673 = stdlib.gt(v9653, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:33:decimal', stdlib.UInt_max, '0'));
-          const v9674 = stdlib.lt(v9653, stdlib.UInt_max);
-          const v9675 = v9673 ? v9674 : false;
-          const v9676 = v9667 ? v9669 : false;
-          const v9677 = v9676 ? v9675 : false;
-          v9638 = v9677;
+          const v10045 = stdlib.ge(v10025, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:34:decimal', stdlib.UInt_max, '0'));
+          const v10046 = stdlib.lt(v10025, stdlib.UInt_max);
+          const v10047 = v10045 ? v10046 : false;
+          const v10048 = v10039 ? v10041 : false;
+          const v10049 = v10048 ? v10047 : false;
+          v10010 = v10049;
           
           break;
           }
         case 'EjectMember': {
-          const v9678 = v3903[1];
-          const v9679 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v9678), null);
-          let v9680;
-          switch (v9679[0]) {
+          const v10050 = v3955[1];
+          const v10051 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v10050), null);
+          let v10052;
+          switch (v10051[0]) {
             case 'None': {
-              const v9681 = v9679[1];
-              v9680 = false;
+              const v10053 = v10051[1];
+              v10052 = false;
               
               break;
               }
             case 'Some': {
-              const v9682 = v9679[1];
-              v9680 = true;
+              const v10054 = v10051[1];
+              v10052 = true;
               
               break;
               }
             }
-          const v9684 = stdlib.addressEq(v9678, v3897);
-          const v9685 = v9684 ? false : true;
-          const v9686 = v9680 ? v9685 : false;
-          v9638 = v9686;
+          const v10056 = stdlib.addressEq(v10050, v3949);
+          const v10057 = v10056 ? false : true;
+          const v10058 = v10052 ? v10057 : false;
+          v10010 = v10058;
           
           break;
           }
         case 'None': {
-          const v9687 = v3903[1];
-          v9638 = false;
+          const v10059 = v3955[1];
+          v10010 = false;
           
           break;
           }
         case 'Stop': {
-          const v9688 = v3903[1];
-          v9638 = true;
+          const v10060 = v3955[1];
+          v10010 = true;
           
           break;
           }
         }
-      const v9689 = v9638 ? false : true;
-      stdlib.assert(v9689, {
+      const v10061 = v10010 ? false : true;
+      stdlib.assert(v10061, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:295:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:304:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:304:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:315:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:324:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:324:13:function exp)'],
         msg: 'A Proposal is already active.',
         who: 'registerProposal'
         });
-      const v9692 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:300:32:decimal', stdlib.UInt_max, '1'));
-      const v9693 = stdlib.lt(v3932, v9692);
-      stdlib.assert(v9693, {
+      const v10064 = stdlib.sub(stdlib.UInt_max, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:320:32:decimal', stdlib.UInt_max, '1'));
+      const v10065 = stdlib.lt(v3984, v10064);
+      stdlib.assert(v10065, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:300:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:304:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:304:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:320:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:324:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:324:13:function exp)'],
         msg: 'Governance limit reached',
         who: 'registerProposal'
         });
-      let v9695;
-      switch (v9611[0]) {
+      let v10067;
+      switch (v9983[0]) {
         case 'AllocateFunds': {
-          const v9696 = v9611[1];
-          const v9697 = v9696[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-          const v9698 = v9696[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
-          const v9700 = stdlib.lt(v9698, v3828);
-          const v9701 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v9697), null);
-          let v9702;
-          switch (v9701[0]) {
+          const v10068 = v9983[1];
+          const v10069 = v10068[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+          const v10070 = v10068[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
+          const v10072 = stdlib.lt(v10070, v3880);
+          const v10073 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v10069), null);
+          let v10074;
+          switch (v10073[0]) {
             case 'None': {
-              const v9703 = v9701[1];
-              v9702 = false;
+              const v10075 = v10073[1];
+              v10074 = false;
               
               break;
               }
             case 'Some': {
-              const v9704 = v9701[1];
-              v9702 = true;
+              const v10076 = v10073[1];
+              v10074 = true;
               
               break;
               }
             }
-          const v9705 = v9702 ? v9700 : false;
-          const v9707 = v3899 ? v9700 : v9705;
-          v9695 = v9707;
+          const v10077 = v10074 ? v10072 : false;
+          const v10079 = v3951 ? v10072 : v10077;
+          v10067 = v10079;
           
           break;
           }
         case 'ChangeAdmin': {
-          const v9708 = v9611[1];
-          const v9709 = v9708.admin;
-          const v9710 = v9708.fee;
-          const v9712 = v9708.quorum;
-          const v9714 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v9709), null);
-          const v9716 = stdlib.fromSome(v9714, v9623);
-          const v9717 = v9716[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
-          let v9720;
-          switch (v9714[0]) {
+          const v10080 = v9983[1];
+          const v10081 = v10080.admin;
+          const v10082 = v10080.fee;
+          const v10084 = v10080.quorum;
+          const v10086 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v10081), null);
+          const v10088 = stdlib.fromSome(v10086, v9995);
+          const v10089 = v10088[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
+          let v10092;
+          switch (v10086[0]) {
             case 'None': {
-              const v9721 = v9714[1];
-              v9720 = false;
+              const v10093 = v10086[1];
+              v10092 = false;
               
               break;
               }
             case 'Some': {
-              const v9722 = v9714[1];
-              v9720 = true;
+              const v10094 = v10086[1];
+              v10092 = true;
               
               break;
               }
             }
-          const v9723 = stdlib.gt(v9717, v3934);
-          const v9724 = v9720 ? v9723 : false;
-          const v9725 = stdlib.gt(v9712, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
-          let v9726;
-          if (v9725) {
-            const v9729 = stdlib.lt(v9712, v3812);
-            v9726 = v9729;
+          const v10095 = stdlib.gt(v10089, v3986);
+          const v10096 = v10092 ? v10095 : false;
+          const v10097 = stdlib.gt(v10084, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
+          let v10098;
+          if (v10097) {
+            const v10101 = stdlib.lt(v10084, v3848);
+            v10098 = v10101;
             }
           else {
-            v9726 = false;
+            v10098 = false;
             }
-          const v9730 = stdlib.gt(v9710, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:33:decimal', stdlib.UInt_max, '0'));
-          const v9731 = stdlib.lt(v9710, stdlib.UInt_max);
-          const v9732 = v9730 ? v9731 : false;
-          const v9733 = v9724 ? v9726 : false;
-          const v9734 = v9733 ? v9732 : false;
-          v9695 = v9734;
+          const v10102 = stdlib.ge(v10082, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:34:decimal', stdlib.UInt_max, '0'));
+          const v10103 = stdlib.lt(v10082, stdlib.UInt_max);
+          const v10104 = v10102 ? v10103 : false;
+          const v10105 = v10096 ? v10098 : false;
+          const v10106 = v10105 ? v10104 : false;
+          v10067 = v10106;
           
           break;
           }
         case 'EjectMember': {
-          const v9735 = v9611[1];
-          const v9736 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v9735), null);
-          let v9737;
-          switch (v9736[0]) {
+          const v10107 = v9983[1];
+          const v10108 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v10107), null);
+          let v10109;
+          switch (v10108[0]) {
             case 'None': {
-              const v9738 = v9736[1];
-              v9737 = false;
+              const v10110 = v10108[1];
+              v10109 = false;
               
               break;
               }
             case 'Some': {
-              const v9739 = v9736[1];
-              v9737 = true;
+              const v10111 = v10108[1];
+              v10109 = true;
               
               break;
               }
             }
-          const v9741 = stdlib.addressEq(v9735, v3897);
-          const v9742 = v9741 ? false : true;
-          const v9743 = v9737 ? v9742 : false;
-          v9695 = v9743;
+          const v10113 = stdlib.addressEq(v10107, v3949);
+          const v10114 = v10113 ? false : true;
+          const v10115 = v10109 ? v10114 : false;
+          v10067 = v10115;
           
           break;
           }
         case 'None': {
-          const v9744 = v9611[1];
-          v9695 = false;
+          const v10116 = v9983[1];
+          v10067 = false;
           
           break;
           }
         case 'Stop': {
-          const v9745 = v9611[1];
-          v9695 = true;
+          const v10117 = v9983[1];
+          v10067 = true;
           
           break;
           }
         }
-      stdlib.assert(v9695, {
+      stdlib.assert(v10067, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:301:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:304:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:304:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:321:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:324:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:324:13:function exp)'],
         msg: 'Bad suggestion is bad. Apologize to everyone.',
         who: 'registerProposal'
         });
-      const v9748 = null;
-      const v9749 = await txn1.getOutput('registerProposal', 'v9748', ctc0, v9748);
-      if (v2511) {
-        stdlib.protect(ctc0, await interact.out(v9307, v9749), {
-          at: './dao/contracts/dao-core.rsh:291:11:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:291:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:291:11:function exp)', 'at ./dao/contracts/dao-core.rsh:305:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:304:13:function exp)', 'at ./dao/contracts/dao-core.rsh:304:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:304:13:function exp)'],
+      const v10120 = null;
+      const v10121 = await txn1.getOutput('registerProposal', 'v10120', ctc0, v10120);
+      if (v2529) {
+        stdlib.protect(ctc0, await interact.out(v9679, v10121), {
+          at: './dao/contracts/dao-core.rsh:311:11:application',
+          fs: ['at ./dao/contracts/dao-core.rsh:311:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:311:11:function exp)', 'at ./dao/contracts/dao-core.rsh:325:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:324:13:function exp)', 'at ./dao/contracts/dao-core.rsh:324:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:324:13:function exp)'],
           msg: 'out',
           who: 'registerProposal'
           });
@@ -5055,40 +5113,40 @@ export async function _registerProposal3(ctcTop, interact) {
         }
       
       null;
-      const v9782 = stdlib.add(v3932, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:163:30:decimal', stdlib.UInt_max, '1'));
-      const v9783 = {
+      const v10154 = stdlib.add(v3984, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:183:30:decimal', stdlib.UInt_max, '1'));
+      const v10155 = {
         Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
         For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-        action: v9611,
-        index: v9782
+        action: v9983,
+        index: v10154
         };
-      const v21509 = v3822;
-      const v21511 = v9783;
-      const v21513 = v3828;
-      const v21514 = v3822.admin;
-      const v21515 = v3822.fee;
-      const v21516 = v3822.openTreasury;
-      const v21517 = v3822.quorum;
-      const v21518 = v3822.registerSelf;
-      const v21519 = v9783.action;
-      const v21520 = v9783.index;
-      const v21521 = stdlib.ge(v21520, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-      let v21522;
-      if (v21521) {
-        const v21523 = stdlib.mod(v21520, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-        const v21524 = stdlib.sub(v21520, v21523);
-        const v21525 = stdlib.div(v21524, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-        v21522 = v21525;
+      const v22041 = v3874;
+      const v22043 = v10155;
+      const v22045 = v3880;
+      const v22046 = v3874.admin;
+      const v22047 = v3874.fee;
+      const v22048 = v3874.openTreasury;
+      const v22049 = v3874.quorum;
+      const v22050 = v3874.registerSelf;
+      const v22051 = v10155.action;
+      const v22052 = v10155.index;
+      const v22053 = stdlib.ge(v22052, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+      let v22054;
+      if (v22053) {
+        const v22055 = stdlib.mod(v22052, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+        const v22056 = stdlib.sub(v22052, v22055);
+        const v22057 = stdlib.div(v22056, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+        v22054 = v22057;
         }
       else {
-        v21522 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+        v22054 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
         }
       return;
       
       break;
       }
-    case 'voteProposal0_334': {
-      const v10519 = v4456[1];
+    case 'voteProposal0_352': {
+      const v10971 = v4508[1];
       return;
       break;
       }
@@ -5112,46 +5170,48 @@ export async function _voteProposal3(ctcTop, interact) {
     });
   const ctc4 = stdlib.T_Address;
   const ctc5 = stdlib.T_Bytes(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '128'));
-  const ctc6 = stdlib.T_Tuple([ctc4, ctc1]);
-  const ctc7 = stdlib.T_Bool;
-  const ctc8 = stdlib.T_Struct([['admin', ctc4], ['registerSelf', ctc7], ['fee', ctc1], ['quorum', ctc1], ['openTreasury', ctc7]]);
-  const ctc9 = stdlib.T_Data({
-    AllocateFunds: ctc6,
-    ChangeAdmin: ctc8,
+  const ctc6 = stdlib.T_Contract;
+  const ctc7 = stdlib.T_Tuple([ctc4, ctc1]);
+  const ctc8 = stdlib.T_Bool;
+  const ctc9 = stdlib.T_Struct([['admin', ctc4], ['registerSelf', ctc8], ['fee', ctc1], ['quorum', ctc1], ['openTreasury', ctc8]]);
+  const ctc10 = stdlib.T_Data({
+    AllocateFunds: ctc7,
+    ChangeAdmin: ctc9,
     EjectMember: ctc4,
     None: ctc0,
     Stop: ctc0
     });
-  const ctc10 = stdlib.T_Object({
+  const ctc11 = stdlib.T_Object({
     admin: ctc4,
     fee: ctc1,
-    openTreasury: ctc7,
+    openTreasury: ctc8,
     quorum: ctc1,
-    registerSelf: ctc7
+    registerSelf: ctc8
     });
-  const ctc11 = stdlib.T_Object({
+  const ctc12 = stdlib.T_Object({
     Against: ctc1,
     For: ctc1,
-    action: ctc9,
+    action: ctc10,
     index: ctc1
     });
-  const ctc12 = stdlib.T_Data({
+  const ctc13 = stdlib.T_Data({
     Against: ctc0,
     For: ctc0
     });
-  const ctc13 = stdlib.T_Tuple([ctc12]);
-  const ctc14 = stdlib.T_Tuple([ctc4]);
-  const ctc15 = stdlib.T_Tuple([ctc1]);
-  const ctc16 = stdlib.T_Tuple([ctc7]);
-  const ctc17 = stdlib.T_Tuple([ctc9]);
-  const ctc18 = stdlib.T_Data({
-    addMember0_334: ctc14,
-    donate0_334: ctc15,
-    eject0_334: ctc14,
-    joinLeave0_334: ctc16,
-    registerProposal0_334: ctc17,
-    voteProposal0_334: ctc13
+  const ctc14 = stdlib.T_Tuple([ctc13]);
+  const ctc15 = stdlib.T_Tuple([ctc4]);
+  const ctc16 = stdlib.T_Tuple([ctc1]);
+  const ctc17 = stdlib.T_Tuple([ctc8]);
+  const ctc18 = stdlib.T_Tuple([ctc10]);
+  const ctc19 = stdlib.T_Data({
+    addMember0_352: ctc15,
+    donate0_352: ctc16,
+    eject0_352: ctc15,
+    joinLeave0_352: ctc17,
+    registerProposal0_352: ctc18,
+    voteProposal0_352: ctc14
     });
+  const ctc20 = stdlib.T_Tuple([ctc1, ctc0]);
   
   const map0_ctc = ctc3;
   const map0 = stdlib.newMap({
@@ -5162,243 +5222,243 @@ export async function _voteProposal3(ctcTop, interact) {
     });
   
   
-  const [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934] = await ctc.getState(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'), [ctc4, ctc5, ctc1, ctc9, ctc10, ctc11, ctc1, ctc4, ctc1, ctc7, ctc1, ctc7, ctc9, ctc1, ctc7, ctc1]);
-  const v4274 = ctc.selfAddress();
-  const v4276 = stdlib.protect(ctc13, await interact.in(), {
+  const [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986] = await ctc.getState(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '3'), [ctc4, ctc5, ctc6, ctc1, ctc6, ctc10, ctc11, ctc12, ctc1, ctc4, ctc1, ctc8, ctc1, ctc8, ctc10, ctc1, ctc8, ctc1]);
+  const v4326 = ctc.selfAddress();
+  const v4328 = stdlib.protect(ctc14, await interact.in(), {
     at: './dao/contracts/dao-core.rsh:1:23:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:313:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:313:38:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runvoteProposal0_334" (defined at: ./dao/contracts/dao-core.rsh:313:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:333:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:333:38:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runvoteProposal0_352" (defined at: ./dao/contracts/dao-core.rsh:333:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'in',
     who: 'voteProposal'
     });
-  const v4277 = v4276[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:1:23:application', stdlib.UInt_max, '0')];
-  let v4284;
-  if (v3933) {
-    const v4286 = stdlib.mod(v3932, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-    const v4288 = stdlib.sub(v3932, v4286);
-    const v4290 = stdlib.div(v4288, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-    v4284 = v4290;
+  const v4329 = v4328[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:1:23:application', stdlib.UInt_max, '0')];
+  let v4336;
+  if (v3985) {
+    const v4338 = stdlib.mod(v3984, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+    const v4340 = stdlib.sub(v3984, v4338);
+    const v4342 = stdlib.div(v4340, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+    v4336 = v4342;
     }
   else {
-    v4284 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+    v4336 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
     }
-  const v4291 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4274), null);
-  const v4292 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-  const v4293 = stdlib.fromSome(v4291, v4292);
-  const v4294 = v4293[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:103:11:array', stdlib.UInt_max, '0')];
-  const v4295 = v4293[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:103:11:array', stdlib.UInt_max, '1')];
-  const v4296 = stdlib.ge(v4294, v4284);
-  stdlib.assert(v4296, {
+  const v4343 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4326), null);
+  const v4344 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+  const v4345 = stdlib.fromSome(v4343, v4344);
+  const v4346 = v4345[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:120:11:array', stdlib.UInt_max, '0')];
+  const v4347 = v4345[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:120:11:array', stdlib.UInt_max, '1')];
+  const v4348 = stdlib.ge(v4346, v4336);
+  stdlib.assert(v4348, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:104:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:314:22:application call to "requireIsMember" (defined at: ./dao/contracts/dao-core.rsh:101:36:function exp)', 'at ./dao/contracts/dao-core.rsh:313:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:313:38:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runvoteProposal0_334" (defined at: ./dao/contracts/dao-core.rsh:313:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:121:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:334:22:application call to "requireIsMember" (defined at: ./dao/contracts/dao-core.rsh:118:36:function exp)', 'at ./dao/contracts/dao-core.rsh:333:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:333:38:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runvoteProposal0_352" (defined at: ./dao/contracts/dao-core.rsh:333:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'THIEF! SEIZE THEM!',
     who: 'voteProposal'
     });
-  const v4298 = v3824.For;
-  const v4299 = v3824.Against;
-  let v4302;
-  switch (v3903[0]) {
+  const v4350 = v3876.For;
+  const v4351 = v3876.Against;
+  let v4354;
+  switch (v3955[0]) {
     case 'AllocateFunds': {
-      const v4303 = v3903[1];
-      const v4304 = v4303[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-      const v4305 = v4303[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
-      const v4307 = stdlib.lt(v4305, v3828);
-      const v4308 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4304), null);
-      let v4309;
-      switch (v4308[0]) {
+      const v4355 = v3955[1];
+      const v4356 = v4355[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+      const v4357 = v4355[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
+      const v4359 = stdlib.lt(v4357, v3880);
+      const v4360 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4356), null);
+      let v4361;
+      switch (v4360[0]) {
         case 'None': {
-          const v4310 = v4308[1];
-          v4309 = false;
+          const v4362 = v4360[1];
+          v4361 = false;
           
           break;
           }
         case 'Some': {
-          const v4311 = v4308[1];
-          v4309 = true;
+          const v4363 = v4360[1];
+          v4361 = true;
           
           break;
           }
         }
-      const v4312 = v4309 ? v4307 : false;
-      const v4314 = v3899 ? v4307 : v4312;
-      v4302 = v4314;
+      const v4364 = v4361 ? v4359 : false;
+      const v4366 = v3951 ? v4359 : v4364;
+      v4354 = v4366;
       
       break;
       }
     case 'ChangeAdmin': {
-      const v4315 = v3903[1];
-      const v4316 = v4315.admin;
-      const v4317 = v4315.fee;
-      const v4319 = v4315.quorum;
-      const v4321 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4316), null);
-      const v4323 = stdlib.fromSome(v4321, v4292);
-      const v4324 = v4323[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
-      let v4327;
-      switch (v4321[0]) {
+      const v4367 = v3955[1];
+      const v4368 = v4367.admin;
+      const v4369 = v4367.fee;
+      const v4371 = v4367.quorum;
+      const v4373 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4368), null);
+      const v4375 = stdlib.fromSome(v4373, v4344);
+      const v4376 = v4375[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
+      let v4379;
+      switch (v4373[0]) {
         case 'None': {
-          const v4328 = v4321[1];
-          v4327 = false;
+          const v4380 = v4373[1];
+          v4379 = false;
           
           break;
           }
         case 'Some': {
-          const v4329 = v4321[1];
-          v4327 = true;
+          const v4381 = v4373[1];
+          v4379 = true;
           
           break;
           }
         }
-      const v4330 = stdlib.gt(v4324, v3934);
-      const v4331 = v4327 ? v4330 : false;
-      const v4332 = stdlib.gt(v4319, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
-      let v4333;
-      if (v4332) {
-        const v4336 = stdlib.lt(v4319, v3812);
-        v4333 = v4336;
+      const v4382 = stdlib.gt(v4376, v3986);
+      const v4383 = v4379 ? v4382 : false;
+      const v4384 = stdlib.gt(v4371, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
+      let v4385;
+      if (v4384) {
+        const v4388 = stdlib.lt(v4371, v3848);
+        v4385 = v4388;
         }
       else {
-        v4333 = false;
+        v4385 = false;
         }
-      const v4337 = stdlib.gt(v4317, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:33:decimal', stdlib.UInt_max, '0'));
-      const v4338 = stdlib.lt(v4317, stdlib.UInt_max);
-      const v4339 = v4337 ? v4338 : false;
-      const v4340 = v4331 ? v4333 : false;
-      const v4341 = v4340 ? v4339 : false;
-      v4302 = v4341;
+      const v4389 = stdlib.ge(v4369, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:34:decimal', stdlib.UInt_max, '0'));
+      const v4390 = stdlib.lt(v4369, stdlib.UInt_max);
+      const v4391 = v4389 ? v4390 : false;
+      const v4392 = v4383 ? v4385 : false;
+      const v4393 = v4392 ? v4391 : false;
+      v4354 = v4393;
       
       break;
       }
     case 'EjectMember': {
-      const v4342 = v3903[1];
-      const v4343 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4342), null);
-      let v4344;
-      switch (v4343[0]) {
+      const v4394 = v3955[1];
+      const v4395 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4394), null);
+      let v4396;
+      switch (v4395[0]) {
         case 'None': {
-          const v4345 = v4343[1];
-          v4344 = false;
+          const v4397 = v4395[1];
+          v4396 = false;
           
           break;
           }
         case 'Some': {
-          const v4346 = v4343[1];
-          v4344 = true;
+          const v4398 = v4395[1];
+          v4396 = true;
           
           break;
           }
         }
-      const v4348 = stdlib.addressEq(v4342, v3897);
-      const v4349 = v4348 ? false : true;
-      const v4350 = v4344 ? v4349 : false;
-      v4302 = v4350;
+      const v4400 = stdlib.addressEq(v4394, v3949);
+      const v4401 = v4400 ? false : true;
+      const v4402 = v4396 ? v4401 : false;
+      v4354 = v4402;
       
       break;
       }
     case 'None': {
-      const v4351 = v3903[1];
-      v4302 = false;
+      const v4403 = v3955[1];
+      v4354 = false;
       
       break;
       }
     case 'Stop': {
-      const v4352 = v3903[1];
-      v4302 = true;
+      const v4404 = v3955[1];
+      v4354 = true;
       
       break;
       }
     }
-  stdlib.assert(v4302, {
+  stdlib.assert(v4354, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:316:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:313:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:313:38:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runvoteProposal0_334" (defined at: ./dao/contracts/dao-core.rsh:313:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:336:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:333:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:333:38:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runvoteProposal0_352" (defined at: ./dao/contracts/dao-core.rsh:333:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'No Proposal is currently active',
     who: 'voteProposal'
     });
-  const v4354 = stdlib.gt(v4298, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:321:17:decimal', stdlib.UInt_max, '0'));
-  if (v4354) {
-    const v4356 = stdlib.sub(stdlib.UInt_max, v4299);
-    const v4357 = stdlib.lt(v4298, v4356);
-    stdlib.assert(v4357, {
+  const v4406 = stdlib.gt(v4350, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:341:17:decimal', stdlib.UInt_max, '0'));
+  if (v4406) {
+    const v4408 = stdlib.sub(stdlib.UInt_max, v4351);
+    const v4409 = stdlib.lt(v4350, v4408);
+    stdlib.assert(v4409, {
       at: 'reach standard library:57:5:application',
-      fs: ['at ./dao/contracts/dao-core.rsh:322:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:313:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:313:38:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runvoteProposal0_334" (defined at: ./dao/contracts/dao-core.rsh:313:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+      fs: ['at ./dao/contracts/dao-core.rsh:342:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:333:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:333:38:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runvoteProposal0_352" (defined at: ./dao/contracts/dao-core.rsh:333:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
       msg: 'Voting limit reached',
       who: 'voteProposal'
       });
     }
   else {
     }
-  const v4359 = stdlib.gt(v4299, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:324:21:decimal', stdlib.UInt_max, '0'));
-  if (v4359) {
-    const v4361 = stdlib.sub(stdlib.UInt_max, v4298);
-    const v4362 = stdlib.lt(v4299, v4361);
-    stdlib.assert(v4362, {
+  const v4411 = stdlib.gt(v4351, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:344:21:decimal', stdlib.UInt_max, '0'));
+  if (v4411) {
+    const v4413 = stdlib.sub(stdlib.UInt_max, v4350);
+    const v4414 = stdlib.lt(v4351, v4413);
+    stdlib.assert(v4414, {
       at: 'reach standard library:57:5:application',
-      fs: ['at ./dao/contracts/dao-core.rsh:325:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:313:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:313:38:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runvoteProposal0_334" (defined at: ./dao/contracts/dao-core.rsh:313:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+      fs: ['at ./dao/contracts/dao-core.rsh:345:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:333:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:333:38:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runvoteProposal0_352" (defined at: ./dao/contracts/dao-core.rsh:333:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
       msg: 'Voting limit reached',
       who: 'voteProposal'
       });
     }
   else {
     }
-  const v4366 = stdlib.add(v4298, v4299);
-  const v4368 = stdlib.lt(v4366, v3900);
-  stdlib.assert(v4368, {
+  const v4418 = stdlib.add(v4350, v4351);
+  const v4420 = stdlib.lt(v4418, v3952);
+  stdlib.assert(v4420, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:328:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:313:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:313:38:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runvoteProposal0_334" (defined at: ./dao/contracts/dao-core.rsh:313:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:348:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:333:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:333:38:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runvoteProposal0_352" (defined at: ./dao/contracts/dao-core.rsh:333:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'Quorum reached',
     who: 'voteProposal'
     });
-  const v4375 = stdlib.lt(v4295, v3932);
-  stdlib.assert(v4375, {
+  const v4427 = stdlib.lt(v4347, v3984);
+  stdlib.assert(v4427, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:331:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:313:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:313:38:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runvoteProposal0_334" (defined at: ./dao/contracts/dao-core.rsh:313:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:351:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:333:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:333:38:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runvoteProposal0_352" (defined at: ./dao/contracts/dao-core.rsh:333:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'Address has already voted in this session',
     who: 'voteProposal'
     });
-  let v4377;
-  switch (v4277[0]) {
+  let v4429;
+  switch (v4329[0]) {
     case 'Against': {
-      const v4378 = v4277[1];
-      const v4381 = stdlib.add(v4299, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:335:40:decimal', stdlib.UInt_max, '1'));
-      const v4382 = [v4298, v4381];
-      v4377 = v4382;
+      const v4430 = v4329[1];
+      const v4433 = stdlib.add(v4351, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:355:40:decimal', stdlib.UInt_max, '1'));
+      const v4434 = [v4350, v4433];
+      v4429 = v4434;
       
       break;
       }
     case 'For': {
-      const v4384 = v4277[1];
-      const v4387 = stdlib.add(v4298, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:334:27:decimal', stdlib.UInt_max, '1'));
-      const v4388 = [v4387, v4299];
-      v4377 = v4388;
+      const v4436 = v4329[1];
+      const v4439 = stdlib.add(v4350, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:354:27:decimal', stdlib.UInt_max, '1'));
+      const v4440 = [v4439, v4351];
+      v4429 = v4440;
       
       break;
       }
     }
-  const v4390 = v4377[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:333:13:array', stdlib.UInt_max, '0')];
-  const v4391 = v4377[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:333:13:array', stdlib.UInt_max, '1')];
-  const v4393 = stdlib.sub(stdlib.UInt_max, v4391);
-  const v4394 = stdlib.lt(v4390, v4393);
-  stdlib.assert(v4394, {
+  const v4442 = v4429[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:353:13:array', stdlib.UInt_max, '0')];
+  const v4443 = v4429[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:353:13:array', stdlib.UInt_max, '1')];
+  const v4445 = stdlib.sub(stdlib.UInt_max, v4443);
+  const v4446 = stdlib.lt(v4442, v4445);
+  stdlib.assert(v4446, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:337:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:313:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:313:38:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runvoteProposal0_334" (defined at: ./dao/contracts/dao-core.rsh:313:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:357:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:333:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:333:38:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runvoteProposal0_352" (defined at: ./dao/contracts/dao-core.rsh:333:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'Voting limit reached (2)',
     who: 'voteProposal'
     });
-  const v4397 = stdlib.sub(stdlib.UInt_max, v4390);
-  const v4398 = stdlib.lt(v4391, v4397);
-  stdlib.assert(v4398, {
+  const v4449 = stdlib.sub(stdlib.UInt_max, v4442);
+  const v4450 = stdlib.lt(v4443, v4449);
+  stdlib.assert(v4450, {
     at: 'reach standard library:57:5:application',
-    fs: ['at ./dao/contracts/dao-core.rsh:338:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:313:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:313:38:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to "runvoteProposal0_334" (defined at: ./dao/contracts/dao-core.rsh:313:10:function exp)', 'at ./dao/contracts/dao-core.rsh:169:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:169:50:function exp)'],
+    fs: ['at ./dao/contracts/dao-core.rsh:358:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:333:38:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:333:38:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to "runvoteProposal0_352" (defined at: ./dao/contracts/dao-core.rsh:333:10:function exp)', 'at ./dao/contracts/dao-core.rsh:189:50:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:189:50:function exp)'],
     msg: 'Voting limit reached (2)',
     who: 'voteProposal'
     });
-  const v4407 = ['voteProposal0_334', v4276];
+  const v4459 = ['voteProposal0_352', v4328];
   
   const txn1 = await (ctc.sendrecv({
-    args: [v3798, v3799, v3812, v3820, v3822, v3824, v3828, v3897, v3898, v3899, v3900, v3901, v3903, v3932, v3933, v3934, v4407],
+    args: [v3833, v3834, v3839, v3848, v3851, v3872, v3874, v3876, v3880, v3949, v3950, v3951, v3952, v3953, v3955, v3984, v3985, v3986, v4459],
     evt_cnt: 1,
     funcNum: 2,
     lct: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
     onlyIf: true,
-    out_tys: [ctc18],
-    pay: [stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:313:10:decimal', stdlib.UInt_max, '0'), []],
+    out_tys: [ctc19],
+    pay: [stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:333:10:decimal', stdlib.UInt_max, '0'), []],
     sim_p: (async (txn1) => {
       const sim_r = { txns: [], mapRefs: [], maps: [] };
       let sim_txn_ctr = stdlib.UInt_max;
@@ -5406,416 +5466,431 @@ export async function _voteProposal3(ctcTop, interact) {
       
       stdlib.simMapDupe(sim_r, 0, map0);
       
-      const {data: [v4456], secs: v4458, time: v4457, didSend: v2511, from: v4455 } = txn1;
+      const {data: [v4508], secs: v4510, time: v4509, didSend: v2529, from: v4507 } = txn1;
       
-      switch (v4456[0]) {
-        case 'addMember0_334': {
-          const v4459 = v4456[1];
+      switch (v4508[0]) {
+        case 'addMember0_352': {
+          const v4511 = v4508[1];
           
           break;
           }
-        case 'donate0_334': {
-          const v5671 = v4456[1];
+        case 'donate0_352': {
+          const v5803 = v4508[1];
           
           break;
           }
-        case 'eject0_334': {
-          const v6883 = v4456[1];
+        case 'eject0_352': {
+          const v7095 = v4508[1];
           
           break;
           }
-        case 'joinLeave0_334': {
-          const v8095 = v4456[1];
+        case 'joinLeave0_352': {
+          const v8387 = v4508[1];
           
           break;
           }
-        case 'registerProposal0_334': {
-          const v9307 = v4456[1];
+        case 'registerProposal0_352': {
+          const v9679 = v4508[1];
           
           break;
           }
-        case 'voteProposal0_334': {
-          const v10519 = v4456[1];
+        case 'voteProposal0_352': {
+          const v10971 = v4508[1];
           sim_r.txns.push({
             kind: 'api',
             who: "voteProposal"
             });
           ;
-          const v11002 = v10519[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:313:10:spread', stdlib.UInt_max, '0')];
-          const v11013 = stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v4455), null);
-          const v11014 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-          const v11015 = stdlib.fromSome(v11013, v11014);
-          const v11016 = v11015[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:103:11:array', stdlib.UInt_max, '0')];
-          const v11020 = v3824.For;
-          const v11021 = v3824.Against;
-          switch (v3903[0]) {
+          const v11454 = v10971[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:333:10:spread', stdlib.UInt_max, '0')];
+          const v11465 = stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v4507), null);
+          const v11466 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+          const v11467 = stdlib.fromSome(v11465, v11466);
+          const v11468 = v11467[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:120:11:array', stdlib.UInt_max, '0')];
+          const v11472 = v3876.For;
+          const v11473 = v3876.Against;
+          switch (v3955[0]) {
             case 'AllocateFunds': {
-              const v11025 = v3903[1];
-              const v11026 = v11025[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v11026), null);
+              const v11477 = v3955[1];
+              const v11478 = v11477[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v11478), null);
               
               break;
               }
             case 'ChangeAdmin': {
-              const v11037 = v3903[1];
-              const v11038 = v11037.admin;
-              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v11038), null);
+              const v11489 = v3955[1];
+              const v11490 = v11489.admin;
+              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v11490), null);
               
               break;
               }
             case 'EjectMember': {
-              const v11064 = v3903[1];
-              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v11064), null);
+              const v11516 = v3955[1];
+              stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v11516), null);
               
               break;
               }
             case 'None': {
-              const v11073 = v3903[1];
+              const v11525 = v3955[1];
               
               break;
               }
             case 'Stop': {
-              const v11074 = v3903[1];
+              const v11526 = v3955[1];
               
               break;
               }
             }
-          let v11099;
-          switch (v11002[0]) {
+          let v11551;
+          switch (v11454[0]) {
             case 'Against': {
-              const v11100 = v11002[1];
-              const v11103 = stdlib.add(v11021, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:335:40:decimal', stdlib.UInt_max, '1'));
-              const v11104 = [v11020, v11103];
-              v11099 = v11104;
+              const v11552 = v11454[1];
+              const v11555 = stdlib.add(v11473, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:355:40:decimal', stdlib.UInt_max, '1'));
+              const v11556 = [v11472, v11555];
+              v11551 = v11556;
               
               break;
               }
             case 'For': {
-              const v11106 = v11002[1];
-              const v11109 = stdlib.add(v11020, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:334:27:decimal', stdlib.UInt_max, '1'));
-              const v11110 = [v11109, v11021];
-              v11099 = v11110;
+              const v11558 = v11454[1];
+              const v11561 = stdlib.add(v11472, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:354:27:decimal', stdlib.UInt_max, '1'));
+              const v11562 = [v11561, v11473];
+              v11551 = v11562;
               
               break;
               }
             }
-          const v11112 = v11099[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:333:13:array', stdlib.UInt_max, '0')];
-          const v11113 = v11099[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:333:13:array', stdlib.UInt_max, '1')];
-          const v11123 = null;
-          const v11124 = await txn1.getOutput('voteProposal', 'v11123', ctc0, v11123);
+          const v11564 = v11551[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:353:13:array', stdlib.UInt_max, '0')];
+          const v11565 = v11551[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:353:13:array', stdlib.UInt_max, '1')];
+          const v11575 = null;
+          const v11576 = await txn1.getOutput('voteProposal', 'v11575', ctc0, v11575);
           
-          const v11132 = stdlib.lt(v11016, stdlib.UInt_max);
-          let v11133;
-          if (v11132) {
-            const v11136 = stdlib.add(v11016, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:345:45:decimal', stdlib.UInt_max, '1'));
-            const v11137 = [v11136, v3932];
-            v11133 = v11137;
+          const v11584 = stdlib.lt(v11468, stdlib.UInt_max);
+          let v11585;
+          if (v11584) {
+            const v11588 = stdlib.add(v11468, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:365:45:decimal', stdlib.UInt_max, '1'));
+            const v11589 = [v11588, v3984];
+            v11585 = v11589;
             }
           else {
-            const v11138 = [v11016, v3932];
-            v11133 = v11138;
+            const v11590 = [v11468, v3984];
+            v11585 = v11590;
             }
-          await stdlib.simMapSet(sim_r, 0, v4455, v11133);
-          const v11145 = stdlib.add(v11112, v11113);
-          const v11147 = stdlib.ge(v11145, v3900);
-          let v11149;
-          if (v3933) {
-            const v11151 = stdlib.mod(v3932, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-            const v11153 = stdlib.sub(v3932, v11151);
-            const v11155 = stdlib.div(v11153, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-            v11149 = v11155;
+          await stdlib.simMapSet(sim_r, 0, v4507, v11585);
+          const v11597 = stdlib.add(v11564, v11565);
+          const v11599 = stdlib.ge(v11597, v3952);
+          let v11601;
+          if (v3985) {
+            const v11603 = stdlib.mod(v3984, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+            const v11605 = stdlib.sub(v3984, v11603);
+            const v11607 = stdlib.div(v11605, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+            v11601 = v11607;
             }
           else {
-            v11149 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+            v11601 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
             }
-          let v11156;
-          switch (v3903[0]) {
+          let v11608;
+          switch (v3955[0]) {
             case 'AllocateFunds': {
-              const v11157 = v3903[1];
-              const v11158 = v11157[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-              const v11159 = v11157[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
-              const v11161 = stdlib.lt(v11159, v3828);
-              const v11162 = stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v11158), null);
-              let v11163;
-              switch (v11162[0]) {
+              const v11609 = v3955[1];
+              const v11610 = v11609[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+              const v11611 = v11609[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
+              const v11613 = stdlib.lt(v11611, v3880);
+              const v11614 = stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v11610), null);
+              let v11615;
+              switch (v11614[0]) {
                 case 'None': {
-                  const v11164 = v11162[1];
-                  v11163 = false;
+                  const v11616 = v11614[1];
+                  v11615 = false;
                   
                   break;
                   }
                 case 'Some': {
-                  const v11165 = v11162[1];
-                  v11163 = true;
+                  const v11617 = v11614[1];
+                  v11615 = true;
                   
                   break;
                   }
                 }
-              const v11166 = v11163 ? v11161 : false;
-              const v11168 = v3899 ? v11161 : v11166;
-              v11156 = v11168;
+              const v11618 = v11615 ? v11613 : false;
+              const v11620 = v3951 ? v11613 : v11618;
+              v11608 = v11620;
               
               break;
               }
             case 'ChangeAdmin': {
-              const v11169 = v3903[1];
-              const v11170 = v11169.admin;
-              const v11171 = v11169.fee;
-              const v11173 = v11169.quorum;
-              const v11175 = stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v11170), null);
-              const v11177 = stdlib.fromSome(v11175, v11014);
-              const v11178 = v11177[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
-              let v11181;
-              switch (v11175[0]) {
+              const v11621 = v3955[1];
+              const v11622 = v11621.admin;
+              const v11623 = v11621.fee;
+              const v11625 = v11621.quorum;
+              const v11627 = stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v11622), null);
+              const v11629 = stdlib.fromSome(v11627, v11466);
+              const v11630 = v11629[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
+              let v11633;
+              switch (v11627[0]) {
                 case 'None': {
-                  const v11182 = v11175[1];
-                  v11181 = false;
+                  const v11634 = v11627[1];
+                  v11633 = false;
                   
                   break;
                   }
                 case 'Some': {
-                  const v11183 = v11175[1];
-                  v11181 = true;
+                  const v11635 = v11627[1];
+                  v11633 = true;
                   
                   break;
                   }
                 }
-              const v11184 = stdlib.gt(v11178, v11149);
-              const v11185 = v11181 ? v11184 : false;
-              const v11186 = stdlib.gt(v11173, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
-              let v11187;
-              if (v11186) {
-                const v11190 = stdlib.lt(v11173, v3812);
-                v11187 = v11190;
+              const v11636 = stdlib.gt(v11630, v11601);
+              const v11637 = v11633 ? v11636 : false;
+              const v11638 = stdlib.gt(v11625, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
+              let v11639;
+              if (v11638) {
+                const v11642 = stdlib.lt(v11625, v3848);
+                v11639 = v11642;
                 }
               else {
-                v11187 = false;
+                v11639 = false;
                 }
-              const v11191 = stdlib.gt(v11171, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:33:decimal', stdlib.UInt_max, '0'));
-              const v11192 = stdlib.lt(v11171, stdlib.UInt_max);
-              const v11193 = v11191 ? v11192 : false;
-              const v11194 = v11185 ? v11187 : false;
-              const v11195 = v11194 ? v11193 : false;
-              v11156 = v11195;
+              const v11643 = stdlib.ge(v11623, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:34:decimal', stdlib.UInt_max, '0'));
+              const v11644 = stdlib.lt(v11623, stdlib.UInt_max);
+              const v11645 = v11643 ? v11644 : false;
+              const v11646 = v11637 ? v11639 : false;
+              const v11647 = v11646 ? v11645 : false;
+              v11608 = v11647;
               
               break;
               }
             case 'EjectMember': {
-              const v11196 = v3903[1];
-              const v11197 = stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v11196), null);
-              let v11198;
-              switch (v11197[0]) {
+              const v11648 = v3955[1];
+              const v11649 = stdlib.protect(map0_ctc, await stdlib.simMapRef(sim_r, 0, v11648), null);
+              let v11650;
+              switch (v11649[0]) {
                 case 'None': {
-                  const v11199 = v11197[1];
-                  v11198 = false;
+                  const v11651 = v11649[1];
+                  v11650 = false;
                   
                   break;
                   }
                 case 'Some': {
-                  const v11200 = v11197[1];
-                  v11198 = true;
+                  const v11652 = v11649[1];
+                  v11650 = true;
                   
                   break;
                   }
                 }
-              const v11202 = stdlib.addressEq(v11196, v3897);
-              const v11203 = v11202 ? false : true;
-              const v11204 = v11198 ? v11203 : false;
-              v11156 = v11204;
+              const v11654 = stdlib.addressEq(v11648, v3949);
+              const v11655 = v11654 ? false : true;
+              const v11656 = v11650 ? v11655 : false;
+              v11608 = v11656;
               
               break;
               }
             case 'None': {
-              const v11205 = v3903[1];
-              v11156 = false;
+              const v11657 = v3955[1];
+              v11608 = false;
               
               break;
               }
             case 'Stop': {
-              const v11206 = v3903[1];
-              v11156 = true;
+              const v11658 = v3955[1];
+              v11608 = true;
               
               break;
               }
             }
-          if (v11147) {
-            const v11207 = stdlib.gt(v11112, v11113);
-            const v11208 = v11156 ? v11207 : false;
-            if (v11208) {
-              switch (v3903[0]) {
+          if (v11599) {
+            const v11659 = stdlib.gt(v11564, v11565);
+            const v11660 = v11608 ? v11659 : false;
+            if (v11660) {
+              switch (v3955[0]) {
                 case 'AllocateFunds': {
-                  const v11209 = v3903[1];
-                  const v11210 = v11209[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:133:32:application', stdlib.UInt_max, '0')];
-                  const v11211 = v11209[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:133:32:application', stdlib.UInt_max, '1')];
+                  const v11661 = v3955[1];
+                  const v11662 = v11661[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:150:32:application', stdlib.UInt_max, '0')];
+                  const v11663 = v11661[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:150:32:application', stdlib.UInt_max, '1')];
                   null;
-                  const v11218 = stdlib.sub(v3828, v11211);
+                  const v11670 = stdlib.sub(v3880, v11663);
                   sim_r.txns.push({
                     kind: 'from',
-                    to: v11210,
+                    to: v11662,
                     tok: undefined /* Nothing */
                     });
-                  const v11223 = {
+                  const v11675 = {
                     Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                     For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                    action: v3820,
-                    index: v3932
+                    action: v3872,
+                    index: v3984
                     };
-                  const v22234 = v3822;
-                  const v22236 = v11223;
-                  const v22238 = v11218;
-                  const v22239 = v3822.admin;
-                  const v22240 = v3822.fee;
-                  const v22241 = v3822.openTreasury;
-                  const v22242 = v3822.quorum;
-                  const v22243 = v3822.registerSelf;
-                  const v22244 = v11223.action;
-                  const v22245 = v11223.index;
-                  const v22246 = stdlib.ge(v22245, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                  let v22247;
-                  if (v22246) {
-                    const v22248 = stdlib.mod(v22245, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                    const v22249 = stdlib.sub(v22245, v22248);
-                    const v22250 = stdlib.div(v22249, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                    v22247 = v22250;
+                  const v22766 = v3874;
+                  const v22768 = v11675;
+                  const v22770 = v11670;
+                  const v22771 = v3874.admin;
+                  const v22772 = v3874.fee;
+                  const v22773 = v3874.openTreasury;
+                  const v22774 = v3874.quorum;
+                  const v22775 = v3874.registerSelf;
+                  const v22776 = v11675.action;
+                  const v22777 = v11675.index;
+                  const v22778 = stdlib.ge(v22777, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                  let v22779;
+                  if (v22778) {
+                    const v22780 = stdlib.mod(v22777, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                    const v22781 = stdlib.sub(v22777, v22780);
+                    const v22782 = stdlib.div(v22781, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                    v22779 = v22782;
                     }
                   else {
-                    v22247 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                    v22779 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                     }
                   sim_r.isHalt = false;
                   
                   break;
                   }
                 case 'ChangeAdmin': {
-                  const v11294 = v3903[1];
-                  const v11295 = v11294.admin;
-                  const v11296 = v11294.registerSelf;
-                  const v11297 = v11294.fee;
-                  const v11298 = v11294.quorum;
-                  const v11299 = v11294.openTreasury;
+                  const v11762 = v3955[1];
+                  const v11763 = v11762.admin;
+                  const v11764 = v11762.registerSelf;
+                  const v11765 = v11762.fee;
+                  const v11766 = v11762.quorum;
+                  const v11767 = v11762.openTreasury;
                   null;
-                  const v11333 = {
+                  const v11801 = {
                     Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                     For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                    action: v3820,
-                    index: v3932
+                    action: v3872,
+                    index: v3984
                     };
-                  const v11334 = {
-                    admin: v11295,
-                    fee: v11297,
-                    openTreasury: v11299,
-                    quorum: v11298,
-                    registerSelf: v11296
+                  const v11802 = {
+                    admin: v11763,
+                    fee: v11765,
+                    openTreasury: v11767,
+                    quorum: v11766,
+                    registerSelf: v11764
                     };
-                  const v22263 = v11334;
-                  const v22265 = v11333;
-                  const v22267 = v3828;
-                  const v22268 = v11334.admin;
-                  const v22269 = v11334.fee;
-                  const v22270 = v11334.openTreasury;
-                  const v22271 = v11334.quorum;
-                  const v22272 = v11334.registerSelf;
-                  const v22273 = v11333.action;
-                  const v22274 = v11333.index;
-                  const v22275 = stdlib.ge(v22274, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                  let v22276;
-                  if (v22275) {
-                    const v22277 = stdlib.mod(v22274, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                    const v22278 = stdlib.sub(v22274, v22277);
-                    const v22279 = stdlib.div(v22278, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                    v22276 = v22279;
+                  const v22795 = v11802;
+                  const v22797 = v11801;
+                  const v22799 = v3880;
+                  const v22800 = v11802.admin;
+                  const v22801 = v11802.fee;
+                  const v22802 = v11802.openTreasury;
+                  const v22803 = v11802.quorum;
+                  const v22804 = v11802.registerSelf;
+                  const v22805 = v11801.action;
+                  const v22806 = v11801.index;
+                  const v22807 = stdlib.ge(v22806, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                  let v22808;
+                  if (v22807) {
+                    const v22809 = stdlib.mod(v22806, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                    const v22810 = stdlib.sub(v22806, v22809);
+                    const v22811 = stdlib.div(v22810, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                    v22808 = v22811;
                     }
                   else {
-                    v22276 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                    v22808 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                     }
                   sim_r.isHalt = false;
                   
                   break;
                   }
                 case 'EjectMember': {
-                  const v11382 = v3903[1];
+                  const v11866 = v3955[1];
                   null;
-                  const v11428 = v11382;
-                  await stdlib.simMapSet(sim_r, 0, v11382, undefined /* Nothing */);
+                  const v11912 = v11866;
+                  await stdlib.simMapSet(sim_r, 0, v11866, undefined /* Nothing */);
                   null;
-                  const v11431 = {
+                  const v11915 = {
                     Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                     For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                    action: v3820,
-                    index: v3932
+                    action: v3872,
+                    index: v3984
                     };
-                  const v22292 = v3822;
-                  const v22294 = v11431;
-                  const v22296 = v3828;
-                  const v22297 = v3822.admin;
-                  const v22298 = v3822.fee;
-                  const v22299 = v3822.openTreasury;
-                  const v22300 = v3822.quorum;
-                  const v22301 = v3822.registerSelf;
-                  const v22302 = v11431.action;
-                  const v22303 = v11431.index;
-                  const v22304 = stdlib.ge(v22303, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                  let v22305;
-                  if (v22304) {
-                    const v22306 = stdlib.mod(v22303, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                    const v22307 = stdlib.sub(v22303, v22306);
-                    const v22308 = stdlib.div(v22307, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                    v22305 = v22308;
+                  const v22824 = v3874;
+                  const v22826 = v11915;
+                  const v22828 = v3880;
+                  const v22829 = v3874.admin;
+                  const v22830 = v3874.fee;
+                  const v22831 = v3874.openTreasury;
+                  const v22832 = v3874.quorum;
+                  const v22833 = v3874.registerSelf;
+                  const v22834 = v11915.action;
+                  const v22835 = v11915.index;
+                  const v22836 = stdlib.ge(v22835, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                  let v22837;
+                  if (v22836) {
+                    const v22838 = stdlib.mod(v22835, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                    const v22839 = stdlib.sub(v22835, v22838);
+                    const v22840 = stdlib.div(v22839, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                    v22837 = v22840;
                     }
                   else {
-                    v22305 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                    v22837 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                     }
                   sim_r.isHalt = false;
                   
                   break;
                   }
                 case 'None': {
-                  const v11465 = v3903[1];
+                  const v11965 = v3955[1];
                   null;
-                  const v11526 = {
+                  const v12026 = {
                     Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                     For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                    action: v3820,
-                    index: v3932
+                    action: v3872,
+                    index: v3984
                     };
-                  const v22321 = v3822;
-                  const v22323 = v11526;
-                  const v22325 = v3828;
-                  const v22326 = v3822.admin;
-                  const v22327 = v3822.fee;
-                  const v22328 = v3822.openTreasury;
-                  const v22329 = v3822.quorum;
-                  const v22330 = v3822.registerSelf;
-                  const v22331 = v11526.action;
-                  const v22332 = v11526.index;
-                  const v22333 = stdlib.ge(v22332, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                  let v22334;
-                  if (v22333) {
-                    const v22335 = stdlib.mod(v22332, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                    const v22336 = stdlib.sub(v22332, v22335);
-                    const v22337 = stdlib.div(v22336, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                    v22334 = v22337;
+                  const v22853 = v3874;
+                  const v22855 = v12026;
+                  const v22857 = v3880;
+                  const v22858 = v3874.admin;
+                  const v22859 = v3874.fee;
+                  const v22860 = v3874.openTreasury;
+                  const v22861 = v3874.quorum;
+                  const v22862 = v3874.registerSelf;
+                  const v22863 = v12026.action;
+                  const v22864 = v12026.index;
+                  const v22865 = stdlib.ge(v22864, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                  let v22866;
+                  if (v22865) {
+                    const v22867 = stdlib.mod(v22864, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                    const v22868 = stdlib.sub(v22864, v22867);
+                    const v22869 = stdlib.div(v22868, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                    v22866 = v22869;
                     }
                   else {
-                    v22334 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                    v22866 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                     }
                   sim_r.isHalt = false;
                   
                   break;
                   }
                 case 'Stop': {
-                  const v11548 = v3903[1];
+                  const v12064 = v3955[1];
                   null;
-                  const v22367 = v3822.admin;
-                  const v22373 = stdlib.sub(v3828, v3828);
+                  const v12138 = [stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:168:33:application', stdlib.UInt_max, '0'), ((sim_r.txns.push({
+                    kind: 'remote',
+                    obj: v3839,
+                    remote: ({
+                      accs: [],
+                      apps: [],
+                      bills: stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:168:33:application', stdlib.UInt_max, '0'),
+                      fees: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
+                      pays: stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:168:33:application', stdlib.UInt_max, '0'),
+                      toks: []
+                      })
+                    })), undefined)];
+                  const v12139 = await txn1.getOutput('internal', 'v12138', ctc20, v12138);
+                  const v12141 = v12139[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:168:33:application', stdlib.UInt_max, '0')];
+                  const v12146 = stdlib.add(v3880, v12141);
+                  const v22899 = v3874.admin;
+                  const v22905 = stdlib.sub(v12146, v12146);
                   sim_r.txns.push({
                     kind: 'from',
-                    to: v22367,
+                    to: v22899,
                     tok: undefined /* Nothing */
                     });
-                  const v22375 = (stdlib.le(await ctc.getBalance(), v22373) ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:353:29:application', stdlib.UInt_max, '0') : stdlib.sub(await ctc.getBalance(), v22373));
+                  const v22907 = (stdlib.le(await ctc.getBalance(), v22905) ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:373:29:application', stdlib.UInt_max, '0') : stdlib.sub(await ctc.getBalance(), v22905));
                   sim_r.txns.push({
                     kind: 'from',
-                    to: v22367,
+                    to: v22899,
                     tok: undefined /* Nothing */
                     });
                   sim_r.txns.push({
@@ -5828,173 +5903,173 @@ export async function _voteProposal3(ctcTop, interact) {
                   }
                 }}
             else {
-              if (v11207) {
-                switch (v3903[0]) {
+              if (v11659) {
+                switch (v3955[0]) {
                   case 'AllocateFunds': {
-                    const v11631 = v3903[1];
+                    const v12163 = v3955[1];
                     null;
-                    const v11635 = {
+                    const v12167 = {
                       Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                       For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                      action: v3820,
-                      index: v3932
+                      action: v3872,
+                      index: v3984
                       };
-                    const v22379 = v3822;
-                    const v22381 = v11635;
-                    const v22383 = v3828;
-                    const v22384 = v3822.admin;
-                    const v22385 = v3822.fee;
-                    const v22386 = v3822.openTreasury;
-                    const v22387 = v3822.quorum;
-                    const v22388 = v3822.registerSelf;
-                    const v22389 = v11635.action;
-                    const v22390 = v11635.index;
-                    const v22391 = stdlib.ge(v22390, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                    let v22392;
-                    if (v22391) {
-                      const v22393 = stdlib.mod(v22390, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                      const v22394 = stdlib.sub(v22390, v22393);
-                      const v22395 = stdlib.div(v22394, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                      v22392 = v22395;
+                    const v22911 = v3874;
+                    const v22913 = v12167;
+                    const v22915 = v3880;
+                    const v22916 = v3874.admin;
+                    const v22917 = v3874.fee;
+                    const v22918 = v3874.openTreasury;
+                    const v22919 = v3874.quorum;
+                    const v22920 = v3874.registerSelf;
+                    const v22921 = v12167.action;
+                    const v22922 = v12167.index;
+                    const v22923 = stdlib.ge(v22922, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                    let v22924;
+                    if (v22923) {
+                      const v22925 = stdlib.mod(v22922, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                      const v22926 = stdlib.sub(v22922, v22925);
+                      const v22927 = stdlib.div(v22926, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                      v22924 = v22927;
                       }
                     else {
-                      v22392 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                      v22924 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                       }
                     sim_r.isHalt = false;
                     
                     break;
                     }
                   case 'ChangeAdmin': {
-                    const v11641 = v3903[1];
+                    const v12173 = v3955[1];
                     null;
-                    const v11648 = {
+                    const v12180 = {
                       Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                       For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                      action: v3820,
-                      index: v3932
+                      action: v3872,
+                      index: v3984
                       };
-                    const v22408 = v3822;
-                    const v22410 = v11648;
-                    const v22412 = v3828;
-                    const v22413 = v3822.admin;
-                    const v22414 = v3822.fee;
-                    const v22415 = v3822.openTreasury;
-                    const v22416 = v3822.quorum;
-                    const v22417 = v3822.registerSelf;
-                    const v22418 = v11648.action;
-                    const v22419 = v11648.index;
-                    const v22420 = stdlib.ge(v22419, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                    let v22421;
-                    if (v22420) {
-                      const v22422 = stdlib.mod(v22419, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                      const v22423 = stdlib.sub(v22419, v22422);
-                      const v22424 = stdlib.div(v22423, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                      v22421 = v22424;
+                    const v22940 = v3874;
+                    const v22942 = v12180;
+                    const v22944 = v3880;
+                    const v22945 = v3874.admin;
+                    const v22946 = v3874.fee;
+                    const v22947 = v3874.openTreasury;
+                    const v22948 = v3874.quorum;
+                    const v22949 = v3874.registerSelf;
+                    const v22950 = v12180.action;
+                    const v22951 = v12180.index;
+                    const v22952 = stdlib.ge(v22951, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                    let v22953;
+                    if (v22952) {
+                      const v22954 = stdlib.mod(v22951, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                      const v22955 = stdlib.sub(v22951, v22954);
+                      const v22956 = stdlib.div(v22955, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                      v22953 = v22956;
                       }
                     else {
-                      v22421 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                      v22953 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                       }
                     sim_r.isHalt = false;
                     
                     break;
                     }
                   case 'EjectMember': {
-                    const v11654 = v3903[1];
+                    const v12186 = v3955[1];
                     null;
-                    const v11656 = {
+                    const v12188 = {
                       Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                       For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                      action: v3820,
-                      index: v3932
+                      action: v3872,
+                      index: v3984
                       };
-                    const v22437 = v3822;
-                    const v22439 = v11656;
-                    const v22441 = v3828;
-                    const v22442 = v3822.admin;
-                    const v22443 = v3822.fee;
-                    const v22444 = v3822.openTreasury;
-                    const v22445 = v3822.quorum;
-                    const v22446 = v3822.registerSelf;
-                    const v22447 = v11656.action;
-                    const v22448 = v11656.index;
-                    const v22449 = stdlib.ge(v22448, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                    let v22450;
-                    if (v22449) {
-                      const v22451 = stdlib.mod(v22448, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                      const v22452 = stdlib.sub(v22448, v22451);
-                      const v22453 = stdlib.div(v22452, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                      v22450 = v22453;
+                    const v22969 = v3874;
+                    const v22971 = v12188;
+                    const v22973 = v3880;
+                    const v22974 = v3874.admin;
+                    const v22975 = v3874.fee;
+                    const v22976 = v3874.openTreasury;
+                    const v22977 = v3874.quorum;
+                    const v22978 = v3874.registerSelf;
+                    const v22979 = v12188.action;
+                    const v22980 = v12188.index;
+                    const v22981 = stdlib.ge(v22980, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                    let v22982;
+                    if (v22981) {
+                      const v22983 = stdlib.mod(v22980, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                      const v22984 = stdlib.sub(v22980, v22983);
+                      const v22985 = stdlib.div(v22984, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                      v22982 = v22985;
                       }
                     else {
-                      v22450 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                      v22982 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                       }
                     sim_r.isHalt = false;
                     
                     break;
                     }
                   case 'None': {
-                    const v11662 = v3903[1];
+                    const v12194 = v3955[1];
                     null;
-                    const v11664 = {
+                    const v12196 = {
                       Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                       For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                      action: v3820,
-                      index: v3932
+                      action: v3872,
+                      index: v3984
                       };
-                    const v22466 = v3822;
-                    const v22468 = v11664;
-                    const v22470 = v3828;
-                    const v22471 = v3822.admin;
-                    const v22472 = v3822.fee;
-                    const v22473 = v3822.openTreasury;
-                    const v22474 = v3822.quorum;
-                    const v22475 = v3822.registerSelf;
-                    const v22476 = v11664.action;
-                    const v22477 = v11664.index;
-                    const v22478 = stdlib.ge(v22477, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                    let v22479;
-                    if (v22478) {
-                      const v22480 = stdlib.mod(v22477, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                      const v22481 = stdlib.sub(v22477, v22480);
-                      const v22482 = stdlib.div(v22481, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                      v22479 = v22482;
+                    const v22998 = v3874;
+                    const v23000 = v12196;
+                    const v23002 = v3880;
+                    const v23003 = v3874.admin;
+                    const v23004 = v3874.fee;
+                    const v23005 = v3874.openTreasury;
+                    const v23006 = v3874.quorum;
+                    const v23007 = v3874.registerSelf;
+                    const v23008 = v12196.action;
+                    const v23009 = v12196.index;
+                    const v23010 = stdlib.ge(v23009, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                    let v23011;
+                    if (v23010) {
+                      const v23012 = stdlib.mod(v23009, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                      const v23013 = stdlib.sub(v23009, v23012);
+                      const v23014 = stdlib.div(v23013, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                      v23011 = v23014;
                       }
                     else {
-                      v22479 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                      v23011 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                       }
                     sim_r.isHalt = false;
                     
                     break;
                     }
                   case 'Stop': {
-                    const v11670 = v3903[1];
+                    const v12202 = v3955[1];
                     null;
-                    const v11672 = {
+                    const v12204 = {
                       Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                       For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                      action: v3820,
-                      index: v3932
+                      action: v3872,
+                      index: v3984
                       };
-                    const v22495 = v3822;
-                    const v22497 = v11672;
-                    const v22499 = v3828;
-                    const v22500 = v3822.admin;
-                    const v22501 = v3822.fee;
-                    const v22502 = v3822.openTreasury;
-                    const v22503 = v3822.quorum;
-                    const v22504 = v3822.registerSelf;
-                    const v22505 = v11672.action;
-                    const v22506 = v11672.index;
-                    const v22507 = stdlib.ge(v22506, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                    let v22508;
-                    if (v22507) {
-                      const v22509 = stdlib.mod(v22506, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                      const v22510 = stdlib.sub(v22506, v22509);
-                      const v22511 = stdlib.div(v22510, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                      v22508 = v22511;
+                    const v23027 = v3874;
+                    const v23029 = v12204;
+                    const v23031 = v3880;
+                    const v23032 = v3874.admin;
+                    const v23033 = v3874.fee;
+                    const v23034 = v3874.openTreasury;
+                    const v23035 = v3874.quorum;
+                    const v23036 = v3874.registerSelf;
+                    const v23037 = v12204.action;
+                    const v23038 = v12204.index;
+                    const v23039 = stdlib.ge(v23038, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                    let v23040;
+                    if (v23039) {
+                      const v23041 = stdlib.mod(v23038, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                      const v23042 = stdlib.sub(v23038, v23041);
+                      const v23043 = stdlib.div(v23042, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                      v23040 = v23043;
                       }
                     else {
-                      v22508 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                      v23040 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                       }
                     sim_r.isHalt = false;
                     
@@ -6002,172 +6077,172 @@ export async function _voteProposal3(ctcTop, interact) {
                     }
                   }}
               else {
-                switch (v3903[0]) {
+                switch (v3955[0]) {
                   case 'AllocateFunds': {
-                    const v11678 = v3903[1];
+                    const v12210 = v3955[1];
                     null;
-                    const v11682 = {
+                    const v12214 = {
                       Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                       For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                      action: v3820,
-                      index: v3932
+                      action: v3872,
+                      index: v3984
                       };
-                    const v22524 = v3822;
-                    const v22526 = v11682;
-                    const v22528 = v3828;
-                    const v22529 = v3822.admin;
-                    const v22530 = v3822.fee;
-                    const v22531 = v3822.openTreasury;
-                    const v22532 = v3822.quorum;
-                    const v22533 = v3822.registerSelf;
-                    const v22534 = v11682.action;
-                    const v22535 = v11682.index;
-                    const v22536 = stdlib.ge(v22535, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                    let v22537;
-                    if (v22536) {
-                      const v22538 = stdlib.mod(v22535, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                      const v22539 = stdlib.sub(v22535, v22538);
-                      const v22540 = stdlib.div(v22539, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                      v22537 = v22540;
+                    const v23056 = v3874;
+                    const v23058 = v12214;
+                    const v23060 = v3880;
+                    const v23061 = v3874.admin;
+                    const v23062 = v3874.fee;
+                    const v23063 = v3874.openTreasury;
+                    const v23064 = v3874.quorum;
+                    const v23065 = v3874.registerSelf;
+                    const v23066 = v12214.action;
+                    const v23067 = v12214.index;
+                    const v23068 = stdlib.ge(v23067, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                    let v23069;
+                    if (v23068) {
+                      const v23070 = stdlib.mod(v23067, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                      const v23071 = stdlib.sub(v23067, v23070);
+                      const v23072 = stdlib.div(v23071, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                      v23069 = v23072;
                       }
                     else {
-                      v22537 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                      v23069 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                       }
                     sim_r.isHalt = false;
                     
                     break;
                     }
                   case 'ChangeAdmin': {
-                    const v11688 = v3903[1];
+                    const v12220 = v3955[1];
                     null;
-                    const v11695 = {
+                    const v12227 = {
                       Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                       For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                      action: v3820,
-                      index: v3932
+                      action: v3872,
+                      index: v3984
                       };
-                    const v22553 = v3822;
-                    const v22555 = v11695;
-                    const v22557 = v3828;
-                    const v22558 = v3822.admin;
-                    const v22559 = v3822.fee;
-                    const v22560 = v3822.openTreasury;
-                    const v22561 = v3822.quorum;
-                    const v22562 = v3822.registerSelf;
-                    const v22563 = v11695.action;
-                    const v22564 = v11695.index;
-                    const v22565 = stdlib.ge(v22564, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                    let v22566;
-                    if (v22565) {
-                      const v22567 = stdlib.mod(v22564, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                      const v22568 = stdlib.sub(v22564, v22567);
-                      const v22569 = stdlib.div(v22568, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                      v22566 = v22569;
+                    const v23085 = v3874;
+                    const v23087 = v12227;
+                    const v23089 = v3880;
+                    const v23090 = v3874.admin;
+                    const v23091 = v3874.fee;
+                    const v23092 = v3874.openTreasury;
+                    const v23093 = v3874.quorum;
+                    const v23094 = v3874.registerSelf;
+                    const v23095 = v12227.action;
+                    const v23096 = v12227.index;
+                    const v23097 = stdlib.ge(v23096, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                    let v23098;
+                    if (v23097) {
+                      const v23099 = stdlib.mod(v23096, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                      const v23100 = stdlib.sub(v23096, v23099);
+                      const v23101 = stdlib.div(v23100, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                      v23098 = v23101;
                       }
                     else {
-                      v22566 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                      v23098 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                       }
                     sim_r.isHalt = false;
                     
                     break;
                     }
                   case 'EjectMember': {
-                    const v11701 = v3903[1];
+                    const v12233 = v3955[1];
                     null;
-                    const v11703 = {
+                    const v12235 = {
                       Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                       For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                      action: v3820,
-                      index: v3932
+                      action: v3872,
+                      index: v3984
                       };
-                    const v22582 = v3822;
-                    const v22584 = v11703;
-                    const v22586 = v3828;
-                    const v22587 = v3822.admin;
-                    const v22588 = v3822.fee;
-                    const v22589 = v3822.openTreasury;
-                    const v22590 = v3822.quorum;
-                    const v22591 = v3822.registerSelf;
-                    const v22592 = v11703.action;
-                    const v22593 = v11703.index;
-                    const v22594 = stdlib.ge(v22593, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                    let v22595;
-                    if (v22594) {
-                      const v22596 = stdlib.mod(v22593, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                      const v22597 = stdlib.sub(v22593, v22596);
-                      const v22598 = stdlib.div(v22597, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                      v22595 = v22598;
+                    const v23114 = v3874;
+                    const v23116 = v12235;
+                    const v23118 = v3880;
+                    const v23119 = v3874.admin;
+                    const v23120 = v3874.fee;
+                    const v23121 = v3874.openTreasury;
+                    const v23122 = v3874.quorum;
+                    const v23123 = v3874.registerSelf;
+                    const v23124 = v12235.action;
+                    const v23125 = v12235.index;
+                    const v23126 = stdlib.ge(v23125, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                    let v23127;
+                    if (v23126) {
+                      const v23128 = stdlib.mod(v23125, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                      const v23129 = stdlib.sub(v23125, v23128);
+                      const v23130 = stdlib.div(v23129, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                      v23127 = v23130;
                       }
                     else {
-                      v22595 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                      v23127 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                       }
                     sim_r.isHalt = false;
                     
                     break;
                     }
                   case 'None': {
-                    const v11709 = v3903[1];
+                    const v12241 = v3955[1];
                     null;
-                    const v11711 = {
+                    const v12243 = {
                       Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                       For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                      action: v3820,
-                      index: v3932
+                      action: v3872,
+                      index: v3984
                       };
-                    const v22611 = v3822;
-                    const v22613 = v11711;
-                    const v22615 = v3828;
-                    const v22616 = v3822.admin;
-                    const v22617 = v3822.fee;
-                    const v22618 = v3822.openTreasury;
-                    const v22619 = v3822.quorum;
-                    const v22620 = v3822.registerSelf;
-                    const v22621 = v11711.action;
-                    const v22622 = v11711.index;
-                    const v22623 = stdlib.ge(v22622, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                    let v22624;
-                    if (v22623) {
-                      const v22625 = stdlib.mod(v22622, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                      const v22626 = stdlib.sub(v22622, v22625);
-                      const v22627 = stdlib.div(v22626, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                      v22624 = v22627;
+                    const v23143 = v3874;
+                    const v23145 = v12243;
+                    const v23147 = v3880;
+                    const v23148 = v3874.admin;
+                    const v23149 = v3874.fee;
+                    const v23150 = v3874.openTreasury;
+                    const v23151 = v3874.quorum;
+                    const v23152 = v3874.registerSelf;
+                    const v23153 = v12243.action;
+                    const v23154 = v12243.index;
+                    const v23155 = stdlib.ge(v23154, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                    let v23156;
+                    if (v23155) {
+                      const v23157 = stdlib.mod(v23154, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                      const v23158 = stdlib.sub(v23154, v23157);
+                      const v23159 = stdlib.div(v23158, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                      v23156 = v23159;
                       }
                     else {
-                      v22624 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                      v23156 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                       }
                     sim_r.isHalt = false;
                     
                     break;
                     }
                   case 'Stop': {
-                    const v11717 = v3903[1];
+                    const v12249 = v3955[1];
                     null;
-                    const v11719 = {
+                    const v12251 = {
                       Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                       For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                      action: v3820,
-                      index: v3932
+                      action: v3872,
+                      index: v3984
                       };
-                    const v22640 = v3822;
-                    const v22642 = v11719;
-                    const v22644 = v3828;
-                    const v22645 = v3822.admin;
-                    const v22646 = v3822.fee;
-                    const v22647 = v3822.openTreasury;
-                    const v22648 = v3822.quorum;
-                    const v22649 = v3822.registerSelf;
-                    const v22650 = v11719.action;
-                    const v22651 = v11719.index;
-                    const v22652 = stdlib.ge(v22651, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                    let v22653;
-                    if (v22652) {
-                      const v22654 = stdlib.mod(v22651, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                      const v22655 = stdlib.sub(v22651, v22654);
-                      const v22656 = stdlib.div(v22655, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                      v22653 = v22656;
+                    const v23172 = v3874;
+                    const v23174 = v12251;
+                    const v23176 = v3880;
+                    const v23177 = v3874.admin;
+                    const v23178 = v3874.fee;
+                    const v23179 = v3874.openTreasury;
+                    const v23180 = v3874.quorum;
+                    const v23181 = v3874.registerSelf;
+                    const v23182 = v12251.action;
+                    const v23183 = v12251.index;
+                    const v23184 = stdlib.ge(v23183, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                    let v23185;
+                    if (v23184) {
+                      const v23186 = stdlib.mod(v23183, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                      const v23187 = stdlib.sub(v23183, v23186);
+                      const v23188 = stdlib.div(v23187, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                      v23185 = v23188;
                       }
                     else {
-                      v22653 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                      v23185 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                       }
                     sim_r.isHalt = false;
                     
@@ -6175,32 +6250,32 @@ export async function _voteProposal3(ctcTop, interact) {
                     }
                   }}}}
           else {
-            const v11725 = {
-              Against: v11113,
-              For: v11112,
-              action: v3903,
-              index: v3932
+            const v12257 = {
+              Against: v11565,
+              For: v11564,
+              action: v3955,
+              index: v3984
               };
-            const v22669 = v3822;
-            const v22671 = v11725;
-            const v22673 = v3828;
-            const v22674 = v3822.admin;
-            const v22675 = v3822.fee;
-            const v22676 = v3822.openTreasury;
-            const v22677 = v3822.quorum;
-            const v22678 = v3822.registerSelf;
-            const v22679 = v11725.action;
-            const v22680 = v11725.index;
-            const v22681 = stdlib.ge(v22680, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-            let v22682;
-            if (v22681) {
-              const v22683 = stdlib.mod(v22680, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-              const v22684 = stdlib.sub(v22680, v22683);
-              const v22685 = stdlib.div(v22684, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-              v22682 = v22685;
+            const v23201 = v3874;
+            const v23203 = v12257;
+            const v23205 = v3880;
+            const v23206 = v3874.admin;
+            const v23207 = v3874.fee;
+            const v23208 = v3874.openTreasury;
+            const v23209 = v3874.quorum;
+            const v23210 = v3874.registerSelf;
+            const v23211 = v12257.action;
+            const v23212 = v12257.index;
+            const v23213 = stdlib.ge(v23212, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+            let v23214;
+            if (v23213) {
+              const v23215 = stdlib.mod(v23212, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+              const v23216 = stdlib.sub(v23212, v23215);
+              const v23217 = stdlib.div(v23216, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+              v23214 = v23217;
               }
             else {
-              v22682 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+              v23214 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
               }
             sim_r.isHalt = false;
             }
@@ -6211,272 +6286,272 @@ export async function _voteProposal3(ctcTop, interact) {
       }),
     soloSend: false,
     timeoutAt: undefined /* mto */,
-    tys: [ctc4, ctc5, ctc1, ctc9, ctc10, ctc11, ctc1, ctc4, ctc1, ctc7, ctc1, ctc7, ctc9, ctc1, ctc7, ctc1, ctc18],
+    tys: [ctc4, ctc5, ctc6, ctc1, ctc6, ctc10, ctc11, ctc12, ctc1, ctc4, ctc1, ctc8, ctc1, ctc8, ctc10, ctc1, ctc8, ctc1, ctc19],
     waitIfNotPresent: false
     }));
-  const {data: [v4456], secs: v4458, time: v4457, didSend: v2511, from: v4455 } = txn1;
-  switch (v4456[0]) {
-    case 'addMember0_334': {
-      const v4459 = v4456[1];
+  const {data: [v4508], secs: v4510, time: v4509, didSend: v2529, from: v4507 } = txn1;
+  switch (v4508[0]) {
+    case 'addMember0_352': {
+      const v4511 = v4508[1];
       return;
       break;
       }
-    case 'donate0_334': {
-      const v5671 = v4456[1];
+    case 'donate0_352': {
+      const v5803 = v4508[1];
       return;
       break;
       }
-    case 'eject0_334': {
-      const v6883 = v4456[1];
+    case 'eject0_352': {
+      const v7095 = v4508[1];
       return;
       break;
       }
-    case 'joinLeave0_334': {
-      const v8095 = v4456[1];
+    case 'joinLeave0_352': {
+      const v8387 = v4508[1];
       return;
       break;
       }
-    case 'registerProposal0_334': {
-      const v9307 = v4456[1];
+    case 'registerProposal0_352': {
+      const v9679 = v4508[1];
       return;
       break;
       }
-    case 'voteProposal0_334': {
-      const v10519 = v4456[1];
+    case 'voteProposal0_352': {
+      const v10971 = v4508[1];
       undefined /* setApiDetails */;
-      const v10571 = stdlib.le(v3828, stdlib.UInt_max);
-      stdlib.assert(v10571, {
-        at: './dao/contracts/dao-core.rsh:169:50:dot',
+      const v11023 = stdlib.le(v3880, stdlib.UInt_max);
+      stdlib.assert(v11023, {
+        at: './dao/contracts/dao-core.rsh:189:50:dot',
         fs: [],
         msg: 'assume <= UInt.max',
         who: 'voteProposal'
         });
       ;
-      const v11002 = v10519[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:313:10:spread', stdlib.UInt_max, '0')];
-      let v11006;
-      if (v3933) {
-        const v11008 = stdlib.mod(v3932, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-        const v11010 = stdlib.sub(v3932, v11008);
-        const v11012 = stdlib.div(v11010, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-        v11006 = v11012;
+      const v11454 = v10971[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:333:10:spread', stdlib.UInt_max, '0')];
+      let v11458;
+      if (v3985) {
+        const v11460 = stdlib.mod(v3984, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+        const v11462 = stdlib.sub(v3984, v11460);
+        const v11464 = stdlib.div(v11462, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+        v11458 = v11464;
         }
       else {
-        v11006 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+        v11458 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
         }
-      const v11013 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4455), null);
-      const v11014 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
-      const v11015 = stdlib.fromSome(v11013, v11014);
-      const v11016 = v11015[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:103:11:array', stdlib.UInt_max, '0')];
-      const v11017 = v11015[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:103:11:array', stdlib.UInt_max, '1')];
-      const v11018 = stdlib.ge(v11016, v11006);
-      stdlib.assert(v11018, {
+      const v11465 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v4507), null);
+      const v11466 = [stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0')];
+      const v11467 = stdlib.fromSome(v11465, v11466);
+      const v11468 = v11467[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:120:11:array', stdlib.UInt_max, '0')];
+      const v11469 = v11467[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:120:11:array', stdlib.UInt_max, '1')];
+      const v11470 = stdlib.ge(v11468, v11458);
+      stdlib.assert(v11470, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:104:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:314:22:application call to "requireIsMember" (defined at: ./dao/contracts/dao-core.rsh:101:36:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:121:10:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:334:22:application call to "requireIsMember" (defined at: ./dao/contracts/dao-core.rsh:118:36:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
         msg: 'THIEF! SEIZE THEM!',
         who: 'voteProposal'
         });
-      const v11020 = v3824.For;
-      const v11021 = v3824.Against;
-      let v11024;
-      switch (v3903[0]) {
+      const v11472 = v3876.For;
+      const v11473 = v3876.Against;
+      let v11476;
+      switch (v3955[0]) {
         case 'AllocateFunds': {
-          const v11025 = v3903[1];
-          const v11026 = v11025[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-          const v11027 = v11025[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
-          const v11029 = stdlib.lt(v11027, v3828);
-          const v11030 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11026), null);
-          let v11031;
-          switch (v11030[0]) {
+          const v11477 = v3955[1];
+          const v11478 = v11477[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+          const v11479 = v11477[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
+          const v11481 = stdlib.lt(v11479, v3880);
+          const v11482 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11478), null);
+          let v11483;
+          switch (v11482[0]) {
             case 'None': {
-              const v11032 = v11030[1];
-              v11031 = false;
+              const v11484 = v11482[1];
+              v11483 = false;
               
               break;
               }
             case 'Some': {
-              const v11033 = v11030[1];
-              v11031 = true;
+              const v11485 = v11482[1];
+              v11483 = true;
               
               break;
               }
             }
-          const v11034 = v11031 ? v11029 : false;
-          const v11036 = v3899 ? v11029 : v11034;
-          v11024 = v11036;
+          const v11486 = v11483 ? v11481 : false;
+          const v11488 = v3951 ? v11481 : v11486;
+          v11476 = v11488;
           
           break;
           }
         case 'ChangeAdmin': {
-          const v11037 = v3903[1];
-          const v11038 = v11037.admin;
-          const v11039 = v11037.fee;
-          const v11041 = v11037.quorum;
-          const v11043 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11038), null);
-          const v11045 = stdlib.fromSome(v11043, v11014);
-          const v11046 = v11045[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
-          let v11049;
-          switch (v11043[0]) {
+          const v11489 = v3955[1];
+          const v11490 = v11489.admin;
+          const v11491 = v11489.fee;
+          const v11493 = v11489.quorum;
+          const v11495 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11490), null);
+          const v11497 = stdlib.fromSome(v11495, v11466);
+          const v11498 = v11497[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
+          let v11501;
+          switch (v11495[0]) {
             case 'None': {
-              const v11050 = v11043[1];
-              v11049 = false;
+              const v11502 = v11495[1];
+              v11501 = false;
               
               break;
               }
             case 'Some': {
-              const v11051 = v11043[1];
-              v11049 = true;
+              const v11503 = v11495[1];
+              v11501 = true;
               
               break;
               }
             }
-          const v11052 = stdlib.gt(v11046, v3934);
-          const v11053 = v11049 ? v11052 : false;
-          const v11054 = stdlib.gt(v11041, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
-          let v11055;
-          if (v11054) {
-            const v11058 = stdlib.lt(v11041, v3812);
-            v11055 = v11058;
+          const v11504 = stdlib.gt(v11498, v3986);
+          const v11505 = v11501 ? v11504 : false;
+          const v11506 = stdlib.gt(v11493, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
+          let v11507;
+          if (v11506) {
+            const v11510 = stdlib.lt(v11493, v3848);
+            v11507 = v11510;
             }
           else {
-            v11055 = false;
+            v11507 = false;
             }
-          const v11059 = stdlib.gt(v11039, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:33:decimal', stdlib.UInt_max, '0'));
-          const v11060 = stdlib.lt(v11039, stdlib.UInt_max);
-          const v11061 = v11059 ? v11060 : false;
-          const v11062 = v11053 ? v11055 : false;
-          const v11063 = v11062 ? v11061 : false;
-          v11024 = v11063;
+          const v11511 = stdlib.ge(v11491, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:34:decimal', stdlib.UInt_max, '0'));
+          const v11512 = stdlib.lt(v11491, stdlib.UInt_max);
+          const v11513 = v11511 ? v11512 : false;
+          const v11514 = v11505 ? v11507 : false;
+          const v11515 = v11514 ? v11513 : false;
+          v11476 = v11515;
           
           break;
           }
         case 'EjectMember': {
-          const v11064 = v3903[1];
-          const v11065 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11064), null);
-          let v11066;
-          switch (v11065[0]) {
+          const v11516 = v3955[1];
+          const v11517 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11516), null);
+          let v11518;
+          switch (v11517[0]) {
             case 'None': {
-              const v11067 = v11065[1];
-              v11066 = false;
+              const v11519 = v11517[1];
+              v11518 = false;
               
               break;
               }
             case 'Some': {
-              const v11068 = v11065[1];
-              v11066 = true;
+              const v11520 = v11517[1];
+              v11518 = true;
               
               break;
               }
             }
-          const v11070 = stdlib.addressEq(v11064, v3897);
-          const v11071 = v11070 ? false : true;
-          const v11072 = v11066 ? v11071 : false;
-          v11024 = v11072;
+          const v11522 = stdlib.addressEq(v11516, v3949);
+          const v11523 = v11522 ? false : true;
+          const v11524 = v11518 ? v11523 : false;
+          v11476 = v11524;
           
           break;
           }
         case 'None': {
-          const v11073 = v3903[1];
-          v11024 = false;
+          const v11525 = v3955[1];
+          v11476 = false;
           
           break;
           }
         case 'Stop': {
-          const v11074 = v3903[1];
-          v11024 = true;
+          const v11526 = v3955[1];
+          v11476 = true;
           
           break;
           }
         }
-      stdlib.assert(v11024, {
+      stdlib.assert(v11476, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:316:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:336:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
         msg: 'No Proposal is currently active',
         who: 'voteProposal'
         });
-      const v11076 = stdlib.gt(v11020, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:321:17:decimal', stdlib.UInt_max, '0'));
-      if (v11076) {
-        const v11078 = stdlib.sub(stdlib.UInt_max, v11021);
-        const v11079 = stdlib.lt(v11020, v11078);
-        stdlib.assert(v11079, {
+      const v11528 = stdlib.gt(v11472, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:341:17:decimal', stdlib.UInt_max, '0'));
+      if (v11528) {
+        const v11530 = stdlib.sub(stdlib.UInt_max, v11473);
+        const v11531 = stdlib.lt(v11472, v11530);
+        stdlib.assert(v11531, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:322:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:342:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
           msg: 'Voting limit reached',
           who: 'voteProposal'
           });
         }
       else {
         }
-      const v11081 = stdlib.gt(v11021, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:324:21:decimal', stdlib.UInt_max, '0'));
-      if (v11081) {
-        const v11083 = stdlib.sub(stdlib.UInt_max, v11020);
-        const v11084 = stdlib.lt(v11021, v11083);
-        stdlib.assert(v11084, {
+      const v11533 = stdlib.gt(v11473, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:344:21:decimal', stdlib.UInt_max, '0'));
+      if (v11533) {
+        const v11535 = stdlib.sub(stdlib.UInt_max, v11472);
+        const v11536 = stdlib.lt(v11473, v11535);
+        stdlib.assert(v11536, {
           at: 'reach standard library:57:5:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:325:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+          fs: ['at ./dao/contracts/dao-core.rsh:345:14:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
           msg: 'Voting limit reached',
           who: 'voteProposal'
           });
         }
       else {
         }
-      const v11088 = stdlib.add(v11020, v11021);
-      const v11090 = stdlib.lt(v11088, v3900);
-      stdlib.assert(v11090, {
+      const v11540 = stdlib.add(v11472, v11473);
+      const v11542 = stdlib.lt(v11540, v3952);
+      stdlib.assert(v11542, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:328:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:348:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
         msg: 'Quorum reached',
         who: 'voteProposal'
         });
-      const v11097 = stdlib.lt(v11017, v3932);
-      stdlib.assert(v11097, {
+      const v11549 = stdlib.lt(v11469, v3984);
+      stdlib.assert(v11549, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:331:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:351:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
         msg: 'Address has already voted in this session',
         who: 'voteProposal'
         });
-      let v11099;
-      switch (v11002[0]) {
+      let v11551;
+      switch (v11454[0]) {
         case 'Against': {
-          const v11100 = v11002[1];
-          const v11103 = stdlib.add(v11021, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:335:40:decimal', stdlib.UInt_max, '1'));
-          const v11104 = [v11020, v11103];
-          v11099 = v11104;
+          const v11552 = v11454[1];
+          const v11555 = stdlib.add(v11473, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:355:40:decimal', stdlib.UInt_max, '1'));
+          const v11556 = [v11472, v11555];
+          v11551 = v11556;
           
           break;
           }
         case 'For': {
-          const v11106 = v11002[1];
-          const v11109 = stdlib.add(v11020, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:334:27:decimal', stdlib.UInt_max, '1'));
-          const v11110 = [v11109, v11021];
-          v11099 = v11110;
+          const v11558 = v11454[1];
+          const v11561 = stdlib.add(v11472, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:354:27:decimal', stdlib.UInt_max, '1'));
+          const v11562 = [v11561, v11473];
+          v11551 = v11562;
           
           break;
           }
         }
-      const v11112 = v11099[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:333:13:array', stdlib.UInt_max, '0')];
-      const v11113 = v11099[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:333:13:array', stdlib.UInt_max, '1')];
-      const v11115 = stdlib.sub(stdlib.UInt_max, v11113);
-      const v11116 = stdlib.lt(v11112, v11115);
-      stdlib.assert(v11116, {
+      const v11564 = v11551[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:353:13:array', stdlib.UInt_max, '0')];
+      const v11565 = v11551[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:353:13:array', stdlib.UInt_max, '1')];
+      const v11567 = stdlib.sub(stdlib.UInt_max, v11565);
+      const v11568 = stdlib.lt(v11564, v11567);
+      stdlib.assert(v11568, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:337:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:357:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
         msg: 'Voting limit reached (2)',
         who: 'voteProposal'
         });
-      const v11119 = stdlib.sub(stdlib.UInt_max, v11112);
-      const v11120 = stdlib.lt(v11113, v11119);
-      stdlib.assert(v11120, {
+      const v11571 = stdlib.sub(stdlib.UInt_max, v11564);
+      const v11572 = stdlib.lt(v11565, v11571);
+      stdlib.assert(v11572, {
         at: 'reach standard library:57:5:application',
-        fs: ['at ./dao/contracts/dao-core.rsh:338:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+        fs: ['at ./dao/contracts/dao-core.rsh:358:12:application call to "check" (defined at: reach standard library:49:32:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
         msg: 'Voting limit reached (2)',
         who: 'voteProposal'
         });
-      const v11123 = null;
-      const v11124 = await txn1.getOutput('voteProposal', 'v11123', ctc0, v11123);
-      if (v2511) {
-        stdlib.protect(ctc0, await interact.out(v10519, v11124), {
-          at: './dao/contracts/dao-core.rsh:313:11:application',
-          fs: ['at ./dao/contracts/dao-core.rsh:313:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:313:11:function exp)', 'at ./dao/contracts/dao-core.rsh:342:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+      const v11575 = null;
+      const v11576 = await txn1.getOutput('voteProposal', 'v11575', ctc0, v11575);
+      if (v2529) {
+        stdlib.protect(ctc0, await interact.out(v10971, v11576), {
+          at: './dao/contracts/dao-core.rsh:333:11:application',
+          fs: ['at ./dao/contracts/dao-core.rsh:333:11:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:333:11:function exp)', 'at ./dao/contracts/dao-core.rsh:362:12:application call to "k" (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
           msg: 'out',
           who: 'voteProposal'
           });
@@ -6484,326 +6559,344 @@ export async function _voteProposal3(ctcTop, interact) {
       else {
         }
       
-      const v11132 = stdlib.lt(v11016, stdlib.UInt_max);
-      let v11133;
-      if (v11132) {
-        const v11136 = stdlib.add(v11016, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:345:45:decimal', stdlib.UInt_max, '1'));
-        const v11137 = [v11136, v3932];
-        v11133 = v11137;
+      const v11584 = stdlib.lt(v11468, stdlib.UInt_max);
+      let v11585;
+      if (v11584) {
+        const v11588 = stdlib.add(v11468, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:365:45:decimal', stdlib.UInt_max, '1'));
+        const v11589 = [v11588, v3984];
+        v11585 = v11589;
         }
       else {
-        const v11138 = [v11016, v3932];
-        v11133 = v11138;
+        const v11590 = [v11468, v3984];
+        v11585 = v11590;
         }
-      await stdlib.mapSet(map0, v4455, v11133);
-      const v11145 = stdlib.add(v11112, v11113);
-      const v11147 = stdlib.ge(v11145, v3900);
-      let v11149;
-      if (v3933) {
-        const v11151 = stdlib.mod(v3932, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-        const v11153 = stdlib.sub(v3932, v11151);
-        const v11155 = stdlib.div(v11153, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-        v11149 = v11155;
+      await stdlib.mapSet(map0, v4507, v11585);
+      const v11597 = stdlib.add(v11564, v11565);
+      const v11599 = stdlib.ge(v11597, v3952);
+      let v11601;
+      if (v3985) {
+        const v11603 = stdlib.mod(v3984, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+        const v11605 = stdlib.sub(v3984, v11603);
+        const v11607 = stdlib.div(v11605, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+        v11601 = v11607;
         }
       else {
-        v11149 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+        v11601 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
         }
-      let v11156;
-      switch (v3903[0]) {
+      let v11608;
+      switch (v3955[0]) {
         case 'AllocateFunds': {
-          const v11157 = v3903[1];
-          const v11158 = v11157[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
-          const v11159 = v11157[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
-          const v11161 = stdlib.lt(v11159, v3828);
-          const v11162 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11158), null);
-          let v11163;
-          switch (v11162[0]) {
+          const v11609 = v3955[1];
+          const v11610 = v11609[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '0')];
+          const v11611 = v11609[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:76:21:array', stdlib.UInt_max, '1')];
+          const v11613 = stdlib.lt(v11611, v3880);
+          const v11614 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11610), null);
+          let v11615;
+          switch (v11614[0]) {
             case 'None': {
-              const v11164 = v11162[1];
-              v11163 = false;
+              const v11616 = v11614[1];
+              v11615 = false;
               
               break;
               }
             case 'Some': {
-              const v11165 = v11162[1];
-              v11163 = true;
+              const v11617 = v11614[1];
+              v11615 = true;
               
               break;
               }
             }
-          const v11166 = v11163 ? v11161 : false;
-          const v11168 = v3899 ? v11161 : v11166;
-          v11156 = v11168;
+          const v11618 = v11615 ? v11613 : false;
+          const v11620 = v3951 ? v11613 : v11618;
+          v11608 = v11620;
           
           break;
           }
         case 'ChangeAdmin': {
-          const v11169 = v3903[1];
-          const v11170 = v11169.admin;
-          const v11171 = v11169.fee;
-          const v11173 = v11169.quorum;
-          const v11175 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11170), null);
-          const v11177 = stdlib.fromSome(v11175, v11014);
-          const v11178 = v11177[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
-          let v11181;
-          switch (v11175[0]) {
+          const v11621 = v3955[1];
+          const v11622 = v11621.admin;
+          const v11623 = v11621.fee;
+          const v11625 = v11621.quorum;
+          const v11627 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11622), null);
+          const v11629 = stdlib.fromSome(v11627, v11466);
+          const v11630 = v11629[stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:84:13:array', stdlib.UInt_max, '0')];
+          let v11633;
+          switch (v11627[0]) {
             case 'None': {
-              const v11182 = v11175[1];
-              v11181 = false;
+              const v11634 = v11627[1];
+              v11633 = false;
               
               break;
               }
             case 'Some': {
-              const v11183 = v11175[1];
-              v11181 = true;
+              const v11635 = v11627[1];
+              v11633 = true;
               
               break;
               }
             }
-          const v11184 = stdlib.gt(v11178, v11149);
-          const v11185 = v11181 ? v11184 : false;
-          const v11186 = stdlib.gt(v11173, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
-          let v11187;
-          if (v11186) {
-            const v11190 = stdlib.lt(v11173, v3812);
-            v11187 = v11190;
+          const v11636 = stdlib.gt(v11630, v11601);
+          const v11637 = v11633 ? v11636 : false;
+          const v11638 = stdlib.gt(v11625, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:86:34:decimal', stdlib.UInt_max, '0'));
+          let v11639;
+          if (v11638) {
+            const v11642 = stdlib.lt(v11625, v3848);
+            v11639 = v11642;
             }
           else {
-            v11187 = false;
+            v11639 = false;
             }
-          const v11191 = stdlib.gt(v11171, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:33:decimal', stdlib.UInt_max, '0'));
-          const v11192 = stdlib.lt(v11171, stdlib.UInt_max);
-          const v11193 = v11191 ? v11192 : false;
-          const v11194 = v11185 ? v11187 : false;
-          const v11195 = v11194 ? v11193 : false;
-          v11156 = v11195;
+          const v11643 = stdlib.ge(v11623, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:87:34:decimal', stdlib.UInt_max, '0'));
+          const v11644 = stdlib.lt(v11623, stdlib.UInt_max);
+          const v11645 = v11643 ? v11644 : false;
+          const v11646 = v11637 ? v11639 : false;
+          const v11647 = v11646 ? v11645 : false;
+          v11608 = v11647;
           
           break;
           }
         case 'EjectMember': {
-          const v11196 = v3903[1];
-          const v11197 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11196), null);
-          let v11198;
-          switch (v11197[0]) {
+          const v11648 = v3955[1];
+          const v11649 = stdlib.protect(map0_ctc, await stdlib.mapRef(map0, v11648), null);
+          let v11650;
+          switch (v11649[0]) {
             case 'None': {
-              const v11199 = v11197[1];
-              v11198 = false;
+              const v11651 = v11649[1];
+              v11650 = false;
               
               break;
               }
             case 'Some': {
-              const v11200 = v11197[1];
-              v11198 = true;
+              const v11652 = v11649[1];
+              v11650 = true;
               
               break;
               }
             }
-          const v11202 = stdlib.addressEq(v11196, v3897);
-          const v11203 = v11202 ? false : true;
-          const v11204 = v11198 ? v11203 : false;
-          v11156 = v11204;
+          const v11654 = stdlib.addressEq(v11648, v3949);
+          const v11655 = v11654 ? false : true;
+          const v11656 = v11650 ? v11655 : false;
+          v11608 = v11656;
           
           break;
           }
         case 'None': {
-          const v11205 = v3903[1];
-          v11156 = false;
+          const v11657 = v3955[1];
+          v11608 = false;
           
           break;
           }
         case 'Stop': {
-          const v11206 = v3903[1];
-          v11156 = true;
+          const v11658 = v3955[1];
+          v11608 = true;
           
           break;
           }
         }
-      if (v11147) {
-        const v11207 = stdlib.gt(v11112, v11113);
-        const v11208 = v11156 ? v11207 : false;
-        if (v11208) {
-          switch (v3903[0]) {
+      if (v11599) {
+        const v11659 = stdlib.gt(v11564, v11565);
+        const v11660 = v11608 ? v11659 : false;
+        if (v11660) {
+          switch (v3955[0]) {
             case 'AllocateFunds': {
-              const v11209 = v3903[1];
-              const v11210 = v11209[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:133:32:application', stdlib.UInt_max, '0')];
-              const v11211 = v11209[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:133:32:application', stdlib.UInt_max, '1')];
+              const v11661 = v3955[1];
+              const v11662 = v11661[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:150:32:application', stdlib.UInt_max, '0')];
+              const v11663 = v11661[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:150:32:application', stdlib.UInt_max, '1')];
               null;
-              const v11218 = stdlib.sub(v3828, v11211);
-              const v11219 = stdlib.ge(v11218, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:137:29:application', stdlib.UInt_max, '0'));
-              stdlib.assert(v11219, {
-                at: './dao/contracts/dao-core.rsh:137:29:application',
-                fs: ['at ./dao/contracts/dao-core.rsh:135:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:136:44:function exp)', 'at ./dao/contracts/dao-core.rsh:135:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:135:28:function exp)', 'at ./dao/contracts/dao-core.rsh:347:28:application call to "doProposal" (defined at: ./dao/contracts/dao-core.rsh:115:51:function exp)', 'at ./dao/contracts/dao-core.rsh:341:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:341:13:function exp)'],
+              const v11670 = stdlib.sub(v3880, v11663);
+              const v11671 = stdlib.ge(v11670, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:154:29:application', stdlib.UInt_max, '0'));
+              stdlib.assert(v11671, {
+                at: './dao/contracts/dao-core.rsh:154:29:application',
+                fs: ['at ./dao/contracts/dao-core.rsh:152:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:153:44:function exp)', 'at ./dao/contracts/dao-core.rsh:152:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:152:28:function exp)', 'at ./dao/contracts/dao-core.rsh:367:28:application call to "doProposal" (defined at: ./dao/contracts/dao-core.rsh:132:51:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
                 msg: 'assume >= 0',
                 who: 'voteProposal'
                 });
               ;
-              const v11223 = {
+              const v11675 = {
                 Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                 For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                action: v3820,
-                index: v3932
+                action: v3872,
+                index: v3984
                 };
-              const v22234 = v3822;
-              const v22236 = v11223;
-              const v22238 = v11218;
-              const v22239 = v3822.admin;
-              const v22240 = v3822.fee;
-              const v22241 = v3822.openTreasury;
-              const v22242 = v3822.quorum;
-              const v22243 = v3822.registerSelf;
-              const v22244 = v11223.action;
-              const v22245 = v11223.index;
-              const v22246 = stdlib.ge(v22245, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-              let v22247;
-              if (v22246) {
-                const v22248 = stdlib.mod(v22245, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                const v22249 = stdlib.sub(v22245, v22248);
-                const v22250 = stdlib.div(v22249, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                v22247 = v22250;
+              const v22766 = v3874;
+              const v22768 = v11675;
+              const v22770 = v11670;
+              const v22771 = v3874.admin;
+              const v22772 = v3874.fee;
+              const v22773 = v3874.openTreasury;
+              const v22774 = v3874.quorum;
+              const v22775 = v3874.registerSelf;
+              const v22776 = v11675.action;
+              const v22777 = v11675.index;
+              const v22778 = stdlib.ge(v22777, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+              let v22779;
+              if (v22778) {
+                const v22780 = stdlib.mod(v22777, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                const v22781 = stdlib.sub(v22777, v22780);
+                const v22782 = stdlib.div(v22781, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                v22779 = v22782;
                 }
               else {
-                v22247 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                v22779 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                 }
               return;
               
               break;
               }
             case 'ChangeAdmin': {
-              const v11294 = v3903[1];
-              const v11295 = v11294.admin;
-              const v11296 = v11294.registerSelf;
-              const v11297 = v11294.fee;
-              const v11298 = v11294.quorum;
-              const v11299 = v11294.openTreasury;
+              const v11762 = v3955[1];
+              const v11763 = v11762.admin;
+              const v11764 = v11762.registerSelf;
+              const v11765 = v11762.fee;
+              const v11766 = v11762.quorum;
+              const v11767 = v11762.openTreasury;
               null;
-              const v11333 = {
+              const v11801 = {
                 Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                 For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                action: v3820,
-                index: v3932
+                action: v3872,
+                index: v3984
                 };
-              const v11334 = {
-                admin: v11295,
-                fee: v11297,
-                openTreasury: v11299,
-                quorum: v11298,
-                registerSelf: v11296
+              const v11802 = {
+                admin: v11763,
+                fee: v11765,
+                openTreasury: v11767,
+                quorum: v11766,
+                registerSelf: v11764
                 };
-              const v22263 = v11334;
-              const v22265 = v11333;
-              const v22267 = v3828;
-              const v22268 = v11334.admin;
-              const v22269 = v11334.fee;
-              const v22270 = v11334.openTreasury;
-              const v22271 = v11334.quorum;
-              const v22272 = v11334.registerSelf;
-              const v22273 = v11333.action;
-              const v22274 = v11333.index;
-              const v22275 = stdlib.ge(v22274, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-              let v22276;
-              if (v22275) {
-                const v22277 = stdlib.mod(v22274, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                const v22278 = stdlib.sub(v22274, v22277);
-                const v22279 = stdlib.div(v22278, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                v22276 = v22279;
+              const v22795 = v11802;
+              const v22797 = v11801;
+              const v22799 = v3880;
+              const v22800 = v11802.admin;
+              const v22801 = v11802.fee;
+              const v22802 = v11802.openTreasury;
+              const v22803 = v11802.quorum;
+              const v22804 = v11802.registerSelf;
+              const v22805 = v11801.action;
+              const v22806 = v11801.index;
+              const v22807 = stdlib.ge(v22806, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+              let v22808;
+              if (v22807) {
+                const v22809 = stdlib.mod(v22806, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                const v22810 = stdlib.sub(v22806, v22809);
+                const v22811 = stdlib.div(v22810, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                v22808 = v22811;
                 }
               else {
-                v22276 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                v22808 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                 }
               return;
               
               break;
               }
             case 'EjectMember': {
-              const v11382 = v3903[1];
+              const v11866 = v3955[1];
               null;
-              const v11428 = v11382;
-              await stdlib.mapSet(map0, v11382, undefined /* Nothing */);
+              const v11912 = v11866;
+              await stdlib.mapSet(map0, v11866, undefined /* Nothing */);
               null;
-              const v11431 = {
+              const v11915 = {
                 Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                 For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                action: v3820,
-                index: v3932
+                action: v3872,
+                index: v3984
                 };
-              const v22292 = v3822;
-              const v22294 = v11431;
-              const v22296 = v3828;
-              const v22297 = v3822.admin;
-              const v22298 = v3822.fee;
-              const v22299 = v3822.openTreasury;
-              const v22300 = v3822.quorum;
-              const v22301 = v3822.registerSelf;
-              const v22302 = v11431.action;
-              const v22303 = v11431.index;
-              const v22304 = stdlib.ge(v22303, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-              let v22305;
-              if (v22304) {
-                const v22306 = stdlib.mod(v22303, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                const v22307 = stdlib.sub(v22303, v22306);
-                const v22308 = stdlib.div(v22307, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                v22305 = v22308;
+              const v22824 = v3874;
+              const v22826 = v11915;
+              const v22828 = v3880;
+              const v22829 = v3874.admin;
+              const v22830 = v3874.fee;
+              const v22831 = v3874.openTreasury;
+              const v22832 = v3874.quorum;
+              const v22833 = v3874.registerSelf;
+              const v22834 = v11915.action;
+              const v22835 = v11915.index;
+              const v22836 = stdlib.ge(v22835, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+              let v22837;
+              if (v22836) {
+                const v22838 = stdlib.mod(v22835, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                const v22839 = stdlib.sub(v22835, v22838);
+                const v22840 = stdlib.div(v22839, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                v22837 = v22840;
                 }
               else {
-                v22305 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                v22837 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                 }
               return;
               
               break;
               }
             case 'None': {
-              const v11465 = v3903[1];
+              const v11965 = v3955[1];
               null;
-              const v11526 = {
+              const v12026 = {
                 Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                 For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                action: v3820,
-                index: v3932
+                action: v3872,
+                index: v3984
                 };
-              const v22321 = v3822;
-              const v22323 = v11526;
-              const v22325 = v3828;
-              const v22326 = v3822.admin;
-              const v22327 = v3822.fee;
-              const v22328 = v3822.openTreasury;
-              const v22329 = v3822.quorum;
-              const v22330 = v3822.registerSelf;
-              const v22331 = v11526.action;
-              const v22332 = v11526.index;
-              const v22333 = stdlib.ge(v22332, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-              let v22334;
-              if (v22333) {
-                const v22335 = stdlib.mod(v22332, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                const v22336 = stdlib.sub(v22332, v22335);
-                const v22337 = stdlib.div(v22336, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                v22334 = v22337;
+              const v22853 = v3874;
+              const v22855 = v12026;
+              const v22857 = v3880;
+              const v22858 = v3874.admin;
+              const v22859 = v3874.fee;
+              const v22860 = v3874.openTreasury;
+              const v22861 = v3874.quorum;
+              const v22862 = v3874.registerSelf;
+              const v22863 = v12026.action;
+              const v22864 = v12026.index;
+              const v22865 = stdlib.ge(v22864, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+              let v22866;
+              if (v22865) {
+                const v22867 = stdlib.mod(v22864, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                const v22868 = stdlib.sub(v22864, v22867);
+                const v22869 = stdlib.div(v22868, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                v22866 = v22869;
                 }
               else {
-                v22334 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                v22866 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                 }
               return;
               
               break;
               }
             case 'Stop': {
-              const v11548 = v3903[1];
+              const v12064 = v3955[1];
               null;
-              const v22367 = v3822.admin;
-              const v22373 = stdlib.sub(v3828, v3828);
-              const v22374 = stdlib.ge(v22373, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:352:25:application', stdlib.UInt_max, '0'));
-              stdlib.assert(v22374, {
-                at: './dao/contracts/dao-core.rsh:352:25:application',
+              const v12138 = undefined /* Remote */;
+              const v12139 = await txn1.getOutput('internal', 'v12138', ctc20, v12138);
+              const v12141 = v12139[stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:168:33:application', stdlib.UInt_max, '0')];
+              const v12146 = stdlib.add(v3880, v12141);
+              const v12147 = stdlib.le(v12146, stdlib.UInt_max);
+              stdlib.assert(v12147, {
+                at: './dao/contracts/dao-core.rsh:168:33:application',
+                fs: ['at ./dao/contracts/dao-core.rsh:152:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:167:20:function exp)', 'at ./dao/contracts/dao-core.rsh:152:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:152:28:function exp)', 'at ./dao/contracts/dao-core.rsh:367:28:application call to "doProposal" (defined at: ./dao/contracts/dao-core.rsh:132:51:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
+                msg: 'assume <= UInt.max',
+                who: 'voteProposal'
+                });
+              const v12151 = stdlib.eq(stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'), v12141);
+              stdlib.assert(v12151, {
+                at: './dao/contracts/dao-core.rsh:168:33:application',
+                fs: ['at ./dao/contracts/dao-core.rsh:152:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:167:20:function exp)', 'at ./dao/contracts/dao-core.rsh:152:28:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:152:28:function exp)', 'at ./dao/contracts/dao-core.rsh:367:28:application call to "doProposal" (defined at: ./dao/contracts/dao-core.rsh:132:51:function exp)', 'at ./dao/contracts/dao-core.rsh:361:13:application call to [unknown function] (defined at: ./dao/contracts/dao-core.rsh:361:13:function exp)'],
+                msg: 'remote bill check',
+                who: 'voteProposal'
+                });
+              const v22899 = v3874.admin;
+              const v22905 = stdlib.sub(v12146, v12146);
+              const v22906 = stdlib.ge(v22905, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:372:25:application', stdlib.UInt_max, '0'));
+              stdlib.assert(v22906, {
+                at: './dao/contracts/dao-core.rsh:372:25:application',
                 fs: [],
                 msg: 'assume >= 0',
                 who: 'voteProposal'
                 });
               ;
-              const v22375 = (stdlib.le(await ctc.getBalance(), v22373) ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:353:29:application', stdlib.UInt_max, '0') : stdlib.sub(await ctc.getBalance(), v22373));
-              const v22376 = stdlib.add(v22375, v22373);
-              const v22377 = stdlib.sub(v22376, v22375);
-              const v22378 = stdlib.ge(v22377, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:353:35:application', stdlib.UInt_max, '0'));
-              stdlib.assert(v22378, {
-                at: './dao/contracts/dao-core.rsh:353:35:application',
+              const v22907 = (stdlib.le(await ctc.getBalance(), v22905) ? stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:373:29:application', stdlib.UInt_max, '0') : stdlib.sub(await ctc.getBalance(), v22905));
+              const v22908 = stdlib.add(v22907, v22905);
+              const v22909 = stdlib.sub(v22908, v22907);
+              const v22910 = stdlib.ge(v22909, stdlib.checkedBigNumberify('./dao/contracts/dao-core.rsh:373:35:application', stdlib.UInt_max, '0'));
+              stdlib.assert(v22910, {
+                at: './dao/contracts/dao-core.rsh:373:35:application',
                 fs: [],
                 msg: 'assume >= 0',
                 who: 'voteProposal'
@@ -6815,173 +6908,173 @@ export async function _voteProposal3(ctcTop, interact) {
               }
             }}
         else {
-          if (v11207) {
-            switch (v3903[0]) {
+          if (v11659) {
+            switch (v3955[0]) {
               case 'AllocateFunds': {
-                const v11631 = v3903[1];
+                const v12163 = v3955[1];
                 null;
-                const v11635 = {
+                const v12167 = {
                   Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                   For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                  action: v3820,
-                  index: v3932
+                  action: v3872,
+                  index: v3984
                   };
-                const v22379 = v3822;
-                const v22381 = v11635;
-                const v22383 = v3828;
-                const v22384 = v3822.admin;
-                const v22385 = v3822.fee;
-                const v22386 = v3822.openTreasury;
-                const v22387 = v3822.quorum;
-                const v22388 = v3822.registerSelf;
-                const v22389 = v11635.action;
-                const v22390 = v11635.index;
-                const v22391 = stdlib.ge(v22390, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                let v22392;
-                if (v22391) {
-                  const v22393 = stdlib.mod(v22390, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                  const v22394 = stdlib.sub(v22390, v22393);
-                  const v22395 = stdlib.div(v22394, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                  v22392 = v22395;
+                const v22911 = v3874;
+                const v22913 = v12167;
+                const v22915 = v3880;
+                const v22916 = v3874.admin;
+                const v22917 = v3874.fee;
+                const v22918 = v3874.openTreasury;
+                const v22919 = v3874.quorum;
+                const v22920 = v3874.registerSelf;
+                const v22921 = v12167.action;
+                const v22922 = v12167.index;
+                const v22923 = stdlib.ge(v22922, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                let v22924;
+                if (v22923) {
+                  const v22925 = stdlib.mod(v22922, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                  const v22926 = stdlib.sub(v22922, v22925);
+                  const v22927 = stdlib.div(v22926, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                  v22924 = v22927;
                   }
                 else {
-                  v22392 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                  v22924 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                   }
                 return;
                 
                 break;
                 }
               case 'ChangeAdmin': {
-                const v11641 = v3903[1];
+                const v12173 = v3955[1];
                 null;
-                const v11648 = {
+                const v12180 = {
                   Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                   For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                  action: v3820,
-                  index: v3932
+                  action: v3872,
+                  index: v3984
                   };
-                const v22408 = v3822;
-                const v22410 = v11648;
-                const v22412 = v3828;
-                const v22413 = v3822.admin;
-                const v22414 = v3822.fee;
-                const v22415 = v3822.openTreasury;
-                const v22416 = v3822.quorum;
-                const v22417 = v3822.registerSelf;
-                const v22418 = v11648.action;
-                const v22419 = v11648.index;
-                const v22420 = stdlib.ge(v22419, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                let v22421;
-                if (v22420) {
-                  const v22422 = stdlib.mod(v22419, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                  const v22423 = stdlib.sub(v22419, v22422);
-                  const v22424 = stdlib.div(v22423, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                  v22421 = v22424;
+                const v22940 = v3874;
+                const v22942 = v12180;
+                const v22944 = v3880;
+                const v22945 = v3874.admin;
+                const v22946 = v3874.fee;
+                const v22947 = v3874.openTreasury;
+                const v22948 = v3874.quorum;
+                const v22949 = v3874.registerSelf;
+                const v22950 = v12180.action;
+                const v22951 = v12180.index;
+                const v22952 = stdlib.ge(v22951, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                let v22953;
+                if (v22952) {
+                  const v22954 = stdlib.mod(v22951, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                  const v22955 = stdlib.sub(v22951, v22954);
+                  const v22956 = stdlib.div(v22955, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                  v22953 = v22956;
                   }
                 else {
-                  v22421 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                  v22953 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                   }
                 return;
                 
                 break;
                 }
               case 'EjectMember': {
-                const v11654 = v3903[1];
+                const v12186 = v3955[1];
                 null;
-                const v11656 = {
+                const v12188 = {
                   Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                   For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                  action: v3820,
-                  index: v3932
+                  action: v3872,
+                  index: v3984
                   };
-                const v22437 = v3822;
-                const v22439 = v11656;
-                const v22441 = v3828;
-                const v22442 = v3822.admin;
-                const v22443 = v3822.fee;
-                const v22444 = v3822.openTreasury;
-                const v22445 = v3822.quorum;
-                const v22446 = v3822.registerSelf;
-                const v22447 = v11656.action;
-                const v22448 = v11656.index;
-                const v22449 = stdlib.ge(v22448, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                let v22450;
-                if (v22449) {
-                  const v22451 = stdlib.mod(v22448, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                  const v22452 = stdlib.sub(v22448, v22451);
-                  const v22453 = stdlib.div(v22452, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                  v22450 = v22453;
+                const v22969 = v3874;
+                const v22971 = v12188;
+                const v22973 = v3880;
+                const v22974 = v3874.admin;
+                const v22975 = v3874.fee;
+                const v22976 = v3874.openTreasury;
+                const v22977 = v3874.quorum;
+                const v22978 = v3874.registerSelf;
+                const v22979 = v12188.action;
+                const v22980 = v12188.index;
+                const v22981 = stdlib.ge(v22980, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                let v22982;
+                if (v22981) {
+                  const v22983 = stdlib.mod(v22980, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                  const v22984 = stdlib.sub(v22980, v22983);
+                  const v22985 = stdlib.div(v22984, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                  v22982 = v22985;
                   }
                 else {
-                  v22450 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                  v22982 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                   }
                 return;
                 
                 break;
                 }
               case 'None': {
-                const v11662 = v3903[1];
+                const v12194 = v3955[1];
                 null;
-                const v11664 = {
+                const v12196 = {
                   Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                   For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                  action: v3820,
-                  index: v3932
+                  action: v3872,
+                  index: v3984
                   };
-                const v22466 = v3822;
-                const v22468 = v11664;
-                const v22470 = v3828;
-                const v22471 = v3822.admin;
-                const v22472 = v3822.fee;
-                const v22473 = v3822.openTreasury;
-                const v22474 = v3822.quorum;
-                const v22475 = v3822.registerSelf;
-                const v22476 = v11664.action;
-                const v22477 = v11664.index;
-                const v22478 = stdlib.ge(v22477, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                let v22479;
-                if (v22478) {
-                  const v22480 = stdlib.mod(v22477, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                  const v22481 = stdlib.sub(v22477, v22480);
-                  const v22482 = stdlib.div(v22481, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                  v22479 = v22482;
+                const v22998 = v3874;
+                const v23000 = v12196;
+                const v23002 = v3880;
+                const v23003 = v3874.admin;
+                const v23004 = v3874.fee;
+                const v23005 = v3874.openTreasury;
+                const v23006 = v3874.quorum;
+                const v23007 = v3874.registerSelf;
+                const v23008 = v12196.action;
+                const v23009 = v12196.index;
+                const v23010 = stdlib.ge(v23009, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                let v23011;
+                if (v23010) {
+                  const v23012 = stdlib.mod(v23009, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                  const v23013 = stdlib.sub(v23009, v23012);
+                  const v23014 = stdlib.div(v23013, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                  v23011 = v23014;
                   }
                 else {
-                  v22479 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                  v23011 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                   }
                 return;
                 
                 break;
                 }
               case 'Stop': {
-                const v11670 = v3903[1];
+                const v12202 = v3955[1];
                 null;
-                const v11672 = {
+                const v12204 = {
                   Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                   For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                  action: v3820,
-                  index: v3932
+                  action: v3872,
+                  index: v3984
                   };
-                const v22495 = v3822;
-                const v22497 = v11672;
-                const v22499 = v3828;
-                const v22500 = v3822.admin;
-                const v22501 = v3822.fee;
-                const v22502 = v3822.openTreasury;
-                const v22503 = v3822.quorum;
-                const v22504 = v3822.registerSelf;
-                const v22505 = v11672.action;
-                const v22506 = v11672.index;
-                const v22507 = stdlib.ge(v22506, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                let v22508;
-                if (v22507) {
-                  const v22509 = stdlib.mod(v22506, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                  const v22510 = stdlib.sub(v22506, v22509);
-                  const v22511 = stdlib.div(v22510, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                  v22508 = v22511;
+                const v23027 = v3874;
+                const v23029 = v12204;
+                const v23031 = v3880;
+                const v23032 = v3874.admin;
+                const v23033 = v3874.fee;
+                const v23034 = v3874.openTreasury;
+                const v23035 = v3874.quorum;
+                const v23036 = v3874.registerSelf;
+                const v23037 = v12204.action;
+                const v23038 = v12204.index;
+                const v23039 = stdlib.ge(v23038, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                let v23040;
+                if (v23039) {
+                  const v23041 = stdlib.mod(v23038, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                  const v23042 = stdlib.sub(v23038, v23041);
+                  const v23043 = stdlib.div(v23042, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                  v23040 = v23043;
                   }
                 else {
-                  v22508 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                  v23040 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                   }
                 return;
                 
@@ -6989,172 +7082,172 @@ export async function _voteProposal3(ctcTop, interact) {
                 }
               }}
           else {
-            switch (v3903[0]) {
+            switch (v3955[0]) {
               case 'AllocateFunds': {
-                const v11678 = v3903[1];
+                const v12210 = v3955[1];
                 null;
-                const v11682 = {
+                const v12214 = {
                   Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                   For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                  action: v3820,
-                  index: v3932
+                  action: v3872,
+                  index: v3984
                   };
-                const v22524 = v3822;
-                const v22526 = v11682;
-                const v22528 = v3828;
-                const v22529 = v3822.admin;
-                const v22530 = v3822.fee;
-                const v22531 = v3822.openTreasury;
-                const v22532 = v3822.quorum;
-                const v22533 = v3822.registerSelf;
-                const v22534 = v11682.action;
-                const v22535 = v11682.index;
-                const v22536 = stdlib.ge(v22535, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                let v22537;
-                if (v22536) {
-                  const v22538 = stdlib.mod(v22535, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                  const v22539 = stdlib.sub(v22535, v22538);
-                  const v22540 = stdlib.div(v22539, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                  v22537 = v22540;
+                const v23056 = v3874;
+                const v23058 = v12214;
+                const v23060 = v3880;
+                const v23061 = v3874.admin;
+                const v23062 = v3874.fee;
+                const v23063 = v3874.openTreasury;
+                const v23064 = v3874.quorum;
+                const v23065 = v3874.registerSelf;
+                const v23066 = v12214.action;
+                const v23067 = v12214.index;
+                const v23068 = stdlib.ge(v23067, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                let v23069;
+                if (v23068) {
+                  const v23070 = stdlib.mod(v23067, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                  const v23071 = stdlib.sub(v23067, v23070);
+                  const v23072 = stdlib.div(v23071, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                  v23069 = v23072;
                   }
                 else {
-                  v22537 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                  v23069 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                   }
                 return;
                 
                 break;
                 }
               case 'ChangeAdmin': {
-                const v11688 = v3903[1];
+                const v12220 = v3955[1];
                 null;
-                const v11695 = {
+                const v12227 = {
                   Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                   For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                  action: v3820,
-                  index: v3932
+                  action: v3872,
+                  index: v3984
                   };
-                const v22553 = v3822;
-                const v22555 = v11695;
-                const v22557 = v3828;
-                const v22558 = v3822.admin;
-                const v22559 = v3822.fee;
-                const v22560 = v3822.openTreasury;
-                const v22561 = v3822.quorum;
-                const v22562 = v3822.registerSelf;
-                const v22563 = v11695.action;
-                const v22564 = v11695.index;
-                const v22565 = stdlib.ge(v22564, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                let v22566;
-                if (v22565) {
-                  const v22567 = stdlib.mod(v22564, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                  const v22568 = stdlib.sub(v22564, v22567);
-                  const v22569 = stdlib.div(v22568, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                  v22566 = v22569;
+                const v23085 = v3874;
+                const v23087 = v12227;
+                const v23089 = v3880;
+                const v23090 = v3874.admin;
+                const v23091 = v3874.fee;
+                const v23092 = v3874.openTreasury;
+                const v23093 = v3874.quorum;
+                const v23094 = v3874.registerSelf;
+                const v23095 = v12227.action;
+                const v23096 = v12227.index;
+                const v23097 = stdlib.ge(v23096, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                let v23098;
+                if (v23097) {
+                  const v23099 = stdlib.mod(v23096, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                  const v23100 = stdlib.sub(v23096, v23099);
+                  const v23101 = stdlib.div(v23100, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                  v23098 = v23101;
                   }
                 else {
-                  v22566 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                  v23098 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                   }
                 return;
                 
                 break;
                 }
               case 'EjectMember': {
-                const v11701 = v3903[1];
+                const v12233 = v3955[1];
                 null;
-                const v11703 = {
+                const v12235 = {
                   Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                   For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                  action: v3820,
-                  index: v3932
+                  action: v3872,
+                  index: v3984
                   };
-                const v22582 = v3822;
-                const v22584 = v11703;
-                const v22586 = v3828;
-                const v22587 = v3822.admin;
-                const v22588 = v3822.fee;
-                const v22589 = v3822.openTreasury;
-                const v22590 = v3822.quorum;
-                const v22591 = v3822.registerSelf;
-                const v22592 = v11703.action;
-                const v22593 = v11703.index;
-                const v22594 = stdlib.ge(v22593, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                let v22595;
-                if (v22594) {
-                  const v22596 = stdlib.mod(v22593, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                  const v22597 = stdlib.sub(v22593, v22596);
-                  const v22598 = stdlib.div(v22597, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                  v22595 = v22598;
+                const v23114 = v3874;
+                const v23116 = v12235;
+                const v23118 = v3880;
+                const v23119 = v3874.admin;
+                const v23120 = v3874.fee;
+                const v23121 = v3874.openTreasury;
+                const v23122 = v3874.quorum;
+                const v23123 = v3874.registerSelf;
+                const v23124 = v12235.action;
+                const v23125 = v12235.index;
+                const v23126 = stdlib.ge(v23125, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                let v23127;
+                if (v23126) {
+                  const v23128 = stdlib.mod(v23125, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                  const v23129 = stdlib.sub(v23125, v23128);
+                  const v23130 = stdlib.div(v23129, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                  v23127 = v23130;
                   }
                 else {
-                  v22595 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                  v23127 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                   }
                 return;
                 
                 break;
                 }
               case 'None': {
-                const v11709 = v3903[1];
+                const v12241 = v3955[1];
                 null;
-                const v11711 = {
+                const v12243 = {
                   Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                   For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                  action: v3820,
-                  index: v3932
+                  action: v3872,
+                  index: v3984
                   };
-                const v22611 = v3822;
-                const v22613 = v11711;
-                const v22615 = v3828;
-                const v22616 = v3822.admin;
-                const v22617 = v3822.fee;
-                const v22618 = v3822.openTreasury;
-                const v22619 = v3822.quorum;
-                const v22620 = v3822.registerSelf;
-                const v22621 = v11711.action;
-                const v22622 = v11711.index;
-                const v22623 = stdlib.ge(v22622, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                let v22624;
-                if (v22623) {
-                  const v22625 = stdlib.mod(v22622, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                  const v22626 = stdlib.sub(v22622, v22625);
-                  const v22627 = stdlib.div(v22626, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                  v22624 = v22627;
+                const v23143 = v3874;
+                const v23145 = v12243;
+                const v23147 = v3880;
+                const v23148 = v3874.admin;
+                const v23149 = v3874.fee;
+                const v23150 = v3874.openTreasury;
+                const v23151 = v3874.quorum;
+                const v23152 = v3874.registerSelf;
+                const v23153 = v12243.action;
+                const v23154 = v12243.index;
+                const v23155 = stdlib.ge(v23154, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                let v23156;
+                if (v23155) {
+                  const v23157 = stdlib.mod(v23154, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                  const v23158 = stdlib.sub(v23154, v23157);
+                  const v23159 = stdlib.div(v23158, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                  v23156 = v23159;
                   }
                 else {
-                  v22624 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                  v23156 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                   }
                 return;
                 
                 break;
                 }
               case 'Stop': {
-                const v11717 = v3903[1];
+                const v12249 = v3955[1];
                 null;
-                const v11719 = {
+                const v12251 = {
                   Against: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
                   For: stdlib.checkedBigNumberify('<builtin>', stdlib.UInt_max, '0'),
-                  action: v3820,
-                  index: v3932
+                  action: v3872,
+                  index: v3984
                   };
-                const v22640 = v3822;
-                const v22642 = v11719;
-                const v22644 = v3828;
-                const v22645 = v3822.admin;
-                const v22646 = v3822.fee;
-                const v22647 = v3822.openTreasury;
-                const v22648 = v3822.quorum;
-                const v22649 = v3822.registerSelf;
-                const v22650 = v11719.action;
-                const v22651 = v11719.index;
-                const v22652 = stdlib.ge(v22651, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-                let v22653;
-                if (v22652) {
-                  const v22654 = stdlib.mod(v22651, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-                  const v22655 = stdlib.sub(v22651, v22654);
-                  const v22656 = stdlib.div(v22655, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-                  v22653 = v22656;
+                const v23172 = v3874;
+                const v23174 = v12251;
+                const v23176 = v3880;
+                const v23177 = v3874.admin;
+                const v23178 = v3874.fee;
+                const v23179 = v3874.openTreasury;
+                const v23180 = v3874.quorum;
+                const v23181 = v3874.registerSelf;
+                const v23182 = v12251.action;
+                const v23183 = v12251.index;
+                const v23184 = stdlib.ge(v23183, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+                let v23185;
+                if (v23184) {
+                  const v23186 = stdlib.mod(v23183, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+                  const v23187 = stdlib.sub(v23183, v23186);
+                  const v23188 = stdlib.div(v23187, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+                  v23185 = v23188;
                   }
                 else {
-                  v22653 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+                  v23185 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
                   }
                 return;
                 
@@ -7162,32 +7255,32 @@ export async function _voteProposal3(ctcTop, interact) {
                 }
               }}}}
       else {
-        const v11725 = {
-          Against: v11113,
-          For: v11112,
-          action: v3903,
-          index: v3932
+        const v12257 = {
+          Against: v11565,
+          For: v11564,
+          action: v3955,
+          index: v3984
           };
-        const v22669 = v3822;
-        const v22671 = v11725;
-        const v22673 = v3828;
-        const v22674 = v3822.admin;
-        const v22675 = v3822.fee;
-        const v22676 = v3822.openTreasury;
-        const v22677 = v3822.quorum;
-        const v22678 = v3822.registerSelf;
-        const v22679 = v11725.action;
-        const v22680 = v11725.index;
-        const v22681 = stdlib.ge(v22680, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
-        let v22682;
-        if (v22681) {
-          const v22683 = stdlib.mod(v22680, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
-          const v22684 = stdlib.sub(v22680, v22683);
-          const v22685 = stdlib.div(v22684, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
-          v22682 = v22685;
+        const v23201 = v3874;
+        const v23203 = v12257;
+        const v23205 = v3880;
+        const v23206 = v3874.admin;
+        const v23207 = v3874.fee;
+        const v23208 = v3874.openTreasury;
+        const v23209 = v3874.quorum;
+        const v23210 = v3874.registerSelf;
+        const v23211 = v12257.action;
+        const v23212 = v12257.index;
+        const v23213 = stdlib.ge(v23212, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:12:decimal', stdlib.UInt_max, '10'));
+        let v23214;
+        if (v23213) {
+          const v23215 = stdlib.mod(v23212, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:35:decimal', stdlib.UInt_max, '10'));
+          const v23216 = stdlib.sub(v23212, v23215);
+          const v23217 = stdlib.div(v23216, stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:42:decimal', stdlib.UInt_max, '10'));
+          v23214 = v23217;
           }
         else {
-          v22682 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
+          v23214 = stdlib.checkedBigNumberify('./dao/contracts/shared.rsh:52:47:decimal', stdlib.UInt_max, '1');
           }
         return;
         }
@@ -7269,7 +7362,7 @@ const _ALGO = {
     pure: [`Proposal()(byte,byte[50])`, `currentVotes()uint64`, `info()(byte[128],address,address,uint64,byte,uint64,byte)`, `isMember(address)byte`, `myRank(address)uint64`],
     sigs: [`Proposal()(byte,byte[50])`, `addMember(address)byte[0]`, `currentVotes()uint64`, `donate(uint64)byte[0]`, `eject(address)byte[0]`, `info()(byte[128],address,address,uint64,byte,uint64,byte)`, `isMember(address)byte`, `joinLeave(byte)byte[0]`, `myRank(address)uint64`, `registerProposal((byte,byte[50]))byte[0]`, `voteProposal((byte,byte[0]))byte[0]`]
     },
-  appApproval: `BiAkAAEQ////////////AQQDCAIKICkRBSEGj6KvlAro3ua5DJmG0PIM+5bDug2NAkvCu92WC/qoxLkME5uQ85gF8OrrwwbxxtHcBpIDM+ACgAORA4kDiAMy6pWp+AMmCgEAAAEBAQIBAwTjht/SBGiwvLEEQuL4EwQMmUlpBH5kmAsiNQAxGEESwClkSSJbNQFJIQZbNQIkWzUIMRkjEkEACjEAKCELr2ZCEoc2GgAXSUEBvCI1BCM1BkkhDwxAAOJJIRAMQACASSERDEAAZUkhEgxAAC8hEhJENAEhBRJENhoBiBKFSTX+IlVAAAYiNf9CAAYjNf9CAAA0/xZRBwg1B0ISPSEREkQ0ASEFEkQoZCpkUCtkUCcEZFBJNQMhEyEUWEk1/yEGWzT/IlsIFjUHQhIOIRASRDYaATX/KjT/UIErr1BCAUBJIRUMQAAvSSEWDEAAFCEWEkQ2GgE1/yg0/1AhF69QQgEeIRUSRDYaATX/KzT/UCEXr1BCAQohDxJENAEhBRJEJK82GgGIEdtJNf9XARA0/yJVTVcACDUHQhGfSSEYDEAAk0khGQxAAHdJIRoMQAAjIRoSRDQBIQUSRChkKmRQK2RQJwRkUEk1AyEbIRxYNQdCEWchGRJENAEhBRJEKGQqZFArZFAnBGRQSTUDVyCANANXACBQNAMhHSEJWFA0AyEeIQZYUDQDIR8jWFA0AyEgIQZYUDQDISEjWFA1B0IRGiEYEkQ2GgE1/ycENP9QISKvUEIAS0khIwxAABIhIxJENhoBNf+AAQQ0/1BCADKBtreZlQESRDYaATX/gAEFNP9QISKvUEIAGDYaAhc1BDYaAzYaARdJIQcMQA4wIQcSRCEFNAESRDQESSISTDQCEhFEKGQqZFArZFAnBGRQSTUDSUpKSkpKSkpXACA1/1cggDX+gaABWzX9V6gzNfxX2zI1+yETIRRYNfqB2AJbNfkhHSEJWDX4IR5bNfchISNYFzX2ISBbNfUhHyNYFzX0IRshHFg184HFA1s18oHNAyNYFzXxgc4DWzXwSTUFNe+ABHVxMYY071CwNO8iVUkhBQxACj1JIQQMQAkiSSEMDEAGeSEMEkQ071cBATXWsSKyASEOshA0CLIYszT5JQ5ENPFBAA808kkhCBgJIQgKNdVCAAMjNdUkr0k11DEAiA/0STXSVwEQNNIiVU1JNdMiW0k10jTVD0Q0+iEGWzXRNPoiWzXQNPMiVUkhBwxAAE1JIQUMQAAYSSEEDEAACiEEEkQjNc9CAOVIIjXPQgDeSDTzVwEgNc40zogPmUk1zCJVQAAGIjXNQgAGIzXNQgAANM00zjT4ExA1z0IAsEkjDEAAbkg081cBMkk1ziENWzXNNM4hCls1zDTOVwAgiA9VSTXLIlVAAAYiNcpCAAYjNcpCAAA0zCINQQAKNMw0/Qw1yUIAAyI1yTTKNNQ0y0k1yFcBEDTIIlVNIls08A0QNMkQNM0iDTTNJQwQEDXPQgA8SDTzVwEoSTXOIQlbNPkMNc00zlcAIIgO60k1yyJVQAAGIjXMQgAGIzXMQgAANMw0zRA0zTT2TTXPQgAANM9ENNEiDUEACzTRJTTQCQxEQgAANNAiDUEACzTQJTTRCQxEQgAANNE00Ag09QxENNMhBls08gxENNZJNc0iVUAADjTRFjTQIwgWUDXOQgAONNEjCBY00BZQNc5CAAA0ziJbNc00ziEGWzXMNM0lNMwJDEQ0zCU0zQkMRIAIAAAAAAAAK3OwKTUHNNIlDEEADjTSIwgWNPIWUDXLQgAJNNIWNPIWUDXLMQAoKjTLUGY08UEADzTySSEIGAkhCAo1ykIAAyM1yjTzIlVJIQcMQABNSSEFDEAAGEkhBAxAAAohBBJEIzXJQgDlSCI1yUIA3kg081cBIDXINMiIDcpJNcYiVUAABiI1x0IABiM1x0IAADTHNMg0+BMQNclCALBJIwxAAG5INPNXATJJNcghDVs1xzTIIQpbNcY0yFcAIIgNhkk1xSJVQAAGIjXEQgAGIzXEQgAANMYiDUEACjTGNP0MNcNCAAMiNcM0xDTUNMVJNcJXARA0wiJVTSJbNMoNEDTDEDTHIg00xyUMEBA1yUIAPEg081cBKEk1yCEJWzT5DDXHNMhXACCIDRxJNcUiVUAABiI1xkIABiM1xkIAADTGNMcQNMc09k01yUIAADTNNMwINPUPQQMVNM00zA01yDTJNMgQQQFBNPMiVUkhBwxAAJdJIQUMQABWSSEEDEAAKSEEEkQnBTTyFlA081CwNP80/jT9NPw0+yIkrzT8UDTyFlAyBjT5Qgr6SCcFNPIWUDTzULA0/zT+NP00/DT7IySvNPxQNPIWUDIGNPlCCtRINPNXASA1xycFNPIWUDTzULA0xyghC69mJwg0x1CwNP80/jT9NPw0+yMkrzT8UDTyFlAyBjT5QgqaSSMMQABISDTzVwEyNccnBTTyFlA081CwNP80/jT9NPw0x1cAIDTHVyEIUDTHVzEBUDTHVykIUDTHVyABUCMkrzT8UDTyFlAyBjT5QgpMSDTzVwEoSTXHIQlbNcYnBTTyFlA081CwNPk0xglJNcUiD0SxIrIBNMayCCOyEDTHVwAgsgezNP80/jT9NPw0+yMkrzT8UDTyFlAyBjTFQgn7NMhBAOA08yJVSSEHDEAAg0khBQxAAFZJIQQMQAApIQQSRCcGNPIWUDTzULA0/zT+NP00/DT7IySvNPxQNPIWUDIGNPlCCbRIJwY08hZQNPNQsDT/NP40/TT8NPsjJK80/FA08hZQMgY0+UIJjkgnBjTyFlA081CwNP80/jT9NPw0+yMkrzT8UDTyFlAyBjT5QgloSSMMQAAmSCcGNPIWUDTzULA0/zT+NP00/DT7IySvNPxQNPIWUDIGNPlCCTxIJwY08hZQNPNQsDT/NP40/TT8NPsjJK80/FA08hZQMgY0+UIJFjTzIlVJIQcMQACDSSEFDEAAVkkhBAxAACkhBBJEJwc08hZQNPNQsDT/NP40/TT8NPsjJK80/FA08hZQMgY0+UII1EgnBzTyFlA081CwNP80/jT9NPw0+yMkrzT8UDTyFlAyBjT5QgiuSCcHNPIWUDTzULA0/zT+NP00/DT7IySvNPxQNPIWUDIGNPlCCIhJIwxAACZIJwc08hZQNPNQsDT/NP40/TT8NPsjJK80/FA08hZQMgY0+UIIXEgnBzTyFlA081CwNP80/jT9NPw0+yMkrzT8UDTyFlAyBjT5Qgg2NP80/jT9NPw0+yM0zBY0zRZQNPNQNPIWUDIGNPlCCBZINO9XATM11jT5JQ5ENNY11TTxQQAPNPJJIQgYCSEICjXUQgADIzXUJK9JNdMxAIgJh0k10VcBEDTRIlVNIltJNdI01A9ENNI08A9ENPMiVUkhBwxAAE1JIQUMQAAYSSEEDEAACiEEEkQjNdFCAOVIIjXRQgDeSDTzVwEgNdA00IgJNkk1ziJVQAAGIjXPQgAGIzXPQgAANM800DT4ExA10UIAsEkjDEAAbkg081cBMkk10CENWzXPNNAhCls1zjTQVwAgiAjySTXNIlVAAAYiNcxCAAYjNcxCAAA0ziINQQAKNM40/Qw1y0IAAyI1yzTMNNM0zUk1ylcBEDTKIlVNIls08A0QNMsQNM8iDTTPJQwQEDXRQgA8SDTzVwEoSTXQIQlbNPkMNc800FcAIIgIiEk1zSJVQAAGIjXOQgAGIzXOQgAANM40zxA0zzT2TTXRQgAANNEURDTyJSMJDEQ01SJVSSEHDEAATUkhBQxAABhJIQQMQAAKIQQSRCM10EIA5UgiNdBCAN5INNVXASA1zzTPiAgjSTXNIlVAAAYiNc5CAAYjNc5CAAA0zjTPNPgTEDXQQgCwSSMMQABuSDTVVwEySTXPIQ1bNc40zyEKWzXNNM9XACCIB99JNcwiVUAABiI1y0IABiM1y0IAADTNIg1BAAo0zTT9DDXKQgADIjXKNMs00zTMSTXJVwEQNMkiVU0iWzTwDRA0yhA0ziINNM4lDBAQNdBCADxINNVXAShJNc8hCVs0+Qw1zjTPVwAgiAd1STXMIlVAAAYiNc1CAAYjNc1CAAA0zTTOEDTONPZNNdBCAAA00ESACAAAAAAAACYUsCk1B4AElpSnrTTVUDEAULA0/zT+NP00/DT7IySvNNVQNPIjCBZQMgY0+UIFdEg071cBATXWNNYXSTXVQQAfMQCIBwFJNdMiVUAABiI11EIABiM11EIAADTUREIAHzT0RDEAiAbfSTXTIlVAAAYjNdRCAAYiNdRCAAA01EQ09yI01U1JNdQlNPkJDEQ0+TTUCEk10yUORDTUiAa4NNVBAB8xAIgGn0k10SJVQAAGIjXSQgAGIzXSQgAANNJEQgAfNPREMQCIBn1JNdEiVUAABiM10kIABiI10kIAADTSRDTUJTTTCQxEgAgAAAAAAAAgwrApNQc01UEAITEAKCELr2YnCDEAULA0/zT+NP00/DT7IzT6MgY000IEhzEAKCo08BYhBq9QUGYnCTEAULA0/zT+NP00/DT7IzT6MgY000IEYEkjDEACrUkhBwxAAclINO9XASA11jT5JQ5ENNY11TTViAXgSTXUIlVAAAYiNdNCAAYjNdNCAAAxADTVE0Q01CJVQAAGIjXSQgAGIzXSQgAANNJENNM01TT4ExBEMQA0+BJBAC+ACAAAAAAAABvRsCk1BzTVKCELr2YnCDTVULA0/zT+NP00/DT7IzT6MgY0+UIDzTTyJSMJDkQ08yJVSSEHDEAATUkhBQxAABhJIQQMQAAKIQQSRCM10UIA5UgiNdFCAN5INPNXASA10DTQiAUySTXOIlVAAAYiNc9CAAYjNc9CAAA0zzTQNPgTEDXRQgCwSSMMQABuSDTzVwEySTXQIQ1bNc800CEKWzXONNBXACCIBO5JNc0iVUAABiI1zEIABiM1zEIAADTOIg1BAAo0zjT9DDXLQgADIjXLNMwkrzTNSTXKVwEQNMoiVU0iWzTwDRA0yxA0zyINNM8lDBAQNdFCADxINPNXAShJNdAhCVs0+Qw1zzTQVwAgiASESTXNIlVAAAYiNc5CAAYjNc5CAAA0zjTPEDTPNPZNNdFCAAA00USACAAAAAAAABuxsCk1BzT/NP40/TT8NPsjJK8rNNVQgRKvUFA08iMIFlAyBjT5QgKKSDTvVwEINdY01hc11SU01Qk11DT5NNQMRDT5NNUISTXTJQ5ENNWIBBM00zTUDEQxAIgD+Uk10iJVQAAGIjXRQgAGIzXRQgAANNFBAG4krzTSSTXPVwEQNM8iVU1JNdAiWzXPNNAhBls1zjTPJSMJDEEADjTPIwgWNM4WUDXNQgAQNPA0z0k08A9NFjTOFlA1zTEAKCo0zVBmgAgAAAAAAAAWlLApNQc0/zT+NP00/DT7IzT6MgY000IBz4AIAAAAAAAAFpywKTUHNP80/jT9NPw0+yM0+jIGNNNCAa1INO9XASA11jTWNdU01YgDPzXUJK801Ek101cBEDTTIlVNIls08A9ENNQiVUAABiM100IABiI100IAADTTRDT5NPcISTXSJQ5ENPeIAxE01CJVQAAGIzXRQgAGIjXRQgAANNFENNUoKjTwFiEGr1BQZicJNNVQsIAIAAAAAAAAEbSwKTUHNP80/jT9NPw0+yM0+jIGNNJCARQiEkSBwJoMiAK8sSKyASEOshAishiABgYxADIJErIegAEGsh+ztD01CCI0ARJENARJIhJMNAISEURJNQVJSklXAIA1/1eAARc1/oGBAVs1/VeJARc1/IGKAVs1+4AEX/m0qTT/UDT+FlEHCFA0/RZQNPwWUQcIUDT7FlCwJYGAlOvcAw1ENP0jD0QlIQgKNfo0/TT6DEQxACiAEQH//////////wAAAAAAAAAAZoAzAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANfkxADT/NPo0+TEANPsWUDT8FlEHCFA0/RZQNP4WUQcIUCMkrzT5UCEGr1AyBiJCAAA1/zX+Nf01/DX7Nfo1+TX4Nfc0/EEAvDT7VwAgNfY0+yEJWzX1NPtXKAEXNfQ0+yEKWzXzNPtXMQEXNfI0/VcQMzXxNP2BQ1tJNfAhCA9JNe9BAA808EkhCBgJIQgKNe5CAAMjNe409zT4UDT5FlA0+lA0+1A0/VA0/xZQNPZQNPUWUDT0FlEHCFA08xZQNPIWUQcIUDTxUDTwFlA07xZRBwhQNO4WUChLAVcAf2cqSwFXf39nK0sBV/5/ZycESwGB/QKBWVhnSCEFNQEyBjUCQgB3NPtXACA19jT/SQlJNfUiD0SxIrIBNP+yCCOyEDT2sgezMgpgMgp4CTT1CUk19DT1CDT0CSIPRLEisgE09LIII7IQNPayB7NCAAAxGSEMEkSxIrIBIQ6yEDQIshghDLIZs7EisgEisggjshAyCbIJMgqyB7NCAAUxGSISRCk0ARY0AhY0CBZQUGc0BkEACoAEFR98dTQHULA0AEkjCDIEEkQxFhJEI0MxGSISREL/3yIxNBJEIQwxNRJEIjE2EkQjMTcSRCI1ASI1AiI1CEL/p0kxGGFAAAVIIQuviShiiTQASUojCDUAOAcyChJEOBAjEkQ4CBJEiQ==`,
+  appApproval: `BiAkAAH///////////8BEAQDCAIKICkRBQYhj6KvlAro3ua5DJmG0PIM+5bDug2dAkvCu92WC/qoxLkME5uQ85gF8OrrwwbxxtHcBqIDM/ACkAOhA5kDmAMy6pWp+AMmDAEAAAEBAQIBAwTjht/SBGiwvLEEQuL4EwQMmUlpBWFwcElEBGZq8OUEfmSYCyI1ADEYQRQVKWRJIls1AUkhBls1AiVbNQgxGSMSQQAKMQAoIQuvZkIT3DYaABdJQQG8IjUEIzUGSSEPDEAA4kkhEAxAAIBJIREMQABlSSESDEAALyESEkQ0ASEFEkQ2GgGIE9pJNf4iVUAABiI1/0IABiM1/0IAADT/FlEHCDUHQhOSIRESRDQBIQUSRChkKmRQK2RQJwRkUEk1AyETIRRYSTX/IQZbNP8iWwgWNQdCE2MhEBJENhoBNf8qNP9QgSuvUEIBQEkhFQxAAC9JIRYMQAAUIRYSRDYaATX/KDT/UCEXr1BCAR4hFRJENhoBNf8rNP9QIRevUEIBCiEPEkQ0ASEFEkQlrzYaAYgTMEk1/1cBEDT/IlVNVwAINQdCEvRJIRgMQACTSSEZDEAAd0khGgxAACMhGhJENAEhBRJEKGQqZFArZFAnBGRQSTUDIRshHFg1B0ISvCEZEkQ0ASEFEkQoZCpkUCtkUCcEZFBJNQNXIIA0A1cAIFA0AyEdIQlYUDQDIR4hBlhQNAMhHyNYUDQDISAhBlhQNAMhISNYUDUHQhJvIRgSRDYaATX/JwQ0/1AhIq9QQgBLSSEjDEAAEiEjEkQ2GgE1/4ABBDT/UEIAMoG2t5mVARJENhoBNf+AAQU0/1AhIq9QQgAYNhoCFzUENhoDNhoBF0khBwxADwUhBxJEIQU0ARJENARJIhJMNAISEUQoZCpkUCtkUCcEZFBJNQNJSkpKSkpKSkpXACA1/1cggDX+gaABWzX9gagBWzX8gbABWzX7V7gzNfpX6zI1+SETIRRYNfiB6AJbNfchHSEJWDX2IR5bNfUhISNYFzX0ISBbNfMhHyNYFzXyIRshHFg18YHVA1s18IHdAyNYFzXvgd4DWzXuSTUFNe2ABHVxMYY07VCwNO0iVUkhBQxACvFJIQQMQAnOSSEMDEAHISEMEkQ07VcBATXUsSKyASENshA0CLIYszT3JA5ENO9BAA808EkhCBgJIQgKNdNCAAMjNdMlr0k10jEAiBE8STXQVwEQNNAiVU1JNdEiW0k10DTTD0Q0+CEGWzXPNPgiWzXONPEiVUkhBwxAAE1JIQUMQAAYSSEEDEAACiEEEkQjNc1CAOVIIjXNQgDeSDTxVwEgNcw0zIgQ4Uk1yiJVQAAGIjXLQgAGIzXLQgAANMs0zDT2ExA1zUIAsEkjDEAAbkg08VcBMkk1zCEOWzXLNMwhCls1yjTMVwAgiBCdSTXJIlVAAAYiNchCAAYjNchCAAA0yiINQQAKNMo0/Aw1x0IAAyI1xzTINNI0yUk1xlcBEDTGIlVNIls07g0QNMcQNMsiDzTLJAwQEDXNQgA8SDTxVwEoSTXMIQlbNPcMNcs0zFcAIIgQM0k1ySJVQAAGIjXKQgAGIzXKQgAANMo0yxA0yzT0TTXNQgAANM1ENM8iDUEACzTPJDTOCQxEQgAANM4iDUEACzTOJDTPCQxEQgAANM80zgg08wxENNEhBls08AxENNRJNcsiVUAADjTPFjTOIwgWUDXMQgAONM8jCBY0zhZQNcxCAAA0zCJbNcs0zCEGWzXKNMskNMoJDEQ0yiQ0ywkMRIAIAAAAAAAALTewKTUHNNAkDEEADjTQIwgWNPAWUDXJQgAJNNAWNPAWUDXJMQAoKjTJUGY070EADzTwSSEIGAkhCAo1yEIAAyM1yDTxIlVJIQcMQABNSSEFDEAAGEkhBAxAAAohBBJEIzXHQgDlSCI1x0IA3kg08VcBIDXGNMaIDxJJNcQiVUAABiI1xUIABiM1xUIAADTFNMY09hMQNcdCALBJIwxAAG5INPFXATJJNcYhDls1xTTGIQpbNcQ0xlcAIIgOzkk1wyJVQAAGIjXCQgAGIzXCQgAANMQiDUEACjTENPwMNcFCAAMiNcE0wjTSNMNJNcBXARA0wCJVTSJbNMgNEDTBEDTFIg80xSQMEBA1x0IAPEg08VcBKEk1xiEJWzT3DDXFNMZXACCIDmRJNcMiVUAABiI1xEIABiM1xEIAADTENMUQNMU09E01x0IAADTLNMoINPMPQQO5NMs0yg01xjTHNMYQQQG9NPEiVUkhBwxAAQtJIQUMQADGSSEEDEAAlSEEEkQnBTTwFlA08VCwJwk0/RZQAzXEMgp4NcMyCmA0wwkWNcKxIrIBIQ2yEDT9shgnCrIaNPsWshqzMgpgNMMJNMIXCRa3AD5XBABQNcWACAAAAAAAAC9qNMVQsDTFSTXEIls1wzT3NMMISTXCJA5EIjTDEkQ0/zT+NP00/DT7NPo0+SIlrzT6UDTwFlAyBjTCQgvKSCcFNPAWUDTxULA0/zT+NP00/DT7NPo0+SMlrzT6UDTwFlAyBjT3QgugSDTxVwEgNcUnBTTwFlA08VCwNMUoIQuvZicINMVQsDT/NP40/TT8NPs0+jT5IyWvNPpQNPAWUDIGNPdCC2JJIwxAAExINPFXATI1xScFNPAWUDTxULA0/zT+NP00/DT7NPo0xVcAIDTFVyEIUDTFVzEBUDTFVykIUDTFVyABUCMlrzT6UDTwFlAyBjT3QgsQSDTxVwEoSTXFIQlbNcQnBTTwFlA08VCwNPc0xAlJNcMiD0SxIrIBNMSyCCOyEDTFVwAgsgezNP80/jT9NPw0+zT6NPkjJa80+lA08BZQMgY0w0IKuzTGQQD0NPEiVUkhBwxAAI9JIQUMQABeSSEEDEAALSEEEkQnBjTwFlA08VCwNP80/jT9NPw0+zT6NPkjJa80+lA08BZQMgY090IKcEgnBjTwFlA08VCwNP80/jT9NPw0+zT6NPkjJa80+lA08BZQMgY090IKRkgnBjTwFlA08VCwNP80/jT9NPw0+zT6NPkjJa80+lA08BZQMgY090IKHEkjDEAAKkgnBjTwFlA08VCwNP80/jT9NPw0+zT6NPkjJa80+lA08BZQMgY090IJ7EgnBjTwFlA08VCwNP80/jT9NPw0+zT6NPkjJa80+lA08BZQMgY090IJwjTxIlVJIQcMQACPSSEFDEAAXkkhBAxAAC0hBBJEJwc08BZQNPFQsDT/NP40/TT8NPs0+jT5IyWvNPpQNPAWUDIGNPdCCXxIJwc08BZQNPFQsDT/NP40/TT8NPs0+jT5IyWvNPpQNPAWUDIGNPdCCVJIJwc08BZQNPFQsDT/NP40/TT8NPs0+jT5IyWvNPpQNPAWUDIGNPdCCShJIwxAACpIJwc08BZQNPFQsDT/NP40/TT8NPs0+jT5IyWvNPpQNPAWUDIGNPdCCPhIJwc08BZQNPFQsDT/NP40/TT8NPs0+jT5IyWvNPpQNPAWUDIGNPdCCM40/zT+NP00/DT7NPo0+SM0yhY0yxZQNPFQNPAWUDIGNPdCCKpINO1XATM11DT3JA5ENNQ10zTvQQAPNPBJIQgYCSEICjXSQgADIzXSJa9JNdExAIgKJ0k1z1cBEDTPIlVNIltJNdA00g9ENNA07g9ENPEiVUkhBwxAAE1JIQUMQAAYSSEEDEAACiEEEkQjNc9CAOVIIjXPQgDeSDTxVwEgNc40zogJ1kk1zCJVQAAGIjXNQgAGIzXNQgAANM00zjT2ExA1z0IAsEkjDEAAbkg08VcBMkk1ziEOWzXNNM4hCls1zDTOVwAgiAmSSTXLIlVAAAYiNcpCAAYjNcpCAAA0zCINQQAKNMw0/Aw1yUIAAyI1yTTKNNE0y0k1yFcBEDTIIlVNIls07g0QNMkQNM0iDzTNJAwQEDXPQgA8SDTxVwEoSTXOIQlbNPcMNc00zlcAIIgJKEk1yyJVQAAGIjXMQgAGIzXMQgAANMw0zRA0zTT0TTXPQgAANM8URDTwJCMJDEQ00yJVSSEHDEAATUkhBQxAABhJIQQMQAAKIQQSRCM1zkIA5UgiNc5CAN5INNNXASA1zTTNiAjDSTXLIlVAAAYiNcxCAAYjNcxCAAA0zDTNNPYTEDXOQgCwSSMMQABuSDTTVwEySTXNIQ5bNcw0zSEKWzXLNM1XACCICH9JNcoiVUAABiI1yUIABiM1yUIAADTLIg1BAAo0yzT8DDXIQgADIjXINMk00TTKSTXHVwEQNMciVU0iWzTuDRA0yBA0zCIPNMwkDBAQNc5CADxINNNXAShJNc0hCVs09ww1zDTNVwAgiAgVSTXKIlVAAAYiNctCAAYjNctCAAA0yzTMEDTMNPRNNc5CAAA0zkSACAAAAAAAACeIsCk1B4AElpSnrTTTUDEAULA0/zT+NP00/DT7NPo0+SMlrzTTUDTwIwgWUDIGNPdCBgRINO1XAQE11DTUF0k100EAHzEAiAedSTXRIlVAAAYiNdJCAAYjNdJCAAA00kRCAB808kQxAIgHe0k10SJVQAAGIzXSQgAGIjXSQgAANNJENPUiNNNNSTXSJDT3CQxENPc00ghJNdEkDkQ00ogHVDTTQQAfMQCIBztJNc8iVUAABiI10EIABiM10EIAADTQREIAHzTyRDEAiAcZSTXPIlVAAAYjNdBCAAYiNdBCAAA00EQ00iQ00QkMRIAIAAAAAAAAIeawKTUHNNNBACUxACghC69mJwgxAFCwNP80/jT9NPw0+zT6NPkjNPgyBjTRQgUTMQAoKjTuFiEGr1BQZicLMQBQsDT/NP40/TT8NPs0+jT5IzT4MgY00UIE6EkjDEACvUkhBwxAAdFINO1XASA11DT3JA5ENNQ10zTTiAZ0STXSIlVAAAYiNdFCAAYjNdFCAAAxADTTE0Q00iJVQAAGIjXQQgAGIzXQQgAANNBENNE00zT2ExBEMQA09hJBADOACAAAAAAAABylsCk1BzTTKCELr2YnCDTTULA0/zT+NP00/DT7NPo0+SM0+DIGNPdCBFE08CQjCQ5ENPEiVUkhBwxAAE1JIQUMQAAYSSEEDEAACiEEEkQjNc9CAOVIIjXPQgDeSDTxVwEgNc40zogFwkk1zCJVQAAGIjXNQgAGIzXNQgAANM00zjT2ExA1z0IAsEkjDEAAbkg08VcBMkk1ziEOWzXNNM4hCls1zDTOVwAgiAV+STXLIlVAAAYiNcpCAAYjNcpCAAA0zCINQQAKNMw0/Aw1yUIAAyI1yTTKJa80y0k1yFcBEDTIIlVNIls07g0QNMkQNM0iDzTNJAwQEDXPQgA8SDTxVwEoSTXOIQlbNPcMNc00zlcAIIgFFEk1yyJVQAAGIjXMQgAGIzXMQgAANMw0zRA0zTT0TTXPQgAANM9EgAgAAAAAAAAchbApNQc0/zT+NP00/DT7NPo0+SMlrys001CBEq9QUDTwIwgWUDIGNPdCAwpINO1XAQg11DTUFzXTJDTTCTXSNPc00gxENPc00whJNdEkDkQ004gEnzTRNNIMRDEAiASFSTXQIlVAAAYiNc9CAAYjNc9CAAA0z0EAciWvNNBJNc1XARA0zSJVTUk1ziJbNc00ziEGWzXMNM0kIwkMQQAONM0jCBY0zBZQNctCABA07jTNSTTuD00WNMwWUDXLMQAoKjTLUGaACAAAAAAAABcYsCk1BzT/NP40/TT8NPs0+jT5IzT4MgY00UICS4AIAAAAAAAAFyCwKTUHNP80/jT9NPw0+zT6NPkjNPgyBjTRQgIlSDTtVwEgNdQ01DXTNNOIA8M10iWvNNJJNdFXARA00SJVTSJbNO4PRDTSIlVAAAYjNdFCAAYiNdFCAAA00UQ09zT1CEk10CQORDT1iAOVNNIiVUAABiM1z0IABiI1z0IAADTPRDTTKCo07hYhBq9QUGYnCzTTULCACAAAAAAAABHosCk1BzT/NP40/TT8NPs0+jT5IzT4MgY00EIBiCISRIHAmgyIAzyxIrIBIQ2yECKyGIAGBjEAMgkSsh6AAQayH7O0PTUIIjQBEkQ0BEkiEkw0AhIRREk1BUlKSlcAgDX/V4ABFzX+gYEBWzX9V4kBFzX8gYoBWzX7gZIBWzX6gASIl9jVNP9QNP4WUQcIUDT9FlA0/BZRBwhQNPsWUDT6FlCwJIGAlOvcAw1ENP0jD0QkIQgKNfk0/TT5DEQxGDX4MQAogBEB//////////8AAAAAAAAAAGYnCTT6FlADNfYyCng19TIKYDT1CRY19LEisgEhDbIQNPqyGCcKsho0+BayGrMyCmA09Qk09BcJFrcAPlcEAFA194AIAAAAAAAADw8091CwNPdJNfYiW0k19SQORCI09RJEgDMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA19DEANP80+jT5NPg09DEANPsWUDT8FlEHCFA0/RZQNP4WUQcIUCMlrzT0UCEGr1AyBjT1QgAANf81/jX9Nfw1+zX6Nfk1+DX3NfY19TT8QQDENPtXACA19DT7IQlbNfM0+1coARc18jT7IQpbNfE0+1cxARc18DT9VxAzNe80/YFDW0k17iEID0k17UEADzTuSSEIGAkhCAo17EIAAyM17DT1NPZQNPcWUDT4FlA0+RZQNPpQNPtQNP1QNP8WUDT0UDTzFlA08hZRBwhQNPEWUDTwFlEHCFA071A07hZQNO0WUQcIUDTsFlAoSwFXAH9nKksBV39/ZytLAVf+f2cnBEsBgf0CgWlYZ0ghBTUBMgY1AkIAdzT7VwAgNfQ0/0kJSTXzIg9EsSKyATT/sggjshA09LIHszIKYDIKeAk08wlJNfI08wg08gkiD0SxIrIBNPKyCCOyEDT0sgezQgAAMRkhDBJEsSKyASENshA0CLIYIQyyGbOxIrIBIrIII7IQMgmyCTIKsgezQgAFMRkiEkQpNAEWNAIWNAgWUFBnNAZBAAqABBUffHU0B1CwNABJIwgyBBJEMRYSRCNDMRkiEkRC/98iMTQSRCEMMTUSRCIxNhJEIzE3EkQiNQEiNQIiNQhC/6dJMRhhQAAFSCELr4koYok0AElKIwg1ADgHMgoSRDgQIxJEOAgSRIk=`,
   appClear: `Bg==`,
   companionInfo: {
     api_voteProposal: 1
@@ -7278,10 +7371,10 @@ const _ALGO = {
   mapDataKeys: 1,
   mapDataSize: 17,
   stateKeys: 4,
-  stateSize: 470,
+  stateSize: 486,
   unsupported: [],
   version: 10,
-  warnings: []
+  warnings: [`Step 0 calls a remote object at /app/dao/contracts/dao-core.rsh:109:23:application. This means that Reach's conservative analysis of resource utilization and fees is incorrect, because we cannot take into account the needs of the remote object. Furthermore, the remote object may require special transaction parameters which are not expressed in the Reach API or the Algorand ABI standards.`, `Step 2 calls a remote object at /app/dao/contracts/dao-core.rsh:168:33:application. This means that Reach's conservative analysis of resource utilization and fees is incorrect, because we cannot take into account the needs of the remote object. Furthermore, the remote object may require special transaction parameters which are not expressed in the Reach API or the Algorand ABI standards.`]
   };
 const _ETH = {
   ABI: `[
@@ -7320,36 +7413,41 @@ const _ETH = {
                   }
                 ],
                 "internalType": "struct T5",
-                "name": "v3799",
+                "name": "v3834",
                 "type": "tuple"
               },
               {
                 "internalType": "bool",
-                "name": "v3800",
+                "name": "v3835",
                 "type": "bool"
               },
               {
                 "internalType": "uint256",
-                "name": "v3801",
+                "name": "v3836",
                 "type": "uint256"
               },
               {
                 "internalType": "bool",
-                "name": "v3802",
+                "name": "v3837",
                 "type": "bool"
               },
               {
                 "internalType": "uint256",
-                "name": "v3803",
+                "name": "v3838",
                 "type": "uint256"
+              },
+              {
+                "internalType": "address payable",
+                "name": "v3839",
+                "type": "address"
               }
             ],
-            "internalType": "struct T13",
+            "internalType": "struct T14",
             "name": "msg",
             "type": "tuple"
           }
         ],
-        "internalType": "struct T14",
+        "internalType": "struct T15",
         "name": "_a",
         "type": "tuple"
       }
@@ -7796,37 +7894,42 @@ const _ETH = {
                   }
                 ],
                 "internalType": "struct T5",
-                "name": "v3799",
+                "name": "v3834",
                 "type": "tuple"
               },
               {
                 "internalType": "bool",
-                "name": "v3800",
+                "name": "v3835",
                 "type": "bool"
               },
               {
                 "internalType": "uint256",
-                "name": "v3801",
+                "name": "v3836",
                 "type": "uint256"
               },
               {
                 "internalType": "bool",
-                "name": "v3802",
+                "name": "v3837",
                 "type": "bool"
               },
               {
                 "internalType": "uint256",
-                "name": "v3803",
+                "name": "v3838",
                 "type": "uint256"
+              },
+              {
+                "internalType": "address payable",
+                "name": "v3839",
+                "type": "address"
               }
             ],
-            "internalType": "struct T13",
+            "internalType": "struct T14",
             "name": "msg",
             "type": "tuple"
           }
         ],
         "indexed": false,
-        "internalType": "struct T14",
+        "internalType": "struct T15",
         "name": "_a",
         "type": "tuple"
       }
@@ -7855,7 +7958,7 @@ const _ETH = {
               {
                 "components": [
                   {
-                    "internalType": "enum _enum_T21",
+                    "internalType": "enum _enum_T22",
                     "name": "which",
                     "type": "uint8"
                   },
@@ -7867,8 +7970,8 @@ const _ETH = {
                         "type": "address"
                       }
                     ],
-                    "internalType": "struct T15",
-                    "name": "_addMember0_334",
+                    "internalType": "struct T16",
+                    "name": "_addMember0_352",
                     "type": "tuple"
                   },
                   {
@@ -7879,8 +7982,8 @@ const _ETH = {
                         "type": "uint256"
                       }
                     ],
-                    "internalType": "struct T16",
-                    "name": "_donate0_334",
+                    "internalType": "struct T17",
+                    "name": "_donate0_352",
                     "type": "tuple"
                   },
                   {
@@ -7891,8 +7994,8 @@ const _ETH = {
                         "type": "address"
                       }
                     ],
-                    "internalType": "struct T15",
-                    "name": "_eject0_334",
+                    "internalType": "struct T16",
+                    "name": "_eject0_352",
                     "type": "tuple"
                   },
                   {
@@ -7903,8 +8006,8 @@ const _ETH = {
                         "type": "bool"
                       }
                     ],
-                    "internalType": "struct T17",
-                    "name": "_joinLeave0_334",
+                    "internalType": "struct T18",
+                    "name": "_joinLeave0_352",
                     "type": "tuple"
                   },
                   {
@@ -7986,8 +8089,8 @@ const _ETH = {
                         "type": "tuple"
                       }
                     ],
-                    "internalType": "struct T18",
-                    "name": "_registerProposal0_334",
+                    "internalType": "struct T19",
+                    "name": "_registerProposal0_352",
                     "type": "tuple"
                   },
                   {
@@ -7995,7 +8098,7 @@ const _ETH = {
                       {
                         "components": [
                           {
-                            "internalType": "enum _enum_T19",
+                            "internalType": "enum _enum_T20",
                             "name": "which",
                             "type": "uint8"
                           },
@@ -8010,28 +8113,28 @@ const _ETH = {
                             "type": "bool"
                           }
                         ],
-                        "internalType": "struct T19",
+                        "internalType": "struct T20",
                         "name": "elem0",
                         "type": "tuple"
                       }
                     ],
-                    "internalType": "struct T20",
-                    "name": "_voteProposal0_334",
+                    "internalType": "struct T21",
+                    "name": "_voteProposal0_352",
                     "type": "tuple"
                   }
                 ],
-                "internalType": "struct T21",
-                "name": "v4456",
+                "internalType": "struct T22",
+                "name": "v4508",
                 "type": "tuple"
               }
             ],
-            "internalType": "struct T22",
+            "internalType": "struct T23",
             "name": "msg",
             "type": "tuple"
           }
         ],
         "indexed": false,
-        "internalType": "struct T23",
+        "internalType": "struct T24",
         "name": "_a",
         "type": "tuple"
       }
@@ -8049,7 +8152,7 @@ const _ETH = {
         "type": "bool"
       }
     ],
-    "name": "_reach_oe_v11123",
+    "name": "_reach_oe_v10120",
     "type": "event"
   },
   {
@@ -8062,7 +8165,57 @@ const _ETH = {
         "type": "bool"
       }
     ],
-    "name": "_reach_oe_v4532",
+    "name": "_reach_oe_v11575",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "elem0",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "elem1",
+            "type": "bool"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct T10",
+        "name": "v0",
+        "type": "tuple"
+      }
+    ],
+    "name": "_reach_oe_v12138",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "elem0",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "elem1",
+            "type": "bool"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct T10",
+        "name": "v0",
+        "type": "tuple"
+      }
+    ],
+    "name": "_reach_oe_v3855",
     "type": "event"
   },
   {
@@ -8075,7 +8228,7 @@ const _ETH = {
         "type": "bool"
       }
     ],
-    "name": "_reach_oe_v5780",
+    "name": "_reach_oe_v4584",
     "type": "event"
   },
   {
@@ -8088,7 +8241,7 @@ const _ETH = {
         "type": "bool"
       }
     ],
-    "name": "_reach_oe_v5788",
+    "name": "_reach_oe_v5912",
     "type": "event"
   },
   {
@@ -8101,7 +8254,7 @@ const _ETH = {
         "type": "bool"
       }
     ],
-    "name": "_reach_oe_v7089",
+    "name": "_reach_oe_v5920",
     "type": "event"
   },
   {
@@ -8114,7 +8267,7 @@ const _ETH = {
         "type": "bool"
       }
     ],
-    "name": "_reach_oe_v7121",
+    "name": "_reach_oe_v7301",
     "type": "event"
   },
   {
@@ -8127,7 +8280,7 @@ const _ETH = {
         "type": "bool"
       }
     ],
-    "name": "_reach_oe_v8386",
+    "name": "_reach_oe_v7333",
     "type": "event"
   },
   {
@@ -8140,7 +8293,7 @@ const _ETH = {
         "type": "bool"
       }
     ],
-    "name": "_reach_oe_v9748",
+    "name": "_reach_oe_v8678",
     "type": "event"
   },
   {
@@ -8337,7 +8490,7 @@ const _ETH = {
               {
                 "components": [
                   {
-                    "internalType": "enum _enum_T21",
+                    "internalType": "enum _enum_T22",
                     "name": "which",
                     "type": "uint8"
                   },
@@ -8349,8 +8502,8 @@ const _ETH = {
                         "type": "address"
                       }
                     ],
-                    "internalType": "struct T15",
-                    "name": "_addMember0_334",
+                    "internalType": "struct T16",
+                    "name": "_addMember0_352",
                     "type": "tuple"
                   },
                   {
@@ -8361,8 +8514,8 @@ const _ETH = {
                         "type": "uint256"
                       }
                     ],
-                    "internalType": "struct T16",
-                    "name": "_donate0_334",
+                    "internalType": "struct T17",
+                    "name": "_donate0_352",
                     "type": "tuple"
                   },
                   {
@@ -8373,8 +8526,8 @@ const _ETH = {
                         "type": "address"
                       }
                     ],
-                    "internalType": "struct T15",
-                    "name": "_eject0_334",
+                    "internalType": "struct T16",
+                    "name": "_eject0_352",
                     "type": "tuple"
                   },
                   {
@@ -8385,8 +8538,8 @@ const _ETH = {
                         "type": "bool"
                       }
                     ],
-                    "internalType": "struct T17",
-                    "name": "_joinLeave0_334",
+                    "internalType": "struct T18",
+                    "name": "_joinLeave0_352",
                     "type": "tuple"
                   },
                   {
@@ -8468,8 +8621,8 @@ const _ETH = {
                         "type": "tuple"
                       }
                     ],
-                    "internalType": "struct T18",
-                    "name": "_registerProposal0_334",
+                    "internalType": "struct T19",
+                    "name": "_registerProposal0_352",
                     "type": "tuple"
                   },
                   {
@@ -8477,7 +8630,7 @@ const _ETH = {
                       {
                         "components": [
                           {
-                            "internalType": "enum _enum_T19",
+                            "internalType": "enum _enum_T20",
                             "name": "which",
                             "type": "uint8"
                           },
@@ -8492,27 +8645,27 @@ const _ETH = {
                             "type": "bool"
                           }
                         ],
-                        "internalType": "struct T19",
+                        "internalType": "struct T20",
                         "name": "elem0",
                         "type": "tuple"
                       }
                     ],
-                    "internalType": "struct T20",
-                    "name": "_voteProposal0_334",
+                    "internalType": "struct T21",
+                    "name": "_voteProposal0_352",
                     "type": "tuple"
                   }
                 ],
-                "internalType": "struct T21",
-                "name": "v4456",
+                "internalType": "struct T22",
+                "name": "v4508",
                 "type": "tuple"
               }
             ],
-            "internalType": "struct T22",
+            "internalType": "struct T23",
             "name": "msg",
             "type": "tuple"
           }
         ],
-        "internalType": "struct T23",
+        "internalType": "struct T24",
         "name": "_a",
         "type": "tuple"
       }
@@ -8668,7 +8821,7 @@ const _ETH = {
     "inputs": [
       {
         "internalType": "address payable",
-        "name": "v22701",
+        "name": "v23233",
         "type": "address"
       }
     ],
@@ -8706,7 +8859,7 @@ const _ETH = {
     "inputs": [
       {
         "internalType": "address payable",
-        "name": "v22703",
+        "name": "v23235",
         "type": "address"
       }
     ],
@@ -8816,7 +8969,7 @@ const _ETH = {
       {
         "components": [
           {
-            "internalType": "enum _enum_T19",
+            "internalType": "enum _enum_T20",
             "name": "which",
             "type": "uint8"
           },
@@ -8831,7 +8984,7 @@ const _ETH = {
             "type": "bool"
           }
         ],
-        "internalType": "struct T19",
+        "internalType": "struct T20",
         "name": "_a0",
         "type": "tuple"
       }
@@ -8852,8 +9005,8 @@ const _ETH = {
     "type": "receive"
   }
 ]`,
-  Bytecode: `0x608060405260405162006cfd38038062006cfd833981016040819052620000269162000952565b600080554360035562000038620004e2565b7f54fcc60229fb8b48da371e2faf9f386c112f33d5f23c9d84b579eb2466a70a7e33836040516200006b92919062000a22565b60405180910390a1620000813415600c6200020d565b6200008f6001600d6200020d565b620000ae60018360200151604001511015600e6200020d60201b60201c565b620000bd600a60001962000abe565b808252602083015160400151620000d79111600f6200020d565b6020818101805160001990528051600090830181905233808252600484526040808320805460ff19166001908117825594518051958201959095559385015160029094019390935582850180519190915285840180516080908101518351870152815160609081015184519015159087015282518601518451820152915186015192519215159281019290925280860180516003905280518301849052918601805184905280519095018390529051845190930192909252915101526200019d62000563565b8051339052602080840151518251820152825182516040908101919091526060808501518451820152818501518385018051919091528051600194019390935260808086015184519093019290925282514391015290516000910152620002048162000237565b50505062000d69565b81620002335760405163100960cb60e01b81526004810182905260240160405180910390fd5b5050565b6200026560405180608001604052806000151581526020016000815260200160008152602001600081525090565b81602001516020015115620003ea5760208201516040015160600151600a1180158252620002ca5760208201516040015160600151600a90620002b390620002ae838262000ad5565b900390565b620002bf919062000abe565b6020820152620002d2565b600160208201525b620002dc62000587565b8251516001600160a01b039081168252835160209081015181840152845160409081015181850152855160609081015181860152828701805151608080880191909152815184015160a0880152815181015160c08801528151515190951660e0870152805151840151610100870152805151830151151561012087015280515182015161014087015280515190940151151561016086015283518201518201516101808601529251810151909201516101a0840152835115156101c0840152838101516101e08401526003600055436001559051620003be9183910162000bd7565b60405160208183030381529060405260029080519060200190620003e492919062000666565b50505050565b60006040820152620003ff600160106200020d565b60208201518051516080909101516040516001600160a01b039092169181156108fc0291906000818181858888f1935050505015801562000444573d6000803e3d6000fd5b506040810151479081106200046f5762000469818360400151620002ae60201b60201c565b62000472565b60005b60608301525062000486600160116200020d565b6020820151515160608201516040516001600160a01b039092169181156108fc0291906000818181858888f19350505050158015620004c9573d6000803e3d6000fd5b50600080805560018190556200023390600290620006f5565b6040518060a001604052806000815260200162000512604051806040016040528060008152602001600081525090565b81526040805160a0810182526000808252602082810182905292820181905260608201819052608082015291019081526020016200054f62000737565b81526020016200055e620007ba565b905290565b604051806040016040528062000578620007ea565b81526020016200055e62000832565b604080516102008101825260008082528251608081018452818152602081810183905293810182905260608101919091529091820190815260200160008152602001620005d362000737565b81526040805160a08101825260008082526020828101829052928201819052606082018190526080820152910190815260200162000610620007ba565b815260006020820181905260408201819052606082018190526080820181905260a0820181905260c082015260e0016200064962000737565b815260200160008152602001600015158152602001600081525090565b828054620006749062000d2c565b90600052602060002090601f016020900481019282620006985760008555620006e3565b82601f10620006b357805160ff1916838001178555620006e3565b82800160010185558215620006e3579182015b82811115620006e3578251825591602001919060010190620006c6565b50620006f19291506200088c565b5090565b508054620007039062000d2c565b6000825580601f1062000714575050565b601f0160209004906000526020600020908101906200073491906200088c565b50565b6040805160c08101909152806000815260200162000771604051806040016040528060006001600160a01b03168152602001600081525090565b81526040805160a0810182526000808252602082810182905292820181905260608201819052608082015291019081526000602082018190526040820181905260609091015290565b60405180608001604052806000815260200160008152602001620007dd62000737565b8152602001600081525090565b60408051608080820183526000808352835191820184528082526020828101829052938201819052606082015290918201908152602001600081526020016200055e62000737565b6040805161014081018252600060a0820181815260c0830182905260e08301829052610100830182905261012083018290528252602082015290810162000878620007ba565b815260200160008152602001600081525090565b5b80821115620006f157600081556001016200088d565b604080519081016001600160401b0381118282101715620008d457634e487b7160e01b600052604160045260246000fd5b60405290565b60405160a081016001600160401b0381118282101715620008d457634e487b7160e01b600052604160045260246000fd5b604051608081016001600160401b0381118282101715620008d457634e487b7160e01b600052604160045260246000fd5b805180151581146200094d57600080fd5b919050565b60008183036101208112156200096757600080fd5b62000971620008a3565b83518152601f1982019150610100808312156200098d57600080fd5b62000997620008da565b6080841215620009a657600080fd5b620009b06200090b565b935060208601518452604086015160208501526060860151604085015260808601516060850152838152620009e860a087016200093c565b602082015260c0860151604082015262000a0560e087016200093c565b606082015294015160808501526020810193909352509092915050565b60006101408201905060018060a01b038416825282516020830152602083015162000a72604084018251805182526020810151602083015260408101516040830152606081015160608301525050565b6020810151151560c0840152604081015160e0840152606081015115156101008401526080810151610120840152509392505050565b634e487b7160e01b600052601260045260246000fd5b60008262000ad05762000ad062000aa8565b500490565b60008262000ae75762000ae762000aa8565b500690565b80516005811062000b0d57634e487b7160e01b600052602160045260246000fd5b825260208181015180516001600160a01b031682850152015160408084019190915281015162000b75606084018280516001600160a01b0316825260208082015115159083015260408082015190830152606080820151908301526080908101511515910152565b5060608101516001600160a01b03166101008301526080810151151561012083015260a00151151561014090910152565b8051825260208101516020830152604081015162000bc8604084018262000aec565b50606001516101a09190910152565b81516001600160a01b031681526107008101602083015162000c1d6020840182805182526020810151602083015260408101516040830152606081015160608301525050565b50604083015160a0830152606083015162000c3c60c084018262000aec565b5060808381015180516001600160a01b03166102208501526020810151610240850152604081015115156102608501526060810151610280850152015115156102a083015260a083015162000c966102c084018262000ba6565b5060c083015161048083015260e08301516001600160a01b03166104a08301526101008301516104c083015261012083015115156104e0830152610140830151610500830152610160830151151561052083015261018083015162000d0061054084018262000aec565b506101a08301516106a08301526101c083015115156106c08301526101e0909201516106e09091015290565b600181811c9082168062000d4157607f821691505b6020821081141562000d6357634e487b7160e01b600052602260045260246000fd5b50919050565b615f848062000d796000396000f3fe6080604052600436106100eb5760003560e01c8063901d13e211610084578063c4d7841a11610056578063c4d7841a146102c3578063ca6d56dc146102e5578063dff5c8aa146102f8578063f14faf6f1461030b57005b8063901d13e214610258578063994ba4d21461026b578063a230c52414610280578063ab53f2c6146102a057005b8063473f1773116100bd578063473f1773146101fd5780635cc4f6491461021057806383230757146102305780638a4557711461024557005b80631a777ba8146100f45780631e93b0f11461011c578063370158ea1461013b5780633bc5b7bf146101d057005b366100f257005b005b61010761010236600461539c565b61031e565b60405190151581526020015b60405180910390f35b34801561012857600080fd5b506003545b604051908152602001610113565b34801561014757600080fd5b50610150610359565b60408051825180518252602080820151818401528184015183850152606091820151828401528401516001600160a01b03908116608080850191909152938501511660a0808401919091529084015160c08084019190915292840151151560e0830152830151610100820152910151151561012082015261014001610113565b3480156101dc57600080fd5b506101f06101eb3660046153d4565b610493565b6040516101139190615417565b61010761020b366004615454565b6104aa565b34801561021c57600080fd5b5061012d61022b3660046153d4565b6104e7565b34801561023c57600080fd5b5060015461012d565b6100f261025336600461547c565b610615565b6101076102663660046153d4565b610639565b34801561027757600080fd5b5061012d61067d565b34801561028c57600080fd5b5061010761029b3660046153d4565b610748565b3480156102ac57600080fd5b506102b561086f565b604051610113929190615495565b3480156102cf57600080fd5b506102d861090c565b604051610113919061559d565b6101076102f33660046153d4565b6109d6565b6101076103063660046156d9565b610a0e565b6101076103193660046156f6565b610a49565b60006103286145b2565b6020810180515160059052515160c001518390526103446145d1565b61034e8282610a84565b60a001519392505050565b610361614606565b600360005414156104845760006002805461037b9061570f565b80601f01602080910402602001604051908101604052809291908181526020018280546103a79061570f565b80156103f45780601f106103c9576101008083540402835291602001916103f4565b820191906000526020600020905b8154815290600101906020018083116103d757829003601f168201915b505050505080602001905181019061040c9190615954565b9050610416614661565b602080830151825152825182516001600160a01b0391821692019190915260e0830151825191166040909101526101008201518151606001526101608201518151901515608090910152610140820151815160a0015261012090910151815190151560c09091015251919050565b61049060006009614241565b90565b61049b614674565b6104a482614266565b92915050565b60006104b46145b2565b602081018051516003905251516080015183151590526104d26145d1565b6104dc8282610a84565b606001519392505050565b600060036000541415610604576000600280546105039061570f565b80601f016020809104026020016040519081016040528092919081815260200182805461052f9061570f565b801561057c5780601f106105515761010080835404028352916020019161057c565b820191906000526020600020905b81548152906001019060200180831161055f57829003601f168201915b50505050508060200190518101906105949190615954565b90506105b6604080516060810182526000602082018181529282015290815290565b805160009081905281516020015260016105cf85614266565b5160018111156105e1576105e16153f1565b146105ed5780516105fb565b6105f684614266565b604001515b51949350505050565b6106106000600b614241565b919050565b61061d6145d1565b61063561062f36849003840184615b37565b82610a84565b5050565b60006106436145b2565b60208101805151600290525151606001516001600160a01b03841690526106686145d1565b6106728282610a84565b604001519392505050565b60006003600054141561073c576000600280546106999061570f565b80601f01602080910402602001604051908101604052809291908181526020018280546106c59061570f565b80156107125780601f106106e757610100808354040283529160200191610712565b820191906000526020600020905b8154815290600101906020018083116106f557829003601f168201915b505050505080602001905181019061072a9190615954565b60a00151602081015190510192915050565b61049060006008614241565b600060036000541415610863576000600280546107649061570f565b80601f01602080910402602001604051908101604052809291908181526020018280546107909061570f565b80156107dd5780601f106107b2576101008083540402835291602001916107dd565b820191906000526020600020905b8154815290600101906020018083116107c057829003601f168201915b50505050508060200190518101906107f59190615954565b604080516020810190915260008152909150600061081285614266565b516001811115610824576108246153f1565b1415610833576000815261085b565b600161083e85614266565b516001811115610850576108506153f1565b141561085b57600181525b519392505050565b6106106000600a614241565b6000606060005460028080546108849061570f565b80601f01602080910402602001604051908101604052809291908181526020018280546108b09061570f565b80156108fd5780601f106108d2576101008083540402835291602001916108fd565b820191906000526020600020905b8154815290600101906020018083116108e057829003601f168201915b50505050509050915091509091565b6109146146ad565b600360005414156109ca5760006002805461092e9061570f565b80601f016020809104026020016040519081016040528092919081815260200182805461095a9061570f565b80156109a75780601f1061097c576101008083540402835291602001916109a7565b820191906000526020600020905b81548152906001019060200180831161098a57829003601f168201915b50505050508060200190518101906109bf9190615954565b610180015192915050565b61049060006007614241565b60006109e06145b2565b602081810180515160009052515101516001600160a01b0384169052610a046145d1565b61085b8282610a84565b6000610a186145b2565b6020810180515160049052515160a00151839052610a346145d1565b610a3e8282610a84565b608001519392505050565b6000610a536145b2565b6020810180515160019052515160400151839052610a6f6145d1565b610a798282610a84565b602001519392505050565b610a94600360005414603e614241565b8151610aaf901580610aa857508251600154145b603f614241565b600080805560028054610ac19061570f565b80601f0160208091040260200160405190810160405280929190818152602001828054610aed9061570f565b8015610b3a5780601f10610b0f57610100808354040283529160200191610b3a565b820191906000526020600020905b815481529060010190602001808311610b1d57829003601f168201915b5050505050806020019051810190610b529190615954565b9050610b5c614702565b7f35b2ac41a02c0ce05b6e2f0c2dc3bab826a4b4a195d0603a918923288b9f190b3385604051610b8d929190615c47565b60405180910390a16000602085015151516005811115610baf57610baf6153f1565b1415610e6a5760208085015151015180825251610bcb90614266565b60208281019182526040830180516000908190529051909101526101e0830151905151610c29919060019081811115610c0657610c066153f1565b14610c15578260400151610c1f565b8260200151604001515b5110156012614241565b60006020820151516001811115610c4257610c426153f1565b1415610c545760016060820152610c7b565b60016020820151516001811115610c6d57610c6d6153f1565b1415610c7b57600060608201525b610c8a81606001516013614241565b60c0820151610100830151016080820152610ca760016014614241565b610cb982610100015134146015614241565b60006020820151516001811115610cd257610cd26153f1565b1415610ce457600160a0820152610d0b565b60016020820151516001811115610cfd57610cfd6153f1565b1415610d0b57600060a08201525b610d1a8160a001516016614241565b6101e082015160c082018051919091528051600060209182018190528351516001600160a01b039081168252600483526040808320805460ff1916600190811790915594518651518316845292819020835195810195909555918301516002909401939093558351519051921682527f0abf3b3f643594d958297062a019458e27d7766629590ac621aa1000fa1298ab910160405180910390a1604051600081527f70b5db5ce898cd03240ca1f67f073b95f13d578e04267536eedf62724b9ca7ee9060200160405180910390a160008352610df4614e15565b825181516001600160a01b0390911690526020808401518251820152604080850151835182015260608086015184518201526080808701518486018051919091528051600195019490945260a08701518451909301929092528251439101528381015191510152610e648161433a565b5061423b565b6001602085015151516005811115610e8457610e846153f1565b141561115c576020840151516040015160e082018190525119610100820181905260c0830151610eb691116017614241565b60c082015160e08201515101610120820152610ed460016018614241565b60e081015151610ee79034146019614241565b610efe81610100015182610120015110601a614241565b610f0733614266565b6101408201819052516000906001811115610f2457610f246153f1565b1415610f37576000610160820152610f60565b6001610140820151516001811115610f5157610f516153f1565b1415610f605760016101608201525b8061016001511561112b57610180810180516000908190529051602001526001610140820151516001811115610f9857610f986153f1565b14610fa857806101800151610fb3565b806101400151604001515b6101a08201819052516001191115610ff8576101a0810151516001016101e082018051919091526101a0820151602090810151825190910152516101c0820152611043565b6101e08201516101a082015151101561101657816101e0015161101e565b6101a0810151515b61020082018051919091526101a0820151602090810151825190910152516101c08201525b336000908152600460209081526040808320805460ff1916600190811782556101c0860151805191830191909155830151600290910155519182527f4878a2fd93ae304c0e5906a315bd066c5755e721e76b9679bd219d833479754e91015b60405180910390a1600060208401526110b9614e15565b825181516001600160a01b0390911690526020808401518251820152604080850151835182015260608086015184518201526080808701518486018051919091528051600195019490945260a087015184519093019290925282514391015261012084015191510152610e648161433a565b604051600081527f6d5168086dc56df808ffe33dd2dabbecfdf4461ca6554bdaf6b1d17027f0383a906020016110a2565b6002602085015151516005811115611176576111766153f1565b14156118f757602084015151606001516102208201526111986001601b614241565b6111a43415601c614241565b610220810151516111b490614266565b61024082018190525160009060018111156111d1576111d16153f1565b14156111e457600061026082015261120d565b60016102408201515160018111156111fe576111fe6153f1565b141561120d5760016102608201525b61022081015151611238906001600160a01b0316331461122e576001611231565b60005b601d614241565b6000610240820151516001811115611252576112526153f1565b141561126557600061028082015261128e565b600161024082015151600181111561127f5761127f6153f1565b141561128e5760016102808201525b61129e816102800151601e614241565b6112e98161026001516112b25760006112e2565b8260e001516001600160a01b0316826102200151600001516001600160a01b0316146112df5760016112e2565b60005b601f614241565b8160e001516001600160a01b0316336001600160a01b0316141561142857604051600081527f643898274eb7af13e7298b6dddb6e7dc13ba53c9b0c470983edeb830eac8e5159060200160405180910390a16000604084810182905261022083018051516001600160a01b03908116845260046020908152838520805461ffff1916815560018101869055600201949094559051519151911681527f81df7148ed3a9aa51bafe04f44371e89b96f47294267fbf6ab28b7aa8c87b386910160405180910390a16113b7614e15565b825181516001600160a01b0390911690526020808401518251820152604080850151835182015260608086015184518201526080808701518486018051919091528051600195019490945260a087015184519093019290925282514391015260c085015191510152610e648161433a565b61143d600119836101a0015111156020614241565b6000610180830151516004811115611457576114576153f1565b1415611524576101808201516020908101516102c0830181905260c0840151910151106102e082015260006102c08201515161149290614266565b5160018111156114a4576114a46153f1565b14156114b75760006103008201526114ea565b60016102c0820151516114c990614266565b5160018111156114db576114db6153f1565b14156114ea5760016103008201525b81610120015161151057806103000151611505576000611517565b806102e00151611517565b806102e001515b15156102a08201526117db565b600161018083015151600481111561153e5761153e6153f1565b141561169f576101808201516040015161032082018190525161156090614266565b610340820152610360810180516000908190529051602001819052610340820151516001811115611593576115936153f1565b14156115a65760006103808201526115cf565b60016103408201515160018111156115c0576115c06153f1565b14156115cf5760016103808201525b61032081015160600151156115f957604082015161032082015160600151106103a0820152611602565b60006103a08201525b806103800151611613576000611651565b6101e08201516001610340830151516001811115611633576116336153f1565b146116435781610360015161164e565b816103400151604001515b51115b61165c576000611663565b806103a001515b61166e576000611517565b60008161032001516040015111611686576000611517565b61032081015160400151600019116102a08201526117db565b60026101808301515160048111156116b9576116b96153f1565b141561178557610180820151606001516001600160a01b03166103c082015260006116e8826103c00151614266565b5160018111156116fa576116fa6153f1565b141561170d5760006103e082015261173e565b600161171d826103c00151614266565b51600181111561172f5761172f6153f1565b141561173e5760016103e08201525b806103e0015161174f576000611517565b8160e001516001600160a01b0316816103c001516001600160a01b031614611778576001611517565b60006102a08201526117db565b600361018083015151600481111561179f5761179f6153f1565b14156117b25760006102a08201526117db565b60046101808301515160048111156117cc576117cc6153f1565b14156117db5760016102a08201525b6117eb816102a001516021614241565b604051600081527fc4398620e4414fe5d5b0f554d463504a8726197ac7ac1628a94f305591410b869060200160405180910390a1600060408401526104008101516002908190525061022081015151610400820180516001600160a01b039092166060928301526104208301805160009081905281516020015290518151604001526101a084015190516001909101910152611885614e15565b825181516001600160a01b0390911690526020808401518251820152604080850151835182015260608086015184518201526080808701518486018051919091528051600195019490945261042086015184519093019290925282514391015260c085015191510152610e648161433a565b6003602085015151516005811115611911576119116153f1565b1415611d2c5760208401515160800151610440820181905251156119a057600061193a33614266565b51600181111561194c5761194c6153f1565b141561195f57600061046082015261198b565b600161196a33614266565b51600181111561197c5761197c6153f1565b141561198b5760016104608201525b61199b8161046001516022614241565b611a1c565b6119b08261016001516023614241565b60006119bb33614266565b5160018111156119cd576119cd6153f1565b14156119e0576001610480820152611a0c565b60016119eb33614266565b5160018111156119fd576119fd6153f1565b1415611a0c5760006104808201525b611a1c8161048001516024614241565b61044081015151611a3257816101000151611a35565b60005b6104a082015260c0820151611a539019826104a00151106025614241565b60c08201516104a0820151016104c0820152611a7160016026614241565b611a83816104a0015134146027614241565b6104408101515115611b00576000611a9a33614266565b516001811115611aac57611aac6153f1565b1415611abf5760006104e0820152611aeb565b6001611aca33614266565b516001811115611adc57611adc6153f1565b1415611aeb5760016104e08201525b611afb816104e001516028614241565b611b7c565b611b108261016001516029614241565b6000611b1b33614266565b516001811115611b2d57611b2d6153f1565b1415611b40576001610500820152611b6c565b6001611b4b33614266565b516001811115611b5d57611b5d6153f1565b1415611b6c5760006105008201525b611b7c816105000151602a614241565b6104c0810151611b959019826104a0015110602b614241565b604051600081527fe42cd63e0877ca62345537ae5ffd379e6d22754fade2a4ce7b6072bf0c4686539060200160405180910390a1600060608401526104408101515115611cb057336000818152600460209081526040808320805461ffff19168155600181018490556002019290925590519182527f81df7148ed3a9aa51bafe04f44371e89b96f47294267fbf6ab28b7aa8c87b38691015b60405180910390a1611c3e614e15565b825181516001600160a01b0390911690526020808401518251820152604080850151835182015260608086015184518201526080808701518486018051919091528051600195019490945260a08701518451909301929092528251439101526104c084015191510152610e648161433a565b6101e082015161052082018051919091528051600060209182018190523380825260048352604091829020805460ff191660019081178255945180519582019590955593830151600290940193909355519182527f0abf3b3f643594d958297062a019458e27d7766629590ac621aa1000fa1298ab9101611c2e565b6004602085015151516005811115611d4657611d466153f1565b14156126eb5760208401515160a00151610540820152611d686001602c614241565b611d743415602d614241565b816101c0015115611db0576101a0820151600a90611d9b90611d968382615d0c565b900390565b611da59190615d20565b610560820152611db9565b60016105608201525b61058081018051600090819052905160200152610560810151611e1b906001611de133614266565b516001811115611df357611df36153f1565b14611e0357826105800151611e11565b611e0c33614266565b604001515b511015602e614241565b6101e0820151611e6a906001611e3033614266565b516001811115611e4257611e426153f1565b14611e5257826105800151611e60565b611e5b33614266565b604001515b511015602f614241565b6000610180830151516004811115611e8457611e846153f1565b1415611f51576101808201516020908101516105c0830181905260c0840151910151106105e082015260006105c082015151611ebf90614266565b516001811115611ed157611ed16153f1565b1415611ee4576000610600820152611f17565b60016105c082015151611ef690614266565b516001811115611f0857611f086153f1565b1415611f175760016106008201525b816101200151611f3d57806106000151611f32576000611f44565b806105e00151611f44565b806105e001515b15156105a08201526121f2565b6001610180830151516004811115611f6b57611f6b6153f1565b14156120b65761018082015160400151610620820181905251611f8d90614266565b6106408201819052516000906001811115611faa57611faa6153f1565b1415611fbd576000610660820152611fe6565b6001610640820151516001811115611fd757611fd76153f1565b1415611fe65760016106608201525b61062081015160600151156120105760408201516106208201516060015110610680820152612019565b60006106808201525b80610660015161202a576000612068565b6101e0820151600161064083015151600181111561204a5761204a6153f1565b1461205a57816105800151612065565b816106400151604001515b51115b61207357600061207a565b8061068001515b612085576000611f44565b6000816106200151604001511161209d576000611f44565b61062081015160400151600019116105a08201526121f2565b60026101808301515160048111156120d0576120d06153f1565b141561219c57610180820151606001516001600160a01b03166106a082015260006120ff826106a00151614266565b516001811115612111576121116153f1565b14156121245760006106c0820152612155565b6001612134826106a00151614266565b516001811115612146576121466153f1565b14156121555760016106c08201525b806106c00151612166576000611f44565b8160e001516001600160a01b0316816106a001516001600160a01b03161461218f576001611f44565b60006105a08201526121f2565b60036101808301515160048111156121b6576121b66153f1565b14156121c95760006105a08201526121f2565b60046101808301515160048111156121e3576121e36153f1565b14156121f25760016105a08201525b612210816105a00151612206576001612209565b60005b6030614241565b612224600119836101a00151106031614241565b60006105408201515151600481111561223f5761223f6153f1565b141561230d5761054081015151602090810151610700830181905260c08401519101511061072082015260006107008201515161227b90614266565b51600181111561228d5761228d6153f1565b14156122a05760006107408201526122d3565b6001610700820151516122b290614266565b5160018111156122c4576122c46153f1565b14156122d35760016107408201525b8161012001516122f9578061074001516122ee576000612300565b806107200151612300565b8061072001515b15156106e08201526125b4565b600161054082015151516004811115612328576123286153f1565b141561247457610540810151516040015161076082018190525161234b90614266565b6107808201819052516000906001811115612368576123686153f1565b141561237b5760006107a08201526123a4565b6001610780820151516001811115612395576123956153f1565b14156123a45760016107a08201525b61076081015160600151156123ce57604082015161076082015160600151106107c08201526123d7565b60006107c08201525b806107a001516123e8576000612426565b6101e08201516001610780830151516001811115612408576124086153f1565b1461241857816105800151612423565b816107800151604001515b51115b612431576000612438565b806107c001515b612443576000612300565b6000816107600151604001511161245b576000612300565b61076081015160400151600019116106e08201526125b4565b60026105408201515151600481111561248f5761248f6153f1565b141561255c5761054081015151606001516001600160a01b03166107e082015260006124bf826107e00151614266565b5160018111156124d1576124d16153f1565b14156124e4576000610800820152612515565b60016124f4826107e00151614266565b516001811115612506576125066153f1565b14156125155760016108008201525b806108000151612526576000612300565b8160e001516001600160a01b0316816107e001516001600160a01b03161461254f576001612300565b60006106e08201526125b4565b600361054082015151516004811115612577576125776153f1565b141561258a5760006106e08201526125b4565b6004610540820151515160048111156125a5576125a56153f1565b14156125b45760016106e08201525b6125c4816106e001516032614241565b604051600081527f86fc678c4ea0a4d60b8d448e77e6d3805d3b953e223c5b6a285f2b7576b5f3ac9060200160405180910390a160006080840152610540810151516040517f18f2698e4794214ca6e5e526501521f9e9e882fe9c8490e38a1a71c7bad7a10c91612636913390615d34565b60405180910390a161082081018051600090819052815160200152610540820151519051604001526101a082015160010161082082015160600152612679614e15565b825181516001600160a01b0390911690526020808401518251820152604080850151835182015260608086015184518201526080808701518486018051919091528051600195019490945261082086015184519093019290925282514391015260c085015191510152610e648161433a565b6005602085015151516005811115612705576127056153f1565b141561423b5760208401515160c0015161084082015261272760016033614241565b61273334156034614241565b816101c001511561276a576101a0820151600a9061275590611d968382615d0c565b61275f9190615d20565b610860820152612773565b60016108608201525b61088081018051600090819052905160200152600161279133614266565b5160018111156127a3576127a36153f1565b146127b3578061088001516127c1565b6127bc33614266565b604001515b6108a0820181905261086082015190516127de9111156035614241565b60006101808301515160048111156127f8576127f86153f1565b14156128c5576101808201516020908101516108e0830181905260c08401519101511061090082015260006108e08201515161283390614266565b516001811115612845576128456153f1565b141561285857600061092082015261288b565b60016108e08201515161286a90614266565b51600181111561287c5761287c6153f1565b141561288b5760016109208201525b8161012001516128b1578061092001516128a65760006128b8565b8061090001516128b8565b8061090001515b15156108c0820152612b66565b60016101808301515160048111156128df576128df6153f1565b1415612a2a576101808201516040015161094082018190525161290190614266565b610960820181905251600090600181111561291e5761291e6153f1565b141561293157600061098082015261295a565b600161096082015151600181111561294b5761294b6153f1565b141561295a5760016109808201525b610940810151606001511561298457604082015161094082015160600151106109a082015261298d565b60006109a08201525b80610980015161299e5760006129dc565b6101e082015160016109608301515160018111156129be576129be6153f1565b146129ce578161088001516129d9565b816109600151604001515b51115b6129e75760006129ee565b806109a001515b6129f95760006128b8565b60008161094001516040015111612a115760006128b8565b61094081015160400151600019116108c0820152612b66565b6002610180830151516004811115612a4457612a446153f1565b1415612b1057610180820151606001516001600160a01b03166109c08201526000612a73826109c00151614266565b516001811115612a8557612a856153f1565b1415612a985760006109e0820152612ac9565b6001612aa8826109c00151614266565b516001811115612aba57612aba6153f1565b1415612ac95760016109e08201525b806109e00151612ada5760006128b8565b8160e001516001600160a01b0316816109c001516001600160a01b031614612b035760016128b8565b60006108c0820152612b66565b6003610180830151516004811115612b2a57612b2a6153f1565b1415612b3d5760006108c0820152612b66565b6004610180830151516004811115612b5757612b576153f1565b1415612b665760016108c08201525b612b76816108c001516036614241565b60a08201516020015115612ba05760a082015151612ba090198360a0015160200151106037614241565b60a08201515115612bc45760a082015160208101519051612bc49119116038614241565b61014082015160a083015160208101519051612be4929101106039614241565b612bff826101a00151826108a001516020015110603a614241565b600061084082015151516001811115612c1a57612c1a6153f1565b1415612c505760a08201805160200151610a20830151525151600101610a20820180516020019190915251610a00820152612c9c565b600161084082015151516001811115612c6b57612c6b6153f1565b1415612c9c5760a082015160200151600101610a40820180519190915260a08301515181516020015251610a008201525b610a0081015160208101519051612cb6911911603b614241565b610a0081015151612cd4901982610a0001516020015110603c614241565b604051600081527f4334279692c0c7730628f7d869fc37e6243136d9c873f7f2faf662e85df1c3a79060200160405180910390a1600060a08401526108a0810151516000191115612d4c576108a081015151600101610a8082018051919091526101a083015181516020015251610a60820152612d72565b6108a081015151610aa082018051919091526101a083015181516020015251610a608201525b336000908152600460209081526040909120805460ff191660019081178255610a60840151805191830191909155909101516002909101556101c082015115612de1576101a0820151600a90612dcc90611d968382615d0c565b612dd69190615d20565b610ac0820152612dea565b6001610ac08201525b6000610180830151516004811115612e0457612e046153f1565b1415612ed157610180820151602090810151610b00830181905260c084015191015110610b208201526000610b0082015151612e3f90614266565b516001811115612e5157612e516153f1565b1415612e64576000610b40820152612e97565b6001610b0082015151612e7690614266565b516001811115612e8857612e886153f1565b1415612e97576001610b408201525b816101200151612ebd5780610b400151612eb2576000612ec4565b80610b200151612ec4565b80610b2001515b1515610ae0820152613172565b6001610180830151516004811115612eeb57612eeb6153f1565b14156130365761018082015160400151610b60820181905251612f0d90614266565b610b808201819052516000906001811115612f2a57612f2a6153f1565b1415612f3d576000610ba0820152612f66565b6001610b80820151516001811115612f5757612f576153f1565b1415612f66576001610ba08201525b610b608101516060015115612f90576040820151610b608201516060015110610bc0820152612f99565b6000610bc08201525b80610ba00151612faa576000612fe8565b610ac08101516001610b80830151516001811115612fca57612fca6153f1565b14612fda57816108800151612fe5565b81610b800151604001515b51115b612ff3576000612ffa565b80610bc001515b613005576000612ec4565b600081610b600151604001511161301d576000612ec4565b610b608101516040015160001911610ae0820152613172565b6002610180830151516004811115613050576130506153f1565b141561311c57610180820151606001516001600160a01b0316610be0820152600061307f82610be00151614266565b516001811115613091576130916153f1565b14156130a4576000610c008201526130d5565b60016130b482610be00151614266565b5160018111156130c6576130c66153f1565b14156130d5576001610c008201525b80610c0001516130e6576000612ec4565b8160e001516001600160a01b031681610be001516001600160a01b03161461310f576001612ec4565b6000610ae0820152613172565b6003610180830151516004811115613136576131366153f1565b1415613149576000610ae0820152613172565b6004610180830151516004811115613163576131636153f1565b1415613172576001610ae08201525b610140820151610a008201518051602090910151011061418857610a008101516020810151905111610c20820152610ae08101516131b15760006131b8565b80610c2001515b156137f55760006101808301515160048111156131d7576131d76153f1565b1415613328576101808201805160200151610c408301526101a08301519051604051600080516020615f0f83398151915292613214929091615d5c565b60405180910390a160c0820151610c40820151602001519003610c6082015261323f6001603d614241565b610c4081015180516020909101516040516001600160a01b039092169181156108fc0291906000818181858888f19350505050158015613283573d6000803e3d6000fd5b50610c80810180516000908190528151602001526060808401518251604001526101a0840151915101526132b5614e15565b825181516001600160a01b03909116905260208084015182518201526040808501518351820152606080860151845182015260808087015184860180519190915280516001950194909452610c80860151845190930192909252825143910152610c6084015191510152610e648161433a565b6001610180830151516004811115613342576133426153f1565b14156134905761018082018051604090810151610ca08401526101a084015191519051600080516020615f0f83398151915292613380929091615d5c565b60405180910390a1610cc081018051600090819052815160209081019190915260608085015183516040908101919091526101a08601519351820193909352610ca08401805151610ce0860180516001600160a01b03909216909152815185015181518501528151608090810151825190151596019590955281518301518151909301929092525190910151905190151591015261341c614e15565b825181516001600160a01b039091169052602080840151825182015260408085015183518201526060808601518451820152610ce085015183850180519190915280516001940193909352610cc085015183519092019190915281514391015260c0840151905160800152610e648161433a565b60026101808301515160048111156134aa576134aa6153f1565b14156136085761018082018051606001516001600160a01b0316610d008301526101a08301519051604051600080516020615f0f833981519152926134f0929091615d5c565b60405180910390a1610d00810180516001600160a01b039081166000908152600460209081526040808320805461ffff19168155600181018490556002019290925592519051911681527f81df7148ed3a9aa51bafe04f44371e89b96f47294267fbf6ab28b7aa8c87b386910160405180910390a1610d20810180516000908190528151602001526060808401518251604001526101a084015191510152613596614e15565b825181516001600160a01b03909116905260208084015182518201526040808501518351820152606080860151845182015260808087015184860180519190915280516001950194909452610d2086015184519093019290925282514391015260c085015191510152610e648161433a565b6003610180830151516004811115613622576136226153f1565b14156136fc57600080516020615f0f833981519152826101a00151836101800151604051613651929190615d5c565b60405180910390a1610d40810180516000908190528151602001526060808401518251604001526101a08401519151015261368a614e15565b825181516001600160a01b03909116905260208084015182518201526040808501518351820152606080860151845182015260808087015184860180519190915280516001950194909452610d4086015184519093019290925282514391015260c085015191510152610e648161433a565b6004610180830151516004811115613716576137166153f1565b14156137f057600080516020615f0f833981519152826101a00151836101800151604051613745929190615d5c565b60405180910390a1610d60810180516000908190528151602001526060808401518251604001526101a08401519151015261377e614e15565b825181516001600160a01b03909116905260208084015182518201526040808501518351820152606080860151845182015260808087015184860180519190915280516000950194909452610d6086015184519093019290925282514391015260c085015191510152610e648161433a565b61423b565b80610c20015115613cc457600061018083015151600481111561381a5761381a6153f1565b14156138f457600080516020615f2f833981519152826101a00151836101800151604051613849929190615d5c565b60405180910390a1610d80810180516000908190528151602001526060808401518251604001526101a084015191510152613882614e15565b825181516001600160a01b03909116905260208084015182518201526040808501518351820152606080860151845182015260808087015184860180519190915280516001950194909452610d8086015184519093019290925282514391015260c085015191510152610e648161433a565b600161018083015151600481111561390e5761390e6153f1565b14156139e857600080516020615f2f833981519152826101a0015183610180015160405161393d929190615d5c565b60405180910390a1610da0810180516000908190528151602001526060808401518251604001526101a084015191510152613976614e15565b825181516001600160a01b03909116905260208084015182518201526040808501518351820152606080860151845182015260808087015184860180519190915280516001950194909452610da086015184519093019290925282514391015260c085015191510152610e648161433a565b6002610180830151516004811115613a0257613a026153f1565b1415613adc57600080516020615f2f833981519152826101a00151836101800151604051613a31929190615d5c565b60405180910390a1610dc0810180516000908190528151602001526060808401518251604001526101a084015191510152613a6a614e15565b825181516001600160a01b03909116905260208084015182518201526040808501518351820152606080860151845182015260808087015184860180519190915280516001950194909452610dc086015184519093019290925282514391015260c085015191510152610e648161433a565b6003610180830151516004811115613af657613af66153f1565b1415613bd057600080516020615f2f833981519152826101a00151836101800151604051613b25929190615d5c565b60405180910390a1610de0810180516000908190528151602001526060808401518251604001526101a084015191510152613b5e614e15565b825181516001600160a01b03909116905260208084015182518201526040808501518351820152606080860151845182015260808087015184860180519190915280516001950194909452610de086015184519093019290925282514391015260c085015191510152610e648161433a565b6004610180830151516004811115613bea57613bea6153f1565b14156137f057600080516020615f2f833981519152826101a00151836101800151604051613c19929190615d5c565b60405180910390a1610e00810180516000908190528151602001526060808401518251604001526101a084015191510152613c52614e15565b825181516001600160a01b03909116905260208084015182518201526040808501518351820152606080860151845182015260808087015184860180519190915280516001950194909452610e0086015184519093019290925282514391015260c085015191510152610e648161433a565b6000610180830151516004811115613cde57613cde6153f1565b1415613db857600080516020615eef833981519152826101a00151836101800151604051613d0d929190615d5c565b60405180910390a1610e20810180516000908190528151602001526060808401518251604001526101a084015191510152613d46614e15565b825181516001600160a01b03909116905260208084015182518201526040808501518351820152606080860151845182015260808087015184860180519190915280516001950194909452610e2086015184519093019290925282514391015260c085015191510152610e648161433a565b6001610180830151516004811115613dd257613dd26153f1565b1415613eac57600080516020615eef833981519152826101a00151836101800151604051613e01929190615d5c565b60405180910390a1610e40810180516000908190528151602001526060808401518251604001526101a084015191510152613e3a614e15565b825181516001600160a01b03909116905260208084015182518201526040808501518351820152606080860151845182015260808087015184860180519190915280516001950194909452610e4086015184519093019290925282514391015260c085015191510152610e648161433a565b6002610180830151516004811115613ec657613ec66153f1565b1415613fa057600080516020615eef833981519152826101a00151836101800151604051613ef5929190615d5c565b60405180910390a1610e60810180516000908190528151602001526060808401518251604001526101a084015191510152613f2e614e15565b825181516001600160a01b03909116905260208084015182518201526040808501518351820152606080860151845182015260808087015184860180519190915280516001950194909452610e6086015184519093019290925282514391015260c085015191510152610e648161433a565b6003610180830151516004811115613fba57613fba6153f1565b141561409457600080516020615eef833981519152826101a00151836101800151604051613fe9929190615d5c565b60405180910390a1610e80810180516000908190528151602001526060808401518251604001526101a084015191510152614022614e15565b825181516001600160a01b03909116905260208084015182518201526040808501518351820152606080860151845182015260808087015184860180519190915280516001950194909452610e8086015184519093019290925282514391015260c085015191510152610e648161433a565b60046101808301515160048111156140ae576140ae6153f1565b14156137f057600080516020615eef833981519152826101a001518361018001516040516140dd929190615d5c565b60405180910390a1610ea0810180516000908190528151602001526060808401518251604001526101a084015191510152614116614e15565b825181516001600160a01b03909116905260208084015182518201526040808501518351820152606080860151845182015260808087015184860180519190915280516001950194909452610ea086015184519093019290925282514391015260c085015191510152610e648161433a565b610a0081018051602090810151610ec084018051919091529151518251909101526101808301518151604001526101a08301519051606001526141c9614e15565b825181516001600160a01b03909116905260208084015182518201526040808501518351820152606080860151845182015260808087015184860180519190915280516001950194909452610ec086015184519093019290925282514391015260c085015191510152610e648161433a565b50505050565b816106355760405163100960cb60e01b81526004810182905260240160405180910390fd5b61426e614674565b60016001600160a01b03831660009081526004602052604090205460ff16600181111561429d5761429d6153f1565b141561432b576001600160a01b038216600090815260046020526040908190208151606081019092528054829060ff1660018111156142de576142de6153f1565b60018111156142ef576142ef6153f1565b81528154610100900460ff1615156020808301919091526040805180820182526001850154815260029094015491840191909152015292915050565b60008082526020820152919050565b61436760405180608001604052806000151581526020016000815260200160008152602001600081525090565b816020015160200151156144d35760208201516040015160600151600a11801582526143bf5760208201516040015160600151600a906143ab90611d968382615d0c565b6143b59190615d20565b60208201526143c7565b600160208201525b6143cf614e35565b8251516001600160a01b039081168252835160209081015181840152845160409081015181850152855160609081015181860152828701805151608080880191909152815184015160a0880152815181015160c08801528151515190951660e0870152805151840151610100870152805151830151151561012087015280515182015161014087015280515190940151151561016086015283518201518201516101808601529251810151909201516101a0840152835115156101c0840152838101516101e084015260036000554360015590516144af91839101615da0565b6040516020818303038152906040526002908051906020019061423b929190614f1e565b600060408201526144e660016010614241565b60208201518051516080909101516040516001600160a01b039092169181156108fc0291906000818181858888f1935050505015801561452a573d6000803e3d6000fd5b506040810151479081106145445760408201518103614547565b60005b60608301525061455960016011614241565b6020820151515160608201516040516001600160a01b039092169181156108fc0291906000818181858888f1935050505015801561459b573d6000803e3d6000fd5b506000808055600181905561063590600290614fa2565b6040518060400160405280600081526020016145cc614fdf565b905290565b6040805160c081018252600080825260208201819052918101829052606081018290526080810182905260a081019190915290565b6040805161016081018252600060e08201818152610100830182905261012083018290526101408301829052825260208201819052918101829052606081018290526080810182905260a0810182905260c081019190915290565b60405180602001604052806145cc614606565b604080516060810190915280600081526020016000151581526020016145cc604051806040016040528060008152602001600081525090565b6040805160c0810190915280600081526020016146da604080518082019091526000808252602082015290565b81526020016146e7614ff2565b81526000602082018190526040820181905260609091015290565b60408051610f0081019091526000610ee08201908152815260208101614726614674565b8152602001614748604051806040016040528060008152602001600081525090565b815260200160001515815260200160008152602001600015158152602001614783604051806040016040528060008152602001600081525090565b815260200161479e6040518060200160405280600081525090565b815260200160008152602001600081526020016147b9614674565b81526020016000151581526020016147e4604051806040016040528060008152602001600081525090565b8152602001614806604051806040016040528060008152602001600081525090565b8152602001614828604051806040016040528060008152602001600081525090565b815260200161484a604051806040016040528060008152602001600081525090565b815260200161486c604051806040016040528060008152602001600081525090565b815260408051602080820183526000825283015201614889614674565b81526000602082018190526040820181905260608201526080016148bd604080518082019091526000808252602082015290565b815260006020820181905260408201526060016148d8614ff2565b81526020016148e5614674565b8152602001614907604051806040016040528060008152602001600081525090565b81526000602082018190526040820181905260608201819052608082015260a0016149306146ad565b815260200161493d615020565b81526040805160208082018352600080835281850192909252828401829052606084018290526080840182905260a0840182905260c0840182905260e0840182905282518084019093528183528201526101008201526101200161499f61504e565b8152602001600081526020016149c8604051806040016040528060008152602001600081525090565b8152600060208201526040016149ee604080518082019091526000808252602082015290565b81526000602082018190526040820152606001614a09614ff2565b8152602001614a16614674565b815260006020820181905260408201819052606082018190526080820181905260a082015260c001614a58604080518082019091526000808252602082015290565b81526000602082018190526040820152606001614a73614ff2565b8152602001614a80614674565b81526000602082018190526040820181905260608201819052608082015260a001614aa9615020565b8152602001614ad560408051608081018252600060208201818152928201819052606082015290815290565b815260200160008152602001614afe604051806040016040528060008152602001600081525090565b8152602001614b20604051806040016040528060008152602001600081525090565b815260006020820152604001614b46604080518082019091526000808252602082015290565b81526000602082018190526040820152606001614b61614ff2565b8152602001614b6e614674565b815260200160001515815260200160001515815260200160006001600160a01b03168152602001600015158152602001614bbb604051806040016040528060008152602001600081525090565b8152602001614bdd604051806040016040528060008152602001600081525090565b8152602001614bff604051806040016040528060008152602001600081525090565b8152602001614c21604051806040016040528060008152602001600081525090565b8152602001614c43604051806040016040528060008152602001600081525090565b8152602001614c65604051806040016040528060008152602001600081525090565b81526000602082018190526040820152606001614c92604080518082019091526000808252602082015290565b81526000602082018190526040820152606001614cad614ff2565b8152602001614cba614674565b815260006020820181905260408201819052606082018190526080820181905260a082015260c001614cfc604080518082019091526000808252602082015290565b815260200160008152602001614d10615020565b8152602001614d1d614ff2565b8152602001614d2a615020565b81526040805160a08101825260008082526020828101829052928201819052606082018190526080820152910190815260006020820152604001614d6c615020565b8152602001614d79615020565b8152602001614d86615020565b8152602001614d93615020565b8152602001614da0615020565b8152602001614dad615020565b8152602001614dba615020565b8152602001614dc7615020565b8152602001614dd4615020565b8152602001614de1615020565b8152602001614dee615020565b8152602001614dfb615020565b8152602001614e08615020565b81526020016145cc615020565b6040518060400160405280614e28615061565b81526020016145cc6150a7565b60405180610200016040528060006001600160a01b03168152602001614e7b60408051608081018252600080825260208201819052918101829052606081019190915290565b815260200160008152602001614e8f6146ad565b81526040805160a081018252600080825260208281018290529282018190526060820181905260808201529101908152602001614eca615020565b815260006020820181905260408201819052606082018190526080820181905260a0820181905260c082015260e001614f016146ad565b815260200160008152602001600015158152602001600081525090565b828054614f2a9061570f565b90600052602060002090601f016020900481019282614f4c5760008555614f92565b82601f10614f6557805160ff1916838001178555614f92565b82800160010185558215614f92579182015b82811115614f92578251825591602001919060010190614f77565b50614f9e9291506150ff565b5090565b508054614fae9061570f565b6000825580601f10614fbe575050565b601f016020900490600052602060002090810190614fdc91906150ff565b50565b60405180602001604052806145cc615114565b6040805160a08101825260008082526020820181905291810182905260608101829052608081019190915290565b604051806080016040528060008152602001600081526020016150416146ad565b8152602001600081525090565b60405180602001604052806145cc6146ad565b60408051608080820183526000808352835191820184528082526020828101829052938201819052606082015290918201908152602001600081526020016145cc6146ad565b6040805161014081018252600060a0820181815260c0830182905260e0830182905261010083018290526101208301829052825260208201529081016150eb615020565b815260200160008152602001600081525090565b5b80821115614f9e5760008155600101615100565b6040805160e081018252600080825282516020808201855282825280840191909152835180820185528281528385015283518082018552828152606084015283519081019093528252608081019190915260a0810161517161504e565b81526020016145cc60408051608081018252600060208201818152928201819052606082015290815290565b60405160a0810167ffffffffffffffff811182821017156151ce57634e487b7160e01b600052604160045260246000fd5b60405290565b60405160c0810167ffffffffffffffff811182821017156151ce57634e487b7160e01b600052604160045260246000fd5b6040805190810167ffffffffffffffff811182821017156151ce57634e487b7160e01b600052604160045260246000fd5b6040516080810167ffffffffffffffff811182821017156151ce57634e487b7160e01b600052604160045260246000fd5b604051610200810167ffffffffffffffff811182821017156151ce57634e487b7160e01b600052604160045260246000fd5b6040516020810167ffffffffffffffff811182821017156151ce57634e487b7160e01b600052604160045260246000fd5b60405160e0810167ffffffffffffffff811182821017156151ce57634e487b7160e01b600052604160045260246000fd5b8015158114614fdc57600080fd5b8035610610816152fb565b60006060828403121561532657600080fd5b6040516060810181811067ffffffffffffffff8211171561535757634e487b7160e01b600052604160045260246000fd5b60405290508082356002811061536c57600080fd5b8152602083013561537c816152fb565b6020820152604083013561538f816152fb565b6040919091015292915050565b6000606082840312156153ae57600080fd5b6153b88383615314565b9392505050565b6001600160a01b0381168114614fdc57600080fd5b6000602082840312156153e657600080fd5b81356153b8816153bf565b634e487b7160e01b600052602160045260246000fd5b60028110614fdc57614fdc6153f1565b8151608082019061542781615407565b80835250602083015115156020830152604083015180516040840152602081015160608401525092915050565b60006020828403121561546657600080fd5b81356153b8816152fb565b8035610610816153bf565b6000610280828403121561548f57600080fd5b50919050565b82815260006020604081840152835180604085015260005b818110156154c9578581018301518582016060015282016154ad565b818111156154db576000606083870101525b50601f01601f191692909201606001949350505050565b805160058110615504576155046153f1565b80835250602081015160018060a01b03808251166020850152602082015160408501526040830151915080825116606085015250602081015115156080840152604081015160a0840152606081015160c08401526080810151151560e08401525060608101516155806101008401826001600160a01b03169052565b506080810151151561012083015260a00151151561014090910152565b61016081016104a482846154f2565b60058110614fdc57600080fd5b600060a082840312156155cb57600080fd5b6155d361519d565b905081356155e0816153bf565b815260208201356155f0816152fb565b8060208301525060408201356040820152606082013560608201526080820135615619816152fb565b608082015292915050565b600081830361016081121561563857600080fd5b6156406151d4565b9150823561564d816155ac565b82526040601f198201121561566157600080fd5b5061566a615205565b6020830135615678816153bf565b8152604083013560208083019190915282015261569883606084016155b9565b60408201526156aa6101008301615471565b60608201526156bc6101208301615309565b60808201526156ce6101408301615309565b60a082015292915050565b600061016082840312156156ec57600080fd5b6153b88383615624565b60006020828403121561570857600080fd5b5035919050565b600181811c9082168061572357607f821691505b6020821081141561548f57634e487b7160e01b600052602260045260246000fd5b8051610610816153bf565b60006080828403121561576157600080fd5b615769615236565b90508151815260208201516020820152604082015160408201526060820151606082015292915050565b8051610610816152fb565b600060a082840312156157b057600080fd5b6157b861519d565b905081516157c5816153bf565b815260208201516157d5816152fb565b8060208301525060408201516040820152606082015160608201526080820151615619816152fb565b600081830361016081121561581257600080fd5b61581a6151d4565b91508251615827816155ac565b82526040601f198201121561583b57600080fd5b50615844615205565b6020830151615852816153bf565b81526040830151602080830191909152820152615872836060840161579e565b60408201526158846101008301615744565b60608201526158966101208301615793565b60808201526156ce6101408301615793565b600060a082840312156158ba57600080fd5b6158c261519d565b905081516158cf816153bf565b81526020828101519082015260408201516158e9816152fb565b6040820152606082810151908201526080820151615619816152fb565b60006101c0828403121561591957600080fd5b615921615236565b9050815181526020820151602082015261593e83604084016157fe565b60408201526101a0820151606082015292915050565b6000610700828403121561596757600080fd5b61596f615267565b61597883615744565b8152615987846020850161574f565b602082015260a083015160408201526159a38460c085016157fe565b60608201526159b68461022085016158a8565b60808201526159c9846102c08501615906565b60a082015261048083015160c08201526159e66104a08401615744565b60e08201526104c0830151610100820152615a046104e08401615793565b610120820152610500830151610140820152615a236105208401615793565b610160820152615a378461054085016157fe565b6101808201526106a08301516101a0820152615a566106c08401615793565b6101c08201526106e092909201516101e083015250919050565b600060208284031215615a8257600080fd5b615a8a615299565b90508135615a97816153bf565b815292915050565b600060208284031215615ab157600080fd5b615ab9615299565b9135825250919050565b600060208284031215615ad557600080fd5b615add615299565b90508135615a97816152fb565b60006101608284031215615afd57600080fd5b615b05615299565b9050615a978383615624565b600060608284031215615b2357600080fd5b615b2b615299565b9050615a978383615314565b6000818303610280811215615b4b57600080fd5b615b53615205565b83358152610260601f1983011215615b6a57600080fd5b615b72615299565b9150615b7c6152ca565b602085013560068110615b8e57600080fd5b8152615b9d8660408701615a70565b6020820152615baf8660608701615a9f565b6040820152615bc18660808701615a70565b6060820152615bd38660a08701615ac3565b6080820152615be58660c08701615aea565b60a0820152615bf8866102208701615b11565b60c0820152825260208101919091529392505050565b6106358282516154f2565b80518051615c2681615407565b80845250602081015115156020840152604081015115156040840152505050565b6001600160a01b03838116825282516020808401919091528301515180516102a0840192919060068110615c7d57615c7d6153f1565b8060408601525081602082015151166060850152604081015151608085015260608101519150615cb960a0850183516001600160a01b03169052565b608081015151151560c085015260a08101519150615cda60e0850183615c0e565b60c001519050615cee610240840182615c19565b509392505050565b634e487b7160e01b600052601260045260246000fd5b600082615d1b57615d1b615cf6565b500690565b600082615d2f57615d2f615cf6565b500490565b6101808101615d4382856154f2565b6001600160a01b03929092166101609190910152919050565b82815261018081016153b860208301846154f2565b80518252602081015160208301526040810151615d9160408401826154f2565b50606001516101a09190910152565b81516001600160a01b0316815261070081016020830151615de56020840182805182526020810151602083015260408101516040830152606081015160608301525050565b50604083015160a08301526060830151615e0260c08401826154f2565b5060808381015180516001600160a01b03166102208501526020810151610240850152604081015115156102608501526060810151610280850152015115156102a083015260a0830151615e5a6102c0840182615d71565b5060c083015161048083015260e08301516001600160a01b03166104a08301526101008301516104c083015261012083015115156104e08301526101408301516105008301526101608301511515610520830152610180830151615ec26105408401826154f2565b506101a08301516106a08301526101c083015115156106c08301526101e0909201516106e0909101529056fea0c08e29c71350e40fbb4cf003989233b13d526e69962aefa0a312080ee1fc54f825aeeaf8a98d102cfef2ce8a456afbe776ac52abc49aed0689abcbcf31c12f4eb456086f80a7670898a2f96c26b017204aad3098f1aeb032d9b4edbe0ef5c9a2646970667358221220b607919378eb27db13e0d006a9592126906f5c61b9954d195e6cd478cba5684964736f6c634300080c0033`,
-  BytecodeLen: 27901,
+  Bytecode: `0x60806040526040516200756238038062007562833981016040819052620000269162000bdd565b600080554360035562000038620006db565b7f2459370484f6045637fb7fb87fc70f3038e753af1c6caeead146f0debfc1b58e33836040516200006b92919062000cc0565b60405180910390a1620000813415600c620003a7565b6200008f6001600d620003a7565b620000ae60018360200151604001511015600e620003a760201b60201c565b620000bd600a60001962000d6a565b808252602083015160400151620000d79111600f620003a7565b30602082810191909152604080830180516000199052805160009084018190523381526004845291909120805460ff191660019081178255915180519282019290925591015160029091015547610100820152602080820151604080516001600160a01b03928316602480830191909152825180830390910181526044909101825280840180516001600160e01b0316632c44543160e11b1790529285015160a0015190516000928392169082906200019290869062000d81565b60006040518083038185875af1925050503d8060008114620001d1576040519150601f19603f3d011682016040523d82523d6000602084013e620001d6565b606091505b509092509050620001ea82826010620003d7565b506200020247856101000151620003d260201b60201c565b60608501805191909152516080850181905260408051825181526020928301511515928101929092527faa7f0449bf3b272659a2f5e04e898ba8520371a6a3c35f4b1fc295110f6945689450019150620002599050565b60405180910390a16200026f60016011620003a7565b6080810151516200028390156012620003a7565b60a0810180513390526020838101805160809081015184518401528151606090810151855190151560409182015283510151855190910152905190910151915191151591015260c08101516003908190525060c0810180516000608090910181905260e083018051829052805160200182905291518251604001529051606001526200030e620007bf565b8051339052602080840180515183518301525160a09081015183516001600160a01b0391821660409182015285518551606090810191909152868501518651931660809384015260c08701518651850152928601518486018051919091528051600195019490945260e08601518451909101528251439201919091528084015151915101526200039e816200041d565b50505062001080565b81620003ce5760405163100960cb60e01b8152600481018290526024015b60405180910390fd5b5050565b900390565b60608315620003e857508162000416565b825115620003f95782518084602001fd5b60405163100960cb60e01b815260048101839052602401620003c5565b9392505050565b6200044b60405180608001604052806000151581526020016000815260200160008152602001600081525090565b81602001516020015115620005e35760208201516040015160600151600a1180158252620004ab5760208201516040015160600151600a906200049490620003d2838262000dbf565b620004a0919062000d6a565b6020820152620004b3565b600160208201525b620004bd620007e8565b8251516001600160a01b03908116825283516020908101518184015284516040908101518316818501528551606090810151818601528651608090810151851681870152875160a0908101519087015283880180515160c0880152805184015160e08801528051820151610100880152805151519095166101208701528451518401516101408701528451518301511515610160870152845151820151610180870152845151015115156101a086015283518201518201516101c08601529251810151909201516101e084015283511515610200840152838101516102208401526003600055436001559051620005b79183910162000ec1565b60405160208183030381529060405260029080519060200190620005dd929190620008d5565b50505050565b60006040820152620005f860016013620003a7565b60208201518051516080909101516040516001600160a01b039092169181156108fc0291906000818181858888f193505050501580156200063d573d6000803e3d6000fd5b50604081015147908110620006685762000662818360400151620003d260201b60201c565b6200066b565b60005b6060830152506200067f60016014620003a7565b6020820151515160608201516040516001600160a01b039092169181156108fc0291906000818181858888f19350505050158015620006c2573d6000803e3d6000fd5b5060008080556001819055620003ce9060029062000964565b6040518061012001604052806000815260200160006001600160a01b031681526020016200071c604051806040016040528060008152602001600081525090565b8152602001620007416040518060400160405280600081526020016000151581525090565b8152602001620007666040518060400160405280600081526020016000151581525090565b81526040805160a081018252600080825260208281018290529282018190526060820181905260808201529101908152602001620007a3620009a6565b8152602001620007b262000a29565b8152602001600081525090565b6040518060400160405280620007d462000a4c565b8152602001620007e362000aa5565b905290565b604080516102408101825260008082528251608081018452818152602081810183905293810182905260608101919091529091820190815260006020820181905260408201819052606082015260800162000842620009a6565b81526040805160a0810182526000808252602082810182905292820181905260608201819052608082015291019081526020016200087f62000a29565b815260006020820181905260408201819052606082018190526080820181905260a0820181905260c082015260e001620008b8620009a6565b815260200160008152602001600015158152602001600081525090565b828054620008e39062001043565b90600052602060002090601f01602090048101928262000907576000855562000952565b82601f106200092257805160ff191683800117855562000952565b8280016001018555821562000952579182015b828111156200095257825182559160200191906001019062000935565b506200096092915062000aff565b5090565b508054620009729062001043565b6000825580601f1062000983575050565b601f016020900490600052602060002090810190620009a3919062000aff565b50565b6040805160c081019091528060008152602001620009e0604051806040016040528060006001600160a01b03168152602001600081525090565b81526040805160a0810182526000808252602082810182905292820181905260608201819052608082015291019081526000602082018190526040820181905260609091015290565b60405180608001604052806000815260200160008152602001620007b2620009a6565b6040805160c081018252600080825282516080810184528181526020818101839052938101829052606081019190915290918201908152600060208201819052604082018190526060820152608001620007e3620009a6565b6040805161014081018252600060a0820181815260c0830182905260e08301829052610100830182905261012083018290528252602082015290810162000aeb62000a29565b815260200160008152602001600081525090565b5b8082111562000960576000815560010162000b00565b604080519081016001600160401b038111828210171562000b4757634e487b7160e01b600052604160045260246000fd5b60405290565b60405160c081016001600160401b038111828210171562000b4757634e487b7160e01b600052604160045260246000fd5b604051608081016001600160401b038111828210171562000b4757634e487b7160e01b600052604160045260246000fd5b8051801515811462000bc057600080fd5b919050565b80516001600160a01b038116811462000bc057600080fd5b600081830361014081121562000bf257600080fd5b62000bfc62000b16565b83518152601f19820191506101208083121562000c1857600080fd5b62000c2262000b4d565b608084121562000c3157600080fd5b62000c3b62000b7e565b93506020860151845260408601516020850152606086015160408501526080860151606085015283815262000c7360a0870162000baf565b602082015260c0860151604082015262000c9060e0870162000baf565b6060820152610100860151608082015262000cad82870162000bc5565b60a0820152602083015250949350505050565b60006101608201905060018060a01b03808516835283516020840152602084015162000d11604085018251805182526020810151602083015260408101516040830152606081015160608301525050565b6020810151151560c0850152604081015160e085015260608101511515610100850152608081015161012085015260a00151166101409092019190915292915050565b634e487b7160e01b600052601260045260246000fd5b60008262000d7c5762000d7c62000d54565b500490565b6000825160005b8181101562000da4576020818601810151858301520162000d88565b8181111562000db4576000828501525b509190910192915050565b60008262000dd15762000dd162000d54565b500690565b80516005811062000df757634e487b7160e01b600052602160045260246000fd5b825260208181015180516001600160a01b031682850152015160408084019190915281015162000e5f606084018280516001600160a01b0316825260208082015115159083015260408082015190830152606080820151908301526080908101511515910152565b5060608101516001600160a01b03166101008301526080810151151561012083015260a00151151561014090910152565b8051825260208101516020830152604081015162000eb2604084018262000dd6565b50606001516101a09190910152565b81516001600160a01b031681526107408101602083015162000f076020840182805182526020810151602083015260408101516040830152606081015160608301525050565b5060408301516001600160a01b03811660a084015250606083015160c083015260808301516001600160a01b03811660e08401525060a083015161010062000f528185018362000dd6565b60c085015180516001600160a01b03166102608601526020810151610280860152604081015115156102a086015260608101516102c08601526080015115156102e085015260e0850151915062000fae61030085018362000e90565b8401516104c0840152506101208301516001600160a01b03166104e083015261014083015161050083015261016083015115156105208301526101808301516105408301526101a083015115156105608301526101c08301516200101761058084018262000dd6565b506101e08301516106e08301526102008301511515610700830152610220909201516107209091015290565b600181811c908216806200105857607f821691505b602082108114156200107a57634e487b7160e01b600052602260045260246000fd5b50919050565b6164d280620010906000396000f3fe6080604052600436106100eb5760003560e01c8063901d13e211610084578063c4d7841a11610056578063c4d7841a146102c3578063ca6d56dc146102e5578063dff5c8aa146102f8578063f14faf6f1461030b57005b8063901d13e214610258578063994ba4d21461026b578063a230c52414610280578063ab53f2c6146102a057005b8063473f1773116100bd578063473f1773146101fd5780635cc4f6491461021057806383230757146102305780638a4557711461024557005b80631a777ba8146100f45780631e93b0f11461011c578063370158ea1461013b5780633bc5b7bf146101d057005b366100f257005b005b61010761010236600461587b565b61031e565b60405190151581526020015b60405180910390f35b34801561012857600080fd5b506003545b604051908152602001610113565b34801561014757600080fd5b50610150610359565b60408051825180518252602080820151818401528184015183850152606091820151828401528401516001600160a01b03908116608080850191909152938501511660a0808401919091529084015160c08084019190915292840151151560e0830152830151610100820152910151151561012082015261014001610113565b3480156101dc57600080fd5b506101f06101eb3660046158ac565b610494565b60405161011391906158ef565b61010761020b36600461592c565b6104ab565b34801561021c57600080fd5b5061012d61022b3660046158ac565b6104e8565b34801561023c57600080fd5b5060015461012d565b6100f2610253366004615954565b610616565b6101076102663660046158ac565b61063a565b34801561027757600080fd5b5061012d61067e565b34801561028c57600080fd5b5061010761029b3660046158ac565b610749565b3480156102ac57600080fd5b506102b5610870565b604051610113929190615999565b3480156102cf57600080fd5b506102d861090d565b6040516101139190615a7e565b6101076102f33660046158ac565b6109d7565b610107610306366004615bba565b610a0f565b610107610319366004615bd7565b610a4a565b6000610328614a13565b6020810180515160059052515160c00151839052610344614a32565b61034e8282610a85565b60a001519392505050565b610361614a67565b600360005414156104855760006002805461037b90615bf0565b80601f01602080910402602001604051908101604052809291908181526020018280546103a790615bf0565b80156103f45780601f106103c9576101008083540402835291602001916103f4565b820191906000526020600020905b8154815290600101906020018083116103d757829003601f168201915b505050505080602001905181019061040c9190615e35565b9050610416614ac2565b602080830151825152825182516001600160a01b03918216920191909152610120830151825191166040909101526101408201518151606001526101a08201518151901515608090910152610180820151815160a0015261016090910151815190151560c09091015251919050565b61049160006009614647565b90565b61049c614ad5565b6104a58261466d565b92915050565b60006104b5614a13565b602081018051516003905251516080015183151590526104d3614a32565b6104dd8282610a85565b606001519392505050565b6000600360005414156106055760006002805461050490615bf0565b80601f016020809104026020016040519081016040528092919081815260200182805461053090615bf0565b801561057d5780601f106105525761010080835404028352916020019161057d565b820191906000526020600020905b81548152906001019060200180831161056057829003601f168201915b50505050508060200190518101906105959190615e35565b90506105b7604080516060810182526000602082018181529282015290815290565b805160009081905281516020015260016105d08561466d565b5160018111156105e2576105e26158c9565b146105ee5780516105fc565b6105f78461466d565b604001515b51949350505050565b6106116000600b614647565b919050565b61061e614a32565b6106366106303684900384018461603c565b82610a85565b5050565b6000610644614a13565b60208101805151600290525151606001516001600160a01b0384169052610669614a32565b6106738282610a85565b604001519392505050565b60006003600054141561073d5760006002805461069a90615bf0565b80601f01602080910402602001604051908101604052809291908181526020018280546106c690615bf0565b80156107135780601f106106e857610100808354040283529160200191610713565b820191906000526020600020905b8154815290600101906020018083116106f657829003601f168201915b505050505080602001905181019061072b9190615e35565b60e00151602081015190510192915050565b61049160006008614647565b6000600360005414156108645760006002805461076590615bf0565b80601f016020809104026020016040519081016040528092919081815260200182805461079190615bf0565b80156107de5780601f106107b3576101008083540402835291602001916107de565b820191906000526020600020905b8154815290600101906020018083116107c157829003601f168201915b50505050508060200190518101906107f69190615e35565b60408051602081019091526000815290915060006108138561466d565b516001811115610825576108256158c9565b1415610834576000815261085c565b600161083f8561466d565b516001811115610851576108516158c9565b141561085c57600181525b519392505050565b6106116000600a614647565b60006060600054600280805461088590615bf0565b80601f01602080910402602001604051908101604052809291908181526020018280546108b190615bf0565b80156108fe5780601f106108d3576101008083540402835291602001916108fe565b820191906000526020600020905b8154815290600101906020018083116108e157829003601f168201915b50505050509050915091509091565b610915614b0e565b600360005414156109cb5760006002805461092f90615bf0565b80601f016020809104026020016040519081016040528092919081815260200182805461095b90615bf0565b80156109a85780601f1061097d576101008083540402835291602001916109a8565b820191906000526020600020905b81548152906001019060200180831161098b57829003601f168201915b50505050508060200190518101906109c09190615e35565b6101c0015192915050565b61049160006007614647565b60006109e1614a13565b602081810180515160009052515101516001600160a01b0384169052610a05614a32565b61085c8282610a85565b6000610a19614a13565b6020810180515160049052515160a00151839052610a35614a32565b610a3f8282610a85565b608001519392505050565b6000610a54614a13565b6020810180515160019052515160400151839052610a70614a32565b610a7a8282610a85565b602001519392505050565b610a956003600054146044614647565b8151610ab0901580610aa957508251600154145b6045614647565b600080805560028054610ac290615bf0565b80601f0160208091040260200160405190810160405280929190818152602001828054610aee90615bf0565b8015610b3b5780601f10610b1057610100808354040283529160200191610b3b565b820191906000526020600020905b815481529060010190602001808311610b1e57829003601f168201915b5050505050806020019051810190610b539190615e35565b9050610b5d614b63565b7f35b2ac41a02c0ce05b6e2f0c2dc3bab826a4b4a195d0603a918923288b9f190b3385604051610b8e92919061614c565b60405180910390a16000602085015151516005811115610bb057610bb06158c9565b1415610e8e5760208085015151015180825251610bcc9061466d565b6020828101918252604083018051600090819052905190910152610220830151905151610c2a919060019081811115610c0757610c076158c9565b14610c16578260400151610c20565b8260200151604001515b5110156015614647565b60006020820151516001811115610c4357610c436158c9565b1415610c555760016060820152610c7c565b60016020820151516001811115610c6e57610c6e6158c9565b1415610c7c57600060608201525b610c8b81606001516016614647565b610100820151610140830151016080820152610ca960016017614647565b610cbb82610140015134146018614647565b60006020820151516001811115610cd457610cd46158c9565b1415610ce657600160a0820152610d0d565b60016020820151516001811115610cff57610cff6158c9565b1415610d0d57600060a08201525b610d1c8160a001516019614647565b61022082015160c082018051919091528051600060209182018190528351516001600160a01b039081168252600483526040808320805460ff1916600190811790915594518651518316845292819020835195810195909555918301516002909401939093558351519051921682527f0abf3b3f643594d958297062a019458e27d7766629590ac621aa1000fa1298ab910160405180910390a1604051600081527f8976e3e91676b34f8229a1d272fc5e882573e653f5b8be4fdef949d07b312a039060200160405180910390a160008352610df66152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c08701518386018051919091528051600194019390935260e087015183519092019190915281514391015283820151905190910152610e8881614741565b50614641565b6001602085015151516005811115610ea857610ea86158c9565b14156111a2576020840151516040015160e082018190525119610100808301829052830151610ed99111601a614647565b61010082015160e08201515101610120820152610ef86001601b614647565b60e081015151610f0b903414601c614647565b610f2281610100015182610120015110601d614647565b610f2b3361466d565b6101408201819052516000906001811115610f4857610f486158c9565b1415610f5b576000610160820152610f84565b6001610140820151516001811115610f7557610f756158c9565b1415610f845760016101608201525b8061016001511561117157610180810180516000908190529051602001526001610140820151516001811115610fbc57610fbc6158c9565b14610fcc57806101800151610fd7565b806101400151604001515b6101a0820181905251600119111561101c576101a0810151516001016101e082018051919091526101a0820151602090810151825190910152516101c0820152611067565b6102208201516101a082015151101561103a57816102200151611042565b6101a0810151515b61020082018051919091526101a0820151602090810151825190910152516101c08201525b336000908152600460209081526040808320805460ff1916600190811782556101c0860151805191830191909155830151600290910155519182527fa5674e6d60ee2197cf7602777d8c42a56b82d29a8fb270046e32bc4520b6bf9391015b60405180910390a1600060208401526110dd6152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c08701518386018051919091528051600194019390935260e0870151835190920191909152815143910152610120840151905190910152610e8881614741565b604051600081527fe439a2d9ee8aba63ad6d0b6f5172a579f7c29436a118ed5ed31bd6be589890ae906020016110c6565b60026020850151515160058111156111bc576111bc6158c9565b141561197057602084015151606001516102208201526111de6001601e614647565b6111ea3415601f614647565b610220810151516111fa9061466d565b6102408201819052516000906001811115611217576112176158c9565b141561122a576000610260820152611253565b6001610240820151516001811115611244576112446158c9565b14156112535760016102608201525b6102208101515161127e906001600160a01b03163314611274576001611277565b60005b6020614647565b6000610240820151516001811115611298576112986158c9565b14156112ab5760006102808201526112d4565b60016102408201515160018111156112c5576112c56158c9565b14156112d45760016102808201525b6112e48161028001516021614647565b6113308161026001516112f8576000611329565b8261012001516001600160a01b0316826102200151600001516001600160a01b031614611326576001611329565b60005b6022614647565b8161012001516001600160a01b0316336001600160a01b0316141561149357604051600081527f5b71d480ccb91c15d2b3efb40b752e23730d9ce136ad29c88a6adffe56aa686d9060200160405180910390a16000604084810182905261022083018051516001600160a01b03908116845260046020908152838520805461ffff1916815560018101869055600201949094559051519151911681527f81df7148ed3a9aa51bafe04f44371e89b96f47294267fbf6ab28b7aa8c87b386910160405180910390a16113ff6152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c08701518386018051919091528051600194019390935260e0870151835190920191909152815143910152610100850151905190910152610e8881614741565b6114a8600119836101e0015111156023614647565b60006101c08301515160048111156114c2576114c26158c9565b1415611590576101c08201516020908101516102c08301819052610100840151910151106102e082015260006102c0820151516114fe9061466d565b516001811115611510576115106158c9565b1415611523576000610300820152611556565b60016102c0820151516115359061466d565b516001811115611547576115476158c9565b14156115565760016103008201525b81610160015161157c57806103000151611571576000611583565b806102e00151611583565b806102e001515b15156102a0820152611831565b60016101c08301515160048111156115aa576115aa6158c9565b14156116f4576101c0820151604001516103208201819052516115cc9061466d565b6103408201526103608101805160009081905290516020018190526103408201515160018111156115ff576115ff6158c9565b141561161257600061038082015261163b565b600161034082015151600181111561162c5761162c6158c9565b141561163b5760016103808201525b61032081015160600151156116665760608083015161032083015190910151106103a082015261166f565b60006103a08201525b8061038001516116805760006116be565b61022082015160016103408301515160018111156116a0576116a06158c9565b146116b0578161036001516116bb565b816103400151604001515b51115b6116c95760006116d0565b806103a001515b6116db576000611583565b61032081015160400151600019116102a0820152611831565b60026101c083015151600481111561170e5761170e6158c9565b14156117db576101c0820151606001516001600160a01b03166103c0820152600061173d826103c0015161466d565b51600181111561174f5761174f6158c9565b14156117625760006103e0820152611793565b6001611772826103c0015161466d565b516001811115611784576117846158c9565b14156117935760016103e08201525b806103e001516117a4576000611583565b8161012001516001600160a01b0316816103c001516001600160a01b0316146117ce576001611583565b60006102a0820152611831565b60036101c08301515160048111156117f5576117f56158c9565b14156118085760006102a0820152611831565b60046101c0830151516004811115611822576118226158c9565b14156118315760016102a08201525b611841816102a001516024614647565b604051600081527ff818eb462a42ad91850677eea395e08aa8834c7447e8c099bdef947387abbac59060200160405180910390a1600060408401526104008101516002908190525061022081015151610400820180516001600160a01b039092166060928301526104208301805160009081905281516020015290518151604001526101e0840151905160019091019101526118db6152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610420860151835190920191909152815143910152610100850151905190910152610e8881614741565b600360208501515151600581111561198a5761198a6158c9565b1415611dc9576020840151516080015161044082018190525115611a195760006119b33361466d565b5160018111156119c5576119c56158c9565b14156119d8576000610460820152611a04565b60016119e33361466d565b5160018111156119f5576119f56158c9565b1415611a045760016104608201525b611a148161046001516025614647565b611a95565b611a29826101a001516026614647565b6000611a343361466d565b516001811115611a4657611a466158c9565b1415611a59576001610480820152611a85565b6001611a643361466d565b516001811115611a7657611a766158c9565b1415611a855760006104808201525b611a958161048001516027614647565b61044081015151611aab57816101400151611aae565b60005b6104a0820152610100820151611acd9019826104a00151106028614647565b6101008201516104a0820151016104c0820152611aec60016029614647565b611afe816104a001513414602a614647565b6104408101515115611b7b576000611b153361466d565b516001811115611b2757611b276158c9565b1415611b3a5760006104e0820152611b66565b6001611b453361466d565b516001811115611b5757611b576158c9565b1415611b665760016104e08201525b611b76816104e00151602b614647565b611bf7565b611b8b826101a00151602c614647565b6000611b963361466d565b516001811115611ba857611ba86158c9565b1415611bbb576001610500820152611be7565b6001611bc63361466d565b516001811115611bd857611bd86158c9565b1415611be75760006105008201525b611bf7816105000151602d614647565b6104c0810151611c109019826104a0015110602e614647565b604051600081527f50f0bdbd7f6817b51954d451c4fad2759b6ed40ee2435310321b703583a1cf019060200160405180910390a1600060608401526104408101515115611d4d57336000818152600460209081526040808320805461ffff19168155600181018490556002019290925590519182527f81df7148ed3a9aa51bafe04f44371e89b96f47294267fbf6ab28b7aa8c87b38691015b60405180910390a1611cb96152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c08701518386018051919091528051600194019390935260e08701518351909201919091528151439101526104c0840151905190910152610e8881614741565b61022082015161052082018051919091528051600060209182018190523380825260048352604091829020805460ff191660019081178255945180519582019590955593830151600290940193909355519182527f0abf3b3f643594d958297062a019458e27d7766629590ac621aa1000fa1298ab9101611ca9565b6004602085015151516005811115611de357611de36158c9565b14156127815760208401515160a00151610540820152611e056001602f614647565b611e1134156030614647565b81610200015115611e4d576101e0820151600a90611e3890611e338382616211565b900390565b611e429190616225565b610560820152611e56565b60016105608201525b61058081018051600090819052905160200152610560810151611eb8906001611e7e3361466d565b516001811115611e9057611e906158c9565b14611ea057826105800151611eae565b611ea93361466d565b604001515b5110156031614647565b610220820151611f07906001611ecd3361466d565b516001811115611edf57611edf6158c9565b14611eef57826105800151611efd565b611ef83361466d565b604001515b5110156032614647565b60006101c0830151516004811115611f2157611f216158c9565b1415611fef576101c08201516020908101516105c08301819052610100840151910151106105e082015260006105c082015151611f5d9061466d565b516001811115611f6f57611f6f6158c9565b1415611f82576000610600820152611fb5565b60016105c082015151611f949061466d565b516001811115611fa657611fa66158c9565b1415611fb55760016106008201525b816101600151611fdb57806106000151611fd0576000611fe2565b806105e00151611fe2565b806105e001515b15156105a082015261227a565b60016101c0830151516004811115612009576120096158c9565b141561213d576101c08201516040015161062082018190525161202b9061466d565b6106408201819052516000906001811115612048576120486158c9565b141561205b576000610660820152612084565b6001610640820151516001811115612075576120756158c9565b14156120845760016106608201525b61062081015160600151156120af5760608083015161062083015190910151106106808201526120b8565b60006106808201525b8061066001516120c9576000612107565b61022082015160016106408301515160018111156120e9576120e96158c9565b146120f957816105800151612104565b816106400151604001515b51115b612112576000612119565b8061068001515b612124576000611fe2565b61062081015160400151600019116105a082015261227a565b60026101c0830151516004811115612157576121576158c9565b1415612224576101c0820151606001516001600160a01b03166106a08201526000612186826106a0015161466d565b516001811115612198576121986158c9565b14156121ab5760006106c08201526121dc565b60016121bb826106a0015161466d565b5160018111156121cd576121cd6158c9565b14156121dc5760016106c08201525b806106c001516121ed576000611fe2565b8161012001516001600160a01b0316816106a001516001600160a01b031614612217576001611fe2565b60006105a082015261227a565b60036101c083015151600481111561223e5761223e6158c9565b14156122515760006105a082015261227a565b60046101c083015151600481111561226b5761226b6158c9565b141561227a5760016105a08201525b612298816105a0015161228e576001612291565b60005b6033614647565b6122ac600119836101e00151106034614647565b6000610540820151515160048111156122c7576122c76158c9565b141561239657610540810151516020908101516107008301819052610100840151910151106107208201526000610700820151516123049061466d565b516001811115612316576123166158c9565b141561232957600061074082015261235c565b60016107008201515161233b9061466d565b51600181111561234d5761234d6158c9565b141561235c5760016107408201525b81610160015161238257806107400151612377576000612389565b806107200151612389565b8061072001515b15156106e0820152612627565b6001610540820151515160048111156123b1576123b16158c9565b14156124e65761054081015151604001516107608201819052516123d49061466d565b61078082018190525160009060018111156123f1576123f16158c9565b14156124045760006107a082015261242d565b600161078082015151600181111561241e5761241e6158c9565b141561242d5760016107a08201525b61076081015160600151156124585760608083015161076083015190910151106107c0820152612461565b60006107c08201525b806107a001516124725760006124b0565b6102208201516001610780830151516001811115612492576124926158c9565b146124a2578161058001516124ad565b816107800151604001515b51115b6124bb5760006124c2565b806107c001515b6124cd576000612389565b61076081015160400151600019116106e0820152612627565b600261054082015151516004811115612501576125016158c9565b14156125cf5761054081015151606001516001600160a01b03166107e08201526000612531826107e0015161466d565b516001811115612543576125436158c9565b1415612556576000610800820152612587565b6001612566826107e0015161466d565b516001811115612578576125786158c9565b14156125875760016108008201525b806108000151612598576000612389565b8161012001516001600160a01b0316816107e001516001600160a01b0316146125c2576001612389565b60006106e0820152612627565b6003610540820151515160048111156125ea576125ea6158c9565b14156125fd5760006106e0820152612627565b600461054082015151516004811115612618576126186158c9565b14156126275760016106e08201525b612637816106e001516035614647565b604051600081527f8c9b8c5b4d5e4d83e16c07a2ccfe0685fdbb2e345536a3f7eedb028b80813f889060200160405180910390a160006080840152610540810151516040517f18f2698e4794214ca6e5e526501521f9e9e882fe9c8490e38a1a71c7bad7a10c916126a9913390616239565b60405180910390a161082081018051600090819052815160200152610540820151519051604001526101e0820151600101610820820151606001526126ec6152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610820860151835190920191909152815143910152610100850151905190910152610e8881614741565b600560208501515151600581111561279b5761279b6158c9565b14156146415760208401515160c001516108408201526127bd60016036614647565b6127c934156037614647565b81610200015115612800576101e0820151600a906127eb90611e338382616211565b6127f59190616225565b610860820152612809565b60016108608201525b6108808101805160009081905290516020015260016128273361466d565b516001811115612839576128396158c9565b1461284957806108800151612857565b6128523361466d565b604001515b6108a0820181905261086082015190516128749111156038614647565b60006101c083015151600481111561288e5761288e6158c9565b141561295c576101c08201516020908101516108e083018190526101008401519101511061090082015260006108e0820151516128ca9061466d565b5160018111156128dc576128dc6158c9565b14156128ef576000610920820152612922565b60016108e0820151516129019061466d565b516001811115612913576129136158c9565b14156129225760016109208201525b8161016001516129485780610920015161293d57600061294f565b80610900015161294f565b8061090001515b15156108c0820152612be7565b60016101c0830151516004811115612976576129766158c9565b1415612aaa576101c0820151604001516109408201819052516129989061466d565b61096082018190525160009060018111156129b5576129b56158c9565b14156129c85760006109808201526129f1565b60016109608201515160018111156129e2576129e26158c9565b14156129f15760016109808201525b6109408101516060015115612a1c5760608083015161094083015190910151106109a0820152612a25565b60006109a08201525b806109800151612a36576000612a74565b6102208201516001610960830151516001811115612a5657612a566158c9565b14612a6657816108800151612a71565b816109600151604001515b51115b612a7f576000612a86565b806109a001515b612a9157600061294f565b61094081015160400151600019116108c0820152612be7565b60026101c0830151516004811115612ac457612ac46158c9565b1415612b91576101c0820151606001516001600160a01b03166109c08201526000612af3826109c0015161466d565b516001811115612b0557612b056158c9565b1415612b185760006109e0820152612b49565b6001612b28826109c0015161466d565b516001811115612b3a57612b3a6158c9565b1415612b495760016109e08201525b806109e00151612b5a57600061294f565b8161012001516001600160a01b0316816109c001516001600160a01b031614612b8457600161294f565b60006108c0820152612be7565b60036101c0830151516004811115612bab57612bab6158c9565b1415612bbe5760006108c0820152612be7565b60046101c0830151516004811115612bd857612bd86158c9565b1415612be75760016108c08201525b612bf7816108c001516039614647565b60e08201516020015115612c215760e082015151612c2190198360e001516020015110603a614647565b60e08201515115612c455760e082015160208101519051612c45911911603b614647565b61018082015160e083015160208101519051612c6592910110603c614647565b612c80826101e00151826108a001516020015110603d614647565b600061084082015151516001811115612c9b57612c9b6158c9565b1415612cd15760e08201805160200151610a20830151525151600101610a20820180516020019190915251610a00820152612d1d565b600161084082015151516001811115612cec57612cec6158c9565b1415612d1d5760e082015160200151600101610a40820180519190915260e08301515181516020015251610a008201525b610a0081015160208101519051612d37911911603e614647565b610a0081015151612d55901982610a0001516020015110603f614647565b604051600081527f2cfe501089d3e5ce128ec5043e6cfdbf5b53b81d39e0a91e00a480a217f2bbc09060200160405180910390a1600060a08401526108a0810151516000191115612dcd576108a081015151600101610a8082018051919091526101e083015181516020015251610a60820152612df3565b6108a081015151610aa082018051919091526101e083015181516020015251610a608201525b336000908152600460209081526040909120805460ff191660019081178255610a608401518051918301919091559091015160029091015561020082015115612e62576101e0820151600a90612e4d90611e338382616211565b612e579190616225565b610ac0820152612e6b565b6001610ac08201525b60006101c0830151516004811115612e8557612e856158c9565b1415612f53576101c0820151602090810151610b00830181905261010084015191015110610b208201526000610b0082015151612ec19061466d565b516001811115612ed357612ed36158c9565b1415612ee6576000610b40820152612f19565b6001610b0082015151612ef89061466d565b516001811115612f0a57612f0a6158c9565b1415612f19576001610b408201525b816101600151612f3f5780610b400151612f34576000612f46565b80610b200151612f46565b80610b2001515b1515610ae08201526131de565b60016101c0830151516004811115612f6d57612f6d6158c9565b14156130a1576101c082015160400151610b60820181905251612f8f9061466d565b610b808201819052516000906001811115612fac57612fac6158c9565b1415612fbf576000610ba0820152612fe8565b6001610b80820151516001811115612fd957612fd96158c9565b1415612fe8576001610ba08201525b610b60810151606001511561301357606080830151610b608301519091015110610bc082015261301c565b6000610bc08201525b80610ba0015161302d57600061306b565b610ac08101516001610b8083015151600181111561304d5761304d6158c9565b1461305d57816108800151613068565b81610b800151604001515b51115b61307657600061307d565b80610bc001515b613088576000612f46565b610b608101516040015160001911610ae08201526131de565b60026101c08301515160048111156130bb576130bb6158c9565b1415613188576101c0820151606001516001600160a01b0316610be082015260006130ea82610be0015161466d565b5160018111156130fc576130fc6158c9565b141561310f576000610c00820152613140565b600161311f82610be0015161466d565b516001811115613131576131316158c9565b1415613140576001610c008201525b80610c000151613151576000612f46565b8161012001516001600160a01b031681610be001516001600160a01b03161461317b576001612f46565b6000610ae08201526131de565b60036101c08301515160048111156131a2576131a26158c9565b14156131b5576000610ae08201526131de565b60046101c08301515160048111156131cf576131cf6158c9565b14156131de576001610ae08201525b610180820151610a008201518051602090910151011061456b57610a008101516020810151905111610c20820152610ae081015161321d576000613224565b80610c2001515b15613a705760006101c0830151516004811115613243576132436158c9565b14156133b8576101c08201805160200151610c408301526101e0830151905160405160008051602061645d83398151915292613280929091616261565b60405180910390a1610100820151610c40820151602001519003610c608201526132ac60016040614647565b610c4081015180516020909101516040516001600160a01b039092169181156108fc0291906000818181858888f193505050501580156132f0573d6000803e3d6000fd5b50610c808101805160009081905281516020015260a08301518151604001526101e08301519051606001526133236152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610c80860151835190920191909152815143910152610c60840151905190910152610e8881614741565b60016101c08301515160048111156133d2576133d26158c9565b1415613544576101c082018051604090810151610ca08401526101e08401519151905160008051602061645d83398151915292613410929091616261565b60405180910390a1610cc081018051600090819052815160209081019190915260a084015182516040908101919091526101e08501519251606090810193909352610ca08401805151610ce0860180516001600160a01b0390921690915281518301518151850152815160809081015182519015159401939093528151850151815190950194909452519091015191519115159101526134ae6152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a080880151865190910152610ce086015183860180519190915280516001940193909352610cc0860151835190920191909152815143910152610100850151905190910152610e8881614741565b60026101c083015151600481111561355e5761355e6158c9565b14156136e0576101c082018051606001516001600160a01b0316610d008301526101e0830151905160405160008051602061645d833981519152926135a4929091616261565b60405180910390a1610d00810180516001600160a01b039081166000908152600460209081526040808320805461ffff19168155600181018490556002019290925592519051911681527f81df7148ed3a9aa51bafe04f44371e89b96f47294267fbf6ab28b7aa8c87b386910160405180910390a1610d208101805160009081905281516020015260a08301518151604001526101e083015190516060015261364b6152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610d20860151835190920191909152815143910152610100850151905190910152610e8881614741565b60036101c08301515160048111156136fa576136fa6158c9565b14156137f85760008051602061645d833981519152826101e00151836101c00151604051613729929190616261565b60405180910390a1610d408101805160009081905281516020015260a08301518151604001526101e08301519051606001526137636152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610d40860151835190920191909152815143910152610100850151905190910152610e8881614741565b60046101c0830151516004811115613812576138126158c9565b1415613a6b5760008051602061645d833981519152826101e00151836101c00151604051613841929190616261565b60405180910390a147610f408201526080820151604080516001600160a01b0392831660248083019190915282518083039091018152604490910182526020810180516001600160e01b0316632c44543160e11b1790528185015191519092600092839291169082906138b5908690616276565b60006040518083038185875af1925050503d80600081146138f2576040519150601f19603f3d011682016040523d82523d6000602084013e6138f7565b606091505b5091509150613908828260416149d1565b50610f408401514703610d60850180519190915251610d80850181905260408051825181526020928301511515928101929092527fff57ae8f8e1983cd004d19869e3aba8a0b97d3decdd96cd726527b0e24912f3094500191506139699050565b60405180910390a1610100820151610d808201515101610da082015261399160016042614647565b610d80810151516139a490156043614647565b610dc08101805160009081905281516020015260a08301518151604001526101e08301519051606001526139d66152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516000940193909352610dc0860151835190920191909152815143910152610da0840151905190910152610e8881614741565b614641565b80610c20015115613ff35760006101c0830151516004811115613a9557613a956158c9565b1415613b935760008051602061647d833981519152826101e00151836101c00151604051613ac4929190616261565b60405180910390a1610de08101805160009081905281516020015260a08301518151604001526101e0830151905160600152613afe6152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610de0860151835190920191909152815143910152610100850151905190910152610e8881614741565b60016101c0830151516004811115613bad57613bad6158c9565b1415613cab5760008051602061647d833981519152826101e00151836101c00151604051613bdc929190616261565b60405180910390a1610e008101805160009081905281516020015260a08301518151604001526101e0830151905160600152613c166152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610e00860151835190920191909152815143910152610100850151905190910152610e8881614741565b60026101c0830151516004811115613cc557613cc56158c9565b1415613dc35760008051602061647d833981519152826101e00151836101c00151604051613cf4929190616261565b60405180910390a1610e208101805160009081905281516020015260a08301518151604001526101e0830151905160600152613d2e6152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610e20860151835190920191909152815143910152610100850151905190910152610e8881614741565b60036101c0830151516004811115613ddd57613ddd6158c9565b1415613edb5760008051602061647d833981519152826101e00151836101c00151604051613e0c929190616261565b60405180910390a1610e408101805160009081905281516020015260a08301518151604001526101e0830151905160600152613e466152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610e40860151835190920191909152815143910152610100850151905190910152610e8881614741565b60046101c0830151516004811115613ef557613ef56158c9565b1415613a6b5760008051602061647d833981519152826101e00151836101c00151604051613f24929190616261565b60405180910390a1610e608101805160009081905281516020015260a08301518151604001526101e0830151905160600152613f5e6152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610e60860151835190920191909152815143910152610100850151905190910152610e8881614741565b60006101c083015151600481111561400d5761400d6158c9565b141561410b5760008051602061643d833981519152826101e00151836101c0015160405161403c929190616261565b60405180910390a1610e808101805160009081905281516020015260a08301518151604001526101e08301519051606001526140766152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610e80860151835190920191909152815143910152610100850151905190910152610e8881614741565b60016101c0830151516004811115614125576141256158c9565b14156142235760008051602061643d833981519152826101e00151836101c00151604051614154929190616261565b60405180910390a1610ea08101805160009081905281516020015260a08301518151604001526101e083015190516060015261418e6152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610ea0860151835190920191909152815143910152610100850151905190910152610e8881614741565b60026101c083015151600481111561423d5761423d6158c9565b141561433b5760008051602061643d833981519152826101e00151836101c0015160405161426c929190616261565b60405180910390a1610ec08101805160009081905281516020015260a08301518151604001526101e08301519051606001526142a66152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610ec0860151835190920191909152815143910152610100850151905190910152610e8881614741565b60036101c0830151516004811115614355576143556158c9565b14156144535760008051602061643d833981519152826101e00151836101c00151604051614384929190616261565b60405180910390a1610ee08101805160009081905281516020015260a08301518151604001526101e08301519051606001526143be6152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610ee0860151835190920191909152815143910152610100850151905190910152610e8881614741565b60046101c083015151600481111561446d5761446d6158c9565b1415613a6b5760008051602061643d833981519152826101e00151836101c0015160405161449c929190616261565b60405180910390a1610f008101805160009081905281516020015260a08301518151604001526101e08301519051606001526144d66152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610f00860151835190920191909152815143910152610100850151905190910152610e8881614741565b610a0081018051602090810151610f2084018051919091529151518251909101526101c08301518151604001526101e08301519051606001526145ac6152d2565b825181516001600160a01b03918216905260208085015183518201526040808601518451908416908201526060808701518551820152608080880151865195169481019490945260a08088015186519091015260c087015183860180519190915280516001940193909352610f20860151835190920191909152815143910152610100850151905190910152610e8881614741565b50505050565b816106365760405163100960cb60e01b8152600481018290526024015b60405180910390fd5b614675614ad5565b60016001600160a01b03831660009081526004602052604090205460ff1660018111156146a4576146a46158c9565b1415614732576001600160a01b038216600090815260046020526040908190208151606081019092528054829060ff1660018111156146e5576146e56158c9565b60018111156146f6576146f66158c9565b81528154610100900460ff1615156020808301919091526040805180820182526001850154815260029094015491840191909152015292915050565b60008082526020820152919050565b61476e60405180608001604052806000151581526020016000815260200160008152602001600081525090565b816020015160200151156148f25760208201516040015160600151600a11801582526147c65760208201516040015160600151600a906147b290611e338382616211565b6147bc9190616225565b60208201526147ce565b600160208201525b6147d66152f2565b8251516001600160a01b03908116825283516020908101518184015284516040908101518316818501528551606090810151818601528651608090810151851681870152875160a0908101519087015283880180515160c0880152805184015160e08801528051820151610100880152805151519095166101208701528451518401516101408701528451518301511515610160870152845151820151610180870152845151015115156101a086015283518201518201516101c08601529251810151909201516101e0840152835115156102008401528381015161022084015260036000554360015590516148ce918391016162c1565b604051602081830303815290604052600290805190602001906146419291906153e9565b6000604082015261490560016013614647565b60208201518051516080909101516040516001600160a01b039092169181156108fc0291906000818181858888f19350505050158015614949573d6000803e3d6000fd5b506040810151479081106149635760408201518103614966565b60005b60608301525061497860016014614647565b6020820151515160608201516040516001600160a01b039092169181156108fc0291906000818181858888f193505050501580156149ba573d6000803e3d6000fd5b50600080805560018190556106369060029061546d565b606083156149e0575081614a0c565b8251156149f05782518084602001fd5b60405163100960cb60e01b815260048101839052602401614664565b9392505050565b604051806040016040528060008152602001614a2d6154aa565b905290565b6040805160c081018252600080825260208201819052918101829052606081018290526080810182905260a081019190915290565b6040805161016081018252600060e08201818152610100830182905261012083018290526101408301829052825260208201819052918101829052606081018290526080810182905260a0810182905260c081019190915290565b6040518060200160405280614a2d614a67565b60408051606081019091528060008152602001600015158152602001614a2d604051806040016040528060008152602001600081525090565b6040805160c081019091528060008152602001614b3b604080518082019091526000808252602082015290565b8152602001614b486154bd565b81526000602082018190526040820181905260609091015290565b60408051610f8081019091526000610f608201908152815260208101614b87614ad5565b8152602001614ba9604051806040016040528060008152602001600081525090565b815260200160001515815260200160008152602001600015158152602001614be4604051806040016040528060008152602001600081525090565b8152602001614bff6040518060200160405280600081525090565b81526020016000815260200160008152602001614c1a614ad5565b8152602001600015158152602001614c45604051806040016040528060008152602001600081525090565b8152602001614c67604051806040016040528060008152602001600081525090565b8152602001614c89604051806040016040528060008152602001600081525090565b8152602001614cab604051806040016040528060008152602001600081525090565b8152602001614ccd604051806040016040528060008152602001600081525090565b815260408051602080820183526000825283015201614cea614ad5565b8152600060208201819052604082018190526060820152608001614d1e604080518082019091526000808252602082015290565b81526000602082018190526040820152606001614d396154bd565b8152602001614d46614ad5565b8152602001614d68604051806040016040528060008152602001600081525090565b81526000602082018190526040820181905260608201819052608082015260a001614d91614b0e565b8152602001614d9e6154eb565b81526040805160208082018352600080835281850192909252828401829052606084018290526080840182905260a0840182905260c0840182905260e08401829052825180840190935281835282015261010082015261012001614e0061550c565b815260200160008152602001614e29604051806040016040528060008152602001600081525090565b815260006020820152604001614e4f604080518082019091526000808252602082015290565b81526000602082018190526040820152606001614e6a6154bd565b8152602001614e77614ad5565b815260006020820181905260408201819052606082018190526080820181905260a082015260c001614eb9604080518082019091526000808252602082015290565b81526000602082018190526040820152606001614ed46154bd565b8152602001614ee1614ad5565b81526000602082018190526040820181905260608201819052608082015260a001614f0a6154eb565b8152602001614f3660408051608081018252600060208201818152928201819052606082015290815290565b815260200160008152602001614f5f604051806040016040528060008152602001600081525090565b8152602001614f81604051806040016040528060008152602001600081525090565b815260006020820152604001614fa7604080518082019091526000808252602082015290565b81526000602082018190526040820152606001614fc26154bd565b8152602001614fcf614ad5565b815260200160001515815260200160001515815260200160006001600160a01b0316815260200160001515815260200161501c604051806040016040528060008152602001600081525090565b815260200161503e604051806040016040528060008152602001600081525090565b8152602001615060604051806040016040528060008152602001600081525090565b8152602001615082604051806040016040528060008152602001600081525090565b81526020016150a4604051806040016040528060008152602001600081525090565b81526020016150c6604051806040016040528060008152602001600081525090565b815260006020820181905260408201526060016150f3604080518082019091526000808252602082015290565b8152600060208201819052604082015260600161510e6154bd565b815260200161511b614ad5565b815260006020820181905260408201819052606082018190526080820181905260a082015260c00161515d604080518082019091526000808252602082015290565b8152602001600081526020016151716154eb565b815260200161517e6154bd565b815260200161518b6154eb565b81526040805160a081018252600080825260208281018290529282018190526060820181905260808201529101908152600060208201526040016151cd6154eb565b81526020016151da6154eb565b81526020016151fe6040518060400160405280600081526020016000151581525090565b81526020016152226040518060400160405280600081526020016000151581525090565b8152602001600081526020016152366154eb565b81526020016152436154eb565b81526020016152506154eb565b815260200161525d6154eb565b815260200161526a6154eb565b81526020016152776154eb565b81526020016152846154eb565b81526020016152916154eb565b815260200161529e6154eb565b81526020016152ab6154eb565b81526020016152b86154eb565b81526020016152c56154eb565b8152602001600081525090565b60405180604001604052806152e561551f565b8152602001614a2d615586565b60405180610240016040528060006001600160a01b0316815260200161533860408051608081018252600080825260208201819052918101829052606081019190915290565b815260006020820181905260408201819052606082015260800161535a614b0e565b81526040805160a0810182526000808252602082810182905292820181905260608201819052608082015291019081526020016153956154eb565b815260006020820181905260408201819052606082018190526080820181905260a0820181905260c082015260e0016153cc614b0e565b815260200160008152602001600015158152602001600081525090565b8280546153f590615bf0565b90600052602060002090601f016020900481019282615417576000855561545d565b82601f1061543057805160ff191683800117855561545d565b8280016001018555821561545d579182015b8281111561545d578251825591602001919060010190615442565b506154699291506155de565b5090565b50805461547990615bf0565b6000825580601f10615489575050565b601f0160209004906000526020600020908101906154a791906155de565b50565b6040518060200160405280614a2d6155f3565b6040805160a08101825260008082526020820181905291810182905260608101829052608081019190915290565b604051806080016040528060008152602001600081526020016152c5614b0e565b6040518060200160405280614a2d614b0e565b6040518060c0016040528060006001600160a01b0316815260200161556460408051608081018252600080825260208201819052918101829052606081019190915290565b8152600060208201819052604082018190526060820152608001614a2d614b0e565b6040805161014081018252600060a0820181815260c0830182905260e0830182905261010083018290526101208301829052825260208201529081016155ca6154eb565b815260200160008152602001600081525090565b5b8082111561546957600081556001016155df565b6040805160e081018252600080825282516020808201855282825280840191909152835180820185528281528385015283518082018552828152606084015283519081019093528252608081019190915260a0810161565061550c565b8152602001614a2d60408051608081018252600060208201818152928201819052606082015290815290565b60405160a0810167ffffffffffffffff811182821017156156ad57634e487b7160e01b600052604160045260246000fd5b60405290565b60405160c0810167ffffffffffffffff811182821017156156ad57634e487b7160e01b600052604160045260246000fd5b6040805190810167ffffffffffffffff811182821017156156ad57634e487b7160e01b600052604160045260246000fd5b6040516080810167ffffffffffffffff811182821017156156ad57634e487b7160e01b600052604160045260246000fd5b604051610240810167ffffffffffffffff811182821017156156ad57634e487b7160e01b600052604160045260246000fd5b6040516020810167ffffffffffffffff811182821017156156ad57634e487b7160e01b600052604160045260246000fd5b60405160e0810167ffffffffffffffff811182821017156156ad57634e487b7160e01b600052604160045260246000fd5b80151581146154a757600080fd5b8035610611816157da565b60006060828403121561580557600080fd5b6040516060810181811067ffffffffffffffff8211171561583657634e487b7160e01b600052604160045260246000fd5b60405290508082356002811061584b57600080fd5b8152602083013561585b816157da565b6020820152604083013561586e816157da565b6040919091015292915050565b60006060828403121561588d57600080fd5b614a0c83836157f3565b6001600160a01b03811681146154a757600080fd5b6000602082840312156158be57600080fd5b8135614a0c81615897565b634e487b7160e01b600052602160045260246000fd5b600281106154a7576154a76158c9565b815160808201906158ff816158df565b80835250602083015115156020830152604083015180516040840152602081015160608401525092915050565b60006020828403121561593e57600080fd5b8135614a0c816157da565b803561061181615897565b6000610280828403121561596757600080fd5b50919050565b60005b83811015615988578181015183820152602001615970565b838111156146415750506000910152565b82815260406020820152600082518060408401526159be81606085016020870161596d565b601f01601f1916919091016060019392505050565b8051600581106159e5576159e56158c9565b80835250602081015160018060a01b03808251166020850152602082015160408501526040830151915080825116606085015250602081015115156080840152604081015160a0840152606081015160c08401526080810151151560e0840152506060810151615a616101008401826001600160a01b03169052565b506080810151151561012083015260a00151151561014090910152565b61016081016104a582846159d3565b600581106154a757600080fd5b600060a08284031215615aac57600080fd5b615ab461567c565b90508135615ac181615897565b81526020820135615ad1816157da565b8060208301525060408201356040820152606082013560608201526080820135615afa816157da565b608082015292915050565b6000818303610160811215615b1957600080fd5b615b216156b3565b91508235615b2e81615a8d565b82526040601f1982011215615b4257600080fd5b50615b4b6156e4565b6020830135615b5981615897565b81526040830135602080830191909152820152615b798360608401615a9a565b6040820152615b8b6101008301615949565b6060820152615b9d61012083016157e8565b6080820152615baf61014083016157e8565b60a082015292915050565b60006101608284031215615bcd57600080fd5b614a0c8383615b05565b600060208284031215615be957600080fd5b5035919050565b600181811c90821680615c0457607f821691505b6020821081141561596757634e487b7160e01b600052602260045260246000fd5b805161061181615897565b600060808284031215615c4257600080fd5b615c4a615715565b90508151815260208201516020820152604082015160408201526060820151606082015292915050565b8051610611816157da565b600060a08284031215615c9157600080fd5b615c9961567c565b90508151615ca681615897565b81526020820151615cb6816157da565b8060208301525060408201516040820152606082015160608201526080820151615afa816157da565b6000818303610160811215615cf357600080fd5b615cfb6156b3565b91508251615d0881615a8d565b82526040601f1982011215615d1c57600080fd5b50615d256156e4565b6020830151615d3381615897565b81526040830151602080830191909152820152615d538360608401615c7f565b6040820152615d656101008301615c25565b6060820152615d776101208301615c74565b6080820152615baf6101408301615c74565b600060a08284031215615d9b57600080fd5b615da361567c565b90508151615db081615897565b8152602082810151908201526040820151615dca816157da565b6040820152606082810151908201526080820151615afa816157da565b60006101c08284031215615dfa57600080fd5b615e02615715565b90508151815260208201516020820152615e1f8360408401615cdf565b60408201526101a0820151606082015292915050565b60006107408284031215615e4857600080fd5b615e50615746565b615e5983615c25565b8152615e688460208501615c30565b6020820152615e7960a08401615c25565b604082015260c08301516060820152615e9460e08401615c25565b6080820152610100615ea885828601615cdf565b60a0830152615ebb856102608601615d89565b60c0830152615ece856103008601615de7565b60e08301526104c084015190820152615eea6104e08401615c25565b610120820152610500830151610140820152615f096105208401615c74565b610160820152610540830151610180820152615f286105608401615c74565b6101a0820152615f3c846105808501615cdf565b6101c08201526106e08301516101e0820152615f5b6107008401615c74565b610200820152610720929092015161022083015250919050565b600060208284031215615f8757600080fd5b615f8f615778565b90508135615f9c81615897565b815292915050565b600060208284031215615fb657600080fd5b615fbe615778565b9135825250919050565b600060208284031215615fda57600080fd5b615fe2615778565b90508135615f9c816157da565b6000610160828403121561600257600080fd5b61600a615778565b9050615f9c8383615b05565b60006060828403121561602857600080fd5b616030615778565b9050615f9c83836157f3565b600081830361028081121561605057600080fd5b6160586156e4565b83358152610260601f198301121561606f57600080fd5b616077615778565b91506160816157a9565b60208501356006811061609357600080fd5b81526160a28660408701615f75565b60208201526160b48660608701615fa4565b60408201526160c68660808701615f75565b60608201526160d88660a08701615fc8565b60808201526160ea8660c08701615fef565b60a08201526160fd866102208701616016565b60c0820152825260208101919091529392505050565b6106368282516159d3565b8051805161612b816158df565b80845250602081015115156020840152604081015115156040840152505050565b6001600160a01b03838116825282516020808401919091528301515180516102a0840192919060068110616182576161826158c9565b80604086015250816020820151511660608501526040810151516080850152606081015191506161be60a0850183516001600160a01b03169052565b608081015151151560c085015260a081015191506161df60e0850183616113565b60c0015190506161f361024084018261611e565b509392505050565b634e487b7160e01b600052601260045260246000fd5b600082616220576162206161fb565b500690565b600082616234576162346161fb565b500490565b610180810161624882856159d3565b6001600160a01b03929092166101609190910152919050565b8281526101808101614a0c60208301846159d3565b6000825161628881846020870161596d565b9190910192915050565b805182526020810151602083015260408101516162b260408401826159d3565b50606001516101a09190910152565b81516001600160a01b03168152610740810160208301516163066020840182805182526020810151602083015260408101516040830152606081015160608301525050565b5060408301516001600160a01b03811660a084015250606083015160c083015260808301516001600160a01b03811660e08401525060a083015161010061634f818501836159d3565b60c085015180516001600160a01b03166102608601526020810151610280860152604081015115156102a086015260608101516102c08601526080015115156102e085015260e085015191506163a9610300850183616292565b8401516104c0840152506101208301516001600160a01b03166104e083015261014083015161050083015261016083015115156105208301526101808301516105408301526101a083015115156105608301526101c08301516164106105808401826159d3565b506101e08301516106e0830152610200830151151561070083015261022090920151610720909101529056fea0c08e29c71350e40fbb4cf003989233b13d526e69962aefa0a312080ee1fc54f825aeeaf8a98d102cfef2ce8a456afbe776ac52abc49aed0689abcbcf31c12f4eb456086f80a7670898a2f96c26b017204aad3098f1aeb032d9b4edbe0ef5c9a264697066735822122042ef2c40d46bd43011eb0882b6a59e0db3a3c356a04d29995eab20228455d0f764736f6c634300080c0033`,
+  BytecodeLen: 30050,
   Which: `oD`,
   version: 7,
   views: {
@@ -8866,13 +9019,13 @@ const _ETH = {
   };
 export const _stateSourceMap = {
   2: {
-    at: './dao/contracts/dao-core.rsh:354:11:after expr stmt semicolon',
+    at: './dao/contracts/dao-core.rsh:374:11:after expr stmt semicolon',
     fs: [],
     msg: null,
     who: 'Module'
     },
   3: {
-    at: './dao/contracts/dao-core.rsh:169:50:after expr stmt semicolon',
+    at: './dao/contracts/dao-core.rsh:189:50:after expr stmt semicolon',
     fs: [],
     msg: null,
     who: 'Module'

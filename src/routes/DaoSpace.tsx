@@ -77,7 +77,7 @@ export default function DaoSpace() {
         <b>Create DAO</b>
       </WideButton>
 
-      {!loading && daos.length && (
+      {!loading && daos.length > 0 && (
         <WideListView data={daos} itemText={DaoItem} onItemClick={goToDao} />
       )}
     </PageContainer>

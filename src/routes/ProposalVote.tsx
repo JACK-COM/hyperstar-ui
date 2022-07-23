@@ -89,6 +89,13 @@ export default function ProposalVote() {
   if (!proposal || !data)
     return <LoadingView msg="No active proposals for this DAO" />;
 
+  const format = (d: string | boolean) => {
+    if (typeof d === "boolean")
+      return d ? "Allowed/Enabled" : "Disallowed/disabled";
+
+    return d;
+  };
+
   return (
     <PageContainer>
       <h1>Governance</h1>
@@ -108,12 +115,12 @@ export default function ProposalVote() {
           <>
             <ProposalLabel>
               <span className="label">From (old value)</span>
-              <span className="text">{data.value.old}</span>
+              <span className="text">{format(data.value.old)}</span>
             </ProposalLabel>
 
             <ProposalLabel>
               <span className="label">To (new value)</span>
-              <span className="text">{data.value.new}</span>
+              <span className="text">{format(data.value.new)}</span>
             </ProposalLabel>
           </>
         )}
