@@ -63,9 +63,15 @@ export default function PreviewDao(props: Props) {
 
       {view.isMember ? (
         <FlexColumn>
-          <ActionLink type="button" to={`/dao/${daoId}/proposals/new`}>
-            Create Proposal
-          </ActionLink>
+          {view.proposal?.[0] === "None" ? (
+            <ActionLink type="button" to={`/dao/${daoId}/proposals/new`}>
+              Create Proposal
+            </ActionLink>
+          ) : (
+            <ActionLink type="button" to={`/dao/${daoId}/proposals/vote`}>
+              View Active Proposal
+            </ActionLink>
+          )}
 
           {!view.isAdmin && <ActionBtn>Leave DAO</ActionBtn>}
         </FlexColumn>

@@ -47,6 +47,12 @@ const publicRoutes: RouteDef[] = [
     text: "Create a Governance Proposal",
     component: lazy(() => import("./ProposalCreate")),
     publicRoute: true
+  },
+  {
+    path: "/dao/:id/proposals/vote",
+    text: "Create a Governance Proposal",
+    component: lazy(() => import("./ProposalVote")),
+    publicRoute: true
   }
 ];
 

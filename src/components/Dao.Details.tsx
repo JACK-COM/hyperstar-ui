@@ -58,9 +58,7 @@ export default function DaoDetails(props: Props) {
   return (
     <section className="dao-details">
       <h2>{dao.name}</h2>
-      <TextSection>
-        {dao.description || "No description provided"}
-      </TextSection>
+      <TextSection>{dao.description || "No description provided"}</TextSection>
       {dao.isAdmin && (
         <ActionBtn
           type="button"
@@ -75,7 +73,9 @@ export default function DaoDetails(props: Props) {
       <FieldGrid>
         <FlexColumn>
           <CapsLabel>Membership Fee</CapsLabel>
-          <BigValue>{`${dao.fee} ${getBlockchain()}`}</BigValue>
+          <BigValue>
+            {dao.fee === "0" ? "Free" : `${dao.fee} ${getBlockchain()}`}
+          </BigValue>
         </FlexColumn>
 
         <FlexColumn>
@@ -91,7 +91,7 @@ export default function DaoDetails(props: Props) {
       </FieldGrid>
 
       <Spacer />
-      
+
       <FieldGrid>
         <FlexColumn>
           <CapsLabel>Membership</CapsLabel>

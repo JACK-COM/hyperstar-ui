@@ -2,18 +2,27 @@ import styled, { css } from "styled-components";
 import { useMemo, useState } from "react";
 import useGlobalModal from "hooks/globalModal";
 import useGlobalUser from "hooks/globalUser";
-import { WideButton } from "components/Forms/Button";
-import { Fieldset, Form, Input, Legend, Textarea } from "components/Forms/Form";
-import { Radio } from "components/Forms/Radio";
+import { Fieldset, Form, Input, Legend } from "components/Forms/Form";
 import { ClickableStrong, FlexColumn } from "./Common/Containers";
-import { DaoDeployerOpts } from "reach/participants/DaoAdmin";
 import { UIDao } from "reach/views/DaoView";
 import { ToggleList, ToggleListItemHoverable } from "./Common/ToggleList";
 import {
-  proposalActionText,
-  ProposalActionType,
-  proposalTypes
-} from "types/dao.contract";
+  ChangeAdminProposition,
+  ProposalType,
+  Proposition,
+  UIProposalType
+} from "types/dao";
+import { proposalTypes } from "constants/dao";
+import JsonSchemaForm from "components/JsonSchemaForm";
+import {
+  UISchemaData,
+  proposalActionSchema,
+  schemaData,
+  validateSchemaData,
+  UIJsonSchema
+} from "types/proposal-schema";
+import { WideButton } from "./Forms/Button";
+import { createReachAPI } from "@jackcom/reachduck";
 
 const animHide = "slide-up-fade-out";
 const animShow = "slide-down-fade-in";
@@ -31,14 +40,10 @@ const FormDesc = styled.p<{ hide?: boolean }>`
   height: ${({ hide }) => (hide ? 0 : "auto")};
   overflow: hidden;
 `;
-const FieldGrid = styled(Fieldset)`
-  display: grid;
-  gap: 0.4rem;
-  grid-template-columns: repeat(2, 1fr);
+const SchemaForm = styled(JsonSchemaForm)`
+  display: flex;
+  flex-direction: column;
   ${fieldsetCSS}
-  ${FormDesc} {
-    grid-column: 1 / grid-column-end;
-  }
 `;
 const Fields = styled(Fieldset)`
   display: flex;
@@ -54,41 +59,62 @@ const ProposalTypes = styled(ToggleList)`
   width: 100%;
 `;
 
-type FormProps = { onSubmit(d: DaoDeployerOpts): any; dao: UIDao };
+type FormProps = { onSubmit(d: Proposition): any; dao: UIDao };
+
+const UINone = { text: "Select an action", type: ProposalType.NONE };
 
 export default function CreateProposalForm(props: FormProps) {
   const { onSubmit, dao } = props;
   const { showModal, MODAL } = useGlobalModal();
   const { address } = useGlobalUser();
-  const [action, setAction] = useState<ProposalActionType>(
-    ProposalActionType.NONE
-  );
-  const [name, setName] = useState("");
-  const [description, setDesc] = useState("");
-  const [fee, setFee] = useState(0);
+  const [action, setAction] = useState<UIProposalType>(UINone);
+  const [schema, setSchema] = useState<UIJsonSchema | null>(null);
+  const [data, setData] = useState<UISchemaData>(null);
   const [selectingAction, setSelectingAction] = useState(false);
-  const [openTreasury, setOpenTreasury] = useState(true);
-  const [registerSelf, setRegisterSelf] = useState(true);
-  const formData = useMemo<DaoDeployerOpts>(
-    () => ({ name, description, fee, openTreasury, quorum: 1, registerSelf }),
-    [name, fee, openTreasury, registerSelf]
-  );
   const submitText = useMemo(
     () => (address ? "Create Proposal" : "Connect to begin"),
     [address]
   );
-  const isInvalid = useMemo(() => Boolean(address && !name), [name, address]);
-  const onFee = (f: string) => setFee(Math.max(Number(f), 0));
-  const selectAction = async (d: ProposalActionType) => {
-    setAction(d);
+  const isInvalid = useMemo(
+    () =>
+      action === UINone ||
+      (!dao.isAdmin && action.type === ProposalType.STOP) ||
+      !validateSchemaData(data, schema),
+    [action, data, schema]
+  );
+  const selectAction = async (d: UIProposalType) => {
     setSelectingAction(false);
+    if (d.text === action.text) return;
+
+    setAction(d);
+    setSchema(proposalActionSchema(d));
+    setData(schemaData(d, dao));
   };
+  const onData = (d: UISchemaData) =>
+    d ? setData((old) => ({ ...old, ...d })) : setData(d);
+
   const maybeSubmit = async (): Promise<void> => {
     if (isInvalid) return;
     if (!address) {
       showModal(MODAL.PROVIDER_SELECT);
-    } else onSubmit(formData);
+      return;
+    }
+
+    const stdlib = createReachAPI();
+    const toDo = action.type.valueOf() as Proposition["0"];
+    const src = data as ChangeAdminProposition;
+    const fData = src?.fee
+      ? {
+          ...data,
+          fee: stdlib.parseCurrency(src.fee),
+          quorum: stdlib.bigNumberify(src.quorum)
+        }
+      : data;
+    onSubmit([toDo, fData as any]);
   };
+  const filteredTypes = dao.isAdmin
+    ? proposalTypes
+    : proposalTypes.filter((t) => t.type !== ProposalType.STOP);
 
   return (
     <section>
@@ -97,65 +123,37 @@ export default function CreateProposalForm(props: FormProps) {
         Enter <b>information</b> about your Proposal.
       </FormDesc>
 
-      <Form onSubmit={(e) => e.preventDefault()}>
+      <Form name="selectActionForm" onSubmit={(e) => e.preventDefault()}>
         <Fields disabled={!address}>
           <Legend>Proposal Type</Legend>
-          <SelectProposalType onClick={() => setSelectingAction(true)}>
-            {proposalActionText(action, dao)}
+          <SelectProposalType
+            onClick={() => setSelectingAction(!selectingAction)}
+          >
+            {action.text}
           </SelectProposalType>
 
           {selectingAction && (
             <ProposalTypes
-              data={proposalTypes}
+              data={filteredTypes}
               onItemClick={(d) => selectAction(d)}
               itemText={(d) => (
-                <ToggleListItemHoverable>
-                  {proposalActionText(d, dao)}
-                </ToggleListItemHoverable>
+                <ToggleListItemHoverable>{d.text}</ToggleListItemHoverable>
               )}
             />
           )}
         </Fields>
-
-        <FieldGrid disabled={!address}>
-          <FlexColumn>
-            <h4>Membership Fee</h4>
-            <Input
-              type="number"
-              min={0}
-              pattern="0-9"
-              placeholder="(Leave blank for free membership)"
-              onChange={({ target }) => onFee(target.value)}
-            />
-          </FlexColumn>
-
-          <FlexColumn>
-            <h4>Voting Quorum</h4>
-
-            <Input
-              type="number"
-              min={0}
-              pattern="0-9"
-              placeholder="(Leave blank for free membership)"
-              value={1}
-              disabled
-            />
-          </FlexColumn>
-
-          {address && (
-            <FormDesc>
-              Your <b>voting quorum</b> determines the minimum number of votes
-              required before a <b>Governance Proposal</b> is auto-resolved. It
-              starts at <b>1</b>, but can be changed by a{" "}
-              <b>Governance Proposal</b>.
-            </FormDesc>
-          )}
-        </FieldGrid>
-
-        <WideButton type="button" disabled={isInvalid} onClick={maybeSubmit}>
-          <b>{submitText}</b>
-        </WideButton>
       </Form>
+
+      {schema && (
+        <FlexColumn>
+          <h4>{action.text}</h4>
+          <SchemaForm schema={schema} values={data} onChange={onData} />
+        </FlexColumn>
+      )}
+
+      <WideButton type="button" disabled={isInvalid} onClick={maybeSubmit}>
+        <b>{submitText}</b>
+      </WideButton>
     </section>
   );
 }
