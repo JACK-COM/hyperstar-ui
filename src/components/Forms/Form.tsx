@@ -9,6 +9,12 @@ const sharedInputStyles = css`
   line-height: ${({ theme }) => theme.sizes.lg};
   padding: ${({ theme }) => theme.sizes.xs};
 `;
+const sharedRadioStyles = css`
+  display: inline-block;
+  margin: 0 0.3rem;
+  order: -1;
+  width: initial;
+`;
 export const Fieldset = styled.fieldset`
   border: 1px solid ${({ theme }) => theme.colors.semitransparent};
   border-radius: ${({ theme }) => theme.presets.rounded.sm};
@@ -22,23 +28,32 @@ export const Fieldset = styled.fieldset`
 `;
 export const Input = styled.input`
   ${sharedInputStyles};
+
+  &[type="checkbox"],
+  &[type="radio"] {
+    ${sharedRadioStyles}
+  }
 `;
 
 export const Textarea = styled.textarea`
   ${sharedInputStyles};
   height: 120px;
 `;
-export const Label = styled.label`
+export const Label = styled.label<{ direction?: "row" | "column" }>`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ direction = "column" }) => direction};
 
   > span,
   .label {
-    color: ${({ theme }) => theme.colors.secondary};
+    color: #e89458;
+    font-weight: bold;
   }
 `;
 export const RadioInput = styled.input.attrs({ type: "radio" })`
-  width: initial;
+  ${sharedRadioStyles}
+`;
+export const CheckboxInput = styled.input.attrs({ type: "checkbox" })`
+  ${sharedRadioStyles}
 `;
 export const RadioLabel = styled(Label)`
   align-items: center;

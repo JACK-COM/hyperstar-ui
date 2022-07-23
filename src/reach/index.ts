@@ -16,23 +16,24 @@ import {
   createConnectorAPI,
   createReachAPI,
   formatCurrency,
+  parseAddress
 } from "@jackcom/reachduck";
 import ADI from "ADI";
 import store, {
   addNotification,
   checkHasToken,
   updateAsError,
-  updateNotification,
+  updateNotification
 } from "state";
 import {
   subscribeToExchanges,
-  subscribeToListings,
+  subscribeToListings
 } from "./participants/Announcers";
 import { loadStdlib } from "@reach-sh/stdlib";
 
 const CONNECT_USER_OPTS = {
   fetchAssets: true,
-  fetchBalance: false,
+  fetchBalance: false
 };
 
 /** Connect user Wallet */
@@ -91,7 +92,7 @@ export async function inlineAssetOptIn(
     acc
       .tokenAccept(tokenId)
       .then(() => true)
-      .catch(() => false),
+      .catch(() => false)
   ]);
 
   if (accepted) {
@@ -109,10 +110,10 @@ export async function tokenMetadata(
   cacheResponse?: boolean
 ): Promise<ReachToken> {
   if (!acc) return {} as ReachToken;
-  const fetchToken = () => getReachToken(tokenId, acc);
+  const id = parseAddress(tokenId)
+  const fetchToken = () => getReachToken(id, acc);
   if (cacheResponse === false) return fetchToken();
-
-  return ADI.getItem(tokenId, "tokens", fetchToken);
+  return ADI.getItem(id, "tokens", fetchToken);
 }
 
 type LibFallbackOpts = {
@@ -125,7 +126,7 @@ function setLibFallback(opts?: LibFallbackOpts) {
     chain: "ALGO",
     network: getBlockchainNetwork(),
     showReachContractWarnings: false,
-    walletFallback: opts,
+    walletFallback: opts
   });
 }
 
@@ -134,7 +135,7 @@ export function loadReachDefaults() {
   loadReachWithOpts(loadStdlib, {
     chain: getBlockchain(),
     network: getBlockchainNetwork(),
-    showReachContractWarnings: false,
+    showReachContractWarnings: false
   });
   console.log(createConnectorAPI(), createConnectorAPI().getProviderEnv());
 }
@@ -153,6 +154,6 @@ export function useWalletConnect() {
       const wcInstance = new WCClient();
       store.wcClient(wcInstance.wc);
       return wcInstance;
-    },
+    }
   });
 }

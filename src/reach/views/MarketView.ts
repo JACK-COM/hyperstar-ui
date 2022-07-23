@@ -7,7 +7,6 @@ import {
   formatCurrency,
   parseAddress,
   formatNumberShort,
-  Maybe,
   formatAddress
 } from "@jackcom/reachduck";
 import ADI from "ADI";
@@ -21,6 +20,9 @@ export type Sale = {
   item: ReachToken;
   altToken: ReachToken;
   closed?: boolean;
+  qty: any;
+  price: any;
+  useBondingCurve: boolean;
 } & { [k: string]: any };
 
 export async function loadSale(
@@ -42,7 +44,6 @@ export async function loadSale(
     const pricing = fromMaybe(await contract.views.pricing());
 
     if (!Market || !pricing) {
-      ADI.removeItem(addr, "listings");
       return { ctc: addr, closed: true } as Sale;
     }
 
@@ -69,7 +70,6 @@ export async function loadSale(
     };
 
     if (storeContract) storeListingContract(addr, contract);
-    ADI.cacheItem(addr, listing, "listings");
 
     return listing;
   } catch (e) {
@@ -79,9 +79,6 @@ export async function loadSale(
 
 function storeListingContract(info: any, ctc: ReachContract<any>) {
   const { bigNumberToNumber } = createReachAPI();
-  const removeListing = () => {
-    ADI.removeItem(info, "listings");
-  };
 
   // Monitor events and update cache
   ctc.events.itemPurchased.monitor(async ({ what }) => {
@@ -89,16 +86,7 @@ function storeListingContract(info: any, ctc: ReachContract<any>) {
     const amtNumber = bigNumberToNumber(amt);
     const items = amtNumber === 1 ? "item" : "items";
     addNotification(`Someone purchased ${amtNumber} ${items}!`);
-
-    ADI.getItem(info, "listings").then((listing) => {
-      listing.qty = bigNumberToNumber(balance);
-      if (listing.qty > 0) ADI.cacheItem(info, listing);
-      else removeListing();
-    });
   });
-
-  // Clear cache when listing is closed
-  ctc.events.listingClosed.monitor(removeListing);
 
   // Store to state and return
   const { marketplace } = ContractStore.getState();

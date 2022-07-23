@@ -31,7 +31,10 @@ export async function createSaleContract(
   data: ListingDeployerOpts,
   acc: ReachAccount
 ): Promise<any> {
-  const id = resetNotifications(`💰 Listing item ...`, true);
+  const id = resetNotifications(`💰 Listing item ...`, {
+    persistent: true,
+    loading: true
+  });
   const ctcInfo = await deploy(acc, data);
   const { setSigningMonitor } = createReachAPI();
   setSigningMonitor(() => addNotification("Please sign transaction"));

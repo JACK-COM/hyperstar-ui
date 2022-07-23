@@ -1,92 +1,60 @@
-import { ComponentProps, PureComponent } from "react";
+import styled from "styled-components";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import SalesStore from "state/sale";
+import SalesStore, { addSale } from "state/sale";
 import { PageContainer } from "components/Common/Containers";
 import { AdjustableListGrid, gridClass } from "components/Common/ListView";
 import { Hint } from "components/Forms/Form";
-import styled from "styled-components";
 import SaleListItem from "components/SaleListItem";
 import LoadingView from "components/Common/LoadingView";
 import { Sale } from "reach/views/MarketView";
-import ADI from "ADI";
+import { listMarketplaceItems } from "graphql/queries";
 
 const Market = styled(PageContainer)`
   max-width: 100vw;
 `;
 
-type MarketState = {
-  loading: boolean;
-  items: Sale[];
-  className: string;
-};
+export default function Marketplace() {
+  const { items: stateItems } = SalesStore.getState();
+  const [items, setItems] = useState<Sale[]>(stateItems);
+  const [loading, setLoading] = useState(true);
+  const className = useMemo(() => gridClass(items.length), [items]);
+  const load = async () => {
+    const it = await listMarketplaceItems();
+    it.forEach(addSale);
+    setLoading(false);
+  };
 
-export default class Marketplace extends PureComponent {
-  unsubscribe: any;
-
-  mounted: boolean;
-
-  constructor(props: ComponentProps<any>) {
-    super(props);
-    const { items } = SalesStore.getState();
-    const state: MarketState = {
-      loading: items.length === 0,
-      className: gridClass(items.length),
-      items,
-    };
-
-    this.state = state;
-    this.mounted = false;
-    this.unsubscribe = SalesStore.subscribeToKeys(
-      ({ items: stItems = [] }) => {
-        if (!this.mounted) return;
-
-        const { loading } = this.state as MarketState;
-        const updates: Partial<MarketState> = {};
-        updates.items = stItems;
-        updates.className = gridClass(stItems.length);
-        if (loading) updates.loading = false;
-
-        this.setState((s) => ({ ...s, ...updates }));
-      },
+  useEffect(() => {
+    load();
+    return SalesStore.subscribeToKeys(
+      ({ items: i = [] }) => setItems(i),
       ["items"]
     );
+  }, []);
 
-    ADI.publishItems({ cacheKey: "listings" });
-  }
+  if (loading) return <LoadingView msg="Loading marketplace..." />;
 
-  componentDidMount() {
-    this.mounted = true;
-  }
+  return (
+    <Market>
+      <h1 className="h2">Marketplace</h1>
+      <Hint>All active listings from sellers just like you!</Hint>
 
-  componentWillUnmount() {
-    this.mounted = false;
-  }
+      {!items.length && (
+        <p>
+          Nothing has been listed yet.&nbsp;
+          <b>
+            <Link to="/sell">Be the first!</Link>
+          </b>
+        </p>
+      )}
 
-  render() {
-    const { loading, className, items } = this.state as MarketState;
-    if (loading) return <LoadingView msg="Loading marketplace..." />;
-
-    return (
-      <Market>
-        <h1 className="h2">Marketplace</h1>
-        <Hint>All active listings from sellers just like you!</Hint>
-
-        {!items.length && (
-          <p>
-            Nothing has been listed yet.&nbsp;
-            <b>
-              <Link to="/sell">Be the first!</Link>
-            </b>
-          </p>
-        )}
-
-        <AdjustableListGrid
-          className={className}
-          row
-          data={items}
-          itemText={(d: any) => <SaleListItem {...d} />}
-        />
-      </Market>
-    );
-  }
+      <AdjustableListGrid
+        className={className}
+        row
+        data={items}
+        itemText={(d: any) => <SaleListItem {...d} />}
+      />
+    </Market>
+  );
 }

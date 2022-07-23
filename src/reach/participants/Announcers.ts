@@ -5,15 +5,17 @@ import {
   getBlockchain
 } from "@jackcom/reachduck";
 import { EXCHANGE_ANNOUNCER, SALE_ANNOUNCER } from "constants/announcers";
-import { exchangeBroadcaster } from "reach/backends";
+import { daoBackend, exchangeBroadcaster } from "reach/backends";
 import { listingBroadcaster } from "reach/backends";
 import { loadSale } from "reach/views/MarketView";
 import { loadExchangeView } from "reach/views/TokenExchangeView";
+import DaoStore from "state/daos";
 import {
   updateNotification,
   resetNotifications,
   updateAsError
 } from "state/index";
+import { Proposition } from "types/dao";
 import { Inventory } from "types/shared";
 
 type CtcAlert = [ctcAddr: string, secondVal?: boolean];
@@ -91,6 +93,26 @@ export function createExchangeAnnouncerAPI(acc: ReachAccount, info: any) {
         .contractCreated(addr, smallUnit, largeUnit, conversionRate)
         .then(() => updateNotification(alertId, "✅ Published Contract!", end))
         .catch((err) => updateAsError(alertId, err.message || err));
+    }
+  };
+}
+
+/** Create a DAO Proposal announcer API */
+export function createProposalAnnouncerAPI(acc: ReachAccount, info: any) {
+  const ctc = acc.contract(daoBackend, parseAddress(info));
+
+  return {
+    async subscribe() {
+      DaoStore.proposals([]);
+
+      ctc.events.MotionEnacted.seekNow();
+      ctc.events.MotionEnacted.monitor<Proposition>(({ what }) => {
+        console.log("MotionEnacted", what);
+      });
+      ctc.events.MotionFailed.seekNow();
+      ctc.events.MotionFailed.monitor<Proposition>(({ what }) => {
+        console.log("MotionFailed", what);
+      });
     }
   };
 }

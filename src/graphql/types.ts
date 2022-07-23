@@ -24,8 +24,9 @@ export type HSListing = {
   qty: string;
   seller: string;
   bondingCurve: boolean;
-  created: Date;
-  lastModified: Date;
+  created: string; // Date ISO string
+  tokens?: { item: any | null; altToken: any | null };
+  //   lastModified?: string; // Date ISO string
   ended: boolean;
   connector: HSConnector;
 };
@@ -40,7 +41,7 @@ export type HSDao = {
   admin: string;
   founder: string;
   created: string; // Date ISO string
-//   lastModified?: string; // Date ISO string
+  //   lastModified?: string; // Date ISO string
   private: boolean;
   connector: HSConnector;
 };

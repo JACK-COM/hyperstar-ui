@@ -61,7 +61,7 @@ export default function DaoSpace() {
     setDaos(await listDaos());
     setLoading(false);
   };
-  const goToDao = (d: DaoItemProps) => history.push(`/dao/interact/${d.id}`);
+  const goToDao = (d: DaoItemProps) => history.push(`/dao/${d.id}/view`);
 
   useEffect(() => {
     load();
@@ -77,7 +77,7 @@ export default function DaoSpace() {
         <b>Create DAO</b>
       </WideButton>
 
-      {!loading && daos.length && (
+      {!loading && daos.length > 0 && (
         <WideListView data={daos} itemText={DaoItem} onItemClick={goToDao} />
       )}
     </PageContainer>

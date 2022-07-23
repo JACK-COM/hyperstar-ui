@@ -4,6 +4,7 @@ import {
   parseAddress,
   ReachAccount
 } from "@jackcom/reachduck";
+import { DAO_ANNOUNCER } from "constants/announcers";
 import { addDAO } from "graphql";
 import { HSConnector, HSDao } from "graphql/types";
 import { daoBackend } from "reach/backends";
@@ -50,7 +51,7 @@ export async function createDaoContract(
 
   updateNotification(id, `${data.name} was Created`, end);
   localStorage.setItem("new-dao", ctcInfo);
-  await publishDAO(ctcInfo.toString(), dao);
+  // await publishDAO(ctcInfo.toString(), dao);
 
   return ctcInfo;
 }
@@ -77,10 +78,12 @@ export async function publishDAO(ctcInfo: string, data: HSDao) {
 async function deploy(acc: ReachAccount, data: DaoDeployerOpts) {
   const ctc = acc.contract(daoBackend);
   const stdlib = createReachAPI();
+  const announcerCtc = DAO_ANNOUNCER;
   const ctcInfo = await new Promise((resolve) =>
     ctc.participants
       .Founder({
         name: data.name,
+        announcerCtc,
         fee: stdlib.parseCurrency(data.fee),
         quorum: stdlib.bigNumberify(data.quorum),
         registerSelf: data.registerSelf,

@@ -8,7 +8,7 @@ import {
 } from "react";
 import styled from "styled-components";
 import { MarketDeployerOpts, TokenID } from "types/shared";
-import { BigValue, FlexColumn, GridContainer } from "./Common/Containers";
+import { BigValue, ClickableStrong, FlexColumn, GridContainer } from "./Common/Containers";
 import Notification from "./Common/Notifications";
 import { ToggleList, ToggleListItemHoverable } from "./Common/ToggleList";
 import { Fieldset, Form, Hint, Input, Legend } from "./Forms/Form";
@@ -18,16 +18,6 @@ type CreateSwapProps = ComponentPropsWithRef<"form"> & {
   onCreate(val: MarketDeployerOpts): any;
 };
 
-const ClickableStrong = styled.strong.attrs({
-  className: "accent--text pulse",
-  role: "button"
-})`
-  animation-duration: 0.3s;
-  border: 1px solid #9998;
-  border-radius: 8px;
-  padding: 0 0.4rem;
-  cursor: pointer;
-`;
 const ExValue = styled(BigValue)`
   align-items: center;
   display: flex;

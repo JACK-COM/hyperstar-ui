@@ -2,7 +2,14 @@ import styled, { css } from "styled-components";
 import { useEffect, useMemo, useState } from "react";
 import useGlobalUser from "hooks/globalUser";
 import { WideButton } from "components/Forms/Button";
-import { Fieldset, Form, Input, Legend, Textarea } from "components/Forms/Form";
+import {
+  Fieldset,
+  Form,
+  Input,
+  Label,
+  Legend,
+  Textarea
+} from "components/Forms/Form";
 import { getDaoView } from "reach/views/DaoView";
 import { getBlockchain } from "@jackcom/reachduck";
 import { UnwrapPromise } from "types/shared";
@@ -70,7 +77,7 @@ export default function EditDaoForm(props: FormProps) {
     const { selected } = DaoStore.getState();
     if (selected) {
       setView(selected);
-      setDesc(selected.description || '');
+      setDesc(selected.description || "");
       return;
     }
 
@@ -83,7 +90,7 @@ export default function EditDaoForm(props: FormProps) {
     const v = await getDaoView(account, target);
     if (v?.name && v?.admin) {
       setView(v);
-      setDesc(v.description || '');
+      setDesc(v.description || "");
       DaoStore.selected(v);
     }
     setLoading(false);
@@ -98,6 +105,7 @@ export default function EditDaoForm(props: FormProps) {
   }, [address]);
 
   if (loading || !view) return <p>Loading DAO details ...</p>;
+  if (!view.isAdmin) return <p>You don't have permissions to view this page</p>;
 
   return (
     <section>
@@ -122,13 +130,16 @@ export default function EditDaoForm(props: FormProps) {
         </Fields>
 
         <Fields disabled={!account}>
-          <h4>{view?.name} description</h4>
-          <Textarea
-            maxLength={512}
-            placeholder="Short description (max-length: 512)"
-            onChange={({ target }) => setDesc(target.value)}
-            value={description || ""}
-          />
+          <Label>
+            <span className="label">{view?.name} description</span>
+            <Textarea
+              disabled={!view.isAdmin}
+              maxLength={512}
+              placeholder="Short description (max-length: 512)"
+              onChange={({ target }) => setDesc(target.value)}
+              value={description || ""}
+            />
+          </Label>
           <FormDesc>Characters remaining: {512 - description.length}</FormDesc>
 
           <FormDesc>
@@ -138,13 +149,23 @@ export default function EditDaoForm(props: FormProps) {
           </FormDesc>
         </Fields>
 
-        <WideButton type="button" disabled={isInvalid} onClick={maybeSubmit}>
+        <WideButton
+          type="button"
+          disabled={!view.isAdmin || isInvalid}
+          onClick={maybeSubmit}
+        >
           <b>Publish DAO</b>
         </WideButton>
 
         <FieldGrid disabled={!account}>
-          <h4>{`Membership Fee: ${view?.fee} ${getBlockchain()}`}</h4>
-          <h4>{`Voting Quorum: ${view?.quorum} member(s)`}</h4>
+          <Label>
+            <span className="label">{`Membership Fee: ${
+              view?.fee
+            } ${getBlockchain()}`}</span>
+          </Label>
+          <Label>
+            <span className="label">{`Voting Quorum: ${view?.quorum} member(s)`}</span>
+          </Label>
 
           <FormDesc>
             <b>Voting quorum</b> determines the minimum number of votes required
@@ -154,9 +175,11 @@ export default function EditDaoForm(props: FormProps) {
         </FieldGrid>
 
         <Fields disabled={!account}>
-          <Legend>{`Self-registration is ${enabled(
-            view?.registerSelf
-          )}`}</Legend>
+          <Label>
+            <span className="label">
+              {`Self-registration is ${enabled(view?.registerSelf)}`}
+            </span>
+          </Label>
 
           <FormDesc>
             <b>Self-Registration</b> allows non-members to register for
@@ -166,7 +189,11 @@ export default function EditDaoForm(props: FormProps) {
         </Fields>
 
         <Fields disabled={!account}>
-          <Legend>{`Open-treasury is ${enabled(view?.openTreasury)}`}</Legend>
+          <Label>
+            <span className="label">
+              {`Open-treasury is ${enabled(view?.openTreasury)}`}
+            </span>
+          </Label>
 
           <FormDesc>
             An <b>Open Treasury</b> allows a non-member to receive a
